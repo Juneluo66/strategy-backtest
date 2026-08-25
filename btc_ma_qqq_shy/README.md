@@ -30,3 +30,21 @@ Reports:
 Frozen rules: `configs/frozen.yaml` (do not retune after seeing results).
 
 Does not modify IBKR, production, or other strategy configs.
+
+## Live v1 (IBKR)
+
+Requires **IB Gateway or TWS** logged in on a host reachable from this machine.
+
+```bash
+pip install -e ".[live]"
+# Edit strategy-backtest/.env — IBKR_HOST, IBKR_PORT (see .env.example)
+btc-ma-qqq live-status          # read account + current signal
+btc-ma-qqq live-weekly --dry-run
+btc-ma-qqq live-weekly --git-push   # rebalance + ledger + push GitHub
+```
+
+Weekly cron: `scripts/weekly_live_v1.sh`
+
+Live reports (committed): `reports/live/live_nav_ledger.csv`, `live_performance.md`
+
+Separate from research `frozen_oos_ledger.csv`.

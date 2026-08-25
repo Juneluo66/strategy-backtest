@@ -18,6 +18,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
+live = ["ib_insync>=0.9.86", "python-dotenv>=1.0"]
 
 [project.scripts]
 btc-ma-qqq = "btc_ma_qqq_shy.cli:main"

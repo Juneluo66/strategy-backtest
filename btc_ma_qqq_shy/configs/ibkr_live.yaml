@@ -1,0 +1,39 @@
+# IBKR live v1 — connection only; strategy rules remain in frozen.yaml
+enabled: true
+mode: paper  # paper | live — user must match Gateway login
+
+connection:
+  host: "127.0.0.1"
+  port: 4002      # IB Gateway paper default; TWS paper 7497, live 7496 / Gateway live 4001
+  client_id: 11
+  timeout_sec: 30
+  readonly: false
+
+account:
+  # Leave empty to use first managed account
+  account_id: ""
+
+strategy:
+  rule_id: BTC50_MOM20_QQQ_SHY_v1
+  risk_on_symbol: QQQ
+  risk_off_symbol: SHY
+  exchange: SMART
+  currency: USD
+  target_pct: 1.0   # 100% of NAV in target sleeve (v1 SetHoldings)
+  min_order_usd: 100.0
+
+ledger:
+  path: reports/live/live_nav_ledger.csv
+  initial_nav_path: reports/live/initial_nav.json
+  report_path: reports/live/live_performance.md
+
+schedule:
+  # Week-start rebalance proxy (America/New_York); cron should run after US market open
+  timezone: America/New_York
+  rebalance_weekday: Monday
+  rebalance_after_hour: 9
+  rebalance_after_minute: 35
+
+git:
+  auto_push: true
+  commit_prefix: "live(v1):"

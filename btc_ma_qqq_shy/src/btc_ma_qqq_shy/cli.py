@@ -47,14 +47,15 @@ def main(argv: list[str] | None = None) -> int:
         "timing-attribution",
         help="Active return A/B vs vol-matched static + frozen QQQ 200DMA benchmark",
     )
-    sub.add_parser(
-        "traditional-combo",
-        help="Frozen QQQ trend + VIX comparator vs BTC (discovery audit)",
+    p_live_status = sub.add_parser("live-status", help="IBKR account snapshot + v1 signal (read-only)")
+    p_live_weekly = sub.add_parser(
+        "live-weekly",
+        help="Weekly v1: rebalance IBKR to QQQ/SHY, update NAV ledger, optional git push",
     )
-    sub.add_parser(
-        "oos-propositions",
-        help="Track 3 OOS propositions: risk-on spread, risk-off tails, active vs static",
-    )
+    p_live_weekly.add_argument("--dry-run", action="store_true", help="Log orders without submitting")
+    p_live_weekly.add_argument("--skip-trade", action="store_true", help="Snapshot + ledger only")
+    p_live_weekly.add_argument("--git-push", action="store_true", help="Commit live reports and push to GitHub")
+    p_live_weekly.add_argument("--reset-initial-nav", action="store_true", help="Re-baseline initial NAV to current")
 
     args = parser.parse_args(argv)
     config = ProjectConfig()
@@ -218,47 +219,38 @@ def main(argv: list[str] | None = None) -> int:
         )
         return 0
 
-    if args.cmd == "traditional-combo":
-        from .frozen_comparators import run_comparator_audit, write_comparator_report
+    if args.cmd in ("live-status", "live-weekly"):
+        from pathlib import Path
 
-        fetch_prices(config, refresh=False)
-        payload = run_comparator_audit(config)
-        path = write_comparator_report(config, payload)
-        print(
-            json.dumps(
-                {
-                    "judgment": payload["judgment"],
-                    "btc_vs_combo": payload["btc_vs_combo"],
-                    "signal_agreement": payload["weekly_signal_agreement_btc_vs_combo"],
-                    "report": str(path),
-                },
-                indent=2,
-            )
-        )
-        return 0
+        from .ibkr_config import IbkrLiveConfig
+        from .live_runner import run_live_status, run_live_weekly
 
-    if args.cmd == "oos-propositions":
-        from .frozen_comparators import run_oos_propositions, write_propositions_report
+        # Load strategy-backtest/.env if present (never committed)
+        env_path = Path(config.project_root).parent / ".env"
+        if env_path.exists():
+            try:
+                from dotenv import load_dotenv
 
-        fetch_prices(config, refresh=False)
-        payload = run_oos_propositions(config)
-        path = write_propositions_report(config, payload)
-        oos = payload["propositions"]["oos_btc"]
-        print(
-            json.dumps(
-                {
-                    "oos_n_weeks": oos.get("n_weeks"),
-                    "oos_status": oos.get("status"),
-                    "proposition_passes": {
-                        "risk_on": oos.get("proposition_1_risk_on", {}).get("passes"),
-                        "risk_off": oos.get("proposition_2_risk_off", {}).get("passes"),
-                        "active": oos.get("proposition_3_active_vs_static", {}).get("passes"),
-                    },
-                    "report": str(path),
-                },
-                indent=2,
-            )
-        )
+                load_dotenv(env_path)
+            except ImportError:
+                pass
+
+        ibkr_cfg = IbkrLiveConfig(config.project_root)
+        try:
+            if args.cmd == "live-status":
+                result = run_live_status(ibkr_cfg)
+            else:
+                result = run_live_weekly(
+                    ibkr_cfg,
+                    dry_run=args.dry_run,
+                    skip_trade=args.skip_trade,
+                    git_push=args.git_push,
+                    force_initial_nav=args.reset_initial_nav,
+                )
+        except Exception as exc:
+            print(json.dumps({"error": str(exc), "hint": "Is IB Gateway/TWS running and logged in?"}, indent=2))
+            return 2
+        print(json.dumps(result, indent=2, default=str))
         return 0
 
     return 1
