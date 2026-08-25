@@ -1,0 +1,11 @@
+# Variant definitions
+
+| variant      | baseline                 | definition                                                       | v8_difference_and_status                                                       |
+|:-------------|:-------------------------|:-----------------------------------------------------------------|:-------------------------------------------------------------------------------|
+| M1           | Price momentum baseline  | MOM_20D; Top-2; no hysteresis or regime gate                     | Not v8; predeclared ablation baseline.                                         |
+| H1           | M1 plus hysteresis       | MOM_20D; delta-rank 0.10; min hold 9; max replace 1              | Predeclared execution ablation.                                                |
+| R1           | H1 plus regime gate      | H1 plus 510300 volatility exposure gate                          | Predeclared risk-control ablation.                                             |
+| v8_reference | Frozen v8 reference      | composite_1 factor declaration and all frozen execution settings | Partial unless non-OHLCV files are supplied; never labelled full reproduction. |
+| C4           | Frozen core_4f reference | core_4f declaration and all frozen execution settings            | Partial unless margin/share fields are supplied.                               |
+
+All variants were defined before execution and are not selected by sample-outcome.

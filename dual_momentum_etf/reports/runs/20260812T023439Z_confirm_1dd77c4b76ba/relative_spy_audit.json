@@ -1,0 +1,565 @@
+{
+  "legacy_metric_clarification": "The previously reported '\u76f8\u5bf9SPY\u6700\u957f\u8fde\u7eed\u8dd1\u8f939\u4e2a\u6708' was Metric A only (longest consecutive single-month return underperformance = 9 months). It is NOT relative-NAV opportunity-cost duration and must not be read as 'investors only endure 9 months of opportunity cost'.",
+  "legacy_code": {
+    "function": "confirmation.longest_underperform_streak_months",
+    "formula": "month_ret_dc = prod(1+daily_net)-1 by Period[M]; streak where month_ret_dc < month_ret_spy"
+  },
+  "metric_A": {
+    "metric": "A_monthly_return_streak",
+    "definition": "Longest consecutive calendar months where (1+r_daily).prod()-1 for D+C is strictly less than the same for SPY. NOT relative-NAV underwater duration.",
+    "longest_months": 9,
+    "start": "2006-08",
+    "end": "2007-04",
+    "ongoing": false,
+    "months_under_pct": 0.5598455598455598
+  },
+  "metric_B": {
+    "metric": "B_rolling_12m_return_streak",
+    "definition": "At each month-end, compare trailing 12-month compounded returns. Longest consecutive months with R12(DC) < R12(SPY).",
+    "longest_months": 38,
+    "start": "2012-07",
+    "end": "2015-08",
+    "ongoing": false,
+    "months_under_pct": 0.6293436293436293
+  },
+  "metric_C": {
+    "metric": "C_relative_nav_underwater",
+    "definition": "relative_nav_t = nav_dc_t / nav_spy_t (both rebased to 1 at common start). An opportunity-cost interval starts when relative_nav falls below its historical high and ends when it recovers to/above that high; open intervals at sample end are ongoing.",
+    "max_relative_drawdown": -0.7337223887943447,
+    "current_relative_drawdown": -0.6904371246641747,
+    "months_since_relative_peak": 210,
+    "last_relative_peak_date": "2009-03-09",
+    "sample_end": "2026-08-10",
+    "longest_period": {
+      "peak_date": "2009-03-09",
+      "peak_value": 2.3693268577504516,
+      "start_date": "2009-03-10",
+      "trough_date": "2024-12-24",
+      "trough_value": 0.6308986958471916,
+      "trough_drawdown": -0.7337223887943447,
+      "recovery_date": null,
+      "end_date": "2026-08-10",
+      "ongoing": true,
+      "duration_months": 210
+    },
+    "all_periods": [
+      {
+        "peak_date": "2005-02-01",
+        "peak_value": 1.0,
+        "start_date": "2005-02-02",
+        "trough_date": "2005-02-16",
+        "trough_value": 0.9810249861872953,
+        "trough_drawdown": -0.018975013812704722,
+        "recovery_date": "2005-02-22",
+        "end_date": "2005-02-22",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2005-02-22",
+        "peak_value": 1.0026141713426722,
+        "start_date": "2005-02-23",
+        "trough_date": "2005-03-07",
+        "trough_value": 0.9684014974293146,
+        "trough_drawdown": -0.03412346931775456,
+        "recovery_date": "2005-03-21",
+        "end_date": "2005-03-21",
+        "ongoing": false,
+        "duration_months": 2
+      },
+      {
+        "peak_date": "2005-03-22",
+        "peak_value": 1.0132149333776248,
+        "start_date": "2005-03-23",
+        "trough_date": "2005-03-28",
+        "trough_value": 1.009674038706907,
+        "trough_drawdown": -0.003494712280753709,
+        "recovery_date": "2005-03-29",
+        "end_date": "2005-03-29",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2005-03-29",
+        "peak_value": 1.0164319895418557,
+        "start_date": "2005-03-30",
+        "trough_date": "2005-04-07",
+        "trough_value": 0.9933315003349737,
+        "trough_drawdown": -0.022727038743924344,
+        "recovery_date": "2005-04-14",
+        "end_date": "2005-04-14",
+        "ongoing": false,
+        "duration_months": 2
+      },
+      {
+        "peak_date": "2005-04-15",
+        "peak_value": 1.0376246960665954,
+        "start_date": "2005-04-18",
+        "trough_date": "2005-04-19",
+        "trough_value": 1.0262962387925583,
+        "trough_drawdown": -0.010917682777771942,
+        "recovery_date": "2005-04-20",
+        "end_date": "2005-04-20",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2005-04-20",
+        "peak_value": 1.040815397452172,
+        "start_date": "2005-04-21",
+        "trough_date": "2006-03-10",
+        "trough_value": 0.88257486720301,
+        "trough_drawdown": -0.15203515497226638,
+        "recovery_date": "2006-05-09",
+        "end_date": "2006-05-09",
+        "ongoing": false,
+        "duration_months": 14
+      },
+      {
+        "peak_date": "2006-05-12",
+        "peak_value": 1.0620126743214973,
+        "start_date": "2006-05-15",
+        "trough_date": "2007-03-05",
+        "trough_value": 0.8597499057246457,
+        "trough_drawdown": -0.19045231143411157,
+        "recovery_date": "2007-10-18",
+        "end_date": "2007-10-18",
+        "ongoing": false,
+        "duration_months": 18
+      },
+      {
+        "peak_date": "2007-10-18",
+        "peak_value": 1.0657658474301235,
+        "start_date": "2007-10-19",
+        "trough_date": "2007-10-19",
+        "trough_value": 1.053537640037472,
+        "trough_drawdown": -0.011473634121544785,
+        "recovery_date": "2007-10-23",
+        "end_date": "2007-10-23",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2007-10-23",
+        "peak_value": 1.0764823541139876,
+        "start_date": "2007-10-24",
+        "trough_date": "2007-10-25",
+        "trough_value": 1.0662244896637552,
+        "trough_drawdown": -0.0095290595438281,
+        "recovery_date": "2007-10-26",
+        "end_date": "2007-10-26",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2007-10-29",
+        "peak_value": 1.0903575738952613,
+        "start_date": "2007-10-30",
+        "trough_date": "2007-10-30",
+        "trough_value": 1.0890321728362713,
+        "trough_drawdown": -0.0012155655087120465,
+        "recovery_date": "2007-10-31",
+        "end_date": "2007-10-31",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2007-10-31",
+        "peak_value": 1.096331364553028,
+        "start_date": "2007-11-01",
+        "trough_date": "2007-11-01",
+        "trough_value": 1.095206486462294,
+        "trough_drawdown": -0.0010260384105609255,
+        "recovery_date": "2007-11-02",
+        "end_date": "2007-11-02",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2007-11-02",
+        "peak_value": 1.1101459742536286,
+        "start_date": "2007-11-05",
+        "trough_date": "2007-11-05",
+        "trough_value": 1.1047397379826387,
+        "trough_drawdown": -0.004869842702104665,
+        "recovery_date": "2007-11-06",
+        "end_date": "2007-11-06",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2007-11-09",
+        "peak_value": 1.1472527500649132,
+        "start_date": "2007-11-12",
+        "trough_date": "2007-12-17",
+        "trough_value": 1.0768833884313371,
+        "trough_drawdown": -0.0613372786681875,
+        "recovery_date": "2008-01-02",
+        "end_date": "2008-01-02",
+        "ongoing": false,
+        "duration_months": 3
+      },
+      {
+        "peak_date": "2008-01-10",
+        "peak_value": 1.21196244559333,
+        "start_date": "2008-01-11",
+        "trough_date": "2008-01-11",
+        "trough_value": 1.2095783787938552,
+        "trough_drawdown": -0.0019671127666894828,
+        "recovery_date": "2008-01-14",
+        "end_date": "2008-01-14",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2008-01-14",
+        "peak_value": 1.2128583519620968,
+        "start_date": "2008-01-15",
+        "trough_date": "2008-01-16",
+        "trough_value": 1.1810809427531994,
+        "trough_drawdown": -0.02620042905875164,
+        "recovery_date": "2008-01-18",
+        "end_date": "2008-01-18",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2008-01-22",
+        "peak_value": 1.2265467870650975,
+        "start_date": "2008-01-23",
+        "trough_date": "2008-02-01",
+        "trough_value": 1.1742047052512126,
+        "trough_drawdown": -0.04267434586749841,
+        "recovery_date": "2008-02-06",
+        "end_date": "2008-02-06",
+        "ongoing": false,
+        "duration_months": 2
+      },
+      {
+        "peak_date": "2008-02-06",
+        "peak_value": 1.2294313458059491,
+        "start_date": "2008-02-07",
+        "trough_date": "2008-02-07",
+        "trough_value": 1.227400213868644,
+        "trough_drawdown": -0.001652090573608822,
+        "recovery_date": "2008-02-08",
+        "end_date": "2008-02-08",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2008-02-08",
+        "peak_value": 1.2432260729267628,
+        "start_date": "2008-02-11",
+        "trough_date": "2008-02-13",
+        "trough_value": 1.2028678726877315,
+        "trough_drawdown": -0.03246247896331622,
+        "recovery_date": "2008-02-21",
+        "end_date": "2008-02-21",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2008-02-21",
+        "peak_value": 1.243329643603393,
+        "start_date": "2008-02-22",
+        "trough_date": "2008-02-26",
+        "trough_value": 1.2144400181950636,
+        "trough_drawdown": -0.02323569260731362,
+        "recovery_date": "2008-02-29",
+        "end_date": "2008-02-29",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2008-03-03",
+        "peak_value": 1.2827257334970374,
+        "start_date": "2008-03-04",
+        "trough_date": "2008-03-04",
+        "trough_value": 1.274011540051718,
+        "trough_drawdown": -0.006793497017918537,
+        "recovery_date": "2008-03-06",
+        "end_date": "2008-03-06",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2008-03-10",
+        "peak_value": 1.3287026948324165,
+        "start_date": "2008-03-11",
+        "trough_date": "2008-03-11",
+        "trough_value": 1.2834352268205294,
+        "trough_drawdown": -0.03406892165413766,
+        "recovery_date": "2008-03-14",
+        "end_date": "2008-03-14",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2008-03-17",
+        "peak_value": 1.3490516582518883,
+        "start_date": "2008-03-18",
+        "trough_date": "2008-05-19",
+        "trough_value": 1.108296251011494,
+        "trough_drawdown": -0.1784627043506748,
+        "recovery_date": "2008-09-17",
+        "end_date": "2008-09-17",
+        "ongoing": false,
+        "duration_months": 7
+      },
+      {
+        "peak_date": "2008-09-17",
+        "peak_value": 1.367197723420163,
+        "start_date": "2008-09-18",
+        "trough_date": "2008-09-19",
+        "trough_value": 1.2542821365588843,
+        "trough_drawdown": -0.08258906881355144,
+        "recovery_date": "2008-09-29",
+        "end_date": "2008-09-29",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2008-09-29",
+        "peak_value": 1.4106962835226047,
+        "start_date": "2008-09-30",
+        "trough_date": "2008-10-01",
+        "trough_value": 1.342297585658962,
+        "trough_drawdown": -0.04848577164522361,
+        "recovery_date": "2008-10-03",
+        "end_date": "2008-10-03",
+        "ongoing": false,
+        "duration_months": 2
+      },
+      {
+        "peak_date": "2008-10-10",
+        "peak_value": 1.7615798482182503,
+        "start_date": "2008-10-13",
+        "trough_date": "2008-10-13",
+        "trough_value": 1.5322154934638454,
+        "trough_drawdown": -0.1302037798549952,
+        "recovery_date": "2008-10-24",
+        "end_date": "2008-10-24",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2008-10-27",
+        "peak_value": 1.8538374020872301,
+        "start_date": "2008-10-28",
+        "trough_date": "2008-11-04",
+        "trough_value": 1.5579155905449975,
+        "trough_drawdown": -0.15962662702190333,
+        "recovery_date": "2008-11-19",
+        "end_date": "2008-11-19",
+        "ongoing": false,
+        "duration_months": 2
+      },
+      {
+        "peak_date": "2008-11-20",
+        "peak_value": 2.132702815696911,
+        "start_date": "2008-11-21",
+        "trough_date": "2009-01-06",
+        "trough_value": 1.7411486276124264,
+        "trough_drawdown": -0.18359528819608883,
+        "recovery_date": "2009-02-23",
+        "end_date": "2009-02-23",
+        "ongoing": false,
+        "duration_months": 4
+      },
+      {
+        "peak_date": "2009-02-23",
+        "peak_value": 2.16727190749034,
+        "start_date": "2009-02-24",
+        "trough_date": "2009-02-24",
+        "trough_value": 2.0834929244228597,
+        "trough_drawdown": -0.038656424594408656,
+        "recovery_date": "2009-02-27",
+        "end_date": "2009-02-27",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2009-03-03",
+        "peak_value": 2.300437216428262,
+        "start_date": "2009-03-04",
+        "trough_date": "2009-03-04",
+        "trough_value": 2.2415192056105404,
+        "trough_drawdown": -0.02561165781746466,
+        "recovery_date": "2009-03-05",
+        "end_date": "2009-03-05",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2009-03-05",
+        "peak_value": 2.3508951287208673,
+        "start_date": "2009-03-06",
+        "trough_date": "2009-03-06",
+        "trough_value": 2.3409856029390075,
+        "trough_drawdown": -0.004215213882063584,
+        "recovery_date": "2009-03-09",
+        "end_date": "2009-03-09",
+        "ongoing": false,
+        "duration_months": 1
+      },
+      {
+        "peak_date": "2009-03-09",
+        "peak_value": 2.3693268577504516,
+        "start_date": "2009-03-10",
+        "trough_date": "2024-12-24",
+        "trough_value": 0.6308986958471916,
+        "trough_drawdown": -0.7337223887943447,
+        "recovery_date": null,
+        "end_date": "2026-08-10",
+        "ongoing": true,
+        "duration_months": 210
+      }
+    ],
+    "rolling_win_rate_vs_spy": {
+      "3y": 0.23766816143497757,
+      "5y": 0.20100502512562815,
+      "10y": 0.20863309352517986
+    }
+  },
+  "alignment": {
+    "price_basis": "Yahoo Adj Close (dividend/split adjusted) via load_ohlc; Open scaled by AdjClose/Close",
+    "dc_return_field": "equity.net_return (after one-way costs; next-open execution)",
+    "spy_return_field": "buy-and-hold Adj Close daily pct_change; zero cost; always invested",
+    "common_dates": 5414,
+    "dc_start": "2005-02-01",
+    "dc_end": "2026-08-10",
+    "spy_start": "2005-02-01",
+    "spy_end": "2026-08-10",
+    "monthly_index": "calendar Period[M] from daily timestamps",
+    "compounding": "daily (1+r).prod()-1 within month; relative_nav from equity_net cumprod",
+    "timing_note": "D+C uses month-end close signal \u2192 next session open fill; SPY BH is continuous close-to-close. This is intentional strategy-vs-market comparison, not same execution clock.",
+    "spy_bh_vs_adj_close_corr": 1.0,
+    "spy_bh_vs_adj_close_max_abs_diff": 0.0,
+    "spy_uses_total_return_proxy": true
+  },
+  "engineering": {
+    "provenance": {
+      "executed_at_utc": "2026-08-12T02:36:33.792247+00:00",
+      "config_hash": "1dd77c4b76bad4fe005e3cec2bf8f3a84471850055c58fc7f1afe6f246993043",
+      "git_commit": "unavailable",
+      "frozen_variant": "attribution_DC",
+      "frozen_trend_horizons": [
+        3,
+        6,
+        12
+      ],
+      "one_way_bps": 5.0,
+      "data_manifest": {
+        "retrieved_at_utc": "2026-08-11T11:17:52.623219+00:00",
+        "source": "Yahoo Finance via yfinance",
+        "start": "2005-01-01",
+        "completed_symbols": [
+          "SPY",
+          "QQQ",
+          "IWM",
+          "VEA",
+          "VWO",
+          "GLD",
+          "IEF",
+          "SGOV",
+          "BIL"
+        ],
+        "failures": {}
+      },
+      "cache_audit": {
+        "status": "OK",
+        "manifest": {
+          "retrieved_at_utc": "2026-08-11T11:17:52.623219+00:00",
+          "source": "Yahoo Finance via yfinance",
+          "start": "2005-01-01",
+          "requested_symbols": [
+            "SPY",
+            "QQQ",
+            "IWM",
+            "VEA",
+            "VWO",
+            "GLD",
+            "IEF",
+            "SGOV",
+            "BIL"
+          ],
+          "completed_symbols": [
+            "SPY",
+            "QQQ",
+            "IWM",
+            "VEA",
+            "VWO",
+            "GLD",
+            "IEF",
+            "SGOV",
+            "BIL"
+          ],
+          "failures": {}
+        },
+        "coverage": {
+          "SPY": {
+            "rows": 5434,
+            "start": "2005-01-03",
+            "end": "2026-08-10"
+          },
+          "QQQ": {
+            "rows": 5434,
+            "start": "2005-01-03",
+            "end": "2026-08-10"
+          },
+          "IWM": {
+            "rows": 5434,
+            "start": "2005-01-03",
+            "end": "2026-08-10"
+          },
+          "VEA": {
+            "rows": 4790,
+            "start": "2007-07-26",
+            "end": "2026-08-10"
+          },
+          "VWO": {
+            "rows": 5388,
+            "start": "2005-03-10",
+            "end": "2026-08-10"
+          },
+          "GLD": {
+            "rows": 5434,
+            "start": "2005-01-03",
+            "end": "2026-08-10"
+          },
+          "IEF": {
+            "rows": 5434,
+            "start": "2005-01-03",
+            "end": "2026-08-10"
+          },
+          "SGOV": {
+            "rows": 1556,
+            "start": "2020-06-01",
+            "end": "2026-08-10"
+          },
+          "BIL": {
+            "rows": 4830,
+            "start": "2007-05-30",
+            "end": "2026-08-10"
+          }
+        }
+      }
+    },
+    "cash_sleeve": {
+      "ok": true,
+      "n_cash_rows": 98,
+      "issues": [],
+      "n_signal_dates": 259
+    },
+    "ibkr": {
+      "fractional_shares": "NOT_MODELED \u2014 research engine uses float weights, not share lots",
+      "minimum_commission": "NOT_MODELED \u2014 only one-way bps linear cost",
+      "order_notional_constraints": "NOT_MODELED \u2014 no IBKR min order / buying-power checks",
+      "status": "PAPER_TRADING_BLOCKED_UNTIL_BROKER_CONSTRAINTS_IMPLEMENTED"
+    },
+    "signal_audit_csv": "/home/ec2-user/strategy-backtest/dual_momentum_etf/reports/runs/20260812T023439Z_confirm_1dd77c4b76ba/dc_rebalance_signal_audit.csv",
+    "n_rebalance_rows": 483
+  },
+  "chart_path": "/home/ec2-user/strategy-backtest/dual_momentum_etf/reports/relative_nav_drawdown.png"
+}

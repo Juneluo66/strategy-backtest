@@ -1,0 +1,165 @@
+{
+  "audit_status": {
+    "SOURCE_VERIFICATION": "PASS",
+    "LOGIC_REPLICATION": "PASS",
+    "PERFORMANCE_RECONCILIATION": "PARTIAL",
+    "CLASSIFICATION": "RESEARCH_CANDIDATE"
+  },
+  "comparison": [
+    {
+      "label": "ORIGINAL",
+      "cagr": 1.9882494630313596,
+      "sharpe": 1.9910081303281784,
+      "sortino": 3.2504390661545535,
+      "max_dd": -0.4942893950798182,
+      "calmar": 4.022440058035831,
+      "volatility": 0.6519368183455247,
+      "final_wealth": 4811139.495531212,
+      "turnover": 43.33107974733518,
+      "trades": 601,
+      "incremental_vs_original": NaN
+    },
+    {
+      "label": "TQQQ_BUY_HOLD",
+      "cagr": 0.4239891584044013,
+      "sharpe": 0.8867178570539315,
+      "sortino": 1.1371855934920958,
+      "max_dd": -0.8165984529948251,
+      "calmar": 0.519213766385972,
+      "volatility": 0.6132805108501412,
+      "final_wealth": 143.7545859731477,
+      "turnover": 12.0,
+      "trades": 1,
+      "incremental_vs_original": 1.5642603046269583
+    },
+    {
+      "label": "SPY_SMA200_TQQQ_BSV",
+      "cagr": 0.3938607995931076,
+      "sharpe": 0.9532092951122437,
+      "sortino": 1.1651187136159586,
+      "max_dd": -0.5991774685980247,
+      "calmar": 0.6573357982146361,
+      "volatility": 0.4615442374717378,
+      "final_wealth": 106.43484934363713,
+      "turnover": 9.69625748502994,
+      "trades": 133,
+      "incremental_vs_original": 1.594388663438252
+    },
+    {
+      "label": "SPY_SMA200_TQQQ_CASH",
+      "cagr": 0.3895162355325892,
+      "sharpe": 0.9466346771625511,
+      "sortino": 1.13439020402551,
+      "max_dd": -0.5889141809279408,
+      "calmar": 0.6614142571993018,
+      "volatility": 0.4613530163222502,
+      "final_wealth": 101.86561841937392,
+      "turnover": 4.8845808383233535,
+      "trades": 67,
+      "incremental_vs_original": NaN
+    },
+    {
+      "label": "ORIGINAL_BULL_BSV_BEAR",
+      "cagr": 0.7529565064917243,
+      "sharpe": 1.3653636179248687,
+      "sortino": 1.8423508302132567,
+      "max_dd": -0.5991774685980247,
+      "calmar": 1.2566502346183293,
+      "volatility": 0.5019604313607322,
+      "final_wealth": 2668.9400041721497,
+      "turnover": 24.008734701934465,
+      "trades": 333,
+      "incremental_vs_original": NaN
+    },
+    {
+      "label": "ORIGINAL_BULL_CASH_BEAR",
+      "cagr": 0.747492666888818,
+      "sharpe": 1.35941699765667,
+      "sortino": 1.8015156003789234,
+      "max_dd": -0.5889141809279408,
+      "calmar": 1.269272656520188,
+      "volatility": 0.5017908546048105,
+      "final_wealth": 2554.362840045267,
+      "turnover": 19.2502467429925,
+      "trades": 267,
+      "incremental_vs_original": NaN
+    },
+    {
+      "label": "SPY",
+      "cagr": 0.1503040322230258,
+      "sharpe": 0.9239086880757487,
+      "sortino": 1.1329610256766807,
+      "max_dd": -0.3371726113109915,
+      "calmar": 0.4457777031135922,
+      "volatility": 0.16666779212329239,
+      "final_wealth": 7.153427010374233,
+      "turnover": 0.0,
+      "trades": 0,
+      "incremental_vs_original": NaN
+    },
+    {
+      "label": "QQQ",
+      "cagr": 0.19707540846219795,
+      "sharpe": 0.9727551549359494,
+      "sortino": 1.2491220201621867,
+      "max_dd": -0.35118728472907856,
+      "calmar": 0.5611689745949392,
+      "volatility": 0.2070549097148622,
+      "final_wealth": 12.52365820374737,
+      "turnover": 0.0,
+      "trades": 0,
+      "incremental_vs_original": NaN
+    }
+  ],
+  "avoided_loss": {
+    "definition": "avoided_loss_contribution = sum(daily strategy - TQQQ return) on non-TQQQ signal days. NOT strict additive attribution; compounding interaction ignored.",
+    "non_tqqq_days": 631,
+    "non_tqqq_strategy_cumulative_return": 309.72618360230354,
+    "non_tqqq_tqqq_counterfactual_cumulative": -0.8337959352728469,
+    "non_tqqq_daily_diff_sum": 7.5068188685766275,
+    "tqqq_days_strategy_cumulative": 15482.534215735637,
+    "tqqq_days_tqqq_counterfactual": 863.928220673422,
+    "full_period_strategy": 4811138.495531212,
+    "full_period_tqqq_bh": 142.7545859731477,
+    "incremental_vs_tqqq_bh": 4810995.740945239,
+    "verdict_hint": "B dominates if non_tqqq_tqqq_counterfactual << 0 and daily_diff_sum large positive"
+  },
+  "bull_tree": {
+    "bull_days": 3031,
+    "uvxy_signal_days": 120,
+    "uvxy_pct_of_bull": 0.0395908940943583,
+    "original_bull_cumulative": 56680.40687039271,
+    "always_tqqq_bull_cumulative": 2259.401879174835,
+    "incremental_vs_always_tqqq": 54421.00499121788,
+    "original_bull_max_dd": -0.34575651564118215,
+    "always_tqqq_bull_max_dd": -0.373719567180939
+  },
+  "regime": [
+    {
+      "regime": "BULL",
+      "days": 3031,
+      "time_pct": 0.8557312252964426,
+      "strategy_return": 56680.40687039271,
+      "tqqq_return": 5569.653500015038,
+      "cagr_equivalent": 1.484306781407636,
+      "avg_daily_return": 0.0041855043640012125,
+      "volatility": 0.5416823817631731,
+      "sharpe": 1.9471689226721938,
+      "max_dd": -0.34575651564118215,
+      "excess_vs_tqqq": 51110.75337037767
+    },
+    {
+      "regime": "BEAR",
+      "days": 511,
+      "time_pct": 0.1442687747035573,
+      "strategy_return": 83.88038249531,
+      "tqqq_return": -0.9741943048561971,
+      "cagr_equivalent": 7.937018457560491,
+      "avg_daily_return": 0.010876730144894176,
+      "volatility": 1.0945550316747947,
+      "sharpe": 2.5041554944198525,
+      "max_dd": -0.6217697101593539,
+      "excess_vs_tqqq": 84.8545768001662
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+version: multi_asset_etf_trend_v1
+research_track: independent
+relation_to_prior_strategies: none
+# Pre-registered versions only — no grid search, no extra lookbacks.
+versions:
+  - base_12m_equal
+  - ensemble_equal
+  - ensemble_risk_balanced
+lookbacks_months: [3, 6, 12]
+vol_lookback_days: 63
+one_way_bps: 5.0
+execution: next_session_open
+rebalance: month_end_close_signal
+weighting: natural_drift_between_rebalances
+leverage: false
+shorting: false
+cash: BIL
+data:
+  start: "2005-01-01"
+  source: Yahoo Finance via yfinance
+  return_basis: Yahoo_AdjClose_scaled_Open
+  fillna_returns: forbidden
+  require_strict_common_interval: true
+  refuse_silent_stale_on_failed_refresh: true
+benchmarks_formal:
+  - spy_buy_hold
+  - equal_weight_8_monthly
+  - sixty_forty_spy_ief_monthly
+  - base_12m_equal
+  - ensemble_equal
+  - ensemble_risk_balanced
+benchmarks_appendix_only:
+  - eighty_twenty_spy_dc
+  - sixty_forty_spy_dc
+  - half_protect
+stability:
+  cost_bps: [5.0, 10.0]
+  extra_delay_sessions: 1
+  exclude_last_years: [1, 2]
+  restart_from: "2010-01-01"
+  fixed_cutoffs: ["2015-12-31", "2018-12-31", "2020-12-31", "2022-12-31", "2024-12-31", "latest"]
+  rolling_years: [3, 5]
+  leave_one_asset_out: true
+  asset_group_contribution: true
+gate_label_pass: MULTI_ASSET_TREND_CANDIDATE
+gate_label_fail: REJECTED
+crisis_windows:
+  gfc_2008: ["2008-01-01", "2009-03-31"]
+  covid_2020: ["2020-02-01", "2020-04-30"]
+  bear_2022: ["2022-01-01", "2022-12-31"]

@@ -1,0 +1,44 @@
+# Frozen Low-MAX defensive research — no retuning of MAX anomaly parameters.
+# Source of truth: max_effect_vix PURCHASE_GATE / config_snapshot (max_robustness_free_v1).
+version: "low_max_defensive_v1"
+parent_project: max_effect_vix
+parent_conclusion: REJECTED_AS_INDEPENDENT_ALPHA
+
+# Frozen MAX definition (do not optimize)
+signal_lookback_days: 21
+top_returns: 5
+min_dollar_volume: 5000000
+portfolio_decile: 0.10
+max_portfolio_size: 25
+rebalance: monthly_first_trading_day
+execution: next_session_open
+benchmark: SPY
+vix_mode: none
+
+costs:
+  one_way_bps: 5.0
+  annual_margin_rate: 0.05
+  annual_spy_borrow_rate: 0.003
+
+# Pre-specified exclusion grid (robustness, not optimization)
+exclusion_fractions: [0.10, 0.20, 0.30]
+primary_exclusion: 0.20
+
+# Frozen regime windows (same as purchase-gate)
+regimes:
+  P1_2015_2018: ["2015-01-01", "2018-12-31"]
+  P2_2019_2022: ["2019-01-01", "2022-12-31"]
+  P3_2023_2026: ["2023-01-01", "2026-12-31"]
+
+style_etfs:
+  SPLV: low_volatility
+  SPYV: value
+  IWD: value_alt
+
+data_status:
+  DATA_TIER: HISTORICAL_SP500_APPROX
+  SURVIVORSHIP_BIAS: REDUCED_NOT_ELIMINATED
+  PIT_VALIDATED: false
+  DELISTING_RETURN: UNAVAILABLE
+  SIZE_NEUTRAL: BLOCKED_BY_PIT_MARKET_CAP
+  SIZE_VALUATION_QUALITY: BLOCKED_BY_PIT_DATA

@@ -1,0 +1,117 @@
+# Research v2 — NOT production. Does not modify or replace v1 OOS ledger.
+name: btc_regime_cross_asset_v2
+lineage: research_v2_strategy_development
+v1_frozen_reference: BTC50_MOM20_QQQ_SHY_v1
+
+data:
+  start: "2010-01-01"
+  effective_start: "2014-11-05"
+  btc_symbol: "BTC-USD"
+  btc_source: bitfinex
+  # Read-only reuse of v1 Bitfinex cache (never writes into v1 project)
+  shared_v1_prices_dir: "../btc_ma_qqq_shy/data/prices"
+
+btc_gate:
+  sma_window: 50
+  momentum_window: 20
+  schedule: week_start_qc_proxy
+  frozen: true
+
+matrix:
+  risk_on: [QQQ, SMH, SOXX, IWO, IWM, SPY]
+  risk_off: [SHY, BIL, IEF, TLT, GLD]
+
+splits:
+  train:
+    start: "2014-11-05"
+    end: "2020-12-31"
+  test:
+    start: "2021-01-01"
+    end: "2026-08-06"
+
+walk_forward_blocks:
+  - label: wf_2019_2020
+    train_end: "2018-12-31"
+    test_start: "2019-01-01"
+    test_end: "2020-12-31"
+  - label: wf_2021_2022
+    train_end: "2020-12-31"
+    test_start: "2021-01-01"
+    test_end: "2022-12-31"
+  - label: wf_2023_2024
+    train_end: "2022-12-31"
+    test_start: "2023-01-01"
+    test_end: "2024-12-31"
+  - label: wf_2025_2026
+    train_end: "2024-12-31"
+    test_start: "2025-01-01"
+    test_end: "2026-08-06"
+
+off_rules_v2:
+  fixed_shy:
+    id: OFF_SHY
+    description: "v1 baseline — OFF always SHY"
+  ietf_sma200_shy:
+    id: IEF_SMA200_SHY
+    description: "OFF → IEF if IEF>SMA200 else SHY (train-selected tiny rule)"
+    trend_asset: IEF
+    fallback_asset: SHY
+    sma_window: 200
+
+return_basis: yahoo_adj_close_total_return
+
+# Audited execution costs (aligned with v1 OOS ledger audit)
+execution:
+  costs_bps_one_way: 5
+  fill: next_open
+  half_spread_bps:
+    QQQ: 1.0
+    SPY: 1.0
+    SMH: 1.5
+    SOXX: 1.5
+    IWO: 1.5
+    IWM: 1.5
+    SHY: 2.0
+    BIL: 2.0
+    IEF: 2.0
+    TLT: 2.0
+    GLD: 2.0
+
+# Frozen v2 final research candidates — locked 2026-08-24
+frozen_final_candidates:
+  A:
+    id: BTC_QQQ_SHY
+    label: QQQ/SHY
+    risk_on: QQQ
+    risk_off: SHY
+    evidence_tier: REFERENCE_CORE
+    role: Defensive/Core reference (v1 analogue)
+  B:
+    id: BTC_QQQ_BIL
+    label: QQQ/BIL
+    risk_on: QQQ
+    risk_off: BIL
+    evidence_tier: POST_TEST_CANDIDATE
+    role: Ultra-short parking — selection informed by Test exploration; not clean OOS
+  C:
+    id: BTC_SMH_x
+    label: SMH/{off}
+    risk_on: SMH
+    off_selection:
+      rule: train_higher_sharpe_adj0
+      candidates: [SHY, BIL]
+    evidence_tier: TRAIN_PRE_REGISTERED
+    role: Aggressive semiconductor sleeve
+  D:
+    id: BTC_SPY_BIL
+    label: SPY/BIL
+    risk_on: SPY
+    risk_off: BIL
+    evidence_tier: TRAIN_AND_WF_EXPLORATORY
+    role: Broad-equity regime hypothesis
+
+verdict_labels:
+  core: BTC_QQQ_SHY_CORE_CANDIDATE
+  broad: BTC_SPY_BIL_BROAD_EQUITY_CANDIDATE
+  aggressive: BTC_SMH_AGGRESSIVE_CANDIDATE
+  bil_unvalidated: BIL_INTERESTING_BUT_NOT_VALIDATED

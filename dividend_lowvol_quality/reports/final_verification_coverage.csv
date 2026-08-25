@@ -1,0 +1,2 @@
+months,price_rows_min,price_rows_median,price_rows_max,dividend_coverage_min_pct,dividend_coverage_median_pct,dividend_coverage_max_pct,financial_coverage_median_pct,industry_coverage_median_pct,eligible_candidates_min,eligible_candidates_median,eligible_candidates_max,months_with_target_holdings
+90,3460,4748.0,5233,0.6,0.6792098443700255,0.7869942196531792,0.9914268422793675,0.9964194815407852,497,1036.5,1705,90

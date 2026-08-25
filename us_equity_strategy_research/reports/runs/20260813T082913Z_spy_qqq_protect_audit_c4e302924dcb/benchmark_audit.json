@@ -1,0 +1,20 @@
+{
+  "prior_report_issue": "Previous etf_trend_sleeve_comparison showed ann_turnover=0 for D+C and 80/20 because those series were fed as raw return streams with empty trade tables; that was NOT_COMPUTED, mislabeled as zero.",
+  "dc_costs": "attribution_DC net_return already deducts internal 5bp trading costs",
+  "sleeve_80_20_60_40": "outer_blend_pit: month-end signal \u2192 next open; weights drift; outer 5bp on L1 turnover only; does not double-count D+C internal costs",
+  "challenger_costs": "same 5bp one-way on measured L1 turnover; month-end \u2192 next open",
+  "bh_turnover": "buy_and_hold labeled turnover_status=buy_and_hold (true zero activity)",
+  "adj_close_anomaly_audit": {
+    "n_flags_gt_25pct": 0,
+    "flags_sample": []
+  },
+  "hash_check": {
+    "config_hash": "8725aaf1874386e68016e9e7ad290f09b8528a34ecf7857f350acfa8a208b1c2",
+    "matches_known_freeze": true,
+    "prefix_ok": true,
+    "ok": true
+  },
+  "dc_internal_cost_total_full_sample": 0.07500000000000001,
+  "common_start": "2008-07-01",
+  "common_end": "2026-08-10"
+}

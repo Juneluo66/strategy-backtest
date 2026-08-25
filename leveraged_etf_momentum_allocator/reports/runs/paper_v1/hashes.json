@@ -1,0 +1,8 @@
+{
+  "frozen_date": "2026-08-24",
+  "paper_config_sha256": "136df27b900bd57534cb8fa49c2ef008420e91ef21a587b3875f76b60ec9c5ad",
+  "strategy_logic_sha256": "7525a334580aff24b318167fb9276f5059d07fd7dfbfc63600f336c6eb6cce95",
+  "asset_mapping_sha256": "a385c6b9386d573a460d6f398fd2242ef48f7682a14f762dc0875c194cd404d1",
+  "composite_sha256": "3c869428b5c4557b670c871dae796645728229b1ddce410ef3d3dccc53ec9b54",
+  "note": "finalized at PAPER_V1 freeze after logging bootstrap"
+}

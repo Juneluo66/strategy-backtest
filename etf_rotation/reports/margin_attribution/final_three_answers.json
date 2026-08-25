@@ -1,0 +1,99 @@
+{
+  "q1_is_91pct_a_bug": {
+    "answer": "\u53e3\u5f84\u5dee\u5f02\uff0c\u4e0d\u662f\u6e90\u6570\u636e\u7a81\u7136\u53d8\u621091%\u7f3a\u5931\u3002",
+    "grid_missing_mbr": 0.24173493783072753,
+    "panel_missing_mbr": 0.24173493783072753,
+    "p_margin_missing_given_excluded_full": 0.9087695547533092,
+    "excluded_ratio_full": 0.26600246076283646,
+    "margin_missing_ratio_on_scored_panel": 0.24173493783072753,
+    "detail": {
+      "grid_24pct": "staging MARGIN_* missing_ratio on full OHLCV ETF\u00d7date grid (~24.2% NaN cells / all staging rows)",
+      "overlap_91pct": "P(all declared MARGIN_* NaN | score NaN) on the scored C1 panel \u2014 NOT the share of universe lacking margin. Denominator = excluded score rows; numerator = excluded rows that also lack MARGIN_BUY_RATIO."
+    }
+  },
+  "q2_c1_improvement_source": {
+    "pool_switch_d_ann": 0.0014235365145357504,
+    "add_margin_d_ann": 0.009569646771514506,
+    "add_both_margin_d_ann": 0.01602473606232091,
+    "proxy_correlations_path": "/home/ec2-user/strategy-backtest/etf_rotation/reports/margin_attribution/part_b_proxy_correlations.csv"
+  },
+  "q3_share_factors_vs_mom_baselines": {
+    "mom20": {
+      "annual_return": -0.010966491948420365,
+      "sharpe": -0.08738757073160355,
+      "max_drawdown": -0.6355915640975004
+    },
+    "mom6": {
+      "annual_return": 0.005877942640499123,
+      "sharpe": 0.051715974318448266,
+      "max_drawdown": -0.5325740862895125
+    },
+    "mom12": {
+      "annual_return": 0.02898377024402987,
+      "sharpe": 0.29494380598664977,
+      "max_drawdown": -0.3259794810187111
+    },
+    "mom6_12": {
+      "annual_return": 0.007731996070963865,
+      "sharpe": 0.071436322576705,
+      "max_drawdown": -0.5103424128734362
+    },
+    "both_shares": {
+      "annual_return": 0.020993685313706045,
+      "sharpe": 0.22802200524188554,
+      "max_drawdown": -0.36595213085584666
+    },
+    "vs_mom_active": {
+      "active_ann_approx": 0.027779957724905397,
+      "active_sharpe_approx": 0.2778984451092401,
+      "active_total": 0.5740088883872317
+    },
+    "stability": {
+      "first_half": {
+        "total_return": 0.07026176140756202,
+        "annual_return": 0.0065903818356518595,
+        "annual_volatility": 0.03755863224814256,
+        "sharpe": 0.17546916490756354,
+        "sortino": 0.10942587844359712,
+        "max_drawdown": -0.11627529365200762,
+        "calmar": 0.05667912441808802,
+        "win_rate": 0.11247600767754319,
+        "profit_factor": 1.0965501178887902
+      },
+      "second_half": {
+        "total_return": 0.43532641297144337,
+        "annual_return": 0.035620049808036125,
+        "annual_volatility": 0.12470581987673057,
+        "sharpe": 0.28563261797441286,
+        "sortino": 0.3520526182151552,
+        "max_drawdown": -0.36595213085584644,
+        "calmar": 0.09733527094030599,
+        "win_rate": 0.5192159877017679,
+        "profit_factor": 1.08285894158732
+      },
+      "oos": {
+        "total_return": 0.2614011893503967,
+        "annual_return": 0.21539296541712383,
+        "annual_volatility": 0.15862150585850748,
+        "sharpe": 1.357905186004584,
+        "sortino": 1.9607900202014266,
+        "max_drawdown": -0.10931959841760674,
+        "calmar": 1.9703051285855544,
+        "win_rate": 0.5433333333333333,
+        "profit_factor": 1.3266801370829122
+      },
+      "is": {
+        "total_return": 0.21783219162232337,
+        "annual_return": 0.010172080578817244,
+        "annual_volatility": 0.08633051319978091,
+        "sharpe": 0.11782717606783621,
+        "sortino": 0.10888608731108264,
+        "max_drawdown": -0.36595213085584666,
+        "calmar": 0.02779620535349242,
+        "win_rate": 0.3018137354799266,
+        "profit_factor": 1.050374733823543
+      }
+    }
+  },
+  "outputs": "/home/ec2-user/strategy-backtest/etf_rotation/reports/margin_attribution"
+}

@@ -1,0 +1,14 @@
+{
+  "cash": 100000.0,
+  "shares": {},
+  "weights": {
+    "TQQQ": 0.5,
+    "BSV": 0.5
+  },
+  "raw_target": "TQQQ",
+  "nav": 100000.0,
+  "peak_nav": 100000.0,
+  "days_in_position": 1,
+  "last_signal_date": "2026-08-24",
+  "last_fill_date": null
+}

@@ -1,0 +1,24 @@
+{
+  "command": "backtest_B0",
+  "config_hash": "c4e302924dcbc3b36b9cbc0a0dbaf942092c1a27626b41ea7be5b8259ab9f4e8",
+  "git_commit": "unavailable",
+  "executed_at_utc": "20260812T035250Z",
+  "python": "3.9.25 (main, Apr 17 2026, 00:00:00) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]",
+  "platform": "Linux-6.1.170-210.320.amzn2023.x86_64-x86_64-with-glibc2.34",
+  "return_basis": "Yahoo_AdjClose_scaled_Open",
+  "status": {
+    "DATA_TIER": "HISTORICAL_SP500_APPROX",
+    "SURVIVORSHIP_BIAS": "REDUCED_NOT_ELIMINATED",
+    "PIT_VALIDATED": false,
+    "DELISTING_RETURN": "UNAVAILABLE",
+    "SIZE_NEUTRAL": "BLOCKED_BY_PIT_MARKET_CAP",
+    "PIT_FUNDAMENTALS": "BLOCKED",
+    "EARNINGS_SURPRISE": "BLOCKED",
+    "return_basis": "Yahoo_AdjClose_scaled_Open"
+  },
+  "dependencies": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "yfinance": "1.2.0"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "common_start": "2008-06-02",
+  "common_end": "2026-08-10",
+  "cash": "BIL",
+  "bil_start": "2007-05-30",
+  "sgov_inception": "2020-06-01",
+  "hash_check": {
+    "config_hash": "8725aaf1874386e68016e9e7ad290f09b8528a34ecf7857f350acfa8a208b1c2",
+    "matches_known_freeze": true,
+    "prefix_ok": true,
+    "ok": true
+  },
+  "dc_adapter_error": null,
+  "risk_pool": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "XLK",
+    "XLF",
+    "XLI",
+    "XLE",
+    "XLV",
+    "XLP",
+    "XLY",
+    "XLU",
+    "VEA",
+    "VWO",
+    "IEF",
+    "TLT",
+    "GLD"
+  ],
+  "one_way_bps": 5.0,
+  "rules": {
+    "rotation": "12-1 mom + price>10m SMA; top2 EW; residual BIL; next open",
+    "spy_qqq_protect": "70/30 SPY/QQQ; each leg SMA-gated to BIL; next open",
+    "f3": "70% rotation + 30% SPY SMA-gated to BIL; next open"
+  }
+}

@@ -1,0 +1,86 @@
+strategy:
+  name: "Leveraged ETF Momentum Allocator"
+  internal_name: "conditional_leveraged_etf_rotation"
+  source: "QuantConnect Strategy #60"
+  source_class: "ConditionalSectorRotation"
+
+parameters:
+  rsi_period: 10
+  spy_sma_period: 200
+  qqq_sma_period: 20
+  tqqq_sma_period: 20
+
+thresholds:
+  qqq_rsi_overbought: 81
+  spy_rsi_overbought: 80
+  tqqq_rsi_oversold: 30
+  spy_rsi_oversold: 30
+  uvxy_high: 74
+  uvxy_extreme: 84
+  sqqq_rsi_branch_1: 31
+  sqqq_rsi_branch_2: 34
+
+universe:
+  - SPY
+  - QQQ
+  - TQQQ
+  - UVXY
+  - TECL
+  - SPXL
+  - SQQQ
+  - TECS
+  - BSV
+
+target_assets:
+  - TQQQ
+  - UVXY
+  - TECL
+  - SPXL
+  - TECS
+  - BSV
+
+signal_only_assets:
+  - SPY
+  - QQQ
+  - SQQQ
+
+backtest:
+  requested_start: "2012-01-01"
+  end: null  # latest available
+  initial_cash: 100000
+  resolution: daily
+  warmup_bars: 200
+
+execution:
+  target_weight: 1.0
+  liquidate_existing_holdings: true
+
+indicators:
+  rsi:
+    type: Wilder
+  sma:
+    type: simple
+
+source_verified: true
+frozen: true
+
+audit_status:
+  SOURCE_VERIFICATION: PASS
+  LOGIC_REPLICATION: PASS
+  PERFORMANCE_RECONCILIATION: PARTIAL
+  CLASSIFICATION: RESEARCH_CANDIDATE
+
+# Index targets for reconciliation ONLY (website may differ from code start date)
+reconciliation_targets:
+  period: "2016-01 to 2025-12"
+  cagr_pct: 203.45
+  sharpe: 2.67
+  max_drawdown_pct: -54.2
+  calmar: 3.75
+  sortino: 3.43
+  note: "Website index; code SetStartDate=2012-01-01"
+
+reconciliation_tolerance:
+  cagr_pp: 3.0
+  max_drawdown_pp: 3.0
+  sharpe: 0.15

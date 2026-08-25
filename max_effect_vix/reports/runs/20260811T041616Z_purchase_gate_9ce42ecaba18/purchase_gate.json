@@ -1,0 +1,109 @@
+{
+  "status": {
+    "DATA_TIER": "HISTORICAL_SP500_APPROX",
+    "SURVIVORSHIP_BIAS": "REDUCED_NOT_ELIMINATED",
+    "PIT_VALIDATED": false,
+    "DELISTING_RETURN": "UNAVAILABLE",
+    "SIZE_NEUTRAL": "BLOCKED_BY_PIT_MARKET_CAP"
+  },
+  "frozen_parameters": {
+    "top_returns": 5,
+    "signal_lookback_days": 21,
+    "portfolio_decile": 0.1,
+    "max_portfolio_size": 25,
+    "one_way_bps": 5.0
+  },
+  "ff3": {
+    "status": "OK",
+    "n_months": 138,
+    "alpha_monthly": -0.00207549006116614,
+    "alpha_annualized": -0.02490588073399368,
+    "alpha_t_stat": -1.0026679447370936,
+    "MKT_RF": 0.729489816670232,
+    "MKT_RF_t": 15.613326577492883,
+    "SMB": -0.18049478230837368,
+    "SMB_t": -2.316638880655255,
+    "HML": 0.25138140146463234,
+    "HML_t": 4.571438529934991
+  },
+  "periods": [
+    {
+      "period": "P1_2015_2018",
+      "start": "2015-01-01",
+      "end": "2018-12-31",
+      "gross_sharpe": 0.7268912954003729,
+      "net_sharpe": 0.643828444684932,
+      "gross_max_drawdown": -0.16729640473168317,
+      "net_max_drawdown": -0.16957613985682563,
+      "mean_ic": -0.014680636345339636,
+      "one_way_turnover": 38.740000000000016,
+      "annualized_turnover": 10.10698928571429
+    },
+    {
+      "period": "P2_2019_2022",
+      "start": "2019-01-01",
+      "end": "2022-12-31",
+      "gross_sharpe": 0.8238502534393889,
+      "net_sharpe": 0.7743675798078534,
+      "gross_max_drawdown": -0.3306359435102363,
+      "net_max_drawdown": -0.33119619089846064,
+      "mean_ic": 0.010360456879746155,
+      "one_way_turnover": 38.120000000000005,
+      "annualized_turnover": 9.743407977606719
+    },
+    {
+      "period": "P3_2023_2026",
+      "start": "2023-01-01",
+      "end": "2026-12-31",
+      "gross_sharpe": 0.39868652664915916,
+      "net_sharpe": 0.3180512878013193,
+      "gross_max_drawdown": -0.18307513130676123,
+      "net_max_drawdown": -0.187539288714346,
+      "mean_ic": 0.03909055631430909,
+      "one_way_turnover": 37.040000000000006,
+      "annualized_turnover": 10.343165137614681
+    }
+  ],
+  "legs": [
+    {
+      "leg": "long_low_MAX",
+      "gross_cagr": 0.09279584473595892,
+      "net_cagr": 0.08208508590452834,
+      "gross_sharpe": 0.6647747014635251,
+      "net_sharpe": 0.5991724196496808,
+      "market_beta": 0.667086146092912,
+      "note": NaN
+    },
+    {
+      "leg": "short_high_MAX",
+      "gross_cagr": -0.2724223678870603,
+      "net_cagr": -0.26669675704776685,
+      "gross_sharpe": -0.8881243196279386,
+      "net_sharpe": -0.8626022504142127,
+      "market_beta": -1.3989300774326605,
+      "note": "economic short = -1 * long high-MAX book"
+    }
+  ],
+  "leg_driver": "mixed_or_neither",
+  "long_short_net_sharpe": -0.6630359295297512,
+  "decision": "YES \u2014 buy one-month Sharadar only as a falsification budget for PIT membership + size-neutral. Free Sharpe is not proof of independent alpha; paid data is justified because size/delisting/PIT is the binding uncertainty.",
+  "support": [
+    "Full-sample after-cost long-only Sharpe is 0.599 (>0.3).",
+    "All three frozen subperiods have positive net Sharpe: [0.644, 0.774, 0.318].",
+    "FF3: alpha=-0.0021 (t=-1.00), MKT=0.729 (t=15.61), SMB=-0.180 (t=-2.32), HML=0.251 (t=4.57).",
+    "SMB loading is negative and significant (-0.180, t=-2.32); not a small-cap bet.",
+    "Long low-MAX net Sharpe is 0.599.",
+    "Leg attribution (net CAGR): long_low_MAX=0.0821, short_high_MAX=-0.2667; primary driver=mixed_or_neither."
+  ],
+  "oppose": [
+    "Cross-sectional IC is not consistently negative across subperiods: [-0.014680636345339636, 0.010360456879746155, 0.03909055631430909].",
+    "FF3 alpha is not significantly positive (alpha=-0.00207549006116614, t=-1.0026679447370936).",
+    "Short high-MAX net Sharpe is negative (-0.863); short leg does not contribute positively.",
+    "Combined long+short net Sharpe is weak (-0.6630359295297512).",
+    "Return is long-leg dominated (long net CAGR 0.0821 vs short -0.2667); classic MAX short-lottery story is weak on this sample.",
+    "DATA_TIER=HISTORICAL_SP500_APPROX; SURVIVORSHIP_BIAS=REDUCED_NOT_ELIMINATED (reduced, not eliminated).",
+    "PIT_VALIDATED=false; size neutralization remains BLOCKED_BY_PIT_MARKET_CAP.",
+    "DELISTING_RETURN=UNAVAILABLE on Yahoo / index-exit proxy.",
+    "Do not purchase merely because free Sharpe is high."
+  ]
+}

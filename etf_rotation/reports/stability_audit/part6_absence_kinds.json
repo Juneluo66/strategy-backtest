@@ -1,0 +1,29 @@
+{
+  "kinds": {
+    "159985": "not_margin_eligible",
+    "518880": "request_failed"
+  },
+  "notes": {
+    "159985": "commodity futures ETF (\u8c46\u7c95); Eastmoney margin endpoint returned empty history",
+    "518880": "Eastmoney response ended prematurely (see download_errors.csv)"
+  },
+  "reason_counts_mbr": {
+    "observed": 75803,
+    "pit_unavailable": 19260,
+    "request_failed": 3159,
+    "not_margin_eligible": 1609,
+    "structurally_not_applicable": 138
+  },
+  "code_rulings": {
+    "159985": {
+      "kind": "not_margin_eligible",
+      "evidence": "commodity futures ETF (\u8c46\u7c95); Eastmoney margin endpoint returned empty history",
+      "retry_helpful": false
+    },
+    "518880": {
+      "kind": "request_failed",
+      "evidence": "Eastmoney response ended prematurely (see download_errors.csv)",
+      "retry_helpful": "maybe_network_only; gold ETF may still lack margin history after success"
+    }
+  }
+}

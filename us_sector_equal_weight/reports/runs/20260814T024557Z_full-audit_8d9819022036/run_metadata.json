@@ -1,0 +1,18 @@
+{
+  "command": "full-audit",
+  "config_hash": "8d9819022036c3922e4db080ae0355807c786de63c1ca3bb3f1327d688bf5fd6",
+  "git_commit": "unavailable",
+  "executed_at_utc": "20260814T024557Z",
+  "python": "3.9.25 (main, Apr 17 2026, 00:00:00) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]",
+  "platform": "Linux-6.1.170-210.320.amzn2023.x86_64-x86_64-with-glibc2.34",
+  "return_basis": "Yahoo_AdjClose_scaled_Open",
+  "research_track": "us_sector_equal_weight",
+  "relation_to_sector_momentum": "independent_equal_weight_rebalance_not_momentum_retune",
+  "sample_label_discovery": "DISCOVERY_SAMPLE",
+  "ibkr_modified": false,
+  "dependencies": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "yfinance": "1.2.0"
+  }
+}

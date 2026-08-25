@@ -1,0 +1,13 @@
+# Frozen parameters
+
+| parameter             | value                                                                           |
+|:----------------------|:--------------------------------------------------------------------------------|
+| ETF pool              | 49 symbols; 41 A-share / 8 QDII; A_SHARE_ONLY trading                           |
+| Factors               | Read from configs/frozen_v8.yaml; ICIR absolute weights normalized in score     |
+| Frequency / positions | 5 trading days / 2                                                              |
+| Hysteresis            | delta_rank=0.1; min_hold_days=9; max_replace=1                                  |
+| Regime gate           | 510300, 20D, (25, 30, 40) -> (1.0, 0.7, 0.4, 0.1)                               |
+| Costs                 | A-share=0.0002; QDII=0.0005                                                     |
+| Timing                | T close signal; next available session open execution                           |
+| Periods               | IS through 2025-04-30; original OOS from 2025-05-01; fresh OOS after 2026-02-10 |
+| Config hash           | 9db5d767cce65951f3657edca54f4b798840d6ec5f8a1a5f48bd1f0f261b0ed0                |

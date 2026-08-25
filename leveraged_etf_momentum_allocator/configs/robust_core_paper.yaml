@@ -1,0 +1,35 @@
+# Recommended paper exposure wrapper around ABLATION_DROP_SPY_RSI signal tree.
+# Signal rules: ROBUST_CORE_V1 thresholds + drop SPY RSI branches.
+# Exposure: 1.5x portfolio scale (research scaling of 3x ETF returns ≈ 0.5).
+
+strategy:
+  name: "Robust Core Paper 1.5X"
+  internal_name: "robust_core_paper_1_5x"
+  parent: "ABLATION_DROP_SPY_RSI"
+  signal: "robust_core_v1 + drop_spy_rsi"
+  exposure_scale: 0.5
+
+parameters:
+  rsi_period: 10
+  spy_sma_period: 200
+  qqq_sma_period: 20
+  tqqq_sma_period: 20
+
+thresholds:
+  qqq_rsi_overbought: 80
+  spy_rsi_overbought: 80
+  tqqq_rsi_oversold: 30
+  spy_rsi_oversold: 30
+  uvxy_high: 70
+  uvxy_extreme: 80
+  sqqq_rsi_branch_1: 30
+  sqqq_rsi_branch_2: 30
+
+ablations:
+  drop_spy_rsi: true
+
+classification: PAPER_TRADING_CANDIDATE
+notes:
+  - "Chosen for lower neighborhood top-tail (91st pct) vs ORIGINAL 100th"
+  - "1.5X exposure targets MaxDD < 30% while keeping Sharpe ~1.7"
+  - "ORIGINAL remains frozen in configs/original.yaml"

@@ -1,0 +1,34 @@
+# Frozen small-universe ETF trend experiments (price-only; no Sharadar).
+version: etf_trend_sleeves_v1
+return_basis: Yahoo_AdjClose_scaled_Open
+execution: next_session_open
+rebalance: month_end_close_signal
+cash: BIL
+one_way_bps: 5.0
+sma_months: 10
+momentum_skip_months: 1
+momentum_formation_months: 11
+top_k: 2
+
+rotation_pool:
+  us: [SPY, QQQ, IWM]
+  sectors: [XLK, XLF, XLI, XLE, XLV, XLP, XLY, XLU]
+  intl: [VEA, VWO]
+  defensive: [IEF, TLT, GLD]
+  # cash BIL is not in risk pool
+
+spy_qqq_protect:
+  spy_weight: 0.70
+  qqq_weight: 0.30
+
+# F3: 70% rotation sleeve + 30% SPY with SMA protect on the SPY sleeve only
+f3:
+  rotation_weight: 0.70
+  spy_weight: 0.30
+
+benchmarks:
+  - VTI
+  - SPY
+  - frozen_80_20_spy_dc
+
+data_start: "2005-01-01"

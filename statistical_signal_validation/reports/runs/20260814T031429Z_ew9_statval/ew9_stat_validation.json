@@ -1,0 +1,867 @@
+{
+  "meta": {
+    "run_dir": "/home/ec2-user/strategy-backtest/us_sector_equal_weight/reports/runs/20260814T025431Z_full-audit_8d9819022036",
+    "discovery_start": "1998-12-22",
+    "discovery_end": "2026-08-12",
+    "sample_label": "DISCOVERY_SAMPLE"
+  },
+  "n_trials": 36,
+  "trial_summary": {
+    "n_trials_total": 36,
+    "by_project": {
+      "dual_momentum_etf": 7,
+      "us_equity_strategy_research": 12,
+      "multi_asset_etf_trend": 3,
+      "us_sector_momentum": 3,
+      "us_sector_equal_weight": 5,
+      "max_effect_vix": 3,
+      "etf_rotation": 1,
+      "dividend_lowvol_quality": 1,
+      "low_max_defensive": 1
+    },
+    "by_status": {
+      "FROZEN_PASS_PAPER_DEFAULT_SLEEVE_COMPONENT": 1,
+      "FROZEN_PAPER_DEFAULT": 1,
+      "FROZEN_CONSERVATIVE_SHADOW": 1,
+      "TESTED_NOT_DOMINANT": 4,
+      "FAIL_OR_BLOCKED": 1,
+      "RESEARCH_ONLY": 2,
+      "FAIL": 4,
+      "REJECTED_VS_80_20": 2,
+      "TESTED_SECONDARY": 1,
+      "DEFENSIVE_SHADOW_CANDIDATE_NOT_RETURN_PRIMARY": 1,
+      "TESTED_NOT_SELECTED": 1,
+      "PRE_REGISTERED": 2,
+      "MULTI_ASSET_TREND_CANDIDATE": 1,
+      "FAIL_OR_REJECTED": 3,
+      "DISCOVERY_ONLY": 1,
+      "PRE_REGISTERED_SECONDARY": 2,
+      "CONTROL": 1,
+      "EXECUTION_CHECK": 1,
+      "RESEARCH_REJECTED_AS_INDEPENDENT_ALPHA": 3,
+      "RESEARCH_CREDIBILITY_LIMITED": 1,
+      "ASHARE_RESEARCH": 1,
+      "RESEARCH": 1
+    },
+    "ew9_classification": {
+      "overall_hypothesis_source": "sector_momentum_audit_secondary_discovery",
+      "EW9_monthly": "DISCOVERY_ONLY",
+      "EW9_quarterly": "PRE_REGISTERED_SECONDARY",
+      "EW9_annual": "PRE_REGISTERED_SECONDARY",
+      "rules": [
+        "do_not_promote_quarterly_to_primary_because_of_higher_CAGR",
+        "pseudo_oos_0_of_5_must_enter_final_judgment",
+        "fixed_endpoints_7_of_7_all_share_1998_common_start",
+        "french_is_MECHANISM_SUPPORT_not_tradable_OOS"
+      ]
+    }
+  },
+  "results": {
+    "EW9_monthly_vs_SPY": {
+      "label": "EW9_monthly_vs_SPY",
+      "relative_nav": {
+        "final_relative_wealth": 1.139725478945662,
+        "relative_cagr": 0.0047494006404871225,
+        "strategy_cagr": 0.09266217580813385,
+        "benchmark_cagr": 0.08749721583472048,
+        "cagr_edge": 0.005164959973413374,
+        "final_strategy_wealth": 11.54322097195685,
+        "final_benchmark_wealth": 10.128071351563767,
+        "n_obs": 6944,
+        "years": 27.603011635865844,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "arithmetic_active_mean_ann": 0.002390868597545573,
+      "information_ratio": 0.04351348573618935,
+      "tracking_error_ann": 0.054945462472043065,
+      "newey_west": {
+        "mean": 9.48757379978402e-06,
+        "mean_ann": 0.002390868597545573,
+        "se_hac": 3.2753671470813836e-05,
+        "t_stat": 0.2896644368017861,
+        "p_value": 0.7720816152203609,
+        "lags": 10,
+        "n": 6944
+      },
+      "moments": {
+        "skewness": -0.37088926885234796,
+        "excess_kurtosis": 12.18723749705102,
+        "acf1": -0.1453369740509595,
+        "acf5": 0.00847912255216003,
+        "acf21": -0.0003971322966718736,
+        "std": 0.003461238794582338,
+        "mean": 9.48757379978402e-06
+      },
+      "effective_n": {
+        "n": 6944,
+        "rho1": -0.1453369740509595,
+        "n_eff": 9305.679204945594
+      },
+      "bootstrap": {
+        "1m": {
+          "block": 21,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.73,
+          "prob_final_rel_gt_1": 0.73,
+          "cagr_edge_mean": 0.0053004876486104765,
+          "cagr_edge_p05": -0.009716072239547813,
+          "cagr_edge_p50": 0.004975146562730792,
+          "cagr_edge_p95": 0.020520845908897505,
+          "final_rel_mean": 1.1763230965764828,
+          "final_rel_p05": 0.7804491912908738,
+          "final_rel_p50": 1.1354306397960556,
+          "final_rel_p95": 1.6967450041755354
+        },
+        "3m": {
+          "block": 63,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.707,
+          "prob_final_rel_gt_1": 0.707,
+          "cagr_edge_mean": 0.005268835568404092,
+          "cagr_edge_p05": -0.009736716679971025,
+          "cagr_edge_p50": 0.00562570257185957,
+          "cagr_edge_p95": 0.01995173253121893,
+          "final_rel_mean": 1.175335900253212,
+          "final_rel_p05": 0.7815848514380626,
+          "final_rel_p50": 1.149963768283143,
+          "final_rel_p95": 1.6591665426154567
+        },
+        "12m": {
+          "block": 252,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.678,
+          "prob_final_rel_gt_1": 0.678,
+          "cagr_edge_mean": 0.004950894869744824,
+          "cagr_edge_p05": -0.010893842839597156,
+          "cagr_edge_p50": 0.004870025905755249,
+          "cagr_edge_p95": 0.021710803498325538,
+          "final_rel_mean": 1.1755442250586894,
+          "final_rel_p05": 0.7583513755304351,
+          "final_rel_p50": 1.1288530874008351,
+          "final_rel_p95": 1.7567586168762894
+        }
+      },
+      "psr_active": {
+        "psr": 0.5902863052514159,
+        "sr_obs_ann": 0.04351348573618935,
+        "sr_benchmark_ann": 0.0,
+        "z": 0.2282815209042917,
+        "skew": -0.37088926885234796,
+        "kurtosis": 15.18723749705102,
+        "n": 6944
+      },
+      "dsr_active": {
+        "dsr": 0.02754719830522573,
+        "sr_obs_ann": 0.04351348573618935,
+        "sr_expected_max_ann": 0.4091347047875636,
+        "n_trials": 36,
+        "variance_trials": 0.036295549474290645,
+        "n": 6944,
+        "psr_vs_expected_max": 0.02754719830522573
+      },
+      "min_trl_active": {
+        "min_trl_years": 1430.4109571423296,
+        "observed_years": 27.555555555555557,
+        "sufficient": false,
+        "sr_obs_ann": 0.04351348573618935,
+        "sr_benchmark_ann": 0.0,
+        "confidence": 0.95
+      },
+      "psr_absolute": {
+        "psr": 0.9987840873993291,
+        "sr_obs_ann": 0.5817721389120135,
+        "sr_benchmark_ann": 0.0,
+        "z": 3.0316978157239802,
+        "skew": -0.2759330747021257,
+        "kurtosis": 14.265928783693411,
+        "n": 6944
+      },
+      "dsr_absolute": {
+        "dsr": 0.8158436314678231,
+        "sr_obs_ann": 0.5817721389120135,
+        "sr_expected_max_ann": 0.4091347047875636,
+        "n_trials": 36,
+        "variance_trials": 0.036295549474290645,
+        "n": 6944,
+        "psr_vs_expected_max": 0.8158436314678231
+      },
+      "power_years": {
+        "years_needed": 888.254508337146,
+        "information_ratio": 0.09400157430727551,
+        "edge": 0.005164959973413374,
+        "tracking_error_ann": 0.054945462472043065,
+        "alpha": 0.05,
+        "power": 0.8
+      }
+    },
+    "EW9_monthly_vs_no_rebalance": {
+      "label": "EW9_monthly_vs_no_rebalance",
+      "relative_nav": {
+        "final_relative_wealth": 1.1794446637919764,
+        "relative_cagr": 0.005997102955448419,
+        "strategy_cagr": 0.09266217580813385,
+        "benchmark_cagr": 0.08614843183750565,
+        "cagr_edge": 0.006513743970628205,
+        "final_strategy_wealth": 11.54322097195685,
+        "final_benchmark_wealth": 9.786996648782818,
+        "n_obs": 6944,
+        "years": 27.603011635865844,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "arithmetic_active_mean_ann": 0.005564207190685615,
+      "information_ratio": 0.2712447875174861,
+      "tracking_error_ann": 0.020513600433066066,
+      "newey_west": {
+        "mean": 2.2080187264625456e-05,
+        "mean_ann": 0.005564207190685615,
+        "se_hac": 1.3857423354984988e-05,
+        "t_stat": 1.5933833223535354,
+        "p_value": 0.11111974458280804,
+        "lags": 10,
+        "n": 6944
+      },
+      "moments": {
+        "skewness": 0.7044671579703272,
+        "excess_kurtosis": 12.869917781261947,
+        "acf1": -0.01519617607454066,
+        "acf5": -0.016018581285878155,
+        "acf21": -0.020209205156922837,
+        "std": 0.0012922353628676117,
+        "mean": 2.2080187264625456e-05
+      },
+      "effective_n": {
+        "n": 6944,
+        "rho1": -0.01519617607454066,
+        "n_eff": 7158.301049809079
+      },
+      "bootstrap": {
+        "1m": {
+          "block": 21,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.961,
+          "prob_final_rel_gt_1": 0.961,
+          "cagr_edge_mean": 0.006612718999944072,
+          "cagr_edge_p05": 0.000417028975978573,
+          "cagr_edge_p50": 0.006497021373905065,
+          "cagr_edge_p95": 0.012959093095286043,
+          "final_rel_mean": 1.187997743455782,
+          "final_rel_p05": 1.0106587235291178,
+          "final_rel_p50": 1.1784739111033316,
+          "final_rel_p95": 1.395728034935192
+        },
+        "3m": {
+          "block": 63,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.973,
+          "prob_final_rel_gt_1": 0.973,
+          "cagr_edge_mean": 0.00666804717530257,
+          "cagr_edge_p05": 0.0010028261143466778,
+          "cagr_edge_p50": 0.006479431693124926,
+          "cagr_edge_p95": 0.012857732634440854,
+          "final_rel_mean": 1.189058910057133,
+          "final_rel_p05": 1.0258375237725466,
+          "final_rel_p50": 1.178880069456116,
+          "final_rel_p95": 1.3799733999193549
+        },
+        "12m": {
+          "block": 252,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.973,
+          "prob_final_rel_gt_1": 0.973,
+          "cagr_edge_mean": 0.006627971334559144,
+          "cagr_edge_p05": 0.0010864852522578519,
+          "cagr_edge_p50": 0.0066581277968369434,
+          "cagr_edge_p95": 0.01183955521990041,
+          "final_rel_mean": 1.1877625201567443,
+          "final_rel_p05": 1.0278465127413152,
+          "final_rel_p50": 1.1847471381898589,
+          "final_rel_p95": 1.3547555445883461
+        }
+      },
+      "psr_active": {
+        "psr": 0.9238728569439556,
+        "sr_obs_ann": 0.2712447875174861,
+        "sr_benchmark_ann": 0.0,
+        "z": 1.4316141209621032,
+        "skew": 0.7044671579703272,
+        "kurtosis": 15.869917781261947,
+        "n": 6944
+      },
+      "dsr_active": {
+        "dsr": 0.23337569071852565,
+        "sr_obs_ann": 0.2712447875174861,
+        "sr_expected_max_ann": 0.4091347047875636,
+        "n_trials": 36,
+        "variance_trials": 0.036295549474290645,
+        "n": 6944,
+        "psr_vs_expected_max": 0.23337569071852565
+      },
+      "min_trl_active": {
+        "min_trl_years": 36.37446152033248,
+        "observed_years": 27.555555555555557,
+        "sufficient": false,
+        "sr_obs_ann": 0.2712447875174861,
+        "sr_benchmark_ann": 0.0,
+        "confidence": 0.95
+      },
+      "psr_absolute": {
+        "psr": 0.9987840873993291,
+        "sr_obs_ann": 0.5817721389120135,
+        "sr_benchmark_ann": 0.0,
+        "z": 3.0316978157239802,
+        "skew": -0.2759330747021257,
+        "kurtosis": 14.265928783693411,
+        "n": 6944
+      },
+      "dsr_absolute": {
+        "dsr": 0.8158436314678231,
+        "sr_obs_ann": 0.5817721389120135,
+        "sr_expected_max_ann": 0.4091347047875636,
+        "n_trials": 36,
+        "variance_trials": 0.036295549474290645,
+        "n": 6944,
+        "psr_vs_expected_max": 0.8158436314678231
+      },
+      "power_years": {
+        "years_needed": 77.84488658902893,
+        "information_ratio": 0.3175329456124455,
+        "edge": 0.006513743970628205,
+        "tracking_error_ann": 0.020513600433066066,
+        "alpha": 0.05,
+        "power": 0.8
+      }
+    },
+    "EW9_monthly_vs_RSP_same_span": {
+      "label": "EW9_monthly_vs_RSP_same_span",
+      "relative_nav": {
+        "final_relative_wealth": 1.0380357743514665,
+        "relative_cagr": 0.0016107001051044456,
+        "strategy_cagr": 0.11163875305828941,
+        "benchmark_cagr": 0.10985111574950124,
+        "cagr_edge": 0.0017876373087881703,
+        "final_strategy_wealth": 11.644767551064954,
+        "final_benchmark_wealth": 11.218079221152328,
+        "n_obs": 5837,
+        "years": 23.195071868583163,
+        "start": "2003-06-02",
+        "end": "2026-08-12"
+      },
+      "arithmetic_active_mean_ann": -0.0026476750966641666,
+      "information_ratio": -0.06083878438325294,
+      "tracking_error_ann": 0.04351952662277373,
+      "newey_west": {
+        "mean": -1.0506647208984789e-05,
+        "mean_ann": -0.0026476750966641666,
+        "se_hac": 3.2155917048597514e-05,
+        "t_stat": -0.32674071130069166,
+        "p_value": 0.7438757229203958,
+        "lags": 9,
+        "n": 5837
+      },
+      "moments": {
+        "skewness": -0.20295927938743505,
+        "excess_kurtosis": 6.395155291018948,
+        "acf1": -0.06251742039151428,
+        "acf5": -0.03932771989235302,
+        "acf21": -0.0018579415681168829,
+        "std": 0.0027414724909312843,
+        "mean": -1.0506647208984789e-05
+      },
+      "effective_n": {
+        "n": 5837,
+        "rho1": -0.06251742039151428,
+        "n_eff": 6615.498055884229
+      },
+      "bootstrap": {
+        "1m": {
+          "block": 21,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.566,
+          "prob_final_rel_gt_1": 0.566,
+          "cagr_edge_mean": 0.0012139586514343002,
+          "cagr_edge_p05": -0.014706747879083404,
+          "cagr_edge_p50": 0.0016881040001610614,
+          "cagr_edge_p95": 0.015757778222951543,
+          "final_rel_mean": 1.0498502891580905,
+          "final_rel_p05": 0.7457182052939133,
+          "final_rel_p50": 1.0358082562576807,
+          "final_rel_p95": 1.4030026241580118
+        },
+        "3m": {
+          "block": 63,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.612,
+          "prob_final_rel_gt_1": 0.612,
+          "cagr_edge_mean": 0.002266951542581535,
+          "cagr_edge_p05": -0.012855290674185827,
+          "cagr_edge_p50": 0.0022748579627854815,
+          "cagr_edge_p95": 0.016923939460403315,
+          "final_rel_mean": 1.0719541117902998,
+          "final_rel_p05": 0.7729211023242112,
+          "final_rel_p50": 1.0482981310087514,
+          "final_rel_p95": 1.440533511943336
+        },
+        "12m": {
+          "block": 252,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.677,
+          "prob_final_rel_gt_1": 0.677,
+          "cagr_edge_mean": 0.0040087520130076045,
+          "cagr_edge_p05": -0.013569231687948657,
+          "cagr_edge_p50": 0.004436989198532637,
+          "cagr_edge_p95": 0.01884773010140713,
+          "final_rel_mean": 1.1156807524635506,
+          "final_rel_p05": 0.7615648892862351,
+          "final_rel_p50": 1.0969507030480825,
+          "final_rel_p95": 1.5059359953260303
+        }
+      },
+      "psr_active": {
+        "psr": 0.3848042434733049,
+        "sr_obs_ann": -0.06083878438325294,
+        "sr_benchmark_ann": 0.0,
+        "z": -0.2928870508935193,
+        "skew": -0.20295927938743505,
+        "kurtosis": 9.395155291018948,
+        "n": 5837
+      },
+      "dsr_active": {
+        "dsr": 0.007318835662904521,
+        "sr_obs_ann": -0.06083878438325294,
+        "sr_expected_max_ann": 0.4462541429322812,
+        "n_trials": 36,
+        "variance_trials": 0.04318026045236463,
+        "n": 5837,
+        "psr_vs_expected_max": 0.007318835662904521
+      },
+      "min_trl_active": {
+        "min_trl_years": 730.4176739355255,
+        "observed_years": 23.16269841269841,
+        "sufficient": false,
+        "sr_obs_ann": -0.06083878438325294,
+        "sr_benchmark_ann": 0.0,
+        "confidence": 0.95
+      },
+      "psr_absolute": {
+        "psr": 0.9994528048381885,
+        "sr_obs_ann": 0.6863199504342444,
+        "sr_benchmark_ann": 0.0,
+        "z": 3.265064811360626,
+        "skew": -0.36640559397842204,
+        "kurtosis": 16.867792377234743,
+        "n": 5837
+      },
+      "dsr_absolute": {
+        "dsr": 0.8732890502628468,
+        "sr_obs_ann": 0.6863199504342444,
+        "sr_expected_max_ann": 0.4462541429322812,
+        "n_trials": 36,
+        "variance_trials": 0.04318026045236463,
+        "n": 5837,
+        "psr_vs_expected_max": 0.8732890502628468
+      },
+      "power_years": {
+        "years_needed": 4651.758716314566,
+        "information_ratio": 0.04107667172677152,
+        "edge": 0.0017876373087881703,
+        "tracking_error_ann": 0.04351952662277373,
+        "alpha": 0.05,
+        "power": 0.8
+      }
+    },
+    "EW9_quarterly_vs_SPY": {
+      "label": "EW9_quarterly_vs_SPY",
+      "relative_nav": {
+        "final_relative_wealth": 1.1636576459762427,
+        "relative_cagr": 0.005506105014118745,
+        "strategy_cagr": 0.09348508970766822,
+        "benchmark_cagr": 0.08749721583472048,
+        "cagr_edge": 0.0059878738729477465,
+        "final_strategy_wealth": 11.785607667240116,
+        "final_benchmark_wealth": 10.128071351563767,
+        "n_obs": 6944,
+        "years": 27.603011635865844,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "arithmetic_active_mean_ann": 0.0030426711202934365,
+      "information_ratio": 0.05505962224286373,
+      "tracking_error_ann": 0.0552613874986728,
+      "newey_west": {
+        "mean": 1.2074091747196176e-05,
+        "mean_ann": 0.0030426711202934365,
+        "se_hac": 3.2847699187997056e-05,
+        "t_stat": 0.3675780053297673,
+        "p_value": 0.7131991215669653,
+        "lags": 10,
+        "n": 6944
+      },
+      "moments": {
+        "skewness": -0.3839696535819128,
+        "excess_kurtosis": 12.143526189250064,
+        "acf1": -0.14409229134527152,
+        "acf5": 0.007434037918325735,
+        "acf21": 0.001515544344473555,
+        "std": 0.0034811402006157603,
+        "mean": 1.2074091747196176e-05
+      },
+      "effective_n": {
+        "n": 6944,
+        "rho1": -0.14409229134527152,
+        "n_eff": 9282.048509165132
+      },
+      "bootstrap": {
+        "1m": {
+          "block": 21,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.766,
+          "prob_final_rel_gt_1": 0.766,
+          "cagr_edge_mean": 0.006174929239355057,
+          "cagr_edge_p05": -0.008631655460661292,
+          "cagr_edge_p50": 0.005996810662404317,
+          "cagr_edge_p95": 0.0211818647375584,
+          "final_rel_mean": 1.2027825492253121,
+          "final_rel_p05": 0.8036133492995453,
+          "final_rel_p50": 1.1622825026979255,
+          "final_rel_p95": 1.7247781615250268
+        },
+        "3m": {
+          "block": 63,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.745,
+          "prob_final_rel_gt_1": 0.745,
+          "cagr_edge_mean": 0.00615925928377871,
+          "cagr_edge_p05": -0.009086042447840458,
+          "cagr_edge_p50": 0.00635144427702361,
+          "cagr_edge_p95": 0.02068210989739778,
+          "final_rel_mean": 1.2021061404891138,
+          "final_rel_p05": 0.7983215867556679,
+          "final_rel_p50": 1.1722901399291796,
+          "final_rel_p95": 1.6875506404867302
+        },
+        "12m": {
+          "block": 252,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.712,
+          "prob_final_rel_gt_1": 0.712,
+          "cagr_edge_mean": 0.0057668798776542175,
+          "cagr_edge_p05": -0.01014496671198488,
+          "cagr_edge_p50": 0.005621878656838275,
+          "cagr_edge_p95": 0.02238591274374094,
+          "final_rel_mean": 1.2000154301960446,
+          "final_rel_p05": 0.7754695371589873,
+          "final_rel_p50": 1.1532620822829602,
+          "final_rel_p95": 1.7865015248324372
+        }
+      },
+      "psr_active": {
+        "psr": 0.6136356156405804,
+        "sr_obs_ann": 0.05505962224286373,
+        "sr_benchmark_ann": 0.0,
+        "z": 0.28880740027867063,
+        "skew": -0.3839696535819128,
+        "kurtosis": 15.143526189250064,
+        "n": 6944
+      },
+      "dsr_active": {
+        "dsr": 0.03163777048289268,
+        "sr_obs_ann": 0.05505962224286373,
+        "sr_expected_max_ann": 0.4091347047875636,
+        "n_trials": 36,
+        "variance_trials": 0.036295549474290645,
+        "n": 6944,
+        "psr_vs_expected_max": 0.03163777048289268
+      },
+      "min_trl_active": {
+        "min_trl_years": 893.6890403125277,
+        "observed_years": 27.555555555555557,
+        "sufficient": false,
+        "sr_obs_ann": 0.05505962224286373,
+        "sr_benchmark_ann": 0.0,
+        "confidence": 0.95
+      },
+      "psr_absolute": {
+        "psr": 0.998893920863987,
+        "sr_obs_ann": 0.5872247518282396,
+        "sr_benchmark_ann": 0.0,
+        "z": 3.0601639922832384,
+        "skew": -0.27165202075021183,
+        "kurtosis": 14.106121181714046,
+        "n": 6944
+      },
+      "dsr_absolute": {
+        "dsr": 0.8233139609359945,
+        "sr_obs_ann": 0.5872247518282396,
+        "sr_expected_max_ann": 0.4091347047875636,
+        "n_trials": 36,
+        "variance_trials": 0.036295549474290645,
+        "n": 6944,
+        "psr_vs_expected_max": 0.8233139609359945
+      },
+      "power_years": {
+        "years_needed": 668.5069962023098,
+        "information_ratio": 0.10835547466287479,
+        "edge": 0.0059878738729477465,
+        "tracking_error_ann": 0.0552613874986728,
+        "alpha": 0.05,
+        "power": 0.8
+      }
+    },
+    "EW9_annual_vs_SPY": {
+      "label": "EW9_annual_vs_SPY",
+      "relative_nav": {
+        "final_relative_wealth": 1.149546169586101,
+        "relative_cagr": 0.00506175397403319,
+        "strategy_cagr": 0.09300185918872206,
+        "benchmark_cagr": 0.08749721583472048,
+        "cagr_edge": 0.0055046433540015816,
+        "final_strategy_wealth": 11.642685627484852,
+        "final_benchmark_wealth": 10.128071351563767,
+        "n_obs": 6944,
+        "years": 27.603011635865844,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "arithmetic_active_mean_ann": 0.0023372937172495235,
+      "information_ratio": 0.04201205539544261,
+      "tracking_error_ann": 0.05563388163824683,
+      "newey_west": {
+        "mean": 9.27497506845049e-06,
+        "mean_ann": 0.0023372937172495235,
+        "se_hac": 3.33716008146588e-05,
+        "t_stat": 0.2779301814127048,
+        "p_value": 0.7810742305043876,
+        "lags": 10,
+        "n": 6944
+      },
+      "moments": {
+        "skewness": -0.4943297960706087,
+        "excess_kurtosis": 12.607526639375706,
+        "acf1": -0.14244135141068112,
+        "acf5": 0.008742683463782881,
+        "acf21": -0.0012210965512409427,
+        "std": 0.0035046051258096145,
+        "mean": 9.27497506845049e-06
+      },
+      "effective_n": {
+        "n": 6944,
+        "rho1": -0.14244135141068112,
+        "n_eff": 9250.810725593768
+      },
+      "bootstrap": {
+        "1m": {
+          "block": 21,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.734,
+          "prob_final_rel_gt_1": 0.734,
+          "cagr_edge_mean": 0.005715566603784006,
+          "cagr_edge_p05": -0.00925756042980217,
+          "cagr_edge_p50": 0.005299032209796994,
+          "cagr_edge_p95": 0.02093244365489908,
+          "final_rel_mean": 1.1905946040799253,
+          "final_rel_p05": 0.7859029846991253,
+          "final_rel_p50": 1.1455283110307786,
+          "final_rel_p95": 1.707287328116487
+        },
+        "3m": {
+          "block": 63,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.719,
+          "prob_final_rel_gt_1": 0.719,
+          "cagr_edge_mean": 0.0056495093831988325,
+          "cagr_edge_p05": -0.009813292141719221,
+          "cagr_edge_p50": 0.005801223464084071,
+          "cagr_edge_p95": 0.020564625607826237,
+          "final_rel_mean": 1.188812872875853,
+          "final_rel_p05": 0.7815146480174703,
+          "final_rel_p50": 1.1584394140148384,
+          "final_rel_p95": 1.6922378250688692
+        },
+        "12m": {
+          "block": 252,
+          "n_boot": 1000,
+          "prob_cagr_edge_gt_0": 0.698,
+          "prob_final_rel_gt_1": 0.698,
+          "cagr_edge_mean": 0.005553012157141913,
+          "cagr_edge_p05": -0.010738539663028878,
+          "cagr_edge_p50": 0.005061391052354702,
+          "cagr_edge_p95": 0.022780208995474924,
+          "final_rel_mean": 1.196034290924174,
+          "final_rel_p05": 0.7672730496773402,
+          "final_rel_p50": 1.1376763566129293,
+          "final_rel_p95": 1.813746154735509
+        }
+      },
+      "psr_active": {
+        "psr": 0.5872095485000651,
+        "sr_obs_ann": 0.04201205539544261,
+        "sr_benchmark_ann": 0.0,
+        "z": 0.2203727026300232,
+        "skew": -0.4943297960706087,
+        "kurtosis": 15.607526639375706,
+        "n": 6944
+      },
+      "dsr_active": {
+        "dsr": 0.027069144593150917,
+        "sr_obs_ann": 0.04201205539544261,
+        "sr_expected_max_ann": 0.4091347047875636,
+        "n_trials": 36,
+        "variance_trials": 0.036295549474290645,
+        "n": 6944,
+        "psr_vs_expected_max": 0.027069144593150917
+      },
+      "min_trl_active": {
+        "min_trl_years": 1534.9232521914041,
+        "observed_years": 27.555555555555557,
+        "sufficient": false,
+        "sr_obs_ann": 0.04201205539544261,
+        "sr_benchmark_ann": 0.0,
+        "confidence": 0.95
+      },
+      "psr_absolute": {
+        "psr": 0.9989067981095617,
+        "sr_obs_ann": 0.5881246423070448,
+        "sr_benchmark_ann": 0.0,
+        "z": 3.0636694031719345,
+        "skew": -0.2926814167623843,
+        "kurtosis": 14.036590603638649,
+        "n": 6944
+      },
+      "dsr_absolute": {
+        "dsr": 0.8244344533114429,
+        "sr_obs_ann": 0.5881246423070448,
+        "sr_expected_max_ann": 0.4091347047875636,
+        "n_trials": 36,
+        "variance_trials": 0.036295549474290645,
+        "n": 6944,
+        "psr_vs_expected_max": 0.8244344533114429
+      },
+      "power_years": {
+        "years_needed": 801.729800026817,
+        "information_ratio": 0.09894408212957198,
+        "edge": 0.0055046433540015816,
+        "tracking_error_ann": 0.05563388163824683,
+        "alpha": 0.05,
+        "power": 0.8
+      }
+    }
+  },
+  "multiple_testing": {
+    "bonferroni": {
+      "EW9_monthly_vs_SPY": 1.0,
+      "EW9_monthly_vs_no_rebalance": 0.5555987229140402,
+      "EW9_monthly_vs_RSP_same_span": 1.0,
+      "EW9_quarterly_vs_SPY": 1.0,
+      "EW9_annual_vs_SPY": 1.0
+    },
+    "bh_fdr": {
+      "EW9_annual_vs_SPY": 0.7810742305043876,
+      "EW9_monthly_vs_SPY": 0.7810742305043876,
+      "EW9_monthly_vs_RSP_same_span": 0.7810742305043876,
+      "EW9_quarterly_vs_SPY": 0.7810742305043876,
+      "EW9_monthly_vs_no_rebalance": 0.5555987229140402
+    },
+    "m": 5
+  },
+  "discovery_gate": {
+    "label": "DISCOVERY_ONLY",
+    "passed": 9,
+    "total": 13,
+    "checks": {
+      "discovery_cagr_gt_spy": true,
+      "majority_pseudo_oos_gt_spy": false,
+      "majority_fixed_endpoints_gt_spy": true,
+      "rolling_5y_ge_55": false,
+      "rolling_10y_ge_60": false,
+      "cost_10bp_not_flip": true,
+      "cost_20bp_not_flip": true,
+      "delay_not_flip": true,
+      "french_same_direction": true,
+      "not_single_sector_dominated": true,
+      "vs_rsp_incremental": true,
+      "monthly_covers_extra_cost_vs_q_a": false,
+      "maxdd_not_worse_than_spy_by_5pp": true
+    },
+    "notes": {
+      "pseudo_oos_win_frac": "0/5",
+      "endpoint_win_frac": "7/7",
+      "cagr_edge_vs_rsp_same_span": "-0.0027741523356892284",
+      "rsp_exposure_warning": "EW9_close_to_RSP_general_equal_weight_exposure",
+      "prefer_lower_turnover_if_false": "If monthly_covers_extra_cost_vs_q_a is false, prefer quarterly/annual; do not pick frequency by max historical CAGR alone."
+    },
+    "rsp_similarity_note": "EW9_close_to_RSP_general_equal_weight_exposure_not_sector_alpha",
+    "preferred_frequency_hint": "prefer_EW9_quarterly_or_annual_lower_turnover"
+  },
+  "pseudo_oos_win_frac": "0/5",
+  "fixed_endpoints_note": "All 7 fixed endpoints share the 1998 discovery common start; they are not independent start-date validations.",
+  "french_role": "MECHANISM_SUPPORT_not_tradable_OOS",
+  "french_summary": {
+    "pre_etf_monthly_cagr": 0.11656313793925777,
+    "post_etf_monthly_cagr": 0.09923664642746921,
+    "tradable": false
+  },
+  "judgment": {
+    "overall": "FORWARD_EVIDENCE_REQUIRED_NO_EW9_RETURN_CLAIM",
+    "n_trials": 36,
+    "q1_cagr_vs_spy": {
+      "question": "Can EW9 ~0.43pp full-sample CAGR edge vs SPY exclude noise?",
+      "cagr_edge": 0.005164959973413374,
+      "newey_west_p": 0.7720816152203609,
+      "boot12_prob_edge_gt0": 0.678,
+      "dsr_active": 0.02754719830522573,
+      "psr_active": 0.5902863052514159,
+      "answer": "NO",
+      "note": "Discovery sample only; pseudo-OOS 0/5 must override naive full-sample edge."
+    },
+    "q2_rebalance_premium": {
+      "question": "Can ~0.65pp rebalance premium vs no-rebalance exclude noise?",
+      "cagr_edge": 0.006513743970628205,
+      "newey_west_p": 0.11111974458280804,
+      "boot12_prob_edge_gt0": 0.973,
+      "dsr_active": 0.23337569071852565,
+      "answer": "NO"
+    },
+    "q3_vs_rsp": {
+      "question": "Is there independent incremental edge vs RSP?",
+      "cagr_edge_same_span": 0.0017876373087881703,
+      "newey_west_p": 0.7438757229203958,
+      "boot12_prob_edge_gt0": 0.677,
+      "dsr_active": 0.007318835662904521,
+      "answer": "NO_MATERIAL_INDEPENDENT_INCREMENT",
+      "note": "EW9_close_to_RSP_general_equal_weight_exposure_not_sector_alpha"
+    },
+    "q4_sample_size": {
+      "question": "How many additional years for reasonable power vs SPY?",
+      "years_needed_approx": 888.254508337146,
+      "observed_years": 27.603011635865844,
+      "min_trl_years_active": 1430.4109571423296,
+      "min_trl_sufficient": false,
+      "answer": "Need ~888 years at current IR/TE for 80% power"
+    },
+    "q5_forward_only": {
+      "question": "Must we rely on forward evidence only?",
+      "answer": "YES",
+      "reasons": [
+        "EW9 hypothesis is a secondary discovery after sector_momentum audit (DISCOVERY_SAMPLE).",
+        "Pseudo-OOS fixed starts beat SPY in 0/5 cases.",
+        "Fixed-endpoint 7/7 all share 1998 start (not independent starts).",
+        "French support is MECHANISM_SUPPORT only, not tradable OOS.",
+        "DSR uses full monorepo trial budget including failures."
+      ]
+    },
+    "q6_any_stat_return_strategy": {
+      "question": "Any return-type strategy with statistical evidence already?",
+      "answer": "NO_STATISTICAL_RETURN_EDGE_CLEARED",
+      "notes": [
+        "dual_momentum 80/20 remains paper default for process/diversifier thesis, not because DSR clears a return edge vs SPY.",
+        "multi_asset trend candidate label is audit-gate based, not this SSV battery.",
+        "EW9 is DISCOVERY_ONLY and fails noise-exclusion here.",
+        "half_protect is defensive shadow only, not a return primary."
+      ]
+    },
+    "pseudo_oos": "0/5",
+    "gate_label": "DISCOVERY_ONLY"
+  }
+}

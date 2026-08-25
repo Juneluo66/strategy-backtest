@@ -1,0 +1,140 @@
+{
+  "config": {
+    "name": "btc_ma_qqq_shy",
+    "hypothesis_source": "email_claim_external",
+    "sample_label": "DISCOVERY_SAMPLE",
+    "claim": "Since 2014, weekly BTC>50DMA and 20d momentum>0 hold QQQ else SHY beats SPY/QQQ on drawdown and risk-adjusted return.",
+    "data": {
+      "start": "2010-01-01",
+      "audit_start": "2014-01-01",
+      "btc_symbol": "BTC-USD",
+      "risk_on": "QQQ",
+      "risk_off": "SHY",
+      "benchmarks": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    "rules": {
+      "sma_window": 50,
+      "momentum_window": 20,
+      "rebalance": "weekly_last_session",
+      "execution": "next_session_close_to_close",
+      "costs_bps_roundtrip": 0
+    },
+    "labels": {
+      "strategy_id": "BTC50_MOM20_QQQ_SHY",
+      "classification": "EMAIL_CLAIM_AUDIT_DISCOVERY_ONLY"
+    }
+  },
+  "audit_start": "2014-11-05",
+  "audit_start_requested": "2014-01-01",
+  "btc_price_start": "2014-09-17",
+  "first_signal_date": "2014-11-05",
+  "switch_count_audit": 130,
+  "occupancy": {
+    "pct_qqq": 0.4735244519392917,
+    "pct_shy": 0.5264755480607083,
+    "n_sessions": 2965
+  },
+  "stats": {
+    "strategy": {
+      "start": "2014-11-06",
+      "end": "2026-08-21",
+      "n_days": 2964,
+      "cagr": 0.1503282257620684,
+      "ann_return_arith": 0.1477163872488194,
+      "ann_vol": 0.12108585056509127,
+      "sharpe": 1.2199310370241196,
+      "sortino": 1.9336263325913514,
+      "calmar": 0.9256088206376689,
+      "max_drawdown": -0.16241010501445363,
+      "final_nav": 5.212417595865526,
+      "skew": 0.036550820247718024,
+      "kurtosis": 9.45756280724821
+    },
+    "SPY": {
+      "start": "2014-11-06",
+      "end": "2026-08-21",
+      "n_days": 2964,
+      "cagr": 0.13795222159334863,
+      "ann_return_arith": 0.14529477048156514,
+      "ann_vol": 0.17524637270221916,
+      "sharpe": 0.8290886038962522,
+      "sortino": 1.2927530656732455,
+      "calmar": 0.4091441901662728,
+      "max_drawdown": -0.3371726274233199,
+      "final_nav": 4.588350403867545,
+      "skew": -0.3040385396609542,
+      "kurtosis": 14.102519941339324
+    },
+    "QQQ": {
+      "start": "2014-11-06",
+      "end": "2026-08-21",
+      "n_days": 2964,
+      "cagr": 0.1885897165121022,
+      "ann_return_arith": 0.19740908719447697,
+      "ann_vol": 0.21852705309847742,
+      "sharpe": 0.9033622354551964,
+      "sortino": 1.4408776262700536,
+      "calmar": 0.5370062610225598,
+      "max_drawdown": -0.3511871838384013,
+      "final_nav": 7.665946679407179,
+      "skew": -0.18569806831677682,
+      "kurtosis": 7.346835986432707
+    },
+    "SHY": {
+      "start": "2014-11-06",
+      "end": "2026-08-21",
+      "n_days": 2964,
+      "cagr": 0.01564210201438998,
+      "ann_return_arith": 0.01565015352720725,
+      "ann_vol": 0.015025265400385353,
+      "sharpe": 1.0415891573406664,
+      "sortino": 1.8360507343165915,
+      "calmar": 0.2740832888371782,
+      "max_drawdown": -0.05707061558095328,
+      "final_nav": 1.2007906877336392,
+      "skew": 0.7068266446341512,
+      "kurtosis": 9.256946629760174
+    }
+  },
+  "relative": {
+    "vs_SPY": {
+      "final_relative_nav": 1.1360112321569755,
+      "relative_cagr": 0.010875679957275342,
+      "relative_max_dd": -0.35101394420633025,
+      "information_ratio": 0.015046941364901478,
+      "tracking_error": 0.1609374761639548,
+      "active_ann_mean": 0.0024216167672542564
+    },
+    "vs_QQQ": {
+      "final_relative_nav": 0.6799444105015104,
+      "relative_cagr": -0.03219066278169702,
+      "relative_max_dd": -0.5030292618459838,
+      "information_ratio": -0.27064775083017434,
+      "tracking_error": 0.1836065505559613,
+      "active_ann_mean": -0.04969269994565762
+    }
+  },
+  "claim_checks": {
+    "max_dd_better_than_SPY": true,
+    "max_dd_better_than_QQQ": true,
+    "sharpe_better_than_SPY": true,
+    "sharpe_better_than_QQQ": true,
+    "sortino_better_than_SPY": true,
+    "sortino_better_than_QQQ": true,
+    "calmar_better_than_SPY": true,
+    "calmar_better_than_QQQ": true,
+    "email_claim_drawdown_and_risk_adj_vs_both": true
+  },
+  "judgment": "EMAIL_CLAIM_SUPPORTED_ON_THIS_SAMPLE",
+  "notes": [
+    "DISCOVERY_SAMPLE / EMAIL_CLAIM_AUDIT \u2014 not pre-registered OOS.",
+    "Signal: BTC-USD > SMA50 and 20d return > 0; weekly last-session check.",
+    "Execution: next session after week-end decision (no same-bar fill).",
+    "Yahoo BTC-USD history begins ~2014-09-17; SMA50 delays first usable signal.",
+    "Costs: 0 bps in base case (see frozen.yaml).",
+    "No IBKR / production / other-strategy changes."
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "status": "OK",
+  "manifest": {
+    "retrieved_at_utc": "2026-08-11T11:17:52.623219+00:00",
+    "source": "Yahoo Finance via yfinance",
+    "start": "2005-01-01",
+    "requested_symbols": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "VEA",
+      "VWO",
+      "GLD",
+      "IEF",
+      "SGOV",
+      "BIL"
+    ],
+    "completed_symbols": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "VEA",
+      "VWO",
+      "GLD",
+      "IEF",
+      "SGOV",
+      "BIL"
+    ],
+    "failures": {}
+  },
+  "coverage": {
+    "SPY": {
+      "rows": 5434,
+      "start": "2005-01-03",
+      "end": "2026-08-10"
+    },
+    "QQQ": {
+      "rows": 5434,
+      "start": "2005-01-03",
+      "end": "2026-08-10"
+    },
+    "IWM": {
+      "rows": 5434,
+      "start": "2005-01-03",
+      "end": "2026-08-10"
+    },
+    "VEA": {
+      "rows": 4790,
+      "start": "2007-07-26",
+      "end": "2026-08-10"
+    },
+    "VWO": {
+      "rows": 5388,
+      "start": "2005-03-10",
+      "end": "2026-08-10"
+    },
+    "GLD": {
+      "rows": 5434,
+      "start": "2005-01-03",
+      "end": "2026-08-10"
+    },
+    "IEF": {
+      "rows": 5434,
+      "start": "2005-01-03",
+      "end": "2026-08-10"
+    },
+    "SGOV": {
+      "rows": 1556,
+      "start": "2020-06-01",
+      "end": "2026-08-10"
+    },
+    "BIL": {
+      "rows": 4830,
+      "start": "2007-05-30",
+      "end": "2026-08-10"
+    }
+  }
+}

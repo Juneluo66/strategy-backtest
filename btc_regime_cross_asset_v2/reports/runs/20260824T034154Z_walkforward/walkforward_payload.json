@@ -1,0 +1,5018 @@
+{
+  "generated_utc": "2026-08-24T03:41:54.948101+00:00",
+  "blocks": [
+    {
+      "label": "wf_2019_2020",
+      "train": "2014-11-05\u21922018-12-31",
+      "test": "2019-01-01\u21922020-12-31",
+      "combos": [
+        {
+          "on": "QQQ",
+          "off": "SHY",
+          "label": "QQQ/SHY",
+          "strategy": {
+            "cagr": 0.2799086190362543,
+            "sharpe": 1.6991180166934452,
+            "ann_vol": 0.15154565144201446,
+            "max_dd": -0.16241067769763962,
+            "final_nav": 1.6365066231940015,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.43424658577475705,
+            "sharpe": 1.445544187219008,
+            "ann_vol": 0.27668065438960443,
+            "max_dd": -0.28559391969380143,
+            "final_nav": 2.0540188764148835,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.25735713921879655,
+            "sharpe": 1.5483935544404197,
+            "ann_vol": 0.15600292905524443,
+            "max_dd": -0.1619933570638573,
+            "final_nav": 1.5794607922168427,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.5700000000000001,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 2.2551479817457754,
+            "sharpe_diff": 0.1507244622530255,
+            "maxdd_pp": -0.04173206337823032
+          },
+          "cum_active": 0.009510001729107875,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "QQQ",
+          "off": "BIL",
+          "label": "QQQ/BIL",
+          "strategy": {
+            "cagr": 0.2723139144476867,
+            "sharpe": 1.6617421274686863,
+            "ann_vol": 0.15129151449012634,
+            "max_dd": -0.17199601923479613,
+            "final_nav": 1.6171824078118113,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.43424658577475705,
+            "sharpe": 1.445544187219008,
+            "ann_vol": 0.27668065438960443,
+            "max_dd": -0.28559391969380143,
+            "final_nav": 2.0540188764148835,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.2422442063839061,
+            "sharpe": 1.4796445424713158,
+            "ann_vol": 0.15494623440173272,
+            "max_dd": -0.16519256321956655,
+            "final_nav": 1.5417965619795049,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.56,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 3.006970806378062,
+            "sharpe_diff": 0.1820975849973705,
+            "maxdd_pp": -0.6803456015229581
+          },
+          "cum_active": 0.023244246415232483,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "QQQ",
+          "off": "IEF",
+          "label": "QQQ/IEF",
+          "strategy": {
+            "cagr": 0.30529387653613793,
+            "sharpe": 1.749938903589218,
+            "ann_vol": 0.15961775565326433,
+            "max_dd": -0.1413597260855458,
+            "final_nav": 1.7019289007257665,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.43424658577475705,
+            "sharpe": 1.445544187219008,
+            "ann_vol": 0.27668065438960443,
+            "max_dd": -0.28559391969380143,
+            "final_nav": 2.0540188764148835,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.30675604165346115,
+            "sharpe": 1.733265998203652,
+            "ann_vol": 0.16238734815208203,
+            "max_dd": -0.1623248631705404,
+            "final_nav": 1.7057361298352138,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -0.1462165117323222,
+            "sharpe_diff": 0.016672905385566095,
+            "maxdd_pp": 2.096513708499459
+          },
+          "cum_active": -0.034020181106134695,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "QQQ",
+          "off": "TLT",
+          "label": "QQQ/TLT",
+          "strategy": {
+            "cagr": 0.34908446805059334,
+            "sharpe": 1.5401974529007467,
+            "ann_vol": 0.2097155014032643,
+            "max_dd": -0.1916641882281287,
+            "final_nav": 1.8177922309157606,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.43424658577475705,
+            "sharpe": 1.445544187219008,
+            "ann_vol": 0.27668065438960443,
+            "max_dd": -0.28559391969380143,
+            "final_nav": 2.0540188764148835,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.3860544301896862,
+            "sharpe": 1.7169620143398407,
+            "ann_vol": 0.2027464078395924,
+            "max_dd": -0.20290599104548523,
+            "final_nav": 1.9185729219744738,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.78,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -3.696996213909287,
+            "sharpe_diff": -0.17676456143909403,
+            "maxdd_pp": 1.1241802817356539
+          },
+          "cum_active": -0.1103479293558568,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "QQQ",
+          "off": "GLD",
+          "label": "QQQ/GLD",
+          "strategy": {
+            "cagr": 0.41553644138247914,
+            "sharpe": 1.9475859047070039,
+            "ann_vol": 0.1869878840202303,
+            "max_dd": -0.19208959492876176,
+            "final_nav": 2.000885834238425,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.43424658577475705,
+            "sharpe": 1.445544187219008,
+            "ann_vol": 0.27668065438960443,
+            "max_dd": -0.28559391969380143,
+            "final_nav": 2.0540188764148835,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.39729339579719847,
+            "sharpe": 1.5871526460293703,
+            "ann_vol": 0.22749652739168374,
+            "max_dd": -0.24274014012112277,
+            "final_nav": 1.9497482944642792,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.8,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 1.824304558528067,
+            "sharpe_diff": 0.36043325867763354,
+            "maxdd_pp": 5.065054519236101
+          },
+          "cum_active": -0.032184610058064056,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "SHY",
+          "label": "SMH/SHY",
+          "strategy": {
+            "cagr": 0.3354535112486341,
+            "sharpe": 1.4478416519673791,
+            "ann_vol": 0.2151145334776292,
+            "max_dd": -0.17959858417745633,
+            "final_nav": 1.7813186682906856,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.5950006887048636,
+            "sharpe": 1.4793265836953076,
+            "ann_vol": 0.3615192331131319,
+            "max_dd": -0.3362234471218233,
+            "final_nav": 2.5391540854594896,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.3679713485413476,
+            "sharpe": 1.5457690136167874,
+            "ann_vol": 0.219015827537593,
+            "max_dd": -0.20820479951548598,
+            "final_nav": 1.8689391647240388,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.61,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -3.2517837292713514,
+            "sharpe_diff": -0.0979273616494083,
+            "maxdd_pp": 2.860621533802965
+          },
+          "cum_active": -0.08962706648087948,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "BIL",
+          "label": "SMH/BIL",
+          "strategy": {
+            "cagr": 0.3275292151240141,
+            "sharpe": 1.4206893865501342,
+            "ann_vol": 0.21494164793760653,
+            "max_dd": -0.18806501236572848,
+            "final_nav": 1.7602844817359282,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.5950006887048636,
+            "sharpe": 1.4793265836953076,
+            "ann_vol": 0.3615192331131319,
+            "max_dd": -0.3362234471218233,
+            "final_nav": 2.5391540854594896,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.35714927704149724,
+            "sharpe": 1.5004780704363248,
+            "ann_vol": 0.2205436094307517,
+            "max_dd": -0.21225564134359431,
+            "final_nav": 1.8395456402338328,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.61,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -2.962006191748312,
+            "sharpe_diff": -0.07978868388619054,
+            "maxdd_pp": 2.4190628977865836
+          },
+          "cum_active": -0.08600920260199274,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "IEF",
+          "label": "SMH/IEF",
+          "strategy": {
+            "cagr": 0.36194042660959,
+            "sharpe": 1.5090450699241127,
+            "ann_vol": 0.22085434143711577,
+            "max_dd": -0.17959858417745633,
+            "final_nav": 1.8525300661779618,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.5950006887048636,
+            "sharpe": 1.4793265836953076,
+            "ann_vol": 0.3615192331131319,
+            "max_dd": -0.3362234471218233,
+            "final_nav": 2.5391540854594896,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.42075228233624085,
+            "sharpe": 1.670711583992608,
+            "ann_vol": 0.22653120935293897,
+            "max_dd": -0.21861042747836357,
+            "final_nav": 2.0156279223807454,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.65,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -5.881185572665082,
+            "sharpe_diff": -0.16166651406849541,
+            "maxdd_pp": 3.9011843300907234
+          },
+          "cum_active": -0.13040878040402237,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "TLT",
+          "label": "SMH/TLT",
+          "strategy": {
+            "cagr": 0.40763142230088345,
+            "sharpe": 1.4535031952155832,
+            "ann_vol": 0.2593466028363089,
+            "max_dd": -0.193181163069011,
+            "final_nav": 1.9786459706983803,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.5950006887048636,
+            "sharpe": 1.4793265836953076,
+            "ann_vol": 0.3615192331131319,
+            "max_dd": -0.3362234471218233,
+            "final_nav": 2.5391540854594896,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.5018512512467475,
+            "sharpe": 1.7134761102639091,
+            "ann_vol": 0.25805794015904,
+            "max_dd": -0.2553219137452114,
+            "final_nav": 2.2517930490083,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.75,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -9.4219828945864,
+            "sharpe_diff": -0.25997291504832587,
+            "maxdd_pp": 6.21407506762004
+          },
+          "cum_active": -0.19136982897898203,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "GLD",
+          "label": "SMH/GLD",
+          "strategy": {
+            "cagr": 0.4769672481524907,
+            "sharpe": 1.7328162455745815,
+            "ann_vol": 0.2413024480422687,
+            "max_dd": -0.19360577142413882,
+            "final_nav": 2.1779412555574944,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.5950006887048636,
+            "sharpe": 1.4793265836953076,
+            "ann_vol": 0.3615192331131319,
+            "max_dd": -0.3362234471218233,
+            "final_nav": 2.5391540854594896,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.5102706258722431,
+            "sharpe": 1.6292172319220113,
+            "ann_vol": 0.2777341675355658,
+            "max_dd": -0.273006165405525,
+            "final_nav": 2.2770586318217036,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.75,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -3.3303377719752447,
+            "sharpe_diff": 0.10359901365257018,
+            "maxdd_pp": 7.940039398138621
+          },
+          "cum_active": -0.1142961816525706,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "SHY",
+          "label": "SOXX/SHY",
+          "strategy": {
+            "cagr": 0.34360601872728624,
+            "sharpe": 1.4656803949610433,
+            "ann_vol": 0.21689233301750496,
+            "max_dd": -0.1866679594317615,
+            "final_nav": 1.8030887224845453,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.5713387975809943,
+            "sharpe": 1.4096448918880762,
+            "ann_vol": 0.3709570738626076,
+            "max_dd": -0.34253825238639923,
+            "final_nav": 2.4645272878751663,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.3566966143378669,
+            "sharpe": 1.4740006831781647,
+            "ann_vol": 0.22476017150709718,
+            "max_dd": -0.21053890640218254,
+            "final_nav": 1.8383212416214836,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.61,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -1.309059561058068,
+            "sharpe_diff": -0.008320288217121385,
+            "maxdd_pp": 2.3870946970421025
+          },
+          "cum_active": -0.06656416600585713,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "BIL",
+          "label": "SOXX/BIL",
+          "strategy": {
+            "cagr": 0.3356333473631872,
+            "sharpe": 1.4387509048498877,
+            "ann_vol": 0.2167215851681857,
+            "max_dd": -0.19597570152490185,
+            "final_nav": 1.7817974705380786,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.5713387975809943,
+            "sharpe": 1.4096448918880762,
+            "ann_vol": 0.3709570738626076,
+            "max_dd": -0.34253825238639923,
+            "final_nav": 2.4645272878751663,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.34594822834872274,
+            "sharpe": 1.43028318944828,
+            "ann_vol": 0.22629757419159965,
+            "max_dd": -0.21590603039615042,
+            "final_nav": 1.8093676437704411,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.61,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -1.0314880985535568,
+            "sharpe_diff": 0.008467715401607734,
+            "maxdd_pp": 1.993032887124857
+          },
+          "cum_active": -0.06282305517391662,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "IEF",
+          "label": "SOXX/IEF",
+          "strategy": {
+            "cagr": 0.37025462805493436,
+            "sharpe": 1.5262666459190004,
+            "ann_vol": 0.22258378955869643,
+            "max_dd": -0.1816035869379622,
+            "final_nav": 1.87517041720238,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.5713387975809943,
+            "sharpe": 1.4096448918880762,
+            "ann_vol": 0.3709570738626076,
+            "max_dd": -0.34253825238639923,
+            "final_nav": 2.4645272878751663,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.4083278454939636,
+            "sharpe": 1.5959024680940512,
+            "ann_vol": 0.2323084267090469,
+            "max_dd": -0.22086043385121434,
+            "final_nav": 1.9806002950817452,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.65,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -3.807321743902925,
+            "sharpe_diff": -0.06963582217505082,
+            "maxdd_pp": 3.9256846913252152
+          },
+          "cum_active": -0.10814838459942566,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "TLT",
+          "label": "SOXX/TLT",
+          "strategy": {
+            "cagr": 0.4162245523505892,
+            "sharpe": 1.470014176634307,
+            "ann_vol": 0.2608166511546076,
+            "max_dd": -0.19705596445127171,
+            "final_nav": 2.0028276237508953,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.5713387975809943,
+            "sharpe": 1.4096448918880762,
+            "ann_vol": 0.3709570738626076,
+            "max_dd": -0.34253825238639923,
+            "final_nav": 2.4645272878751663,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.48653862689667515,
+            "sharpe": 1.6389188069981675,
+            "ann_vol": 0.2643576135928707,
+            "max_dd": -0.2579200747820962,
+            "final_nav": 2.206202173324066,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.75,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -7.031407454608596,
+            "sharpe_diff": -0.1689046303638606,
+            "maxdd_pp": 6.086411033082451
+          },
+          "cum_active": -0.1702418761356299,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "GLD",
+          "label": "SOXX/GLD",
+          "strategy": {
+            "cagr": 0.4859836507714239,
+            "sharpe": 1.7481077970709051,
+            "ann_vol": 0.24287739096218583,
+            "max_dd": -0.19747853359639833,
+            "final_nav": 2.204558558799492,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.5713387975809943,
+            "sharpe": 1.4096448918880762,
+            "ann_vol": 0.3709570738626076,
+            "max_dd": -0.34253825238639923,
+            "final_nav": 2.4645272878751663,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.49457313174433915,
+            "sharpe": 1.5604186655130552,
+            "ann_vol": 0.284265915686606,
+            "max_dd": -0.27749158282855513,
+            "final_nav": 2.230065598440259,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.75,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -0.8589480972915231,
+            "sharpe_diff": 0.18768913155784994,
+            "maxdd_pp": 8.00130492321568
+          },
+          "cum_active": -0.09000483127653902,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "IWO",
+          "off": "SHY",
+          "label": "IWO/SHY",
+          "strategy": {
+            "cagr": 0.2704138304684842,
+            "sharpe": 1.4877382208481493,
+            "ann_vol": 0.17009016772577787,
+            "max_dd": -0.1432753364798125,
+            "final_nav": 1.6123656839104594,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.31409878543114944,
+            "sharpe": 1.0699013999366025,
+            "ann_vol": 0.2979144348918007,
+            "max_dd": -0.39809100009147524,
+            "final_nav": 1.7249195684305123,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.212157882062308,
+            "sharpe": 1.143374308337799,
+            "ann_vol": 0.1833338643749395,
+            "max_dd": -0.2600284403328307,
+            "final_nav": 1.4681661973484077,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 5.825594840617621,
+            "sharpe_diff": 0.34436391251035037,
+            "maxdd_pp": 11.675310385301819
+          },
+          "cum_active": 0.06106382417912193,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWO",
+          "off": "BIL",
+          "label": "IWO/BIL",
+          "strategy": {
+            "cagr": 0.2628754659289092,
+            "sharpe": 1.4538950186407067,
+            "ann_vol": 0.1698631447180528,
+            "max_dd": -0.15307966216124913,
+            "final_nav": 1.5933265298311872,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.31409878543114944,
+            "sharpe": 1.0699013999366025,
+            "ann_vol": 0.2979144348918007,
+            "max_dd": -0.39809100009147524,
+            "final_nav": 1.7249195684305123,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.202902702825833,
+            "sharpe": 1.0947765717212616,
+            "ann_vol": 0.18468404448901787,
+            "max_dd": -0.26368857944930746,
+            "final_nav": 1.4458775439565195,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 5.99727631030762,
+            "sharpe_diff": 0.35911844691944506,
+            "maxdd_pp": 11.060891728805833
+          },
+          "cum_active": 0.06463586155963696,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWO",
+          "off": "IEF",
+          "label": "IWO/IEF",
+          "strategy": {
+            "cagr": 0.29561077167053695,
+            "sharpe": 1.5501552595955637,
+            "ann_vol": 0.1773222491225821,
+            "max_dd": -0.13514119508739253,
+            "final_nav": 1.6768228842422317,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.31409878543114944,
+            "sharpe": 1.0699013999366025,
+            "ann_vol": 0.2979144348918007,
+            "max_dd": -0.39809100009147524,
+            "final_nav": 1.7249195684305123,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.252512423052315,
+            "sharpe": 1.2548562760364674,
+            "ann_vol": 0.19519666801133057,
+            "max_dd": -0.2812313421134418,
+            "final_nav": 1.5673374662564437,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.68,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 4.309834861822193,
+            "sharpe_diff": 0.29529898355909623,
+            "maxdd_pp": 14.609014702604927
+          },
+          "cum_active": 0.023244283424242562,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWO",
+          "off": "TLT",
+          "label": "IWO/TLT",
+          "strategy": {
+            "cagr": 0.33907650998726746,
+            "sharpe": 1.4253877627693154,
+            "ann_vol": 0.22348934529621511,
+            "max_dd": -0.18580997726792736,
+            "final_nav": 1.7909770556792635,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.31409878543114944,
+            "sharpe": 1.0699013999366025,
+            "ann_vol": 0.2979144348918007,
+            "max_dd": -0.39809100009147524,
+            "final_nav": 1.7249195684305123,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.3000372153564679,
+            "sharpe": 1.241958804052217,
+            "ann_vol": 0.23425747609123646,
+            "max_dd": -0.3362539920248142,
+            "final_nav": 1.6882765127587351,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.8200000000000001,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 3.903929463079958,
+            "sharpe_diff": 0.18342895871709852,
+            "maxdd_pp": 15.044401475688684
+          },
+          "cum_active": -0.01700285814194924,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "IWO",
+          "off": "GLD",
+          "label": "IWO/GLD",
+          "strategy": {
+            "cagr": 0.40503552044093594,
+            "sharpe": 1.7780404122479911,
+            "ann_vol": 0.20231860962789838,
+            "max_dd": -0.18623846489177676,
+            "final_nav": 1.9713697523888007,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.31409878543114944,
+            "sharpe": 1.0699013999366025,
+            "ann_vol": 0.2979144348918007,
+            "max_dd": -0.39809100009147524,
+            "final_nav": 1.7249195684305123,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.30621184871847573,
+            "sharpe": 1.1913462271016921,
+            "ann_vol": 0.2513925710617154,
+            "max_dd": -0.34964643995722533,
+            "final_nav": 1.7043186481158126,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.8300000000000001,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 9.88236717224602,
+            "sharpe_diff": 0.586694185146299,
+            "maxdd_pp": 16.340797506544856
+          },
+          "cum_active": 0.07987413376320585,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWM",
+          "off": "SHY",
+          "label": "IWM/SHY",
+          "strategy": {
+            "cagr": 0.20434802799629792,
+            "sharpe": 1.1277030935077577,
+            "ann_vol": 0.1784635552348806,
+            "max_dd": -0.15620323100364497,
+            "final_nav": 1.449347017988789,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.22385062197076233,
+            "sharpe": 0.819520084262914,
+            "ann_vol": 0.3075694913106281,
+            "max_dd": -0.4107237535179531,
+            "final_nav": 1.4965683103007639,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.1643629140009868,
+            "sharpe": 0.883451411450149,
+            "ann_vol": 0.19546901222860497,
+            "max_dd": -0.275659797327669,
+            "final_nav": 1.3548939967749443,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.64,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 3.998511399531113,
+            "sharpe_diff": 0.2442516820576086,
+            "maxdd_pp": 11.945656632402402
+          },
+          "cum_active": 0.02720855695220803,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWM",
+          "off": "BIL",
+          "label": "IWM/BIL",
+          "strategy": {
+            "cagr": 0.1972016838288959,
+            "sharpe": 1.0949689143439858,
+            "ann_vol": 0.17824016481217272,
+            "max_dd": -0.16585961033348973,
+            "final_nav": 1.4322328227009682,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.22385062197076233,
+            "sharpe": 0.819520084262914,
+            "ann_vol": 0.3075694913106281,
+            "max_dd": -0.4107237535179531,
+            "final_nav": 1.4965683103007639,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.1538564938847058,
+            "sharpe": 0.8425450438543834,
+            "ann_vol": 0.19375426598369921,
+            "max_dd": -0.2760893489349061,
+            "final_nav": 1.33060255697738,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.63,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 4.334518994419012,
+            "sharpe_diff": 0.25242387048960235,
+            "maxdd_pp": 11.022973860141638
+          },
+          "cum_active": 0.03548542878722882,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWM",
+          "off": "IEF",
+          "label": "IWM/IEF",
+          "strategy": {
+            "cagr": 0.22823464330261833,
+            "sharpe": 1.2032853875899936,
+            "ann_vol": 0.18539348954294235,
+            "max_dd": -0.14657695055058262,
+            "final_nav": 1.5072872557530808,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.22385062197076233,
+            "sharpe": 0.819520084262914,
+            "ann_vol": 0.3075694913106281,
+            "max_dd": -0.4107237535179531,
+            "final_nav": 1.4965683103007639,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.19664127120656816,
+            "sharpe": 0.9773086414131595,
+            "ann_vol": 0.20759069872780977,
+            "max_dd": -0.2967098808585572,
+            "final_nav": 1.4308950255276678,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.7000000000000001,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 3.1593372096050176,
+            "sharpe_diff": 0.22597674617683405,
+            "maxdd_pp": 15.01329303079746
+          },
+          "cum_active": -0.00013298364418545816,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "IWM",
+          "off": "TLT",
+          "label": "IWM/TLT",
+          "strategy": {
+            "cagr": 0.2694400166791473,
+            "sharpe": 1.159916408614906,
+            "ann_vol": 0.22998488142240964,
+            "max_dd": -0.2087177581462547,
+            "final_nav": 1.609899838999078,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.22385062197076233,
+            "sharpe": 0.819520084262914,
+            "ann_vol": 0.3075694913106281,
+            "max_dd": -0.4107237535179531,
+            "final_nav": 1.4965683103007639,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.22727258820200236,
+            "sharpe": 0.9396382463549284,
+            "ann_vol": 0.2551743539960695,
+            "max_dd": -0.35917176388900607,
+            "final_nav": 1.5049317589881628,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.86,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 4.216742847714494,
+            "sharpe_diff": 0.22027816225997765,
+            "maxdd_pp": 15.045400574275137
+          },
+          "cum_active": -0.02862834924725355,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "IWM",
+          "off": "GLD",
+          "label": "IWM/GLD",
+          "strategy": {
+            "cagr": 0.3319689362038709,
+            "sharpe": 1.4697712766057989,
+            "ann_vol": 0.20951213890913054,
+            "max_dd": -0.19699857725692616,
+            "final_nav": 1.7720538836130872,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.22385062197076233,
+            "sharpe": 0.819520084262914,
+            "ann_vol": 0.3075694913106281,
+            "max_dd": -0.4107237535179531,
+            "final_nav": 1.4965683103007639,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.23013217962243182,
+            "sharpe": 0.9046207902659988,
+            "ann_vol": 0.2724647815767301,
+            "max_dd": -0.37318191412920343,
+            "final_nav": 1.5119385740040239,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.88,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 10.183675658143908,
+            "sharpe_diff": 0.5651504863398,
+            "maxdd_pp": 17.61833368722773
+          },
+          "cum_active": 0.0739002766587733,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SPY",
+          "off": "SHY",
+          "label": "SPY/SHY",
+          "strategy": {
+            "cagr": 0.16261373708669669,
+            "sharpe": 1.243040837663835,
+            "ann_vol": 0.12737392315578855,
+            "max_dd": -0.1547024743663744,
+            "final_nav": 1.3508345859974746,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.24602626707658826,
+            "sharpe": 0.9982693865984655,
+            "ann_vol": 0.2521297475553273,
+            "max_dd": -0.3371726274233199,
+            "final_nav": 1.5511796067263985,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.15642600406517193,
+            "sharpe": 1.1109146147328501,
+            "ann_vol": 0.1393844394514534,
+            "max_dd": -0.19220469160846276,
+            "final_nav": 1.3365231541048646,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.56,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 0.6187733021524755,
+            "sharpe_diff": 0.13212622293098497,
+            "maxdd_pp": 3.7502217242088354
+          },
+          "cum_active": -0.011611616445530215,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SPY",
+          "off": "BIL",
+          "label": "SPY/BIL",
+          "strategy": {
+            "cagr": 0.1557150352946628,
+            "sharpe": 1.1982798071692131,
+            "ann_vol": 0.1270525662414937,
+            "max_dd": -0.1643760283002279,
+            "final_nav": 1.3348836462850628,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.24602626707658826,
+            "sharpe": 0.9982693865984655,
+            "ann_vol": 0.2521297475553273,
+            "max_dd": -0.3371726274233199,
+            "final_nav": 1.5511796067263985,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.14390510006107426,
+            "sharpe": 1.0371825027418318,
+            "ann_vol": 0.13868598141102625,
+            "max_dd": -0.19551223185126787,
+            "final_nav": 1.3077965818430568,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.55,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 1.180993523358853,
+            "sharpe_diff": 0.16109730442738135,
+            "maxdd_pp": 3.1136203551039965
+          },
+          "cum_active": -0.0008156718992512468,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SPY",
+          "off": "IEF",
+          "label": "SPY/IEF",
+          "strategy": {
+            "cagr": 0.18567260914200734,
+            "sharpe": 1.31558287553331,
+            "ann_vol": 0.13694185679305174,
+            "max_dd": -0.1342404407284471,
+            "final_nav": 1.404836613201096,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.24602626707658826,
+            "sharpe": 0.9982693865984655,
+            "ann_vol": 0.2521297475553273,
+            "max_dd": -0.3371726274233199,
+            "final_nav": 1.5511796067263985,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.20015606936112618,
+            "sharpe": 1.2591086746662294,
+            "ann_vol": 0.1544312871137831,
+            "max_dd": -0.21061284138266045,
+            "final_nav": 1.4392957397927508,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.65,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -1.4483460219118838,
+            "sharpe_diff": 0.05647420086708066,
+            "maxdd_pp": 7.637240065421336
+          },
+          "cum_active": -0.05554196578528947,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SPY",
+          "off": "TLT",
+          "label": "SPY/TLT",
+          "strategy": {
+            "cagr": 0.22545009207527644,
+            "sharpe": 1.1591522674615464,
+            "ann_vol": 0.19310691856276335,
+            "max_dd": -0.18496199467490737,
+            "final_nav": 1.500474596849475,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.24602626707658826,
+            "sharpe": 0.9982693865984655,
+            "ann_vol": 0.2521297475553273,
+            "max_dd": -0.3371726274233199,
+            "final_nav": 1.5511796067263985,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.24413613907309228,
+            "sharpe": 1.1330566789615897,
+            "ann_vol": 0.212879845300138,
+            "max_dd": -0.28736512353453714,
+            "final_nav": 1.546486772196841,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.88,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -1.8686046997815842,
+            "sharpe_diff": 0.026095588499956746,
+            "maxdd_pp": 10.240312885962977
+          },
+          "cum_active": -0.10528223735582753,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SPY",
+          "off": "GLD",
+          "label": "SPY/GLD",
+          "strategy": {
+            "cagr": 0.28581219598105756,
+            "sharpe": 1.5751484884823626,
+            "ann_vol": 0.16824573087934916,
+            "max_dd": -0.18539092857055572,
+            "final_nav": 1.6516069957886526,
+            "n_days": 505
+          },
+          "buyhold_on": {
+            "cagr": 0.24602626707658826,
+            "sharpe": 0.9982693865984655,
+            "ann_vol": 0.2521297475553273,
+            "max_dd": -0.3371726274233199,
+            "final_nav": 1.5511796067263985,
+            "n_days": 505
+          },
+          "vol_matched_static": {
+            "cagr": 0.21853570358523533,
+            "sharpe": 1.376756635635917,
+            "ann_vol": 0.1516409759323131,
+            "max_dd": -0.12818639460572967,
+            "final_nav": 1.483624508256279,
+            "n_days": 505
+          },
+          "vol_matched_w_on": 0.07,
+          "pct_on": 0.5663366336633663,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 6.727649239582223,
+            "sharpe_diff": 0.19839185284644545,
+            "maxdd_pp": -5.720453396482606
+          },
+          "cum_active": 0.09110612657410844,
+          "block": "wf_2019_2020",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        }
+      ]
+    },
+    {
+      "label": "wf_2021_2022",
+      "train": "2014-11-05\u21922020-12-31",
+      "test": "2021-01-01\u21922022-12-31",
+      "combos": [
+        {
+          "on": "QQQ",
+          "off": "SHY",
+          "label": "QQQ/SHY",
+          "strategy": {
+            "cagr": 0.08163426754553549,
+            "sharpe": 0.5778653095688421,
+            "ann_vol": 0.13942038481479826,
+            "max_dd": -0.13266965121937435,
+            "final_nav": 1.1685510400529653,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.06699592609472782,
+            "sharpe": -0.16009388795371243,
+            "ann_vol": 0.26159553693294463,
+            "max_dd": -0.35118727732330146,
+            "final_nav": 0.8714060667848977,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.04014198274604752,
+            "sharpe": -0.22701425145030743,
+            "ann_vol": 0.1484135844830507,
+            "max_dd": -0.2243469962043404,
+            "final_nav": 0.9218959851684656,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.56,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 12.177625029158301,
+            "sharpe_diff": 0.8048795610191495,
+            "maxdd_pp": 9.167734498496605
+          },
+          "cum_active": 0.23302901647647944,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "QQQ",
+          "off": "BIL",
+          "label": "QQQ/BIL",
+          "strategy": {
+            "cagr": 0.1091406123610541,
+            "sharpe": 0.7610703170226322,
+            "ann_vol": 0.13851977163452392,
+            "max_dd": -0.1182603250188915,
+            "final_nav": 1.2282755278874486,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.06699592609472782,
+            "sharpe": -0.16009388795371243,
+            "ann_vol": 0.26159553693294463,
+            "max_dd": -0.35118727732330146,
+            "final_nav": 0.8714060667848977,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.026334802749327202,
+            "sharpe": -0.1397922706082386,
+            "ann_vol": 0.14385828932811554,
+            "max_dd": -0.20087203678899257,
+            "final_nav": 0.9484049746009957,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.55,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 13.54754151103813,
+            "sharpe_diff": 0.9008625876308708,
+            "maxdd_pp": 8.261171177010107
+          },
+          "cum_active": 0.2609889976207471,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "QQQ",
+          "off": "IEF",
+          "label": "QQQ/IEF",
+          "strategy": {
+            "cagr": 0.03510195611349087,
+            "sharpe": 0.25229916675820335,
+            "ann_vol": 0.15510744014563393,
+            "max_dd": -0.21222340234888848,
+            "final_nav": 1.0708795865012162,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.06699592609472782,
+            "sharpe": -0.16009388795371243,
+            "ann_vol": 0.26159553693294463,
+            "max_dd": -0.35118727732330146,
+            "final_nav": 0.8714060667848977,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.07031684617918965,
+            "sharpe": -0.3674478498281718,
+            "ann_vol": 0.1699228199059485,
+            "max_dd": -0.2819888646781519,
+            "final_nav": 0.8652602261815499,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 10.541880229268052,
+            "sharpe_diff": 0.6197470165863752,
+            "maxdd_pp": 6.9765462329263395
+          },
+          "cum_active": 0.19794566494807886,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "QQQ",
+          "off": "TLT",
+          "label": "QQQ/TLT",
+          "strategy": {
+            "cagr": -0.028875180964459957,
+            "sharpe": -0.08114049831568548,
+            "ann_vol": 0.2004350157656075,
+            "max_dd": -0.34782482190248154,
+            "final_nav": 0.9434996026083232,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.06699592609472782,
+            "sharpe": -0.16009388795371243,
+            "ann_vol": 0.26159553693294463,
+            "max_dd": -0.35118727732330146,
+            "final_nav": 0.8714060667848977,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.08755849439588403,
+            "sharpe": -0.3488965880906768,
+            "ann_vol": 0.2127850733989755,
+            "max_dd": -0.3432759846801018,
+            "final_nav": 0.8336990462835966,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.79,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 5.868331343142408,
+            "sharpe_diff": 0.2677560897749913,
+            "maxdd_pp": -0.45488372223797535
+          },
+          "cum_active": 0.07359286523759279,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "QQQ",
+          "off": "GLD",
+          "label": "QQQ/GLD",
+          "strategy": {
+            "cagr": 0.013405614188937154,
+            "sharpe": 0.1231886451520664,
+            "ann_vol": 0.17874477326130292,
+            "max_dd": -0.27015541523030195,
+            "final_nav": 1.0267850241519194,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.06699592609472782,
+            "sharpe": -0.16009388795371243,
+            "ann_vol": 0.26159553693294463,
+            "max_dd": -0.35118727732330146,
+            "final_nav": 0.8714060667848977,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.05048102060408943,
+            "sharpe": -0.17269701932842493,
+            "ann_vol": 0.19673720389879643,
+            "max_dd": -0.2833282119267243,
+            "final_nav": 0.9022898129670247,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.71,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 6.388663479302659,
+            "sharpe_diff": 0.29588566448049136,
+            "maxdd_pp": 1.317279669642235
+          },
+          "cum_active": 0.08496903346070317,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "SHY",
+          "label": "SMH/SHY",
+          "strategy": {
+            "cagr": 0.1985766533383806,
+            "sharpe": 0.9452267881235118,
+            "ann_vol": 0.21617836229386433,
+            "max_dd": -0.21622972067793178,
+            "final_nav": 1.4326729594460414,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.029225400967962,
+            "sharpe": 0.10728277733253304,
+            "ann_vol": 0.3697078869011953,
+            "max_dd": -0.4530263611076941,
+            "final_nav": 0.9428243313584409,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.010961266597051766,
+            "sharpe": 0.0649432966507783,
+            "ann_vol": 0.22311052031414114,
+            "max_dd": -0.3054142042691995,
+            "final_nav": 0.9783599791452036,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.6,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 20.953791993543234,
+            "sharpe_diff": 0.8802834914727335,
+            "maxdd_pp": 8.918448359126774
+          },
+          "cum_active": 0.4045273830908871,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "BIL",
+          "label": "SMH/BIL",
+          "strategy": {
+            "cagr": 0.22905688469178198,
+            "sharpe": 1.0633416697287998,
+            "ann_vol": 0.215541879207898,
+            "max_dd": -0.1949631720629753,
+            "final_nav": 1.5058966833608713,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.029225400967962,
+            "sharpe": 0.10728277733253304,
+            "ann_vol": 0.3697078869011953,
+            "max_dd": -0.4530263611076941,
+            "final_nav": 0.9428243313584409,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": 0.001254719180315167,
+            "sharpe": 0.11897946202191066,
+            "ann_vol": 0.22185983075289903,
+            "max_dd": -0.28965550417928343,
+            "final_nav": 1.0024920835036308,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.6,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 22.78021655114668,
+            "sharpe_diff": 0.9443622077068892,
+            "maxdd_pp": 9.469233211630812
+          },
+          "cum_active": 0.4407267373769539,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SMH",
+          "off": "IEF",
+          "label": "SMH/IEF",
+          "strategy": {
+            "cagr": 0.14701343665620037,
+            "sharpe": 0.7185834703295515,
+            "ann_vol": 0.226702755984146,
+            "max_dd": -0.27584155948757916,
+            "final_nav": 1.312925301348844,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.029225400967962,
+            "sharpe": 0.10728277733253304,
+            "ann_vol": 0.3697078869011953,
+            "max_dd": -0.4530263611076941,
+            "final_nav": 0.9428243313584409,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.03833822926763075,
+            "sharpe": -0.038007771053143756,
+            "ann_vol": 0.2412183514695504,
+            "max_dd": -0.35405922994000505,
+            "final_nav": 0.9253379118637226,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.64,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 18.535166592383113,
+            "sharpe_diff": 0.7565912413826953,
+            "maxdd_pp": 7.82176704524259
+          },
+          "cum_active": 0.3489192759435007,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "TLT",
+          "label": "SMH/TLT",
+          "strategy": {
+            "cagr": 0.07611932286016843,
+            "sharpe": 0.41360070847617864,
+            "ann_vol": 0.25993180369196117,
+            "max_dd": -0.39551169288007404,
+            "final_nav": 1.156754238003808,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.029225400967962,
+            "sharpe": 0.10728277733253304,
+            "ann_vol": 0.3697078869011953,
+            "max_dd": -0.4530263611076941,
+            "final_nav": 0.9428243313584409,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.05815262678407451,
+            "sharpe": -0.06819326900539596,
+            "ann_vol": 0.2822341687231619,
+            "max_dd": -0.4142825950552499,
+            "final_nav": 0.887877126012406,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.75,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 13.427194964424293,
+            "sharpe_diff": 0.4817939774815746,
+            "maxdd_pp": 1.8770902175175852
+          },
+          "cum_active": 0.20362737190040425,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "GLD",
+          "label": "SMH/GLD",
+          "strategy": {
+            "cagr": 0.12297136469723124,
+            "sharpe": 0.5986787399544667,
+            "ann_vol": 0.24352075986326374,
+            "max_dd": -0.3343391643472121,
+            "final_nav": 1.2588642591083776,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.029225400967962,
+            "sharpe": 0.10728277733253304,
+            "ann_vol": 0.3697078869011953,
+            "max_dd": -0.4530263611076941,
+            "final_nav": 0.9428243313584409,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.01679410409524884,
+            "sharpe": 0.08550676189022627,
+            "ann_vol": 0.2670424193559096,
+            "max_dd": -0.3500573492706158,
+            "final_nav": 0.9669404071328105,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.6900000000000001,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 13.976546879248009,
+            "sharpe_diff": 0.5131719780642405,
+            "maxdd_pp": 1.571818492340371
+          },
+          "cum_active": 0.21670855908918485,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "SHY",
+          "label": "SOXX/SHY",
+          "strategy": {
+            "cagr": 0.19642649035765203,
+            "sharpe": 0.9180132415421696,
+            "ann_vol": 0.2175956801566094,
+            "max_dd": -0.22320644351081453,
+            "final_nav": 1.4275759368585965,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.031065010771198054,
+            "sharpe": 0.09658178225756175,
+            "ann_vol": 0.37345029518271067,
+            "max_dd": -0.45753732121905255,
+            "final_nav": 0.9392812560303929,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.011757853698015075,
+            "sharpe": 0.05471906382157703,
+            "ann_vol": 0.22538134895359072,
+            "max_dd": -0.3084830895817946,
+            "final_nav": 0.9767964926452968,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.6,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 20.81843440556671,
+            "sharpe_diff": 0.8632941777205926,
+            "maxdd_pp": 8.527664607098007
+          },
+          "cum_active": 0.3965450505571557,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "BIL",
+          "label": "SOXX/BIL",
+          "strategy": {
+            "cagr": 0.22685204230034128,
+            "sharpe": 1.0352468859716855,
+            "ann_vol": 0.2169654421668695,
+            "max_dd": -0.20183711465359588,
+            "final_nav": 1.500539152628659,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.031065010771198054,
+            "sharpe": 0.09658178225756175,
+            "ann_vol": 0.37345029518271067,
+            "max_dd": -0.45753732121905255,
+            "final_nav": 0.9392812560303929,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": 0.0004580079096987433,
+            "sharpe": 0.10816507365337835,
+            "ann_vol": 0.2241008691571196,
+            "max_dd": -0.29278281245928417,
+            "final_nav": 1.0009093241105562,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.6,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 22.639403439064253,
+            "sharpe_diff": 0.9270818123183071,
+            "maxdd_pp": 9.094569780568829
+          },
+          "cum_active": 0.43250995341850684,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SOXX",
+          "off": "IEF",
+          "label": "SOXX/IEF",
+          "strategy": {
+            "cagr": 0.1449557744924801,
+            "sharpe": 0.694242671839565,
+            "ann_vol": 0.22805136616301283,
+            "max_dd": -0.28228764816922314,
+            "final_nav": 1.308254305171754,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.031065010771198054,
+            "sharpe": 0.09658178225756175,
+            "ann_vol": 0.37345029518271067,
+            "max_dd": -0.45753732121905255,
+            "final_nav": 0.9392812560303929,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.039217437761060125,
+            "sharpe": -0.04706452396955192,
+            "ann_vol": 0.24368332983847865,
+            "max_dd": -0.35715222246570744,
+            "final_nav": 0.9236594090383003,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.64,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 18.417321225354023,
+            "sharpe_diff": 0.741307195809117,
+            "maxdd_pp": 7.48645742964843
+          },
+          "cum_active": 0.34158379150171436,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "TLT",
+          "label": "SOXX/TLT",
+          "strategy": {
+            "cagr": 0.07418883979559854,
+            "sharpe": 0.3941943777766975,
+            "ann_vol": 0.261104979163613,
+            "max_dd": -0.3992763678406247,
+            "final_nav": 1.15263885183675,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.031065010771198054,
+            "sharpe": 0.09658178225756175,
+            "ann_vol": 0.37345029518271067,
+            "max_dd": -0.45753732121905255,
+            "final_nav": 0.9392812560303929,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.06055287846645019,
+            "sharpe": -0.08614821472517913,
+            "ann_vol": 0.28164261407866126,
+            "max_dd": -0.4161442151829199,
+            "final_nav": 0.8833914128829264,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.74,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 13.474171826204874,
+            "sharpe_diff": 0.48034259250187666,
+            "maxdd_pp": 1.6867847342295184
+          },
+          "cum_active": 0.2049364720581015,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "GLD",
+          "label": "SOXX/GLD",
+          "strategy": {
+            "cagr": 0.12095683233498011,
+            "sharpe": 0.5768913341569957,
+            "ann_vol": 0.2447754541283787,
+            "max_dd": -0.34210012866455175,
+            "final_nav": 1.2543855959767165,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.031065010771198054,
+            "sharpe": 0.09658178225756175,
+            "ann_vol": 0.37345029518271067,
+            "max_dd": -0.45753732121905255,
+            "final_nav": 0.9392812560303929,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.01762101941949723,
+            "sharpe": 0.0744840297118965,
+            "ann_vol": 0.2664543041814183,
+            "max_dd": -0.3499749394085907,
+            "final_nav": 0.9653268507716555,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.68,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 13.857785175447734,
+            "sharpe_diff": 0.5024073044450992,
+            "maxdd_pp": 0.7874810744038951
+          },
+          "cum_active": 0.21302052194252408,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWO",
+          "off": "SHY",
+          "label": "IWO/SHY",
+          "strategy": {
+            "cagr": 0.03796314631032138,
+            "sharpe": 0.26696247196594375,
+            "ann_vol": 0.15728726538975307,
+            "max_dd": -0.14496933397309608,
+            "final_nav": 1.0767631819413748,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.12487467047246337,
+            "sharpe": -0.3488393717198784,
+            "ann_vol": 0.2850060552192904,
+            "max_dd": -0.42013234313737624,
+            "final_nav": 0.7673841501835902,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.07677291283482934,
+            "sharpe": -0.3997259463104247,
+            "ann_vol": 0.17252130170281874,
+            "max_dd": -0.28145099579161703,
+            "final_nav": 0.8533741167355098,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.6,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 11.473605914515073,
+            "sharpe_diff": 0.6666884182763684,
+            "maxdd_pp": 13.648166181852094
+          },
+          "cum_active": 0.2186179866499549,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWO",
+          "off": "BIL",
+          "label": "IWO/BIL",
+          "strategy": {
+            "cagr": 0.0643589189525855,
+            "sharpe": 0.4270987495937161,
+            "ann_vol": 0.15651387394924532,
+            "max_dd": -0.14563688649288753,
+            "final_nav": 1.131796404587401,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.12487467047246337,
+            "sharpe": -0.3488393717198784,
+            "ann_vol": 0.2850060552192904,
+            "max_dd": -0.42013234313737624,
+            "final_nav": 0.7673841501835902,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.06400470707511985,
+            "sharpe": -0.33295071273263455,
+            "ann_vol": 0.16817752525673282,
+            "max_dd": -0.26511192827994623,
+            "final_nav": 0.8769602240902398,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.59,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 12.836362602770535,
+            "sharpe_diff": 0.7600494623263506,
+            "maxdd_pp": 11.94750417870587
+          },
+          "cum_active": 0.24787981239411128,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWO",
+          "off": "IEF",
+          "label": "IWO/IEF",
+          "strategy": {
+            "cagr": -0.006690417124477266,
+            "sharpe": 0.00325184635876746,
+            "ann_vol": 0.1713092167595275,
+            "max_dd": -0.20481960902222374,
+            "final_nav": 0.986763668435783,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.12487467047246337,
+            "sharpe": -0.3488393717198784,
+            "ann_vol": 0.2850060552192904,
+            "max_dd": -0.42013234313737624,
+            "final_nav": 0.7673841501835902,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.10621925580086611,
+            "sharpe": -0.5147715525169326,
+            "ann_vol": 0.19079676475110918,
+            "max_dd": -0.32521269966753286,
+            "final_nav": 0.8001959707374943,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.65,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 9.952883867638885,
+            "sharpe_diff": 0.5180233988757,
+            "maxdd_pp": 12.039309064530912
+          },
+          "cum_active": 0.1848274372966212,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWO",
+          "off": "TLT",
+          "label": "IWO/TLT",
+          "strategy": {
+            "cagr": -0.06808446914914723,
+            "sharpe": -0.2572464228787782,
+            "ann_vol": 0.21318004386391137,
+            "max_dd": -0.3126968305791106,
+            "final_nav": 0.8693891832220817,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.12487467047246337,
+            "sharpe": -0.3488393717198784,
+            "ann_vol": 0.2850060552192904,
+            "max_dd": -0.42013234313737624,
+            "final_nav": 0.7673841501835902,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.13098630831923896,
+            "sharpe": -0.5119220214210598,
+            "ann_vol": 0.23193418419265868,
+            "max_dd": -0.3791660655651945,
+            "final_nav": 0.7567830320165008,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.8,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 6.290183917009173,
+            "sharpe_diff": 0.2546755985422816,
+            "maxdd_pp": 6.646923498608393
+          },
+          "cum_active": 0.07971056297598289,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWO",
+          "off": "GLD",
+          "label": "IWO/GLD",
+          "strategy": {
+            "cagr": -0.02751076648206363,
+            "sharpe": -0.08580644148437665,
+            "ann_vol": 0.19295847632767774,
+            "max_dd": -0.23809750147446862,
+            "final_nav": 0.9461326650528321,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.12487467047246337,
+            "sharpe": -0.3488393717198784,
+            "ann_vol": 0.2850060552192904,
+            "max_dd": -0.42013234313737624,
+            "final_nav": 0.7673841501835902,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.09375846623058048,
+            "sharpe": -0.35122092004779354,
+            "ann_vol": 0.21788654200969343,
+            "max_dd": -0.3187240337180167,
+            "final_nav": 0.8224921332184775,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.73,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 6.624769974851685,
+            "sharpe_diff": 0.2654144785634169,
+            "maxdd_pp": 8.06265322435481
+          },
+          "cum_active": 0.0883147010251073,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWM",
+          "off": "SHY",
+          "label": "IWM/SHY",
+          "strategy": {
+            "cagr": 0.07133811192519346,
+            "sharpe": 0.5061989113911686,
+            "ann_vol": 0.14226769071311252,
+            "max_dd": -0.11959888337307512,
+            "final_nav": 1.1465750055171617,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.03967587116533955,
+            "sharpe": -0.059905665318176045,
+            "ann_vol": 0.25215234227954625,
+            "max_dd": -0.3191164556668017,
+            "final_nav": 0.9227848105529352,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.02614439520091849,
+            "sharpe": -0.11776701043894505,
+            "ann_vol": 0.15530661250576258,
+            "max_dd": -0.2161928409210151,
+            "final_nav": 0.9487731526932058,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.61,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 9.748250712611195,
+            "sharpe_diff": 0.6239659218301137,
+            "maxdd_pp": 9.659395754793998
+          },
+          "cum_active": 0.17528720702680456,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWM",
+          "off": "BIL",
+          "label": "IWM/BIL",
+          "strategy": {
+            "cagr": 0.098582621834713,
+            "sharpe": 0.6851405016885141,
+            "ann_vol": 0.14139119291145572,
+            "max_dd": -0.09765215087988688,
+            "final_nav": 1.2051763011569543,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.03967587116533955,
+            "sharpe": -0.059905665318176045,
+            "ann_vol": 0.25215234227954625,
+            "max_dd": -0.3191164556668017,
+            "final_nav": 0.9227848105529352,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.013928525904331024,
+            "sharpe": -0.04272530065093837,
+            "ann_vol": 0.15130197411923707,
+            "max_dd": -0.20104926863684958,
+            "final_nav": 0.9725423435499961,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.6,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 11.251114773904403,
+            "sharpe_diff": 0.7278658023394525,
+            "maxdd_pp": 10.33971177569627
+          },
+          "cum_active": 0.20619859253364825,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWM",
+          "off": "IEF",
+          "label": "IWM/IEF",
+          "strategy": {
+            "cagr": 0.025248744965463477,
+            "sharpe": 0.19397744882172746,
+            "ann_vol": 0.1576627820729348,
+            "max_dd": -0.19186587974053293,
+            "final_nav": 1.0507403833598814,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.03967587116533955,
+            "sharpe": -0.059905665318176045,
+            "ann_vol": 0.25215234227954625,
+            "max_dd": -0.3191164556668017,
+            "final_nav": 0.9227848105529352,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.05185937241650884,
+            "sharpe": -0.24871947579245604,
+            "ann_vol": 0.17128782140147836,
+            "max_dd": -0.2605596894561292,
+            "final_nav": 0.8996918097577825,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.66,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 7.710811738197232,
+            "sharpe_diff": 0.44269692461418353,
+            "maxdd_pp": 6.869380971559624
+          },
+          "cum_active": 0.13160756047701905,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWM",
+          "off": "TLT",
+          "label": "IWM/TLT",
+          "strategy": {
+            "cagr": -0.03811938907027168,
+            "sharpe": -0.12259223591017507,
+            "ann_vol": 0.20240964316380175,
+            "max_dd": -0.2979944070377848,
+            "final_nav": 0.9257559361866142,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.03967587116533955,
+            "sharpe": -0.059905665318176045,
+            "ann_vol": 0.25215234227954625,
+            "max_dd": -0.3191164556668017,
+            "final_nav": 0.9227848105529352,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.06230760304329419,
+            "sharpe": -0.22802450073586408,
+            "ann_vol": 0.20902150785951448,
+            "max_dd": -0.30685667966809327,
+            "final_nav": 0.8801192274979422,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.8200000000000001,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 2.418821397302251,
+            "sharpe_diff": 0.10543226482568901,
+            "maxdd_pp": 0.8862272630308476
+          },
+          "cum_active": 0.00010349984693913683,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWM",
+          "off": "GLD",
+          "label": "IWM/GLD",
+          "strategy": {
+            "cagr": 0.003758932104893198,
+            "sharpe": 0.07442869722205936,
+            "ann_vol": 0.1809634359149283,
+            "max_dd": -0.2190693984672396,
+            "final_nav": 1.007475073299803,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": -0.03967587116533955,
+            "sharpe": -0.059905665318176045,
+            "ann_vol": 0.25215234227954625,
+            "max_dd": -0.3191164556668017,
+            "final_nav": 0.9227848105529352,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.03209580403468126,
+            "sharpe": -0.0759774559313543,
+            "ann_vol": 0.1971696809277749,
+            "max_dd": -0.2612838657994042,
+            "final_nav": 0.9372988492341703,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.74,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 3.585473613957446,
+            "sharpe_diff": 0.15040615315341366,
+            "maxdd_pp": 4.22144673321646
+          },
+          "cum_active": 0.029131690824638623,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "SPY",
+          "off": "SHY",
+          "label": "SPY/SHY",
+          "strategy": {
+            "cagr": 0.08206068363233321,
+            "sharpe": 0.801358860180737,
+            "ann_vol": 0.09489390574481261,
+            "max_dd": -0.08660171962279473,
+            "final_nav": 1.1694656436813966,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": 0.03362862472754813,
+            "sharpe": 0.23094334422277912,
+            "ann_vol": 0.19465565205222915,
+            "max_dd": -0.2449638707150863,
+            "final_nav": 1.0678561475907686,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": 0.01106673755028198,
+            "sharpe": 0.12230524871708924,
+            "ann_vol": 0.10537919534234333,
+            "max_dd": -0.15183440454941466,
+            "final_nav": 1.0220865437921824,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.53,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 7.099394608205123,
+            "sharpe_diff": 0.6790536114636477,
+            "maxdd_pp": 6.523268492661993
+          },
+          "cum_active": 0.1233539186719601,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "SPY",
+          "off": "BIL",
+          "label": "SPY/BIL",
+          "strategy": {
+            "cagr": 0.10957787236087335,
+            "sharpe": 1.0783441334765127,
+            "ann_vol": 0.09357045834806157,
+            "max_dd": -0.06821048098517657,
+            "final_nav": 1.2292368767853699,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": 0.03362862472754813,
+            "sharpe": 0.23094334422277912,
+            "ann_vol": 0.19465565205222915,
+            "max_dd": -0.2449638707150863,
+            "final_nav": 1.0678561475907686,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": 0.025395860070156928,
+            "sharpe": 0.2617855719210636,
+            "ann_vol": 0.101208213782346,
+            "max_dd": -0.1284444694048773,
+            "final_nav": 1.0510396800495032,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.52,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 8.418201229071641,
+            "sharpe_diff": 0.8165585615554491,
+            "maxdd_pp": 6.0233988419700735
+          },
+          "cum_active": 0.14874600827364648,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SPY",
+          "off": "IEF",
+          "label": "SPY/IEF",
+          "strategy": {
+            "cagr": 0.035510027620474505,
+            "sharpe": 0.29653226137020244,
+            "ann_vol": 0.11672033950492162,
+            "max_dd": -0.1715328014906229,
+            "final_nav": 1.0717177444608226,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": 0.03362862472754813,
+            "sharpe": 0.23094334422277912,
+            "ann_vol": 0.19465565205222915,
+            "max_dd": -0.2449638707150863,
+            "final_nav": 1.0678561475907686,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.01389900856834203,
+            "sharpe": -0.07888576138775545,
+            "ann_vol": 0.12689065436727529,
+            "max_dd": -0.21090876377540224,
+            "final_nav": 0.9726001307253757,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.61,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 4.940903618881654,
+            "sharpe_diff": 0.3754180227579579,
+            "maxdd_pp": 3.9375962284779353
+          },
+          "cum_active": 0.07886643749389699,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "SPY",
+          "off": "TLT",
+          "label": "SPY/TLT",
+          "strategy": {
+            "cagr": -0.02849233136589413,
+            "sharpe": -0.12053375342194249,
+            "ann_vol": 0.17244571047099688,
+            "max_dd": -0.309600934595323,
+            "final_nav": 0.9442380625731779,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": 0.03362862472754813,
+            "sharpe": 0.23094334422277912,
+            "ann_vol": 0.19465565205222915,
+            "max_dd": -0.2449638707150863,
+            "final_nav": 1.0678561475907686,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": -0.0016122877939959146,
+            "sharpe": 0.03843688002788952,
+            "ann_vol": 0.16665241916689133,
+            "max_dd": -0.25254122997018236,
+            "final_nav": 0.9968022436029853,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.84,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -2.6880043571898216,
+            "sharpe_diff": -0.158970633449832,
+            "maxdd_pp": -5.705970462514065
+          },
+          "cum_active": -0.08682032844662635,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SPY",
+          "off": "GLD",
+          "label": "SPY/GLD",
+          "strategy": {
+            "cagr": 0.013805132278652765,
+            "sharpe": 0.11928994129572298,
+            "ann_vol": 0.14667787217069742,
+            "max_dd": -0.22882685965950955,
+            "final_nav": 1.0275886701002084,
+            "n_days": 503
+          },
+          "buyhold_on": {
+            "cagr": 0.03362862472754813,
+            "sharpe": 0.23094334422277912,
+            "ann_vol": 0.19465565205222915,
+            "max_dd": -0.2449638707150863,
+            "final_nav": 1.0678561475907686,
+            "n_days": 503
+          },
+          "vol_matched_static": {
+            "cagr": 0.019880289473471757,
+            "sharpe": 0.18972578409615873,
+            "ann_vol": 0.15529669516348824,
+            "max_dd": -0.20277384701668877,
+            "final_nav": 1.0398475232679254,
+            "n_days": 503
+          },
+          "vol_matched_w_on": 0.74,
+          "pct_on": 0.37773359840954274,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -0.6075157194818992,
+            "sharpe_diff": -0.07043584280043574,
+            "maxdd_pp": -2.6053012642820783
+          },
+          "cum_active": -0.043499523431899334,
+          "block": "wf_2021_2022",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": false,
+          "pass_both": false
+        }
+      ]
+    },
+    {
+      "label": "wf_2023_2024",
+      "train": "2014-11-05\u21922022-12-31",
+      "test": "2023-01-01\u21922024-12-31",
+      "combos": [
+        {
+          "on": "QQQ",
+          "off": "SHY",
+          "label": "QQQ/SHY",
+          "strategy": {
+            "cagr": 0.2309153427773607,
+            "sharpe": 1.6620750853692328,
+            "ann_vol": 0.13048922960870157,
+            "max_dd": -0.0861600185342909,
+            "final_nav": 1.5129995251553285,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.4008592678698055,
+            "sharpe": 1.9526008782373816,
+            "ann_vol": 0.17931589965861824,
+            "max_dd": -0.13557745684749678,
+            "final_nav": 1.9578841906199935,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.23013414621129313,
+            "sharpe": 2.117335494299491,
+            "ann_vol": 0.09945580459862392,
+            "max_dd": -0.07050136459713263,
+            "final_nav": 1.5110862598477788,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.55,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 0.07811965660675657,
+            "sharpe_diff": -0.4552604089302581,
+            "maxdd_pp": -1.5658653937158262
+          },
+          "cum_active": 0.004332010883564719,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "QQQ",
+          "off": "BIL",
+          "label": "QQQ/BIL",
+          "strategy": {
+            "cagr": 0.23182298387591294,
+            "sharpe": 1.6771314015477523,
+            "ann_vol": 0.12945243020789918,
+            "max_dd": -0.08511164145958106,
+            "final_nav": 1.5152239867238022,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.4008592678698055,
+            "sharpe": 1.9526008782373816,
+            "ann_vol": 0.17931589965861824,
+            "max_dd": -0.13557745684749678,
+            "final_nav": 1.9578841906199935,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.23225021522800082,
+            "sharpe": 2.188018621250427,
+            "ann_vol": 0.0968507465497213,
+            "max_dd": -0.07310994908274138,
+            "final_nav": 1.516271615924103,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.54,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -0.042723135208788676,
+            "sharpe_diff": -0.5108872197026748,
+            "maxdd_pp": -1.2001692376839679
+          },
+          "cum_active": 0.002270924281299047,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "QQQ",
+          "off": "IEF",
+          "label": "QQQ/IEF",
+          "strategy": {
+            "cagr": 0.21548075273931033,
+            "sharpe": 1.4863123072312014,
+            "ann_vol": 0.1406927240610599,
+            "max_dd": -0.09087746391505469,
+            "final_nav": 1.47542148465619,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.4008592678698055,
+            "sharpe": 1.9526008782373816,
+            "ann_vol": 0.17931589965861824,
+            "max_dd": -0.13557745684749678,
+            "final_nav": 1.9578841906199935,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.2349718134771308,
+            "sharpe": 1.8996640818886923,
+            "ann_vol": 0.11439798818703871,
+            "max_dd": -0.0905934811564757,
+            "final_nav": 1.5229538137431413,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.6,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -1.9491060737820476,
+            "sharpe_diff": -0.41335177465749084,
+            "maxdd_pp": -0.028398275857899336
+          },
+          "cum_active": -0.025758408613987482,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "QQQ",
+          "off": "TLT",
+          "label": "QQQ/TLT",
+          "strategy": {
+            "cagr": 0.1725484596710518,
+            "sharpe": 1.0797814796842566,
+            "ann_vol": 0.16964347131816074,
+            "max_dd": -0.1688816082194985,
+            "final_nav": 1.373372751380233,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.4008592678698055,
+            "sharpe": 1.9526008782373816,
+            "ann_vol": 0.17931589965861824,
+            "max_dd": -0.13557745684749678,
+            "final_nav": 1.9578841906199935,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.29591845856133836,
+            "sharpe": 1.8294181671228855,
+            "ann_vol": 0.14748338400935312,
+            "max_dd": -0.12051816535398552,
+            "final_nav": 1.6764275892099758,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.78,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -12.336999889028654,
+            "sharpe_diff": -0.7496366874386289,
+            "maxdd_pp": -4.836344286551297
+          },
+          "cum_active": -0.1734661615405092,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "QQQ",
+          "off": "GLD",
+          "label": "QQQ/GLD",
+          "strategy": {
+            "cagr": 0.341234434727993,
+            "sharpe": 1.9491296430244511,
+            "ann_vol": 0.1594502919783068,
+            "max_dd": -0.11313011121116989,
+            "final_nav": 1.7952984990605894,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.4008592678698055,
+            "sharpe": 1.9526008782373816,
+            "ann_vol": 0.17931589965861824,
+            "max_dd": -0.13557745684749678,
+            "final_nav": 1.9578841906199935,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.3364386966864714,
+            "sharpe": 2.207786786415291,
+            "ann_vol": 0.13520094509157643,
+            "max_dd": -0.0957188559509915,
+            "final_nav": 1.7825265620541677,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.68,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 0.4795738041521558,
+            "sharpe_diff": -0.25865714339084,
+            "maxdd_pp": -1.7411255260178393
+          },
+          "cum_active": 0.012327588146194612,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SMH",
+          "off": "SHY",
+          "label": "SMH/SHY",
+          "strategy": {
+            "cagr": 0.2916643689424543,
+            "sharpe": 1.2777800644516728,
+            "ann_vol": 0.21961113444558583,
+            "max_dd": -0.18683700939861714,
+            "final_nav": 1.665476775687667,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.5613291623432128,
+            "sharpe": 1.563795749193783,
+            "ann_vol": 0.31430430963763,
+            "max_dd": -0.24816010281254297,
+            "final_nav": 2.4303260696255435,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.34313830852993465,
+            "sharpe": 1.6488630499826749,
+            "ann_vol": 0.18856156467876736,
+            "max_dd": -0.14958788811681512,
+            "final_nav": 1.800381466245252,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.6,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -5.147393958748037,
+            "sharpe_diff": -0.37108298553100205,
+            "maxdd_pp": -3.7249121281802022
+          },
+          "cum_active": -0.08320854775678044,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "BIL",
+          "label": "SMH/BIL",
+          "strategy": {
+            "cagr": 0.2926168046023627,
+            "sharpe": 1.2823980309611533,
+            "ann_vol": 0.21899641220002877,
+            "max_dd": -0.18590413115446136,
+            "final_nav": 1.667925414315183,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.5613291623432128,
+            "sharpe": 1.563795749193783,
+            "ann_vol": 0.31430430963763,
+            "max_dd": -0.24816010281254297,
+            "final_nav": 2.4303260696255435,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.34330382342662236,
+            "sharpe": 1.6733630077216648,
+            "ann_vol": 0.18546288860042168,
+            "max_dd": -0.1503988880660796,
+            "final_nav": 1.8008236966663933,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.59,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -5.068701882425963,
+            "sharpe_diff": -0.39096497676051145,
+            "maxdd_pp": -3.5505243088381766
+          },
+          "cum_active": -0.08115788157149484,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "IEF",
+          "label": "SMH/IEF",
+          "strategy": {
+            "cagr": 0.275468039829845,
+            "sharpe": 1.2081787714828012,
+            "ann_vol": 0.22583177741114469,
+            "max_dd": -0.1872972823933019,
+            "final_nav": 1.6241116908435485,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.5613291623432128,
+            "sharpe": 1.563795749193783,
+            "ann_vol": 0.31430430963763,
+            "max_dd": -0.24816010281254297,
+            "final_nav": 2.4303260696255435,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.34010436269544964,
+            "sharpe": 1.5777157806055333,
+            "ann_vol": 0.19750781988578328,
+            "max_dd": -0.14984997720242,
+            "final_nav": 1.7922848164745817,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -6.463632286560461,
+            "sharpe_diff": -0.36953700912273213,
+            "maxdd_pp": -3.7447305190881908
+          },
+          "cum_active": -0.10074350958320322,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "TLT",
+          "label": "SMH/TLT",
+          "strategy": {
+            "cagr": 0.23041692111672307,
+            "sharpe": 1.0080248247231751,
+            "ann_vol": 0.2449440772761141,
+            "max_dd": -0.18730326477290238,
+            "final_nav": 1.511778677889029,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.5613291623432128,
+            "sharpe": 1.563795749193783,
+            "ann_vol": 0.31430430963763,
+            "max_dd": -0.24816010281254297,
+            "final_nav": 2.4303260696255435,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.3870178181802395,
+            "sharpe": 1.5112785088957787,
+            "ann_vol": 0.23473994305729096,
+            "max_dd": -0.1766933724286932,
+            "final_nav": 1.9195153166479617,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.73,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -15.660089706351643,
+            "sharpe_diff": -0.5032536841726036,
+            "maxdd_pp": -1.060989234420917
+          },
+          "cum_active": -0.22492429590030527,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "GLD",
+          "label": "SMH/GLD",
+          "strategy": {
+            "cagr": 0.40742800867839457,
+            "sharpe": 1.5745299788367182,
+            "ann_vol": 0.23786217334842988,
+            "max_dd": -0.17046835785461611,
+            "final_nav": 1.9762253099883693,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.5613291623432128,
+            "sharpe": 1.563795749193783,
+            "ann_vol": 0.31430430963763,
+            "max_dd": -0.24816010281254297,
+            "final_nav": 2.4303260696255435,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.44132528678404315,
+            "sharpe": 1.7828996181203056,
+            "ann_vol": 0.2179456704578094,
+            "max_dd": -0.16752806992572333,
+            "final_nav": 2.07222708251301,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.66,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -3.3897278105648576,
+            "sharpe_diff": -0.20836963928358743,
+            "maxdd_pp": -0.2940287928892782
+          },
+          "cum_active": -0.05712705229206094,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "SHY",
+          "label": "SOXX/SHY",
+          "strategy": {
+            "cagr": 0.19161556072467456,
+            "sharpe": 0.8953404676631034,
+            "ann_vol": 0.2245396003525642,
+            "max_dd": -0.18804797612205515,
+            "final_nav": 1.4182448264103553,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.3820120610345985,
+            "sharpe": 1.1643918621709768,
+            "ann_vol": 0.3170459444894082,
+            "max_dd": -0.24935029727622826,
+            "final_nav": 1.9057323899715675,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.24512428519011698,
+            "sharpe": 1.2510964058972986,
+            "ann_vol": 0.1872082053231958,
+            "max_dd": -0.14787537187665734,
+            "final_nav": 1.548009822740578,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.59,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -5.350872446544241,
+            "sharpe_diff": -0.35575593823419527,
+            "maxdd_pp": -4.017260424539781
+          },
+          "cum_active": -0.08825174788588419,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "BIL",
+          "label": "SOXX/BIL",
+          "strategy": {
+            "cagr": 0.1924942233093374,
+            "sharpe": 0.8987513334872956,
+            "ann_vol": 0.2239387264932326,
+            "max_dd": -0.187116487125226,
+            "final_nav": 1.4203299765102582,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.3820120610345985,
+            "sharpe": 1.1643918621709768,
+            "ann_vol": 0.3170459444894082,
+            "max_dd": -0.24935029727622826,
+            "final_nav": 1.9057323899715675,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.2502685615803626,
+            "sharpe": 1.273117387768672,
+            "ann_vol": 0.1870722560494889,
+            "max_dd": -0.1512509435072612,
+            "final_nav": 1.5607835178868492,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.59,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -5.777433827102518,
+            "sharpe_diff": -0.37436605428137626,
+            "maxdd_pp": -3.586554361796479
+          },
+          "cum_active": -0.09468082172614989,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "IEF",
+          "label": "SOXX/IEF",
+          "strategy": {
+            "cagr": 0.17667375520517492,
+            "sharpe": 0.8380565272659217,
+            "ann_vol": 0.2306166879783919,
+            "max_dd": -0.18850756367570665,
+            "final_nav": 1.383020187777985,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.3820120610345985,
+            "sharpe": 1.1643918621709768,
+            "ann_vol": 0.3170459444894082,
+            "max_dd": -0.24935029727622826,
+            "final_nav": 1.9057323899715675,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.24258435673599488,
+            "sharpe": 1.1803255655069127,
+            "ann_vol": 0.19974077932651343,
+            "max_dd": -0.15076080946439252,
+            "final_nav": 1.5417222431618163,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -6.591060153081996,
+            "sharpe_diff": -0.342269038240991,
+            "maxdd_pp": -3.7746754211314126
+          },
+          "cum_active": -0.10717381682961302,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "TLT",
+          "label": "SOXX/TLT",
+          "strategy": {
+            "cagr": 0.13511217359201777,
+            "sharpe": 0.6711371850496024,
+            "ann_vol": 0.24932960883881444,
+            "max_dd": -0.19806789206351338,
+            "final_nav": 1.2873624657469775,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.3820120610345985,
+            "sharpe": 1.1643918621709768,
+            "ann_vol": 0.3170459444894082,
+            "max_dd": -0.24935029727622826,
+            "final_nav": 1.9057323899715675,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.2645984396881109,
+            "sharpe": 1.1148326758271596,
+            "ann_vol": 0.23465974036715542,
+            "max_dd": -0.17499850572149278,
+            "final_nav": 1.59664165501768,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.72,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -12.948626609609315,
+            "sharpe_diff": -0.4436954907775572,
+            "maxdd_pp": -2.3069386342020604
+          },
+          "cum_active": -0.20255608743186826,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "GLD",
+          "label": "SOXX/GLD",
+          "strategy": {
+            "cagr": 0.29841246384619646,
+            "sharpe": 1.216058606100566,
+            "ann_vol": 0.24254240918248404,
+            "max_dd": -0.17798127129377272,
+            "final_nav": 1.6828642480198783,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.3820120610345985,
+            "sharpe": 1.1643918621709768,
+            "ann_vol": 0.3170459444894082,
+            "max_dd": -0.24935029727622826,
+            "final_nav": 1.9057323899715675,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.3299582501836831,
+            "sharpe": 1.398401403547129,
+            "ann_vol": 0.22012958147014422,
+            "max_dd": -0.1723436438294389,
+            "final_nav": 1.7653401179106343,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.66,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -3.1545786337486614,
+            "sharpe_diff": -0.182342797446563,
+            "maxdd_pp": -0.5637627464333828
+          },
+          "cum_active": -0.054603193860413124,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "IWO",
+          "off": "SHY",
+          "label": "IWO/SHY",
+          "strategy": {
+            "cagr": 0.14335701860500483,
+            "sharpe": 0.9372465579038421,
+            "ann_vol": 0.15654794971982824,
+            "max_dd": -0.10381818007899246,
+            "final_nav": 1.3060671040059506,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.17337912560374447,
+            "sharpe": 0.8584712122516562,
+            "ann_vol": 0.20590584477281854,
+            "max_dd": -0.19506700767589347,
+            "final_nav": 1.3753126450831905,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.12121107565419753,
+            "sharpe": 0.993246321302663,
+            "ann_vol": 0.12014259192168047,
+            "max_dd": -0.11476077123089867,
+            "final_nav": 1.2561302281615025,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.58,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 2.2145942950807296,
+            "sharpe_diff": -0.055999763398820845,
+            "maxdd_pp": 1.0942591151906211
+          },
+          "cum_active": 0.04507676933199489,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWO",
+          "off": "BIL",
+          "label": "IWO/BIL",
+          "strategy": {
+            "cagr": 0.14420009674721235,
+            "sharpe": 0.9438910843179608,
+            "ann_vol": 0.15568519263500047,
+            "max_dd": -0.10972300299855708,
+            "final_nav": 1.3079873267359667,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.17337912560374447,
+            "sharpe": 0.8584712122516562,
+            "ann_vol": 0.20590584477281854,
+            "max_dd": -0.19506700767589347,
+            "final_nav": 1.3753126450831905,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.12603054393533797,
+            "sharpe": 1.0333975738815953,
+            "ann_vol": 0.11938962043934338,
+            "max_dd": -0.11260436696308318,
+            "final_nav": 1.2669150650013163,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.58,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 1.8169552811874379,
+            "sharpe_diff": -0.0895064895636345,
+            "maxdd_pp": 0.2881363964526096
+          },
+          "cum_active": 0.03728275900178479,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWO",
+          "off": "IEF",
+          "label": "IWO/IEF",
+          "strategy": {
+            "cagr": 0.12902033253406908,
+            "sharpe": 0.8414541862829679,
+            "ann_vol": 0.16513609315299452,
+            "max_dd": -0.1377891867832518,
+            "final_nav": 1.2736285990937337,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.17337912560374447,
+            "sharpe": 0.8584712122516562,
+            "ann_vol": 0.20590584477281854,
+            "max_dd": -0.19506700767589347,
+            "final_nav": 1.3753126450831905,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.1147360212068329,
+            "sharpe": 0.8672287620020653,
+            "ann_vol": 0.13430162530401496,
+            "max_dd": -0.1441589447075846,
+            "final_nav": 1.2417129058483098,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 1.4284311327236177,
+            "sharpe_diff": -0.02577457571909747,
+            "maxdd_pp": 0.6369757924332808
+          },
+          "cum_active": 0.033723845930259344,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWO",
+          "off": "TLT",
+          "label": "IWO/TLT",
+          "strategy": {
+            "cagr": 0.08914192912279684,
+            "sharpe": 0.5936874284830713,
+            "ann_vol": 0.1903678646988306,
+            "max_dd": -0.21116751241338994,
+            "final_nav": 1.185537035731531,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.17337912560374447,
+            "sharpe": 0.8584712122516562,
+            "ann_vol": 0.20590584477281854,
+            "max_dd": -0.19506700767589347,
+            "final_nav": 1.3753126450831905,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.1292311118416798,
+            "sharpe": 0.7958184491660448,
+            "ann_vol": 0.1691109708116919,
+            "max_dd": -0.18567474726354394,
+            "final_nav": 1.274102568628918,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.78,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -4.008918271888295,
+            "sharpe_diff": -0.2021310206829735,
+            "maxdd_pp": -2.5492765149845997
+          },
+          "cum_active": -0.059840121385387746,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "IWO",
+          "off": "GLD",
+          "label": "IWO/GLD",
+          "strategy": {
+            "cagr": 0.2458288163675415,
+            "sharpe": 1.3254985665832244,
+            "ann_vol": 0.18153955525147505,
+            "max_dd": -0.15015506330537132,
+            "final_nav": 1.5497561450018094,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.17337912560374447,
+            "sharpe": 0.8584712122516562,
+            "ann_vol": 0.20590584477281854,
+            "max_dd": -0.19506700767589347,
+            "final_nav": 1.3753126450831905,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.18551885886194763,
+            "sharpe": 1.1697605291910211,
+            "ann_vol": 0.15429184821803577,
+            "max_dd": -0.13258729470908137,
+            "final_nav": 1.4038188125665525,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.6900000000000001,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 6.030995750559387,
+            "sharpe_diff": 0.15573803739220327,
+            "maxdd_pp": -1.7567768596289945
+          },
+          "cum_active": 0.11158277143108775,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWM",
+          "off": "SHY",
+          "label": "IWM/SHY",
+          "strategy": {
+            "cagr": 0.11744690187562057,
+            "sharpe": 0.7981599380448698,
+            "ann_vol": 0.15470848078653218,
+            "max_dd": -0.11444801795936876,
+            "final_nav": 1.2477388465410488,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.1444163266101608,
+            "sharpe": 0.7498206749327648,
+            "ann_vol": 0.20399296205562367,
+            "max_dd": -0.17985365236629547,
+            "final_nav": 1.3084800455402519,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.10598492786788327,
+            "sharpe": 0.881283802023774,
+            "ann_vol": 0.12102008687425722,
+            "max_dd": -0.10700550641325879,
+            "final_nav": 1.2223595504086189,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.59,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 1.1461974007737297,
+            "sharpe_diff": -0.08312386397890414,
+            "maxdd_pp": -0.7442511546109976
+          },
+          "cum_active": 0.023450395677462987,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWM",
+          "off": "BIL",
+          "label": "IWM/BIL",
+          "strategy": {
+            "cagr": 0.11827087465290465,
+            "sharpe": 0.8041571341261782,
+            "ann_vol": 0.15383554339875094,
+            "max_dd": -0.12028280228971955,
+            "final_nav": 1.2495733131522204,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.1444163266101608,
+            "sharpe": 0.7498206749327648,
+            "ann_vol": 0.20399296205562367,
+            "max_dd": -0.17985365236629547,
+            "final_nav": 1.3084800455402519,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.11062025101659168,
+            "sharpe": 0.9191742504819594,
+            "ann_vol": 0.12032807852829136,
+            "max_dd": -0.10487821564342126,
+            "final_nav": 1.232591864124557,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.59,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 0.765062363631297,
+            "sharpe_diff": -0.11501711635578127,
+            "maxdd_pp": -1.540458664629829
+          },
+          "cum_active": 0.01604383541507093,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWM",
+          "off": "IEF",
+          "label": "IWM/IEF",
+          "strategy": {
+            "cagr": 0.10343510575906101,
+            "sharpe": 0.7082030104533431,
+            "ann_vol": 0.1633889430005554,
+            "max_dd": -0.13329157518706358,
+            "final_nav": 1.2167490278873654,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.1444163266101608,
+            "sharpe": 0.7498206749327648,
+            "ann_vol": 0.20399296205562367,
+            "max_dd": -0.17985365236629547,
+            "final_nav": 1.3084800455402519,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.10008187959665382,
+            "sharpe": 0.763896039245863,
+            "ann_vol": 0.13667788799135563,
+            "max_dd": -0.1368370788375589,
+            "final_nav": 1.2093903068314584,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.64,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 0.3353226162407186,
+            "sharpe_diff": -0.055693028792519916,
+            "maxdd_pp": 0.35455036504953297
+          },
+          "cum_active": 0.01091010435338724,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": true,
+          "pass_both": false
+        },
+        {
+          "on": "IWM",
+          "off": "TLT",
+          "label": "IWM/TLT",
+          "strategy": {
+            "cagr": 0.06446040440283651,
+            "sharpe": 0.47540952401776315,
+            "ann_vol": 0.18884159433307707,
+            "max_dd": -0.20478045658801547,
+            "final_nav": 1.1325915865718128,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.1444163266101608,
+            "sharpe": 0.7498206749327648,
+            "ann_vol": 0.20399296205562367,
+            "max_dd": -0.17985365236629547,
+            "final_nav": 1.3084800455402519,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.11250116784561803,
+            "sharpe": 0.7028215838313797,
+            "ann_vol": 0.1722355525402477,
+            "max_dd": -0.17587477702572607,
+            "final_nav": 1.2367560445496677,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.81,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -4.804076344278152,
+            "sharpe_diff": -0.22741205981361656,
+            "maxdd_pp": -2.89056795622894
+          },
+          "cum_active": -0.07871420885212943,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "IWM",
+          "off": "GLD",
+          "label": "IWM/GLD",
+          "strategy": {
+            "cagr": 0.21759654111873372,
+            "sharpe": 1.2076874485389422,
+            "ann_vol": 0.18000394468350572,
+            "max_dd": -0.14327399902493398,
+            "final_nav": 1.480544865461716,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.1444163266101608,
+            "sharpe": 0.7498206749327648,
+            "ann_vol": 0.20399296205562367,
+            "max_dd": -0.17985365236629547,
+            "final_nav": 1.3084800455402519,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.1634727336247388,
+            "sharpe": 1.0392421461068153,
+            "ann_vol": 0.15682975941606367,
+            "max_dd": -0.1271800609222452,
+            "final_nav": 1.3522666674806492,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.72,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 5.412380749399492,
+            "sharpe_diff": 0.16844530243212685,
+            "maxdd_pp": -1.6093938102688776
+          },
+          "cum_active": 0.09836675731936739,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SPY",
+          "off": "SHY",
+          "label": "SPY/SHY",
+          "strategy": {
+            "cagr": 0.18232474264785603,
+            "sharpe": 1.8571177819941913,
+            "ann_vol": 0.09281162005601393,
+            "max_dd": -0.05876433827513716,
+            "final_nav": 1.396290233492773,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.2589371542775918,
+            "sharpe": 1.8466450149325673,
+            "ann_vol": 0.12811014893403433,
+            "max_dd": -0.09974314636021298,
+            "final_nav": 1.5824267332174446,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.15111495847887957,
+            "sharpe": 2.1076289760928155,
+            "ann_vol": 0.06748223983877263,
+            "max_dd": -0.04936186859466285,
+            "final_nav": 1.3237898910809356,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.52,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 3.120978416897646,
+            "sharpe_diff": -0.2505111940986242,
+            "maxdd_pp": -0.9402469680474312
+          },
+          "cum_active": 0.05734243921166304,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SPY",
+          "off": "BIL",
+          "label": "SPY/BIL",
+          "strategy": {
+            "cagr": 0.18319655445405258,
+            "sharpe": 1.8893329550368279,
+            "ann_vol": 0.09134861475225597,
+            "max_dd": -0.05876433827513705,
+            "final_nav": 1.3983431052294768,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.2589371542775918,
+            "sharpe": 1.8466450149325673,
+            "ann_vol": 0.12811014893403433,
+            "max_dd": -0.09974314636021298,
+            "final_nav": 1.5824267332174446,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.15463420308493037,
+            "sharpe": 2.2186987164776455,
+            "ann_vol": 0.06534552054844722,
+            "max_dd": -0.04559231146425757,
+            "final_nav": 1.331868745751665,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.51,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 2.856235136912222,
+            "sharpe_diff": -0.32936576144081764,
+            "maxdd_pp": -1.3172026810879478
+          },
+          "cum_active": 0.05219456577609782,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SPY",
+          "off": "IEF",
+          "label": "SPY/IEF",
+          "strategy": {
+            "cagr": 0.16749943577221216,
+            "sharpe": 1.5430230677400523,
+            "ann_vol": 0.10666887831493461,
+            "max_dd": -0.08947556178895466,
+            "final_nav": 1.3616108763149475,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.2589371542775918,
+            "sharpe": 1.8466450149325673,
+            "ann_vol": 0.12811014893403433,
+            "max_dd": -0.09974314636021298,
+            "final_nav": 1.5824267332174446,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.1536900282761926,
+            "sharpe": 1.743178149809641,
+            "ann_vol": 0.0843275360929749,
+            "max_dd": -0.0822581638583112,
+            "final_nav": 1.329698873403779,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.59,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 1.3809407496019555,
+            "sharpe_diff": -0.20015508206958876,
+            "maxdd_pp": -0.7217397930643465
+          },
+          "cum_active": 0.029714728388559708,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SPY",
+          "off": "TLT",
+          "label": "SPY/TLT",
+          "strategy": {
+            "cagr": 0.1262619025404943,
+            "sharpe": 0.9719013647104415,
+            "ann_vol": 0.14266580545451904,
+            "max_dd": -0.1675999915020242,
+            "final_nav": 1.2674339468153142,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.2589371542775918,
+            "sharpe": 1.8466450149325673,
+            "ann_vol": 0.12811014893403433,
+            "max_dd": -0.09974314636021298,
+            "final_nav": 1.5824267332174446,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.21232174714320418,
+            "sharpe": 1.7445024342819488,
+            "ann_vol": 0.11398186360442089,
+            "max_dd": -0.10673638039050282,
+            "final_nav": 1.4677884241665449,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.85,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -8.605984460270989,
+            "sharpe_diff": -0.7726010695715073,
+            "maxdd_pp": -6.086361111152138
+          },
+          "cum_active": -0.1258389822213548,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": false,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SPY",
+          "off": "GLD",
+          "label": "SPY/GLD",
+          "strategy": {
+            "cagr": 0.28828896899779854,
+            "sharpe": 2.039536492194113,
+            "ann_vol": 0.1305534390990164,
+            "max_dd": -0.1189829694371618,
+            "final_nav": 1.656813316041978,
+            "n_days": 502
+          },
+          "buyhold_on": {
+            "cagr": 0.2589371542775918,
+            "sharpe": 1.8466450149325673,
+            "ann_vol": 0.12811014893403433,
+            "max_dd": -0.09974314636021298,
+            "final_nav": 1.5824267332174446,
+            "n_days": 502
+          },
+          "vol_matched_static": {
+            "cagr": 0.24390875463292905,
+            "sharpe": 2.1119090014654343,
+            "ann_vol": 0.1059068263670373,
+            "max_dd": -0.07467562290739171,
+            "final_nav": 1.5449991922383188,
+            "n_days": 502
+          },
+          "vol_matched_w_on": 0.73,
+          "pct_on": 0.5199203187250996,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 4.43802143648695,
+            "sharpe_diff": -0.07237250927132122,
+            "maxdd_pp": -4.430734652977009
+          },
+          "cum_active": 0.07910677139816369,
+          "block": "wf_2023_2024",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        }
+      ]
+    },
+    {
+      "label": "wf_2025_2026",
+      "train": "2014-11-05\u21922024-12-31",
+      "test": "2025-01-01\u21922026-08-06",
+      "combos": [
+        {
+          "on": "QQQ",
+          "off": "SHY",
+          "label": "QQQ/SHY",
+          "strategy": {
+            "cagr": 0.2557460295102585,
+            "sharpe": 2.0876194234952146,
+            "ann_vol": 0.11258403250080923,
+            "max_dd": -0.0666318633884091,
+            "final_nav": 1.4365549907400512,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.24169491489719963,
+            "sharpe": 1.0552078849557414,
+            "ann_vol": 0.22978326966880933,
+            "max_dd": -0.22768308447040186,
+            "final_nav": 1.4110704211009295,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.15618582328048158,
+            "sharpe": 1.1720087044550604,
+            "ann_vol": 0.13105375443878844,
+            "max_dd": -0.1302887108014763,
+            "final_nav": 1.2596721246347147,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.5700000000000001,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 9.95602062297769,
+            "sharpe_diff": 0.9156107190401541,
+            "maxdd_pp": 6.365684741306721
+          },
+          "cum_active": 0.12370376629670643,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "QQQ",
+          "off": "BIL",
+          "label": "QQQ/BIL",
+          "strategy": {
+            "cagr": 0.24906982547602485,
+            "sharpe": 2.050929134665476,
+            "ann_vol": 0.11210053323866083,
+            "max_dd": -0.06663186338840921,
+            "final_nav": 1.4244252090824916,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.24169491489719963,
+            "sharpe": 1.0552078849557414,
+            "ann_vol": 0.22978326966880933,
+            "max_dd": -0.22768308447040186,
+            "final_nav": 1.4110704211009295,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.15765588595520819,
+            "sharpe": 1.1842009701069671,
+            "ann_vol": 0.13086933272866608,
+            "max_dd": -0.1331949254136977,
+            "final_nav": 1.262220800856793,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.5700000000000001,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 9.141393952081668,
+            "sharpe_diff": 0.866728164558509,
+            "maxdd_pp": 6.6563062025288495
+          },
+          "cum_active": 0.11223050338687224,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "QQQ",
+          "off": "IEF",
+          "label": "QQQ/IEF",
+          "strategy": {
+            "cagr": 0.2788141520941354,
+            "sharpe": 2.131762126622699,
+            "ann_vol": 0.11944503444886978,
+            "max_dd": -0.06663186338840887,
+            "final_nav": 1.4787598704114984,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.24169491489719963,
+            "sharpe": 1.0552078849557414,
+            "ann_vol": 0.22978326966880933,
+            "max_dd": -0.22768308447040186,
+            "final_nav": 1.4110704211009295,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.16916705045208613,
+            "sharpe": 1.1559908732795616,
+            "ann_vol": 0.14425296933334644,
+            "max_dd": -0.1372445182129831,
+            "final_nav": 1.2822439716781977,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 10.964710164204927,
+            "sharpe_diff": 0.9757712533431375,
+            "maxdd_pp": 7.061265482457424
+          },
+          "cum_active": 0.1328218988245482,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "QQQ",
+          "off": "TLT",
+          "label": "QQQ/TLT",
+          "strategy": {
+            "cagr": 0.2503851183036958,
+            "sharpe": 1.6704700092991218,
+            "ann_vol": 0.14144846469016586,
+            "max_dd": -0.08062566674450322,
+            "final_nav": 1.42681190077171,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.24169491489719963,
+            "sharpe": 1.0552078849557414,
+            "ann_vol": 0.22978326966880933,
+            "max_dd": -0.22768308447040186,
+            "final_nav": 1.4110704211009295,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.19624464593076896,
+            "sharpe": 1.0492290120380985,
+            "ann_vol": 0.18764830578732458,
+            "max_dd": -0.1839294870709972,
+            "final_nav": 1.3298039195261973,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.8,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 5.414047237292685,
+            "sharpe_diff": 0.6212409972610233,
+            "maxdd_pp": 10.3303820326494
+          },
+          "cum_active": 0.04006672046282711,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "QQQ",
+          "off": "GLD",
+          "label": "QQQ/GLD",
+          "strategy": {
+            "cagr": 0.448862642932351,
+            "sharpe": 1.7203394080806478,
+            "ann_vol": 0.23827229764086624,
+            "max_dd": -0.15945641334587835,
+            "final_nav": 1.8036181245889975,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.24169491489719963,
+            "sharpe": 1.0552078849557414,
+            "ann_vol": 0.22978326966880933,
+            "max_dd": -0.22768308447040186,
+            "final_nav": 1.4110704211009295,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.28122702739034566,
+            "sharpe": 1.4101809236548966,
+            "ann_vol": 0.1905539803015552,
+            "max_dd": -0.16239721463538015,
+            "final_nav": 1.4832005853227974,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.71,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 16.763561554200535,
+            "sharpe_diff": 0.3101584844257512,
+            "maxdd_pp": 0.29408012895018043
+          },
+          "cum_active": 0.2164877770073308,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SMH",
+          "off": "SHY",
+          "label": "SMH/SHY",
+          "strategy": {
+            "cagr": 0.5199530355322957,
+            "sharpe": 2.0176143907573976,
+            "ann_vol": 0.22059652427694135,
+            "max_dd": -0.1408903847395776,
+            "final_nav": 1.9464160151117076,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.7073577447925279,
+            "sharpe": 1.5447430270185438,
+            "ann_vol": 0.4056668518460323,
+            "max_dd": -0.32645889055374666,
+            "final_nav": 2.3418367047058806,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.4398734183668289,
+            "sharpe": 1.599640559316783,
+            "ann_vol": 0.251383348452934,
+            "max_dd": -0.20767846082141816,
+            "final_nav": 1.785850543898584,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 8.007961716546674,
+            "sharpe_diff": 0.4179738314406145,
+            "maxdd_pp": 6.678807608184057
+          },
+          "cum_active": 0.026937243783638376,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SMH",
+          "off": "BIL",
+          "label": "SMH/BIL",
+          "strategy": {
+            "cagr": 0.511872168582133,
+            "sharpe": 1.996447768385109,
+            "ann_vol": 0.22036958116599897,
+            "max_dd": -0.1408903847395775,
+            "final_nav": 1.929981140407801,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.7073577447925279,
+            "sharpe": 1.5447430270185438,
+            "ann_vol": 0.4056668518460323,
+            "max_dd": -0.32645889055374666,
+            "final_nav": 2.3418367047058806,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.4414537281916733,
+            "sharpe": 1.6044329017477728,
+            "ann_vol": 0.2513922821961661,
+            "max_dd": -0.21013740617074295,
+            "final_nav": 1.7889693593528782,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 7.041844039045975,
+            "sharpe_diff": 0.3920148666373362,
+            "maxdd_pp": 6.924702143116546
+          },
+          "cum_active": 0.016757672910621135,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SMH",
+          "off": "IEF",
+          "label": "SMH/IEF",
+          "strategy": {
+            "cagr": 0.5478746551284754,
+            "sharpe": 2.0734889238293985,
+            "ann_vol": 0.2241027208870642,
+            "max_dd": -0.1408903847395776,
+            "final_nav": 2.003600219153947,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.7073577447925279,
+            "sharpe": 1.5447430270185438,
+            "ann_vol": 0.4056668518460323,
+            "max_dd": -0.32645889055374666,
+            "final_nav": 2.3418367047058806,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.45705484230627413,
+            "sharpe": 1.6011205821150172,
+            "ann_vol": 0.2602030719269178,
+            "max_dd": -0.20852708184047963,
+            "final_nav": 1.8198671712370142,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.64,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 9.08198128222013,
+            "sharpe_diff": 0.47236834171438136,
+            "maxdd_pp": 6.763669710090204
+          },
+          "cum_active": 0.03265585225763279,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SMH",
+          "off": "TLT",
+          "label": "SMH/TLT",
+          "strategy": {
+            "cagr": 0.5134641969692875,
+            "sharpe": 1.8862088523772742,
+            "ann_vol": 0.2366289005970419,
+            "max_dd": -0.1408903847395776,
+            "final_nav": 1.9332149149287787,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.7073577447925279,
+            "sharpe": 1.5447430270185438,
+            "ann_vol": 0.4056668518460323,
+            "max_dd": -0.32645889055374666,
+            "final_nav": 2.3418367047058806,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.5051503728059568,
+            "sharpe": 1.5369324449039732,
+            "ann_vol": 0.3001984742837662,
+            "max_dd": -0.24199959673084748,
+            "final_nav": 1.9163498108924193,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.73,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 0.8313824163330708,
+            "sharpe_diff": 0.349276407473301,
+            "maxdd_pp": 10.110921199126988
+          },
+          "cum_active": -0.0744883556464998,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SMH",
+          "off": "GLD",
+          "label": "SMH/GLD",
+          "strategy": {
+            "cagr": 0.7537010832144431,
+            "sharpe": 2.038741212562872,
+            "ann_vol": 0.3040873106274638,
+            "max_dd": -0.19979387415133532,
+            "final_nav": 2.443756922272273,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.7073577447925279,
+            "sharpe": 1.5447430270185438,
+            "ann_vol": 0.4056668518460323,
+            "max_dd": -0.32645889055374666,
+            "final_nav": 2.3418367047058806,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.6107904180110877,
+            "sharpe": 1.7531830133774595,
+            "ann_vol": 0.30383276781818824,
+            "max_dd": -0.212414459429086,
+            "final_nav": 2.1346918755733144,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.68,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 14.291066520335537,
+            "sharpe_diff": 0.2855581991854126,
+            "maxdd_pp": 1.2620585277750673
+          },
+          "cum_active": 0.0926145628136803,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SOXX",
+          "off": "SHY",
+          "label": "SOXX/SHY",
+          "strategy": {
+            "cagr": 0.5843527393893888,
+            "sharpe": 2.037529032100075,
+            "ann_vol": 0.2411515433744521,
+            "max_dd": -0.16294645800097574,
+            "final_nav": 2.079230546298714,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.7682450844441164,
+            "sharpe": 1.5105677275767961,
+            "ann_vol": 0.4480674681838059,
+            "max_dd": -0.3424453382451419,
+            "final_nav": 2.476074105917145,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.47762383376419937,
+            "sharpe": 1.5599395514964935,
+            "ann_vol": 0.2777273221629017,
+            "max_dd": -0.2195747167454173,
+            "final_nav": 1.8609032826753522,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 10.672890562518944,
+            "sharpe_diff": 0.47758948060358164,
+            "maxdd_pp": 5.662825874444155
+          },
+          "cum_active": 0.04217656524899138,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SOXX",
+          "off": "BIL",
+          "label": "SOXX/BIL",
+          "strategy": {
+            "cagr": 0.5759294898613885,
+            "sharpe": 2.0179920938151152,
+            "ann_vol": 0.2409478752954587,
+            "max_dd": -0.16294645800097562,
+            "final_nav": 2.0616742308740337,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.7682450844441164,
+            "sharpe": 1.5105677275767961,
+            "ann_vol": 0.4480674681838059,
+            "max_dd": -0.3424453382451419,
+            "final_nav": 2.476074105917145,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.47926627902949726,
+            "sharpe": 1.5645893189860665,
+            "ann_vol": 0.277681099940962,
+            "max_dd": -0.22200474504531187,
+            "final_nav": 1.864194672008084,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 9.666321083189121,
+            "sharpe_diff": 0.4534027748290488,
+            "maxdd_pp": 5.905828704433624
+          },
+          "cum_active": 0.03182017006149973,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SOXX",
+          "off": "IEF",
+          "label": "SOXX/IEF",
+          "strategy": {
+            "cagr": 0.6134573850338547,
+            "sharpe": 2.0910692451044213,
+            "ann_vol": 0.24434822499759437,
+            "max_dd": -0.1629464580009754,
+            "final_nav": 2.1403167390176865,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.7682450844441164,
+            "sharpe": 1.5105677275767961,
+            "ann_vol": 0.4480674681838059,
+            "max_dd": -0.3424453382451419,
+            "final_nav": 2.476074105917145,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.49612811475012664,
+            "sharpe": 1.5613305128605233,
+            "ann_vol": 0.2874055357768097,
+            "max_dd": -0.2207781677324513,
+            "final_nav": 1.89810976728766,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.64,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 11.732927028372808,
+            "sharpe_diff": 0.529738732243898,
+            "maxdd_pp": 5.783170973147589
+          },
+          "cum_active": 0.04590450523160183,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SOXX",
+          "off": "TLT",
+          "label": "SOXX/TLT",
+          "strategy": {
+            "cagr": 0.5775889717515559,
+            "sharpe": 1.9250061097227342,
+            "ann_vol": 0.25589844799732114,
+            "max_dd": -0.16294645800097585,
+            "final_nav": 2.065128663385711,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.7682450844441164,
+            "sharpe": 1.5105677275767961,
+            "ann_vol": 0.4480674681838059,
+            "max_dd": -0.3424453382451419,
+            "final_nav": 2.476074105917145,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.549377029818154,
+            "sharpe": 1.504334505169874,
+            "ann_vol": 0.3310566774846468,
+            "max_dd": -0.2553646781024611,
+            "final_nav": 2.006694529788119,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.73,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 2.821194193340193,
+            "sharpe_diff": 0.42067160455286023,
+            "maxdd_pp": 9.241822010148526
+          },
+          "cum_active": -0.07113795330424666,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "SOXX",
+          "off": "GLD",
+          "label": "SOXX/GLD",
+          "strategy": {
+            "cagr": 0.8280045832389151,
+            "sharpe": 2.0871115112155576,
+            "ann_vol": 0.3192114449287689,
+            "max_dd": -0.2129343427597602,
+            "final_nav": 2.6105077234610703,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.7682450844441164,
+            "sharpe": 1.5105677275767961,
+            "ann_vol": 0.4480674681838059,
+            "max_dd": -0.3424453382451419,
+            "final_nav": 2.476074105917145,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.6548828113173464,
+            "sharpe": 1.7060335646905649,
+            "ann_vol": 0.3322328507599311,
+            "max_dd": -0.23079379242504694,
+            "final_nav": 2.228389765330136,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.68,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 17.312177192156874,
+            "sharpe_diff": 0.3810779465249927,
+            "maxdd_pp": 1.7859449665286742
+          },
+          "cum_active": 0.10416806263977718,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWO",
+          "off": "SHY",
+          "label": "IWO/SHY",
+          "strategy": {
+            "cagr": 0.21432770630542675,
+            "sharpe": 1.5287487041156123,
+            "ann_vol": 0.1333475923717509,
+            "max_dd": -0.055888192419396465,
+            "final_nav": 1.3619224833066876,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.20236216047899158,
+            "sharpe": 0.8916831704733397,
+            "ann_vol": 0.24306416489593685,
+            "max_dd": -0.25893340814655497,
+            "final_nav": 1.3406377869814694,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.14256452262752495,
+            "sharpe": 0.9838107648687822,
+            "ann_vol": 0.14857159043290633,
+            "max_dd": -0.15982629584055685,
+            "final_nav": 1.236147747191095,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.61,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 7.17631836779018,
+            "sharpe_diff": 0.5449379392468301,
+            "maxdd_pp": 10.393810342116039
+          },
+          "cum_active": 0.08005273332750407,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWO",
+          "off": "BIL",
+          "label": "IWO/BIL",
+          "strategy": {
+            "cagr": 0.2078717037848521,
+            "sharpe": 1.4949623257258051,
+            "ann_vol": 0.13293485208422595,
+            "max_dd": -0.055888192419396354,
+            "final_nav": 1.3504228731535637,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.20236216047899158,
+            "sharpe": 0.8916831704733397,
+            "ann_vol": 0.24306416489593685,
+            "max_dd": -0.25893340814655497,
+            "final_nav": 1.3406377869814694,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.1439281453954906,
+            "sharpe": 0.99506332204596,
+            "ann_vol": 0.14814882195201903,
+            "max_dd": -0.16244742423343983,
+            "final_nav": 1.2384953403226622,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.61,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 6.39435583893615,
+            "sharpe_diff": 0.4998990036798451,
+            "maxdd_pp": 10.655923181404347
+          },
+          "cum_active": 0.069158715975699,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWO",
+          "off": "IEF",
+          "label": "IWO/IEF",
+          "strategy": {
+            "cagr": 0.23663497204846662,
+            "sharpe": 1.605176997312603,
+            "ann_vol": 0.13920629752138985,
+            "max_dd": -0.0558881924193968,
+            "final_nav": 1.4019347173668597,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.20236216047899158,
+            "sharpe": 0.8916831704733397,
+            "ann_vol": 0.24306416489593685,
+            "max_dd": -0.25893340814655497,
+            "final_nav": 1.3406377869814694,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.1513688056980007,
+            "sharpe": 0.9710927008736945,
+            "ann_vol": 0.1606501178937243,
+            "max_dd": -0.1660227419266017,
+            "final_nav": 1.2513341804061249,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.65,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 8.52661663504659,
+            "sharpe_diff": 0.6340842964389086,
+            "maxdd_pp": 11.013454950720492
+          },
+          "cum_active": 0.09517150612371106,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWO",
+          "off": "TLT",
+          "label": "IWO/TLT",
+          "strategy": {
+            "cagr": 0.20914361425481487,
+            "sharpe": 1.294257649649492,
+            "ann_vol": 0.15847521874258955,
+            "max_dd": -0.08117172475013934,
+            "final_nav": 1.3526855704350638,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.20236216047899158,
+            "sharpe": 0.8916831704733397,
+            "ann_vol": 0.24306416489593685,
+            "max_dd": -0.25893340814655497,
+            "final_nav": 1.3406377869814694,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.16611342287978226,
+            "sharpe": 0.8837779510110212,
+            "ann_vol": 0.19948419401967935,
+            "max_dd": -0.20979759245967589,
+            "final_nav": 1.2769209183352837,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.8,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 4.303019137503261,
+            "sharpe_diff": 0.4104796986384708,
+            "maxdd_pp": 12.862586770953655
+          },
+          "cum_active": 0.02309114216624275,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWO",
+          "off": "GLD",
+          "label": "IWO/GLD",
+          "strategy": {
+            "cagr": 0.4010747464834299,
+            "sharpe": 1.5219620200827089,
+            "ann_vol": 0.2488442973603686,
+            "max_dd": -0.14730239651251875,
+            "final_nav": 1.709915799263466,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.20236216047899158,
+            "sharpe": 0.8916831704733397,
+            "ann_vol": 0.24306416489593685,
+            "max_dd": -0.25893340814655497,
+            "final_nav": 1.3406377869814694,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.2508876720907971,
+            "sharpe": 1.2327661259171245,
+            "ann_vol": 0.20221423123230128,
+            "max_dd": -0.1799424550345503,
+            "final_nav": 1.4277242118146787,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.72,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 15.01870743926328,
+            "sharpe_diff": 0.28919589416558433,
+            "maxdd_pp": 3.2640058522031556
+          },
+          "cum_active": 0.19419113881749062,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWM",
+          "off": "SHY",
+          "label": "IWM/SHY",
+          "strategy": {
+            "cagr": 0.17615843961783306,
+            "sharpe": 1.4123426250852569,
+            "ann_vol": 0.1204548491790405,
+            "max_dd": -0.059489784483306773,
+            "final_nav": 1.294462226962136,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.21859054678756995,
+            "sharpe": 1.0286589490519136,
+            "ann_vol": 0.21628463002360568,
+            "max_dd": -0.23751113596108264,
+            "final_nav": 1.3695354039268999,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.15207890045226824,
+            "sharpe": 1.1263176010544447,
+            "ann_vol": 0.13454365739438126,
+            "max_dd": -0.1481528819513197,
+            "final_nav": 1.2525620158170836,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 2.4079539165564823,
+            "sharpe_diff": 0.2860250240308122,
+            "maxdd_pp": 8.866309746801292
+          },
+          "cum_active": 0.018112447266338094,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWM",
+          "off": "BIL",
+          "label": "IWM/BIL",
+          "strategy": {
+            "cagr": 0.16990536492363217,
+            "sharpe": 1.3751007985127703,
+            "ann_vol": 0.11999204325881402,
+            "max_dd": -0.05950205875951775,
+            "final_nav": 1.2835322282651014,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.21859054678756995,
+            "sharpe": 1.0286589490519136,
+            "ann_vol": 0.21628463002360568,
+            "max_dd": -0.23751113596108264,
+            "final_nav": 1.3695354039268999,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.15343308351267249,
+            "sharpe": 1.1400645700159113,
+            "ann_vol": 0.13399060205003244,
+            "max_dd": -0.1504084741109848,
+            "final_nav": 1.2549047931705002,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 1.6472281410959688,
+            "sharpe_diff": 0.235036228496859,
+            "maxdd_pp": 9.090641535146704
+          },
+          "cum_active": 0.007867295821984976,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWM",
+          "off": "IEF",
+          "label": "IWM/IEF",
+          "strategy": {
+            "cagr": 0.19776453386425574,
+            "sharpe": 1.4946665324487947,
+            "ann_vol": 0.1269308580891856,
+            "max_dd": -0.05733019081446722,
+            "final_nav": 1.332492530626345,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.21859054678756995,
+            "sharpe": 1.0286589490519136,
+            "ann_vol": 0.21628463002360568,
+            "max_dd": -0.23751113596108264,
+            "final_nav": 1.3695354039268999,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.163268266392117,
+            "sharpe": 1.1044331059719539,
+            "ann_vol": 0.14788298656342258,
+            "max_dd": -0.15787502820348176,
+            "final_nav": 1.2719686735638593,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.67,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 3.449626747213874,
+            "sharpe_diff": 0.3902334264768408,
+            "maxdd_pp": 10.054483738901453
+          },
+          "cum_active": 0.02922268269305106,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "IWM",
+          "off": "TLT",
+          "label": "IWM/TLT",
+          "strategy": {
+            "cagr": 0.17113729616090634,
+            "sharpe": 1.1595765783508671,
+            "ann_vol": 0.14779215637463602,
+            "max_dd": -0.07620339109699137,
+            "final_nav": 1.2856828471129822,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.21859054678756995,
+            "sharpe": 1.0286589490519136,
+            "ann_vol": 0.21628463002360568,
+            "max_dd": -0.23751113596108264,
+            "final_nav": 1.3695354039268999,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.18375765687367918,
+            "sharpe": 1.0162308620940363,
+            "ann_vol": 0.18414627625241334,
+            "max_dd": -0.2007425177840576,
+            "final_nav": 1.3077914717423638,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.8300000000000001,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": -1.2620360712772838,
+            "sharpe_diff": 0.1433457162568308,
+            "maxdd_pp": 12.453912668706623
+          },
+          "cum_active": -0.04328077218734849,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": false,
+          "pass_both": false
+        },
+        {
+          "on": "IWM",
+          "off": "GLD",
+          "label": "IWM/GLD",
+          "strategy": {
+            "cagr": 0.3570355671333345,
+            "sharpe": 1.4239896527532971,
+            "ann_vol": 0.24227713150029684,
+            "max_dd": -0.1386771322042546,
+            "final_nav": 1.6252183516775836,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.21859054678756995,
+            "sharpe": 1.0286589490519136,
+            "ann_vol": 0.21628463002360568,
+            "max_dd": -0.23751113596108264,
+            "final_nav": 1.3695354039268999,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.2591713487858722,
+            "sharpe": 1.3604315131630649,
+            "ann_vol": 0.1846552326249456,
+            "max_dd": -0.17078076223508198,
+            "final_nav": 1.4427931579714777,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.74,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 9.786421834746228,
+            "sharpe_diff": 0.06355813959023227,
+            "maxdd_pp": 3.210363003082739
+          },
+          "cum_active": 0.13016309752185928,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SPY",
+          "off": "SHY",
+          "label": "SPY/SHY",
+          "strategy": {
+            "cagr": 0.17723534911697558,
+            "sharpe": 1.99209841602309,
+            "ann_vol": 0.08400127893688568,
+            "max_dd": -0.032008450384679366,
+            "final_nav": 1.2963480723376268,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.20036218543006368,
+            "sharpe": 1.1200800986683541,
+            "ann_vol": 0.17617530812280402,
+            "max_dd": -0.1875522626062267,
+            "final_nav": 1.3370923221253161,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.126180765280955,
+            "sharpe": 1.289262801450116,
+            "ann_vol": 0.09541950900779142,
+            "max_dd": -0.09938366212346739,
+            "final_nav": 1.208071293945032,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.54,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 5.105458383602057,
+            "sharpe_diff": 0.7028356145729739,
+            "maxdd_pp": 6.737521173878802
+          },
+          "cum_active": 0.06541902263774002,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SPY",
+          "off": "BIL",
+          "label": "SPY/BIL",
+          "strategy": {
+            "cagr": 0.17097654900746329,
+            "sharpe": 1.9465446243492743,
+            "ann_vol": 0.08333559338507925,
+            "max_dd": -0.03619108771091473,
+            "final_nav": 1.2854021502037616,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.20036218543006368,
+            "sharpe": 1.1200800986683541,
+            "ann_vol": 0.17617530812280402,
+            "max_dd": -0.1875522626062267,
+            "final_nav": 1.3370923221253161,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.12772610601104706,
+            "sharpe": 1.3101111138555008,
+            "ann_vol": 0.09502744666895657,
+            "max_dd": -0.10257745620922865,
+            "final_nav": 1.2107092682273133,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.54,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 4.325044299641623,
+            "sharpe_diff": 0.6364335104937735,
+            "maxdd_pp": 6.638636849831392
+          },
+          "cum_active": 0.05436321847702863,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SPY",
+          "off": "IEF",
+          "label": "SPY/IEF",
+          "strategy": {
+            "cagr": 0.19886122624923108,
+            "sharpe": 2.008920837225387,
+            "ann_vol": 0.09305224918638706,
+            "max_dd": -0.042809219023266176,
+            "final_nav": 1.3344337806871158,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.20036218543006368,
+            "sharpe": 1.1200800986683541,
+            "ann_vol": 0.17617530812280402,
+            "max_dd": -0.1875522626062267,
+            "final_nav": 1.3370923221253161,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.14193413516126951,
+            "sharpe": 1.2386444386748956,
+            "ann_vol": 0.11203307546714653,
+            "max_dd": -0.11030335732669971,
+            "final_nav": 1.2350630404367207,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.62,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 5.692709108796157,
+            "sharpe_diff": 0.7702763985504915,
+            "maxdd_pp": 6.749413830343354
+          },
+          "cum_active": 0.06985665346579295,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SPY",
+          "off": "TLT",
+          "label": "SPY/TLT",
+          "strategy": {
+            "cagr": 0.17220960822070208,
+            "sharpe": 1.4054478646921218,
+            "ann_vol": 0.11995579775791786,
+            "max_dd": -0.07973572865935397,
+            "final_nav": 1.2875559021941334,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.20036218543006368,
+            "sharpe": 1.1200800986683541,
+            "ann_vol": 0.17617530812280402,
+            "max_dd": -0.1875522626062267,
+            "final_nav": 1.3370923221253161,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.008634783045527561,
+            "sharpe": 0.1489214649749266,
+            "ann_vol": 0.11000111689853233,
+            "max_dd": -0.09006326337931803,
+            "final_nav": 1.013770261512916,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.01,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 16.357482517517454,
+            "sharpe_diff": 1.2565263997171952,
+            "maxdd_pp": 1.032753471996406
+          },
+          "cum_active": 0.26360385410463594,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        },
+        {
+          "on": "SPY",
+          "off": "GLD",
+          "label": "SPY/GLD",
+          "strategy": {
+            "cagr": 0.35827809062650573,
+            "sharpe": 1.511670686983979,
+            "ann_vol": 0.2263822591269896,
+            "max_dd": -0.13867713220425482,
+            "final_nav": 1.6275860611779676,
+            "n_days": 399
+          },
+          "buyhold_on": {
+            "cagr": 0.20036218543006368,
+            "sharpe": 1.1200800986683541,
+            "ann_vol": 0.17617530812280402,
+            "max_dd": -0.1875522626062267,
+            "final_nav": 1.3370923221253161,
+            "n_days": 399
+          },
+          "vol_matched_static": {
+            "cagr": 0.241048734983081,
+            "sharpe": 1.4798719061779027,
+            "ann_vol": 0.15534111487707658,
+            "max_dd": -0.1418746978672506,
+            "final_nav": 1.4099025191402206,
+            "n_days": 399
+          },
+          "vol_matched_w_on": 0.76,
+          "pct_on": 0.37844611528822053,
+          "edge_vs_vol_matched": {
+            "cagr_pp": 11.722935564342475,
+            "sharpe_diff": 0.031798780806076454,
+            "maxdd_pp": 0.31975656629957827
+          },
+          "cum_active": 0.1640453794798966,
+          "block": "wf_2025_2026",
+          "pass_sharpe_gt_1": true,
+          "pass_active_positive": true,
+          "pass_both": true
+        }
+      ]
+    }
+  ],
+  "stable_ranking": [
+    {
+      "label": "IWM/GLD",
+      "pass_blocks": 3
+    },
+    {
+      "label": "IWO/GLD",
+      "pass_blocks": 3
+    },
+    {
+      "label": "QQQ/BIL",
+      "pass_blocks": 3
+    },
+    {
+      "label": "QQQ/SHY",
+      "pass_blocks": 3
+    },
+    {
+      "label": "SPY/BIL",
+      "pass_blocks": 3
+    },
+    {
+      "label": "SPY/GLD",
+      "pass_blocks": 3
+    },
+    {
+      "label": "IWM/BIL",
+      "pass_blocks": 2
+    },
+    {
+      "label": "IWM/SHY",
+      "pass_blocks": 2
+    },
+    {
+      "label": "IWO/BIL",
+      "pass_blocks": 2
+    },
+    {
+      "label": "IWO/IEF",
+      "pass_blocks": 2
+    },
+    {
+      "label": "IWO/SHY",
+      "pass_blocks": 2
+    },
+    {
+      "label": "QQQ/GLD",
+      "pass_blocks": 2
+    },
+    {
+      "label": "SMH/BIL",
+      "pass_blocks": 2
+    },
+    {
+      "label": "SOXX/BIL",
+      "pass_blocks": 2
+    },
+    {
+      "label": "SPY/IEF",
+      "pass_blocks": 2
+    }
+  ],
+  "v1_reference_pass_blocks": 3,
+  "n_blocks": 4,
+  "judgment": "V1_QQQ_SHY_REMAINS_ROBUST_REFERENCE"
+}

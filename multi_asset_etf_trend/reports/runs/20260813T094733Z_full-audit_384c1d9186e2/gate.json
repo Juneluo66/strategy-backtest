@@ -1,0 +1,27 @@
+{
+  "label": "MULTI_ASSET_TREND_CANDIDATE",
+  "passed": true,
+  "n_pass": 14,
+  "n_checks": 14,
+  "checks": {
+    "net_cagr_positive": true,
+    "cagr_clearly_above_bil": true,
+    "sharpe_above_ew": true,
+    "maxdd_shallower_than_ew": true,
+    "not_only_2008_vs_base": true,
+    "exclude_last_1y_not_flip": true,
+    "exclude_last_2y_not_flip": true,
+    "cost_10bp_not_flip": true,
+    "delay_not_flip": true,
+    "fixed_cutoffs_majority": true,
+    "leave_one_out_majority": true,
+    "no_single_etf_dominates_excess": true,
+    "not_cash_mechanical_sharpe": true,
+    "improves_vs_base_risk_adjusted": true
+  },
+  "notes": [
+    "Gate is conjunctive: every check must pass.",
+    "Highest CAGR alone never grants MULTI_ASSET_TREND_CANDIDATE.",
+    "This is a research audit label, not a live trading endorsement."
+  ]
+}

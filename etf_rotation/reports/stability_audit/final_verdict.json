@@ -1,0 +1,46 @@
+{
+  "project_status": "ENGINEERING_PARTIAL_REPRODUCTION",
+  "continue_procure_margin_data": false,
+  "continue_c1_as_independent_research": false,
+  "seal_as_engineering_not_strategy_reproduction": true,
+  "pivot_to_ARCANA": true,
+  "criteria": {
+    "margin_vs_shares_majority_roll2y_positive": false,
+    "margin_vs_shares_majority_roll3y_positive": false,
+    "positive_after_2020": true,
+    "positive_frozen_oos": true,
+    "bootstrap_p_positive_high": true,
+    "residual_ic_nonzero": false,
+    "detail": {
+      "mbr_roll2_pct_pos": 0.28,
+      "mbr_roll3_pct_pos": 0.30985915492957744,
+      "both_roll2_pct_pos": 0.28,
+      "both_roll3_pct_pos": 0.28169014084507044,
+      "mbr_2020_d_ann": 0.023652857422994833,
+      "both_2020_d_ann": 0.05273533025163202,
+      "mbr_oos_d_ann": 0.17529198194730533,
+      "both_oos_d_ann": 0.1917327810555749,
+      "boot_mbr_full_p": 0.685,
+      "boot_both_full_p": 0.91,
+      "boot_mbr_oos_p": 0.8725,
+      "boot_both_oos_p": 0.9025,
+      "resid_ic_mbr": -0.00687563195401554,
+      "start_med10": "2019-02-19",
+      "start_med20": "2021-07-07"
+    }
+  },
+  "c1_checks": {
+    "roll2_pct_pos_vs_mom12": 0.30666666666666664,
+    "d_ann_2020_vs_mom12": 0.0028745172480795222,
+    "d_ann_oos_vs_mom12": -0.2267003067723944,
+    "boot_p_full": 0.5375
+  },
+  "rationale": [
+    "Margin incremental edge vs same-pool shares fails the pre-registered stop gates (rolling positivity / OOS / bootstrap / residual IC).",
+    "Residual Rank IC after liquidity/vol/age/AUM controls is -0.0069 (raw Rank IC also near zero / wrong sign for MBR).",
+    "Stop chasing v8 published numbers; keep code + research reports; mark engineering-grade partial reproduction.",
+    "Sealed C1/C4 factor sets remain PARTIAL_REPRODUCTION (margin not production-tier); this is an engineering reproduction of the pipeline, not a sealed strategy reproduction.",
+    "Further research time is better spent on ARCANA reproduction than incremental margin backfills.",
+    "C1 research-partial may still be studied as a hypothesis, but should not be treated as a validated live strategy."
+  ]
+}

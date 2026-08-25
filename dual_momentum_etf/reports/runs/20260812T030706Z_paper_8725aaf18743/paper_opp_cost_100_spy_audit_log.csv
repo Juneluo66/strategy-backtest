@@ -1,0 +1,3 @@
+asof,portfolio_id,event,side,symbol,shares,price,notional,commission,spread_bps_cost,theoretical_weight,theoretical_shares,nav,cash,theoretical_weights,final_weights
+2005-01-03,opp_cost_100_spy,PARTIAL_FILL,BUY,SPY,1218.447749505677,82.02480273253629,99942.93629310594,6.092238747528385,49.97146814655297,1.0,1219.1434379437233,,,,
+2005-01-03,opp_cost_100_spy,REBALANCE_SUMMARY,,,{'SPY': 1218.447749505677},,,,,,,99943.93629310591,0.9999999999708962,{'SPY': 1.0},{'SPY': 0.9999899943904847}

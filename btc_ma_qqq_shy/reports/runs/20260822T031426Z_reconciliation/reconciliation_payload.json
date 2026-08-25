@@ -1,0 +1,698 @@
+{
+  "generated_utc": "2026-08-22T03:14:26.698204+00:00",
+  "judgment": "NO_LOCAL_TIMESTAMP_INFLATION__SIGNALS_~90PCT_AGREE__1_22_VS_0_838_MOSTLY_ENGINE_SAMPLE_RF_COSTS_NOT_WEEKEND_BUG",
+  "qc_reference": {
+    "url": "https://www.quantconnect.com/research/21195/bitcoin-regime-signal-for-growth-equities/",
+    "schedule": "DateRules.WeekStart(QQQ) + TimeRules.At(8,0) ET",
+    "btc": "Bitfinex BTCUSD Daily + SMA50 + ROC20",
+    "exec": "set_holdings(..., 1, True)",
+    "reported_sharpe": {
+      "strategy": 0.838,
+      "SPY": 0.564,
+      "QQQ": 0.682
+    }
+  },
+  "local_prior": {
+    "btc": "Yahoo BTC-USD",
+    "schedule": "ISO week last equity session",
+    "exec": "next session close-to-close",
+    "returns": "Adj Close, 0 bps"
+  },
+  "price_source": {
+    "n_common_days": 4350,
+    "median_abs_pct_diff": 0.001522502709329021,
+    "p95_abs_pct_diff": 0.013957466410391998,
+    "max_abs_pct_diff": 0.10920162268484357,
+    "corr_log_return": 0.9884584121393746
+  },
+  "signal_agreement": {
+    "n_weeks": 615,
+    "agree_qc_bitfinex_vs_ours_weekend": 0.9024390243902439,
+    "agree_qc_bitfinex_vs_qc_yahoo": 0.9886178861788618,
+    "n_disagree_ours": 60,
+    "disagree_weeks": [
+      {
+        "week_start": "2014-11-24",
+        "ours_decision": "2014-11-21",
+        "qc_btc_asof": "2014-11-23",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2014-12-08",
+        "ours_decision": "2014-12-05",
+        "qc_btc_asof": "2014-12-07",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2015-02-23",
+        "ours_decision": "2015-02-20",
+        "qc_btc_asof": "2015-02-22",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2015-03-23",
+        "ours_decision": "2015-03-20",
+        "qc_btc_asof": "2015-03-22",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2015-05-18",
+        "ours_decision": "2015-05-15",
+        "qc_btc_asof": "2015-05-17",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2015-08-10",
+        "ours_decision": "2015-08-07",
+        "qc_btc_asof": "2015-08-09",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2015-11-23",
+        "ours_decision": "2015-11-20",
+        "qc_btc_asof": "2015-11-22",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2016-01-11",
+        "ours_decision": "2016-01-08",
+        "qc_btc_asof": "2016-01-10",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2016-04-04",
+        "ours_decision": "2016-04-01",
+        "qc_btc_asof": "2016-04-03",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2016-04-11",
+        "ours_decision": "2016-04-08",
+        "qc_btc_asof": "2016-04-10",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2016-05-16",
+        "ours_decision": "2016-05-13",
+        "qc_btc_asof": "2016-05-15",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2016-07-05",
+        "ours_decision": "2016-07-01",
+        "qc_btc_asof": "2016-07-04",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2016-07-18",
+        "ours_decision": "2016-07-15",
+        "qc_btc_asof": "2016-07-17",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2016-09-26",
+        "ours_decision": "2016-09-23",
+        "qc_btc_asof": "2016-09-25",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2017-06-26",
+        "ours_decision": "2017-06-23",
+        "qc_btc_asof": "2017-06-25",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2017-10-02",
+        "ours_decision": "2017-09-29",
+        "qc_btc_asof": "2017-10-01",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2017-11-13",
+        "ours_decision": "2017-11-10",
+        "qc_btc_asof": "2017-11-12",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2019-01-07",
+        "ours_decision": "2019-01-04",
+        "qc_btc_asof": "2019-01-06",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2019-02-11",
+        "ours_decision": "2019-02-08",
+        "qc_btc_asof": "2019-02-10",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2019-02-19",
+        "ours_decision": "2019-02-15",
+        "qc_btc_asof": "2019-02-18",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2019-03-18",
+        "ours_decision": "2019-03-15",
+        "qc_btc_asof": "2019-03-17",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2019-06-10",
+        "ours_decision": "2019-06-07",
+        "qc_btc_asof": "2019-06-09",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2019-07-15",
+        "ours_decision": "2019-07-12",
+        "qc_btc_asof": "2019-07-14",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2019-08-05",
+        "ours_decision": "2019-08-02",
+        "qc_btc_asof": "2019-08-04",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2019-10-28",
+        "ours_decision": "2019-10-25",
+        "qc_btc_asof": "2019-10-27",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2020-05-26",
+        "ours_decision": "2020-05-22",
+        "qc_btc_asof": "2020-05-25",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2020-06-01",
+        "ours_decision": "2020-05-29",
+        "qc_btc_asof": "2020-05-31",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2020-08-24",
+        "ours_decision": "2020-08-21",
+        "qc_btc_asof": "2020-08-23",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2020-10-12",
+        "ours_decision": "2020-10-09",
+        "qc_btc_asof": "2020-10-11",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2020-12-14",
+        "ours_decision": "2020-12-11",
+        "qc_btc_asof": "2020-12-13",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2021-03-01",
+        "ours_decision": "2021-02-26",
+        "qc_btc_asof": "2021-02-28",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2021-04-12",
+        "ours_decision": "2021-04-09",
+        "qc_btc_asof": "2021-04-11",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2021-04-19",
+        "ours_decision": "2021-04-16",
+        "qc_btc_asof": "2021-04-18",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2021-05-10",
+        "ours_decision": "2021-05-07",
+        "qc_btc_asof": "2021-05-09",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2021-07-26",
+        "ours_decision": "2021-07-23",
+        "qc_btc_asof": "2021-07-25",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2021-09-20",
+        "ours_decision": "2021-09-17",
+        "qc_btc_asof": "2021-09-19",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2022-02-14",
+        "ours_decision": "2022-02-11",
+        "qc_btc_asof": "2022-02-13",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2022-03-21",
+        "ours_decision": "2022-03-18",
+        "qc_btc_asof": "2022-03-20",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2023-02-27",
+        "ours_decision": "2023-02-24",
+        "qc_btc_asof": "2023-02-26",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2023-05-01",
+        "ours_decision": "2023-04-28",
+        "qc_btc_asof": "2023-04-30",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2023-12-26",
+        "ours_decision": "2023-12-22",
+        "qc_btc_asof": "2023-12-25",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2024-01-02",
+        "ours_decision": "2023-12-29",
+        "qc_btc_asof": "2024-01-01",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2024-02-05",
+        "ours_decision": "2024-02-02",
+        "qc_btc_asof": "2024-02-04",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2024-03-25",
+        "ours_decision": "2024-03-22",
+        "qc_btc_asof": "2024-03-24",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2024-04-01",
+        "ours_decision": "2024-03-28",
+        "qc_btc_asof": "2024-03-31",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2024-04-15",
+        "ours_decision": "2024-04-12",
+        "qc_btc_asof": "2024-04-14",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2024-06-10",
+        "ours_decision": "2024-06-07",
+        "qc_btc_asof": "2024-06-09",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2024-12-23",
+        "ours_decision": "2024-12-20",
+        "qc_btc_asof": "2024-12-22",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2025-02-03",
+        "ours_decision": "2025-01-31",
+        "qc_btc_asof": "2025-02-02",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2025-06-02",
+        "ours_decision": "2025-05-30",
+        "qc_btc_asof": "2025-06-01",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2025-06-30",
+        "ours_decision": "2025-06-27",
+        "qc_btc_asof": "2025-06-29",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2025-08-11",
+        "ours_decision": "2025-08-08",
+        "qc_btc_asof": "2025-08-10",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2025-08-25",
+        "ours_decision": "2025-08-22",
+        "qc_btc_asof": "2025-08-24",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2025-10-13",
+        "ours_decision": "2025-10-10",
+        "qc_btc_asof": "2025-10-12",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2026-01-05",
+        "ours_decision": "2026-01-02",
+        "qc_btc_asof": "2026-01-04",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2026-03-16",
+        "ours_decision": "2026-03-13",
+        "qc_btc_asof": "2026-03-15",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2026-03-23",
+        "ours_decision": "2026-03-20",
+        "qc_btc_asof": "2026-03-22",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2026-04-13",
+        "ours_decision": "2026-04-10",
+        "qc_btc_asof": "2026-04-12",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      },
+      {
+        "week_start": "2026-08-03",
+        "ours_decision": "2026-07-31",
+        "qc_btc_asof": "2026-08-02",
+        "ours": false,
+        "qc_bitfinex": true,
+        "qc_yahoo": true
+      },
+      {
+        "week_start": "2026-08-10",
+        "ours_decision": "2026-08-07",
+        "qc_btc_asof": "2026-08-09",
+        "ours": true,
+        "qc_bitfinex": false,
+        "qc_yahoo": false
+      }
+    ]
+  },
+  "disagree_pnl": {
+    "n_days_position_differ": 290,
+    "pct_days_differ": 0.09790681971640783,
+    "cum_return_gap_ours_minus_qc_on_differ_days": -0.21859043394321198,
+    "cum_return_gap_full_path_ours_minus_qc": -0.20292680391904794,
+    "sharpe_ours": 1.2207230652153243,
+    "sharpe_qc_same_returns_engine": 1.3619955510163804,
+    "sharpe_delta_from_signal_timing_alone": -0.1412724858010561
+  },
+  "stats": {
+    "ours_weekend_yahoo_adj_0bps": {
+      "start": "2014-11-11",
+      "end": "2026-08-21",
+      "n_days": 2961,
+      "cagr": 0.15052701858087603,
+      "ann_return_arith": 0.14788615937628705,
+      "ann_vol": 0.1211463628322623,
+      "sharpe": 1.2207230652153243,
+      "sortino": 1.934961552016743,
+      "calmar": 0.9268328381875008,
+      "max_drawdown": -0.16241010501445352,
+      "final_nav": 5.21303088066599,
+      "skew": 0.036270151069454755,
+      "kurtosis": 9.44529835255224,
+      "sharpe_rf0": 1.2207230652153243,
+      "label": "ours",
+      "n": 2961
+    },
+    "qc_weekstart_bitfinex_adj_0bps": {
+      "start": "2014-11-11",
+      "end": "2026-08-21",
+      "n_days": 2961,
+      "cagr": 0.17290220390501032,
+      "ann_return_arith": 0.16741812293392982,
+      "ann_vol": 0.12292119662872257,
+      "sharpe": 1.3619955510163804,
+      "sortino": 2.1602478836403924,
+      "calmar": 1.0646025005009583,
+      "max_drawdown": -0.1624101050144534,
+      "final_nav": 6.540216013155874,
+      "skew": -0.007575102833141006,
+      "kurtosis": 9.352995395632131,
+      "sharpe_rf0": 1.3619955510163804,
+      "label": "qc_bf_adj0",
+      "n": 2961
+    },
+    "qc_weekstart_bitfinex_close_openfill_0bps": {
+      "start": "2014-11-11",
+      "end": "2026-08-21",
+      "n_days": 2961,
+      "cagr": 0.15462627823228403,
+      "ann_return_arith": 0.15095273176329393,
+      "ann_vol": 0.11696845133885961,
+      "sharpe": 1.2905422790114687,
+      "sortino": 2.070411152616786,
+      "calmar": 1.1582399687018248,
+      "max_drawdown": -0.13350107267114242,
+      "final_nav": 5.4359932808698685,
+      "skew": 0.11632360733276162,
+      "kurtosis": 10.523547716605538,
+      "sharpe_rf0": 1.2905422790114687,
+      "label": "qc_bf_close0",
+      "n": 2961
+    },
+    "qc_weekstart_bitfinex_close_openfill_5bps": {
+      "start": "2014-11-11",
+      "end": "2026-08-21",
+      "n_days": 2961,
+      "cagr": 0.1480715856345558,
+      "ann_return_arith": 0.14525060410371946,
+      "ann_vol": 0.11702355200120992,
+      "sharpe": 1.2412083005497703,
+      "sortino": 1.9904683007204729,
+      "calmar": 1.1019741995407273,
+      "max_drawdown": -0.13436937606730537,
+      "final_nav": 5.083517958663358,
+      "skew": 0.11919903338841799,
+      "kurtosis": 10.505739530711484,
+      "sharpe_rf0": 1.2412083005497703,
+      "label": "qc_bf_close5",
+      "n": 2961
+    },
+    "bh_qqq_adj": {
+      "start": "2014-11-11",
+      "end": "2026-08-21",
+      "n_days": 2961,
+      "cagr": 0.18824456646532428,
+      "ann_return_arith": 0.1971142029304054,
+      "ann_vol": 0.21863464181602835,
+      "sharpe": 0.9015689430235331,
+      "sortino": 1.4381613154951887,
+      "calmar": 0.5360234516756881,
+      "max_drawdown": -0.3511871838384013,
+      "final_nav": 7.621727234908808,
+      "skew": -0.18536090493221488,
+      "kurtosis": 7.336901789148455,
+      "sharpe_rf0": 0.9015689430235331,
+      "label": "BH_QQQ_adj",
+      "n": 2961
+    },
+    "bh_qqq_close": {
+      "start": "2014-11-11",
+      "end": "2026-08-21",
+      "n_days": 2961,
+      "cagr": 0.17933576314840982,
+      "ann_return_arith": 0.18958509230608314,
+      "ann_vol": 0.21871615543300485,
+      "sharpe": 0.8668088186295645,
+      "sortino": 1.3819563626829077,
+      "calmar": 0.503508660735632,
+      "max_drawdown": -0.35617215180846773,
+      "final_nav": 6.975361859173397,
+      "skew": -0.18270057151389213,
+      "kurtosis": 7.323550733844885,
+      "sharpe_rf0": 0.8668088186295645,
+      "label": "BH_QQQ_close",
+      "n": 2961
+    },
+    "bh_spy_adj": {
+      "start": "2014-11-11",
+      "end": "2026-08-21",
+      "n_days": 2961,
+      "cagr": 0.13763448387391364,
+      "ann_return_arith": 0.14475386483277528,
+      "ann_vol": 0.1753306680714419,
+      "sharpe": 0.8256049350920884,
+      "sortino": 1.2874328371876849,
+      "calmar": 0.40820183099001583,
+      "max_drawdown": -0.33717262742332,
+      "final_nav": 4.56520355557012,
+      "skew": -0.3033390881533304,
+      "kurtosis": 14.08674256637638,
+      "sharpe_rf0": 0.8256049350920884,
+      "label": "BH_SPY_adj",
+      "n": 2961
+    },
+    "bh_spy_close": {
+      "start": "2014-11-11",
+      "end": "2026-08-21",
+      "n_days": 2961,
+      "cagr": 0.11879396370779838,
+      "ann_return_arith": 0.1281243678174116,
+      "ann_vol": 0.17597462009251763,
+      "sharpe": 0.7280843552897058,
+      "sortino": 1.1323519264419828,
+      "calmar": 0.348320906997645,
+      "max_drawdown": -0.3410474689324392,
+      "final_nav": 3.750220384810234,
+      "skew": -0.30475570140111113,
+      "kurtosis": 13.905370469029084,
+      "sharpe_rf0": 0.7280843552897058,
+      "label": "BH_SPY_close",
+      "n": 2961
+    }
+  },
+  "factorization": {
+    "qc_reported_strategy_sharpe": 0.838,
+    "qc_reported_qqq_sharpe": 0.682,
+    "qc_reported_spy_sharpe": 0.564,
+    "local_ours_strategy_sharpe": 1.2207230652153243,
+    "local_qc_proxy_strategy_sharpe_adj0": 1.3619955510163804,
+    "local_qc_proxy_strategy_sharpe_close_open_0bps": 1.2905422790114687,
+    "local_qc_proxy_strategy_sharpe_close_open_5bps": 1.2412083005497703,
+    "local_qc_proxy_sharpe_adj0_rf2pct": 1.199289682960043,
+    "local_bh_qqq_adj": 0.9015689430235331,
+    "local_bh_qqq_adj_rf2pct": 0.6373188513714002,
+    "local_bh_qqq_close": 0.8668088186295645,
+    "local_bh_spy_adj": 0.8256049350920884,
+    "ratio_qc_reported_strat_over_qqq": 1.2287390029325511,
+    "ratio_local_ours_over_bh_qqq_adj": 1.3539985762169944,
+    "ratio_local_qcproxy_over_bh_qqq_adj": 1.5106948409832581,
+    "notes": [
+      "Compare local BH QQQ Sharpe to QC 0.682 \u2014 level-shift diagnostic.",
+      "Compare ours vs qc_proxy with identical return engine \u2014 isolates timing/signal disagreements.",
+      "If ours Sharpe < qc_proxy Sharpe, local weekend timing is NOT an optimistic timestamp bug.",
+      "close+openfill+5bps is closest mechanical QC proxy without LEAN fill model."
+    ]
+  },
+  "sample": {
+    "t0": "2014-11-10",
+    "t1": "2026-08-22"
+  }
+}

@@ -1,0 +1,63 @@
+version: v8.0_research
+training_start: '2020-01-01'
+training_end: '2025-04-30'
+oos_start: '2025-05-01'
+universe_mode: A_SHARE_ONLY
+lookback: 252
+frequency: 5
+position_size: 2
+commission_a_share: 0.0002
+commission_qdii: 0.0005
+initial_capital: 1000000
+hysteresis:
+  delta_rank: 0.1
+  min_hold_days: 9
+  max_replacements: 1
+regime_gate:
+  proxy: '510300'
+  window: 20
+  percentile_thresholds:
+  - 25
+  - 30
+  - 40
+  exposures:
+  - 1.0
+  - 0.7
+  - 0.4
+  - 0.1
+strategies:
+  composite_1:
+    factors:
+    - ADX_14D
+    - BREAKOUT_20D
+    - MARGIN_BUY_RATIO
+    - PRICE_POSITION_120D
+    - SHARE_CHG_5D
+    signs:
+    - 1
+    - 1
+    - -1
+    - 1
+    - -1
+    icirs:
+    - 0.44
+    - 18.579
+    - -5.101
+    - 4.542
+    - -2.306
+  core_4f:
+    factors:
+    - MARGIN_CHG_10D
+    - PRICE_POSITION_120D
+    - SHARE_CHG_20D
+    - SLOPE_20D
+    signs:
+    - -1
+    - 1
+    - -1
+    - 1
+    icirs:
+    - -3.387
+    - 4.542
+    - -1.807
+    - 3.125

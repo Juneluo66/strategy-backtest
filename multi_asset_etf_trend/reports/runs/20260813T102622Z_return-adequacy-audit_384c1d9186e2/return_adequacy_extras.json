@@ -1,0 +1,48 @@
+{
+  "wealth_vs_bil": 1.7846663681932062,
+  "mc_bil": {
+    "final_relative_nav": 1.7869905103977242,
+    "relative_cagr": 0.03243414429065972,
+    "relative_max_dd": -0.0889612211241424,
+    "relative_underwater_trading_sessions": 893.0,
+    "relative_underwater_calendar_days": 1300.0,
+    "relative_underwater_months": 43.0,
+    "current_relative_drawdown": -0.00567969266056878,
+    "currently_underwater": true,
+    "n_common_observations": 4576,
+    "common_start": "2008-06-02",
+    "common_end": "2026-08-10",
+    "definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1."
+  },
+  "rolling": {
+    "vs_bil_3y": {
+      "window_years": 3,
+      "n": 182,
+      "beat_rate": 0.9285714285714286,
+      "beats": 169
+    },
+    "vs_bil_5y": {
+      "window_years": 5,
+      "n": 158,
+      "beat_rate": 1.0,
+      "beats": 158
+    },
+    "vs_60_40_3y": {
+      "window_years": 3,
+      "n": 182,
+      "beat_rate": 0.027472527472527472,
+      "beats": 5
+    },
+    "vs_60_40_5y": {
+      "window_years": 5,
+      "n": 158,
+      "beat_rate": 0.0,
+      "beats": 0
+    }
+  },
+  "excess_cagr": 0.03277089601356442,
+  "inflation": {
+    "status": "NOT_COMPUTED",
+    "reason": "no_reliable_PIT_inflation_series"
+  }
+}

@@ -1,0 +1,15 @@
+base:
+  commission_bps: 0
+  slippage_bps: 0
+
+stress_5bps:
+  commission_bps: 0
+  slippage_bps: 5
+
+stress_10bps:
+  commission_bps: 0
+  slippage_bps: 10
+
+stress_25bps:
+  commission_bps: 0
+  slippage_bps: 25

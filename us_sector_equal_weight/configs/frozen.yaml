@@ -1,0 +1,74 @@
+# Pre-registered sector equal-weight audit — no parameter search.
+research_track: us_sector_equal_weight
+relation_to_sector_momentum: independent_equal_weight_rebalance_not_momentum_retune
+ibkr_modified: false
+
+versions:
+  - EW9_monthly
+  - EW9_quarterly
+  - EW9_annual
+
+equal_weight: true
+n_sectors: 9
+target_weight: 0.1111111111111111  # 1/9; enforced as equal
+cash: null
+leverage: null
+vol_weighting: false
+sector_ranking: false
+top_n: null
+trend_filter: false
+sma_filter: false
+bil_sleeve: false
+
+one_way_bps: 5.0
+execution: next_open_after_signal
+execution_delay_sessions: 1
+
+sample_labels:
+  discovery: DISCOVERY_SAMPLE
+  note: >
+    EW9 was a secondary observation inside sector_momentum research;
+    1999/2000–present ETF common sample is discovery only, not independent validation.
+
+pseudo_oos_starts:
+  - "2003-01-02"
+  - "2008-01-02"
+  - "2013-01-02"
+  - "2018-01-02"
+  - "2021-01-04"
+
+fixed_endpoints:
+  - "2005-12-30"
+  - "2008-12-31"
+  - "2012-12-31"
+  - "2016-12-30"
+  - "2020-12-31"
+  - "2024-12-31"
+  - latest
+
+cost_stress_bps: [5.0, 10.0, 20.0]
+exclude_last_years: [1, 2, 3]
+rolling_years: [3, 5, 10]
+
+benchmarks_formal:
+  - spy_bh
+  - spy_monthly_reset
+  - rsp_bh
+  - sector_cap_weight_proxy  # NOT_COMPUTED without reliable PIT weights
+  - ew9_no_rebalance_basket
+
+data:
+  start: "1998-12-01"
+  source: YahooFinance
+  return_basis: Yahoo_AdjClose_scaled_Open
+
+french:
+  mapping_config: configs/french_mapping.yaml
+  role: economic_mechanism_validation_not_tradable_etf_backtest
+
+gate:
+  label_pass: SECTOR_EQUAL_WEIGHT_RETURN_CANDIDATE
+  label_discovery_only: DISCOVERY_ONLY
+  rolling_5y_win_min: 0.55
+  rolling_10y_win_min: 0.60
+  maxdd_vs_spy_extra_pp: 0.05

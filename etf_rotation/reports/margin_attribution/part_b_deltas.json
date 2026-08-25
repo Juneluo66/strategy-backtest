@@ -1,0 +1,21 @@
+{
+  "pool_switch_mom": {
+    "from": "full_pool_mom_same_range",
+    "to": "restricted_pool_mom_only",
+    "d_ann": 0.0014235365145357504,
+    "d_sharpe": 0.0036059225141174267,
+    "d_mdd": -0.025124458152521068
+  },
+  "add_margin_buy_in_pool": {
+    "from": "restricted_pool_mom_plus_shares",
+    "to": "restricted_pool_plus_margin_buy_ratio",
+    "d_ann": 0.009569646771514506,
+    "d_sharpe": 0.13917059512428598
+  },
+  "add_both_margin_in_pool": {
+    "from": "restricted_pool_mom_plus_shares",
+    "to": "restricted_pool_plus_both_margin_factors",
+    "d_ann": 0.01602473606232091,
+    "d_sharpe": 0.15994921784297306
+  }
+}

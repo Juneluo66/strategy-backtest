@@ -1,0 +1,111 @@
+{
+  "paper_config": {
+    "initial_cash": 100000.0,
+    "allow_fractional_shares": true,
+    "min_commission": 1.0,
+    "commission_per_share": 0.005,
+    "min_order_notional": 1.0,
+    "share_lot_size": 1.0,
+    "defer_residual_below_notional": 25.0,
+    "one_way_bps": 5.0,
+    "forbid_negative_cash": true,
+    "books": [
+      {
+        "id": "candidate_80_20_dc",
+        "role": "default_paper_candidate",
+        "type": "spy_dc_lookthrough",
+        "spy": 0.8,
+        "dc": 0.2
+      },
+      {
+        "id": "opp_cost_100_spy",
+        "role": "opportunity_cost_benchmark",
+        "type": "spy_only"
+      },
+      {
+        "id": "shadow_60_40_dc",
+        "role": "conservative_shadow",
+        "type": "spy_dc_lookthrough",
+        "spy": 0.6,
+        "dc": 0.4
+      },
+      {
+        "id": "traditional_60_40_ief",
+        "role": "traditional_benchmark",
+        "type": "two_asset",
+        "weights": {
+          "SPY": 0.6,
+          "IEF": 0.4
+        }
+      }
+    ]
+  },
+  "books": {
+    "candidate_80_20_dc": {
+      "role": "default_paper_candidate",
+      "type": "spy_dc_lookthrough",
+      "final_nav": 917612.6681891357,
+      "n_log_events": 1106,
+      "final_state": {
+        "cash": 0.041087339465775585,
+        "shares": {
+          "SPY": 950.9142611439547,
+          "VEA": 1259.2825977421478,
+          "IWM": 304.118128786657
+        },
+        "deferred_targets": {}
+      }
+    },
+    "opp_cost_100_spy": {
+      "role": "opportunity_cost_benchmark",
+      "type": "spy_only",
+      "final_nav": 941897.6994970848,
+      "n_log_events": 2,
+      "final_state": {
+        "cash": 0.9999999999708962,
+        "shares": {
+          "SPY": 1218.447749505677
+        },
+        "deferred_targets": {}
+      }
+    },
+    "shadow_60_40_dc": {
+      "role": "conservative_shadow",
+      "type": "spy_dc_lookthrough",
+      "final_nav": 875506.2477436773,
+      "n_log_events": 1106,
+      "final_state": {
+        "cash": 0.06922603715838704,
+        "shares": {
+          "SPY": 681.3808818501443,
+          "VEA": 2406.2487285750885,
+          "IWM": 581.1229290372406
+        },
+        "deferred_targets": {}
+      }
+    },
+    "traditional_60_40_ief": {
+      "role": "traditional_benchmark",
+      "type": "two_asset",
+      "final_nav": 542763.0708170498,
+      "n_log_events": 780,
+      "final_state": {
+        "cash": 0.10829472389355033,
+        "shares": {
+          "SPY": 426.55568122526444,
+          "IEF": 2296.4920964011962
+        },
+        "deferred_targets": {}
+      }
+    }
+  },
+  "execution_dates": [
+    "2005-02-01",
+    "2005-03-01",
+    "2005-04-01",
+    "2005-05-02",
+    "2005-06-01",
+    "..."
+  ],
+  "n_execution_dates": 259
+}

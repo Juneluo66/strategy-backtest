@@ -1,0 +1,23 @@
+name: btc_ma_qqq_shy
+hypothesis_source: email_claim_external
+sample_label: DISCOVERY_SAMPLE
+claim: Since 2014, weekly BTC>50DMA and 20d momentum>0 hold QQQ else SHY beats SPY/QQQ
+  on drawdown and risk-adjusted return.
+data:
+  start: '2010-01-01'
+  audit_start: '2014-01-01'
+  btc_symbol: BTC-USD
+  risk_on: QQQ
+  risk_off: SHY
+  benchmarks:
+  - SPY
+  - QQQ
+rules:
+  sma_window: 50
+  momentum_window: 20
+  rebalance: weekly_last_session
+  execution: next_session_close_to_close
+  costs_bps_roundtrip: 0
+labels:
+  strategy_id: BTC50_MOM20_QQQ_SHY
+  classification: EMAIL_CLAIM_AUDIT_DISCOVERY_ONLY

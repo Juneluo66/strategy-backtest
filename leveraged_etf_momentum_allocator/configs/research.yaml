@@ -1,0 +1,37 @@
+# Research extensions ONLY — must not be mixed into original replication.
+mode: RESEARCH_EXTENSION
+
+regime_analysis:
+  enabled: false
+  spy_sma200: false
+  qqq_sma200: false
+  vix_high_low: false
+  note: "Regime filters here are research-only until original rules are verified."
+
+monte_carlo:
+  enabled: false
+  block_size_months: 3
+  n_simulations: 1000
+
+subperiods:
+  - name: "2016-2018"
+    start: "2016-01-01"
+    end: "2018-12-31"
+  - name: "2019-2021"
+    start: "2019-01-01"
+    end: "2021-12-31"
+  - name: "2022"
+    start: "2022-01-01"
+    end: "2022-12-31"
+  - name: "2023-2025"
+    start: "2023-01-01"
+    end: "2025-12-31"
+
+walk_forward:
+  rolling_windows_years: [3, 5]
+
+oos:
+  start: "2026-01-01"
+  end: null  # latest available local data
+  frozen_rules: true
+  note: "True OOS — no parameter tuning on 2026 data."

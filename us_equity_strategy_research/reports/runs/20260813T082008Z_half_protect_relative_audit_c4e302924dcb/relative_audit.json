@@ -1,0 +1,504 @@
+{
+  "alignment": {
+    "half_start": "2008-07-01",
+    "half_end": "2026-08-10",
+    "n_common_trading_days": 4555,
+    "n_calendar_days_span": 6614,
+    "all_rebased_to_1_at_common_start": true,
+    "metric_c_definition": "relative_nav_t = nav_dc_t / nav_spy_t (both rebased to 1 at common start). An opportunity-cost interval starts when relative_nav falls below its historical high and ends when it recovers to/above that high; open intervals at sample end are ongoing.",
+    "prior_4382_unit": "trading_days under legacy excess method",
+    "prior_4382_equals_almost_full_sample": true,
+    "nan_check_half": 0,
+    "nan_check_80": 0,
+    "nan_check_60": 0,
+    "legacy_vs_metric_c": {
+      "legacy_final_rel": 0.98418160895287,
+      "metric_c_final_rel": 1.048729698321955,
+      "discrepancy": 0.06454808936908496
+    }
+  },
+  "legacy_diag_vs_80": {
+    "method": "(1 + r_strat - r_bench).cumprod()  \u2014 NOT formal Metric C",
+    "final_approx_relative": 0.98418160895287,
+    "relative_max_dd_approx": -0.15304161050273657,
+    "relative_underwater_days_approx": 4382.0,
+    "unit": "trading_days (loop over daily index), not calendar days",
+    "note": "This approximation can end <1 even when true NAV ratio >1; prior report's 4382 came from this path."
+  },
+  "books": {
+    "half_protect": {
+      "cagr": 0.12327114583784216,
+      "sharpe": 0.827420874584926,
+      "max_drawdown": -0.2550816732770601,
+      "end_nav": 8.206963792231615
+    },
+    "frozen_80_20_spy_dc": {
+      "cagr": 0.11999950001904325,
+      "sharpe": 0.7504990767119558,
+      "max_drawdown": -0.38945638801288285,
+      "end_nav": 7.784730559963073
+    },
+    "frozen_60_40_spy_dc": {
+      "cagr": 0.11447121798917204,
+      "sharpe": 0.8035484312960998,
+      "max_drawdown": -0.2976292367036927,
+      "end_nav": 7.11753632834478
+    },
+    "spy_bh": {
+      "cagr": 0.12468804526566335,
+      "sharpe": 0.694463154125804,
+      "max_drawdown": -0.4716519450197112,
+      "end_nav": 8.3964612787768
+    }
+  },
+  "metric_c_vs_80": {
+    "benchmark": "frozen_80_20_spy_dc",
+    "common_start": "2008-07-01",
+    "common_end": "2026-08-10",
+    "n_trading_days": 4555,
+    "n_calendar_days": 6614,
+    "final_relative_wealth": 1.048729698321955,
+    "relative_cagr": 0.002630980891900503,
+    "max_relative_underwater": -0.15304161050273657,
+    "longest_relative_underwater_trading_days": 4382,
+    "longest_relative_underwater_months_metric_c": 210,
+    "longest_period": {
+      "peak_date": "2009-03-09",
+      "peak_value": 1.2236802753134675,
+      "start_date": "2009-03-10",
+      "trough_date": "2026-04-17",
+      "trough_value": 1.0364062752390624,
+      "trough_drawdown": -0.15304161050273657,
+      "recovery_date": null,
+      "end_date": "2026-08-10",
+      "ongoing": true,
+      "duration_months": 210
+    },
+    "currently_underwater": true,
+    "current_distance_from_relative_peak": -0.14297082376905668,
+    "last_relative_peak_date": "2009-03-09",
+    "months_since_relative_peak": 210,
+    "frac_days_relative_wealth_gt_1": 0.9995609220636663,
+    "first_date_relative_wealth_gt_1": "2008-07-02",
+    "last_date_relative_wealth_gt_1": "2026-08-10",
+    "cross_above_1_dates": [
+      "2008-07-02",
+      "2008-09-09"
+    ],
+    "n_cross_above_1": 2,
+    "definition": "relative_nav_t = nav_dc_t / nav_spy_t (both rebased to 1 at common start). An opportunity-cost interval starts when relative_nav falls below its historical high and ends when it recovers to/above that high; open intervals at sample end are ongoing."
+  },
+  "metric_c_vs_60": {
+    "benchmark": "frozen_60_40_spy_dc",
+    "common_start": "2008-07-01",
+    "common_end": "2026-08-10",
+    "n_trading_days": 4555,
+    "n_calendar_days": 6614,
+    "final_relative_wealth": 1.1464649220362932,
+    "relative_cagr": 0.007576721985767643,
+    "max_relative_underwater": -0.16168981026067097,
+    "longest_relative_underwater_trading_days": 1876,
+    "longest_relative_underwater_months_metric_c": 90,
+    "longest_period": {
+      "peak_date": "2010-06-03",
+      "peak_value": 1.1752403628818793,
+      "start_date": "2010-06-04",
+      "trough_date": "2011-08-22",
+      "trough_value": 0.9852159715968262,
+      "trough_drawdown": -0.16168981026067097,
+      "recovery_date": "2017-11-14",
+      "end_date": "2017-11-14",
+      "ongoing": false,
+      "duration_months": 90
+    },
+    "currently_underwater": true,
+    "current_distance_from_relative_peak": -0.12204303519347137,
+    "last_relative_peak_date": "2024-12-24",
+    "months_since_relative_peak": 21,
+    "frac_days_relative_wealth_gt_1": 0.9975850713501646,
+    "first_date_relative_wealth_gt_1": "2008-07-03",
+    "last_date_relative_wealth_gt_1": "2026-08-10",
+    "cross_above_1_dates": [
+      "2008-07-03",
+      "2008-07-15",
+      "2008-07-23",
+      "2008-09-09",
+      "2011-08-23"
+    ],
+    "n_cross_above_1": 5,
+    "definition": "relative_nav_t = nav_dc_t / nav_spy_t (both rebased to 1 at common start). An opportunity-cost interval starts when relative_nav falls below its historical high and ends when it recovers to/above that high; open intervals at sample end are ongoing."
+  },
+  "metric_c_vs_spy": {
+    "benchmark": "spy_bh",
+    "common_start": "2008-07-01",
+    "common_end": "2026-08-10",
+    "n_trading_days": 4555,
+    "n_calendar_days": 6614,
+    "final_relative_wealth": 0.9728164174664163,
+    "relative_cagr": -0.0015208034472387055,
+    "max_relative_underwater": -0.31314749692602417,
+    "longest_relative_underwater_trading_days": 4382,
+    "longest_relative_underwater_months_metric_c": 210,
+    "longest_period": {
+      "peak_date": "2009-03-09",
+      "peak_value": 1.4048654653836978,
+      "start_date": "2009-03-10",
+      "trough_date": "2026-07-29",
+      "trough_value": 0.9649353613809788,
+      "trough_drawdown": -0.31314749692602417,
+      "recovery_date": null,
+      "end_date": "2026-08-10",
+      "ongoing": true,
+      "duration_months": 210
+    },
+    "currently_underwater": true,
+    "current_distance_from_relative_peak": -0.30753766717390263,
+    "last_relative_peak_date": "2009-03-09",
+    "months_since_relative_peak": 210,
+    "frac_days_relative_wealth_gt_1": 0.9589462129527991,
+    "first_date_relative_wealth_gt_1": "2008-07-02",
+    "last_date_relative_wealth_gt_1": "2026-04-07",
+    "cross_above_1_dates": [
+      "2008-07-02",
+      "2008-08-12",
+      "2008-08-29",
+      "2019-10-28",
+      "2019-11-04",
+      "2019-11-08",
+      "2019-11-15",
+      "2019-11-25",
+      "2019-12-06",
+      "2019-12-11"
+    ],
+    "n_cross_above_1": 10,
+    "definition": "relative_nav_t = nav_dc_t / nav_spy_t (both rebased to 1 at common start). An opportunity-cost interval starts when relative_nav falls below its historical high and ends when it recovers to/above that high; open intervals at sample end are ongoing."
+  },
+  "rolling": {
+    "half_vs_80_3y": {
+      "n": 61,
+      "cagr_win_rate": 0.5081967213114754,
+      "sharpe_win_rate": 0.47540983606557374,
+      "maxdd_win_rate": 0.36065573770491804,
+      "triple_win_rate": 0.16393442622950818
+    },
+    "half_vs_80_5y": {
+      "n": 53,
+      "cagr_win_rate": 0.4339622641509434,
+      "sharpe_win_rate": 0.5660377358490566,
+      "maxdd_win_rate": 0.4339622641509434,
+      "triple_win_rate": 0.20754716981132076
+    },
+    "half_vs_60_3y": {
+      "n": 61,
+      "cagr_win_rate": 0.7049180327868853,
+      "sharpe_win_rate": 0.5573770491803278,
+      "maxdd_win_rate": 0.2459016393442623,
+      "triple_win_rate": 0.13114754098360656
+    },
+    "half_vs_60_5y": {
+      "n": 53,
+      "cagr_win_rate": 0.8490566037735849,
+      "sharpe_win_rate": 0.5471698113207547,
+      "maxdd_win_rate": 0.4339622641509434,
+      "triple_win_rate": 0.3584905660377358
+    }
+  },
+  "cutoffs": [
+    {
+      "cutoff": "2015-12-31",
+      "start": "2008-07-01",
+      "end": "2015-12-31",
+      "half_cagr": 0.10129804683564347,
+      "half_sharpe": 0.6841614357559496,
+      "half_maxdd": -0.2550816732770601,
+      "m80_cagr": 0.08525674892088508,
+      "m80_sharpe": 0.5330891276935743,
+      "m80_maxdd": -0.38945638801288285,
+      "m60_cagr": 0.08275943000457198,
+      "m60_sharpe": 0.5902354497000291,
+      "m60_maxdd": -0.2976292367036927,
+      "final_rel_vs_80": 1.1104803941393795,
+      "final_rel_vs_60": 1.1292681600038794,
+      "cagr_gt_80": true,
+      "cagr_gt_60": true,
+      "sharpe_gt_60": true,
+      "maxdd_better_60": true
+    },
+    {
+      "cutoff": "2018-12-31",
+      "start": "2008-07-01",
+      "end": "2018-12-31",
+      "half_cagr": 0.09820017226862654,
+      "half_sharpe": 0.6946197741593834,
+      "half_maxdd": -0.2550816732770601,
+      "m80_cagr": 0.0853585803972774,
+      "m80_sharpe": 0.5676859588998415,
+      "m80_maxdd": -0.38945638801288285,
+      "m60_cagr": 0.08177035381996922,
+      "m60_sharpe": 0.616308328250351,
+      "m60_maxdd": -0.2976292367036927,
+      "final_rel_vs_80": 1.1255366831376843,
+      "final_rel_vs_60": 1.1647782270477722,
+      "cagr_gt_80": true,
+      "cagr_gt_60": true,
+      "sharpe_gt_60": true,
+      "maxdd_better_60": true
+    },
+    {
+      "cutoff": "2020-12-31",
+      "start": "2008-07-01",
+      "end": "2020-12-31",
+      "half_cagr": 0.11669467690600865,
+      "half_sharpe": 0.77298980917417,
+      "half_maxdd": -0.2550816732770601,
+      "m80_cagr": 0.10778268149790171,
+      "m80_sharpe": 0.6595826901763557,
+      "m80_maxdd": -0.38945638801288285,
+      "m60_cagr": 0.10272653223452499,
+      "m60_sharpe": 0.7085222269167731,
+      "m60_maxdd": -0.2976292367036927,
+      "final_rel_vs_80": 1.0995795147246699,
+      "final_rel_vs_60": 1.163714195898859,
+      "cagr_gt_80": true,
+      "cagr_gt_60": true,
+      "sharpe_gt_60": true,
+      "maxdd_better_60": true
+    },
+    {
+      "cutoff": "2022-12-31",
+      "start": "2008-07-01",
+      "end": "2022-12-30",
+      "half_cagr": 0.10246650130759427,
+      "half_sharpe": 0.6956977765011279,
+      "half_maxdd": -0.2550816732770601,
+      "m80_cagr": 0.09662234548438287,
+      "m80_sharpe": 0.6075114902321085,
+      "m80_maxdd": -0.38945638801288285,
+      "m60_cagr": 0.09255879741781792,
+      "m60_sharpe": 0.6541499193020047,
+      "m60_maxdd": -0.2976292367036927,
+      "final_rel_vs_80": 1.0744545173946138,
+      "final_rel_vs_60": 1.1332985582671917,
+      "cagr_gt_80": true,
+      "cagr_gt_60": true,
+      "sharpe_gt_60": true,
+      "maxdd_better_60": true
+    },
+    {
+      "cutoff": "2024-12-31",
+      "start": "2008-07-01",
+      "end": "2024-12-31",
+      "half_cagr": 0.1202399662783229,
+      "half_sharpe": 0.8076219652582126,
+      "half_maxdd": -0.2550816732770601,
+      "m80_cagr": 0.1104985341273208,
+      "m80_sharpe": 0.6965137158788607,
+      "m80_maxdd": -0.38945638801288285,
+      "m60_cagr": 0.10265845453281708,
+      "m60_sharpe": 0.7315526560677874,
+      "m60_maxdd": -0.2976292367036927,
+      "final_rel_vs_80": 1.148984673911171,
+      "final_rel_vs_60": 1.2908353236692314,
+      "cagr_gt_80": true,
+      "cagr_gt_60": true,
+      "sharpe_gt_60": true,
+      "maxdd_better_60": true
+    },
+    {
+      "cutoff": "latest",
+      "start": "2008-07-01",
+      "end": "2026-08-10",
+      "half_cagr": 0.12327114583784216,
+      "half_sharpe": 0.827420874584926,
+      "half_maxdd": -0.2550816732770601,
+      "m80_cagr": 0.11999950001904325,
+      "m80_sharpe": 0.7504990767119558,
+      "m80_maxdd": -0.38945638801288285,
+      "m60_cagr": 0.11447121798917204,
+      "m60_sharpe": 0.8035484312960998,
+      "m60_maxdd": -0.2976292367036927,
+      "final_rel_vs_80": 1.048729698321955,
+      "final_rel_vs_60": 1.1464649220362932,
+      "cagr_gt_80": true,
+      "cagr_gt_60": true,
+      "sharpe_gt_60": true,
+      "maxdd_better_60": true
+    }
+  ],
+  "exclude_recent": {
+    "1": {
+      "exclude_last_years": 1,
+      "end": "2025-08-08",
+      "half": {
+        "cagr": 0.12048705777906799,
+        "sharpe": 0.8078435843574414,
+        "max_drawdown": -0.2550816732770601,
+        "end_nav": 6.998786510828541
+      },
+      "frozen_80_20": {
+        "cagr": 0.11315049755303863,
+        "sharpe": 0.7081824581262489,
+        "max_drawdown": -0.38945638801288285,
+        "end_nav": 6.255003614929637
+      },
+      "frozen_60_40": {
+        "cagr": 0.1064513658672448,
+        "sharpe": 0.7536707538917573,
+        "max_drawdown": -0.2976292367036927,
+        "end_nav": 5.6414425946740225
+      },
+      "final_rel_vs_80": 1.1130631786117544,
+      "final_rel_vs_60": 1.2335038781526972,
+      "cagr_edge_vs_80": 0.007336560226029354,
+      "cagr_edge_vs_60": 0.01403569191182319
+    },
+    "2": {
+      "exclude_last_years": 2,
+      "end": "2024-08-09",
+      "half": {
+        "cagr": 0.11573033193317173,
+        "sharpe": 0.7802939801593995,
+        "max_drawdown": -0.2550816732770601,
+        "end_nav": 5.83480076938519
+      },
+      "frozen_80_20": {
+        "cagr": 0.106973210971814,
+        "sharpe": 0.6748218583828398,
+        "max_drawdown": -0.38945638801288285,
+        "end_nav": 5.1393307424106665
+      },
+      "frozen_60_40": {
+        "cagr": 0.09957988596971945,
+        "sharpe": 0.7100242440721887,
+        "max_drawdown": -0.2976292367036927,
+        "end_nav": 4.613501112432866
+      },
+      "final_rel_vs_80": 1.1293904181536063,
+      "final_rel_vs_60": 1.257486549239752,
+      "cagr_edge_vs_80": 0.008757120961357723,
+      "cagr_edge_vs_60": 0.016150445963452276
+    },
+    "3": {
+      "exclude_last_years": 3,
+      "end": "2023-08-11",
+      "half": {
+        "cagr": 0.11107207280213038,
+        "sharpe": 0.7480181809012351,
+        "max_drawdown": -0.2550816732770601,
+        "end_nav": 4.911048224870582
+      },
+      "frozen_80_20": {
+        "cagr": 0.10157453467763866,
+        "sharpe": 0.6384699519645518,
+        "max_drawdown": -0.38945638801288285,
+        "end_nav": 4.31358323414775
+      },
+      "frozen_60_40": {
+        "cagr": 0.09503757927572876,
+        "sharpe": 0.6754589942097226,
+        "max_drawdown": -0.2976292367036927,
+        "end_nav": 3.9425786968095644
+      },
+      "final_rel_vs_80": 1.1325585191473024,
+      "final_rel_vs_60": 1.2385164357514775,
+      "cagr_edge_vs_80": 0.009497538124491722,
+      "cagr_edge_vs_60": 0.016034493526401628
+    }
+  },
+  "annual_vs_80": {
+    "benchmark": "80_20",
+    "annual_excess": {
+      "2008": 0.07885401787084634,
+      "2009": 0.09362606800124129,
+      "2010": -0.06678056261164711,
+      "2011": -0.033182435786309084,
+      "2012": -0.0006242930190278884,
+      "2013": 0.02215697776658998,
+      "2014": 0.03079490008970831,
+      "2015": -0.011203740360731573,
+      "2016": -0.027149137236389675,
+      "2017": 0.039491597231860576,
+      "2018": 0.006300370027686797,
+      "2019": -0.06254082324849852,
+      "2020": 0.03342010858450206,
+      "2021": 0.0323328720636431,
+      "2022": -0.0401698234823018,
+      "2023": 0.0623077958422531,
+      "2024": 0.020529171584908745,
+      "2025": -0.055426221115142615,
+      "2026": -0.04957633463734101
+    },
+    "positive_year_frac": 0.5263157894736842,
+    "best_year": "2009",
+    "best_year_excess": 0.09362606800124129,
+    "worst_year": "2010",
+    "worst_year_excess": -0.06678056261164711,
+    "full_relative_wealth_growth": 0.04872969832195495,
+    "last_1y_share_of_log_rel_growth": -1.2455123446468492,
+    "last_2y_share_of_log_rel_growth": -1.532619272938625,
+    "last_3y_share_of_log_rel_growth": -1.6299231841506028,
+    "last_5y_share_of_log_rel_growth": -1.1898523658849485
+  },
+  "annual_vs_60": {
+    "benchmark": "60_40",
+    "annual_excess": {
+      "2008": 0.01388767812524172,
+      "2009": 0.14467052718173057,
+      "2010": -0.049921407904983894,
+      "2011": -0.05320954082378093,
+      "2012": 0.03062406763348613,
+      "2013": 0.0335570068053439,
+      "2014": 0.04398995885915724,
+      "2015": -0.001178629604091208,
+      "2016": -0.0007306758067753272,
+      "2017": 0.04672059385375604,
+      "2018": -0.006315092405063005,
+      "2019": -0.015640764718997335,
+      "2020": 0.014770747401033901,
+      "2021": 0.06749986328966928,
+      "2022": -0.06758173140138757,
+      "2023": 0.11974352347825246,
+      "2024": 0.03781248973484441,
+      "2025": -0.09017973480009811,
+      "2026": -0.04847566509344858
+    },
+    "positive_year_frac": 0.5263157894736842,
+    "best_year": "2009",
+    "best_year_excess": 0.14467052718173057,
+    "worst_year": "2025",
+    "worst_year_excess": -0.09017973480009811,
+    "full_relative_wealth_growth": 0.14646492203629324,
+    "last_1y_share_of_log_rel_growth": -0.5334896907251329,
+    "last_2y_share_of_log_rel_growth": -0.6555090028073807,
+    "last_3y_share_of_log_rel_growth": -0.5619017025648099,
+    "last_5y_share_of_log_rel_growth": -0.28233200223280863
+  },
+  "decision": {
+    "choice": "C",
+    "reason": "Prior rel_8020_underwater_days=4382 used non-Metric-C arithmetic excess cumprod (final approx wealth <1) instead of formal relative NAV ratio (final wealth >1). Metric fixed; strategy rules unchanged.",
+    "evidence": {
+      "early_cutoffs_cagr_gt_60_all": true,
+      "late_only_cagr_gt_60": false,
+      "rolling_60_ok": true,
+      "rolling_60": {
+        "n": 61,
+        "cagr_win_rate": 0.7049180327868853,
+        "sharpe_win_rate": 0.5573770491803278,
+        "maxdd_win_rate": 0.2459016393442623,
+        "triple_win_rate": 0.13114754098360656
+      },
+      "depends_on_recent_3y": false,
+      "edge_full_vs_60": 0.00879992784867012,
+      "edge_exclude_3y_vs_60": 0.016034493526401628,
+      "metric_error_detected": true
+    }
+  },
+  "constraints": {
+    "no_rule_change": true,
+    "no_exit_ratio_search": true,
+    "no_weight_change": true,
+    "no_sma_retune": true,
+    "no_ibkr_change": true,
+    "paper_default_remains": "80% SPY + 20% D+C"
+  }
+}

@@ -1,0 +1,12 @@
+strategy: comparison
+inherits: frozen.yaml
+include_etf:
+  - vti_bh
+  - spy_bh
+  - sixty_forty_ief
+  - vti_sgov_trend
+  - vti_vxus_sgov_dual
+  - frozen_80_20_spy_dc
+  - experiment_80_20_vti_dc
+common_interval_rule: intersection
+sgov_proxy: BIL

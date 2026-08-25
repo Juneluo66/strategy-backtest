@@ -1,0 +1,1 @@
+TUSHARE_TOKEN is not set. Export a TuShare Pro token before `etf-rotation fetch-non-ohlcv --full`. No empty parquet will be written.

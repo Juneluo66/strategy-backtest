@@ -1,0 +1,6 @@
+metric,public_v8,independent_vec,independent_evt,difference_vs_public_evt,possible_causes
+OOS total return,0.539,-0.08943365843233764,-0.12782588804250072,-0.6668258880425008,"Data vendor/adjustment, PIT listing proxy, partial non-OHLCV factors, cross-section, T+1 timing, cost, lots/cash, QDII exclusion"
+Maximum drawdown,-0.108,-0.25465079505341437,-0.24733857176402296,-0.13933857176402298,"Data vendor/adjustment, PIT listing proxy, partial non-OHLCV factors, cross-section, T+1 timing, cost, lots/cash, QDII exclusion"
+Sharpe,1.38,-0.2776097946717722,-0.4217501517255443,-1.8017501517255443,"Data vendor/adjustment, PIT listing proxy, partial non-OHLCV factors, cross-section, T+1 timing, cost, lots/cash, QDII exclusion"
+Calmar,7.41,-0.2971964131877201,-0.4387916748410895,-7.84879167484109,"Data vendor/adjustment, PIT listing proxy, partial non-OHLCV factors, cross-section, T+1 timing, cost, lots/cash, QDII exclusion"
+VEC minus EVT total return,-0.019,0.03839222961016309,0.03839222961016309,0.05739222961016309,"Data vendor/adjustment, PIT listing proxy, partial non-OHLCV factors, cross-section, T+1 timing, cost, lots/cash, QDII exclusion"

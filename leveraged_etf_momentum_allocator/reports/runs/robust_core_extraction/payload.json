@@ -1,0 +1,154 @@
+{
+  "best": "ABLATION_DROP_SPY_RSI",
+  "classification": "PAPER_TRADING_CANDIDATE",
+  "leverage_recommended": "ROBUST_CORE_1_5X",
+  "summary": "ORIGINAL:\nCAGR: 198.82%\nSharpe: 1.99\nMaxDD: -49.43%\nparameters: 4\nthresholds: 8\nbranches: 10\n\nSTANDARDIZED:\nCAGR: 170.92%\nSharpe: 1.86\nMaxDD: -49.43%\nparameters: 4\nthresholds: 8\nbranches: 12\n\nBEST ROBUST CORE:\nname: ABLATION_DROP_SPY_RSI\nCAGR: 146.64%\nSharpe: 1.72\nMaxDD: -49.43%\nparameters: 4\nthresholds: 6\nbranches: 10\n\nEX-COVID CAGR: 114.30%\nEX-2022 CAGR: 146.10%\nEX-COVID+2022 CAGR: 111.46%\n\nRANDOM NEIGHBORHOOD:\nmedian: 116.73%\n10th percentile: 86.59%\ncandidate percentile: 91.0\n\nROLLING 5Y WIN RATE VS TQQQ: 100.0%\n\nLEVERAGE VERSION RECOMMENDED: ROBUST_CORE_1_5X\n  (CAGR 64.81% Sharpe 1.72 MaxDD -27.36% Calmar 2.37)\n\nCLASSIFICATION: PAPER_TRADING_CANDIDATE",
+  "score_table": [
+    {
+      "name": "COLLAPSE_DROP_SQQQ_RSI",
+      "crisis_score": 1.0417,
+      "cagr": 1.7157496935834362,
+      "ex_both": 1.2025589930544234,
+      "rand_med": 1.204943,
+      "rand_p10": 1.029919,
+      "rand_pct": 100.0,
+      "roll5": 1.0,
+      "sharpe": 1.8673331236886093,
+      "max_dd": -0.49428939507981895,
+      "branches": 11,
+      "params": 10
+    },
+    {
+      "name": "ABLATION_DROP_SQQQ_RSI",
+      "crisis_score": 1.0417,
+      "cagr": 1.7157496935834362,
+      "ex_both": 1.2025589930544234,
+      "rand_med": 1.204943,
+      "rand_p10": 1.029919,
+      "rand_pct": 100.0,
+      "roll5": 1.0,
+      "sharpe": 1.8673331236886093,
+      "max_dd": -0.49428939507981895,
+      "branches": 11,
+      "params": 10
+    },
+    {
+      "name": "STANDARDIZED",
+      "crisis_score": 1.0396,
+      "cagr": 1.7092478498172303,
+      "ex_both": 1.2025589930544234,
+      "rand_med": 1.236621,
+      "rand_p10": 1.041469,
+      "rand_pct": 99.8,
+      "roll5": 1.0,
+      "sharpe": 1.8635354101634125,
+      "max_dd": -0.49428939507981906,
+      "branches": 12,
+      "params": 12
+    },
+    {
+      "name": "ROBUST_CORE_V1",
+      "crisis_score": 1.0396,
+      "cagr": 1.7092478498172303,
+      "ex_both": 1.2025589930544234,
+      "rand_med": 1.236621,
+      "rand_p10": 1.041469,
+      "rand_pct": 99.8,
+      "roll5": 1.0,
+      "sharpe": 1.8635354101634125,
+      "max_dd": -0.49428939507981906,
+      "branches": 12,
+      "params": 12
+    },
+    {
+      "name": "ABLATION_DROP_SPY_RSI",
+      "crisis_score": 1.0366,
+      "cagr": 1.4664034478305417,
+      "ex_both": 1.114619854015345,
+      "rand_med": 1.167264,
+      "rand_p10": 0.865864,
+      "rand_pct": 91.0,
+      "roll5": 1.0,
+      "sharpe": 1.7217036941320798,
+      "max_dd": -0.49428939507981884,
+      "branches": 10,
+      "params": 10
+    },
+    {
+      "name": "ABLATION_DROP_UVXY_RSI",
+      "crisis_score": 1.0365,
+      "cagr": 1.6214213753622189,
+      "ex_both": 1.1831794114927412,
+      "rand_med": 1.202239,
+      "rand_p10": 0.998543,
+      "rand_pct": 100.0,
+      "roll5": 1.0,
+      "sharpe": 1.8585267641269734,
+      "max_dd": -0.49428939507981884,
+      "branches": 9,
+      "params": 10
+    },
+    {
+      "name": "ROBUST_CORE_V2",
+      "crisis_score": 1.0116,
+      "cagr": 1.5391059848137982,
+      "ex_both": 1.1667987005190499,
+      "rand_med": 1.112932,
+      "rand_p10": 0.941594,
+      "rand_pct": 100.0,
+      "roll5": 1.0,
+      "sharpe": 1.8222318887091462,
+      "max_dd": -0.4942893950798186,
+      "branches": 10,
+      "params": 10
+    },
+    {
+      "name": "PRUNED_1",
+      "crisis_score": 1.0073,
+      "cagr": 1.533027048136348,
+      "ex_both": 1.1667987005190499,
+      "rand_med": 1.143231,
+      "rand_p10": 0.944087,
+      "rand_pct": 100.0,
+      "roll5": 1.0,
+      "sharpe": 1.8182554951455787,
+      "max_dd": -0.49428939507981895,
+      "branches": 11,
+      "params": 12
+    }
+  ],
+  "leverage": [
+    {
+      "version": "ROBUST_CORE_1X",
+      "exposure_scale": 0.3333333333333333,
+      "cagr": 0.4106623872575985,
+      "sharpe": 1.7217036941320798,
+      "max_dd": -0.1882561770768354,
+      "calmar": 2.181401926004211
+    },
+    {
+      "version": "ROBUST_CORE_1_5X",
+      "exposure_scale": 0.5,
+      "cagr": 0.6481168416452425,
+      "sharpe": 1.7217036941320798,
+      "max_dd": -0.27359278576473123,
+      "calmar": 2.36891056843353
+    },
+    {
+      "version": "ROBUST_CORE_2X",
+      "exposure_scale": 0.6666666666666666,
+      "cagr": 0.9050679205049303,
+      "sharpe": 1.7217036941320798,
+      "max_dd": -0.35301430474334505,
+      "calmar": 2.5638278912321963
+    },
+    {
+      "version": "ROBUST_CORE_3X_ORIGINAL",
+      "exposure_scale": 1.0,
+      "cagr": 1.4664034478305417,
+      "sharpe": 1.7217036941320798,
+      "max_dd": -0.49428939507981884,
+      "calmar": 2.966690085660737
+    }
+  ]
+}

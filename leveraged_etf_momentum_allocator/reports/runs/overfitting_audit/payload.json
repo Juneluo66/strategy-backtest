@@ -1,0 +1,37 @@
+{
+  "random_neighborhood": {
+    "n_samples": 1000,
+    "cagr_median": 1.3724068997717787,
+    "cagr_p25": 1.2599795648386602,
+    "cagr_p10": 1.166714094660302,
+    "cagr_p5": 1.0975813064889859,
+    "cagr_worst": 0.9421394599979309,
+    "sharpe_median": 1.6667661831649234,
+    "maxdd_median": -0.5477002273434621,
+    "calmar_median": 2.492548877239953,
+    "original_cagr": 1.9882494630313596,
+    "original_cagr_percentile": 100.0,
+    "PARAMETER_OVERFIT_RISK": "HIGH",
+    "ROBUSTNESS": "STRONGER"
+  },
+  "rolling_3y": {
+    "pct_windows_beat_tqqq": 1.0,
+    "pct_windows_beat_spy": 1.0,
+    "median_rel_cagr_vs_tqqq": 0.8746588520950839,
+    "p25_rel_cagr_vs_tqqq": 0.5229227983237448,
+    "p10_rel_cagr_vs_tqqq": 0.33033996447259056,
+    "worst_window_rel_vs_tqqq": 0.16098868266042632
+  },
+  "rolling_5y": {
+    "pct_windows_beat_tqqq": 1.0,
+    "pct_windows_beat_spy": 1.0,
+    "median_rel_cagr_vs_tqqq": 3.682381668265929,
+    "p25_rel_cagr_vs_tqqq": 0.6724294948737339,
+    "p10_rel_cagr_vs_tqqq": 0.5529424833239834,
+    "worst_window_rel_vs_tqqq": 0.4928031552803076
+  },
+  "standardized_cagr": 1.7092478498172303,
+  "long_deleveraged_cagr": 1.0218299969848705,
+  "risk_reduced_cagr": 0.31540381560899666,
+  "classification": "RESEARCH_CANDIDATE"
+}

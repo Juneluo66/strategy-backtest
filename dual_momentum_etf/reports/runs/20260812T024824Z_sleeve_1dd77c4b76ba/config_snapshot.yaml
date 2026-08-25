@@ -1,0 +1,240 @@
+version: dual_momentum_etf_v1
+benchmark: SPY
+execution: next_session_open
+rebalance: month_end_close_signal
+momentum:
+  weight_5m: 0.6
+  weight_12m: 0.4
+trend_filter:
+  month_sma: 10
+trend_consistency:
+  horizons:
+  - 3
+  - 6
+  - 12
+volatility:
+  lookback_days: 60
+  min_observations: 40
+portfolio:
+  top_k: 2
+  equal_weight: true
+hysteresis:
+  relative_threshold: 0.05
+cash:
+  primary: SGOV
+  proxy_before_primary: BIL
+costs:
+  one_way_bps: 5.0
+  stress_one_way_bps:
+  - 0.0
+  - 5.0
+  - 10.0
+  - 20.0
+initial_capital: 1000000
+data:
+  start: '2005-01-01'
+  source: Yahoo Finance via yfinance
+research_windows:
+  in_sample:
+  - '2007-01-01'
+  - '2019-12-31'
+  validation:
+  - '2020-01-01'
+  - '2023-12-31'
+  locked_oos:
+  - '2024-01-01'
+  - '2026-06-30'
+stress_windows:
+  gfc_2008:
+  - '2007-10-01'
+  - '2009-03-31'
+  covid_2020:
+  - '2020-02-01'
+  - '2020-04-30'
+  bear_2022:
+  - '2022-01-01'
+  - '2022-12-31'
+attribution:
+  reference: attribution_A
+  experiments:
+  - attribution_A
+  - attribution_AC
+  - attribution_AD
+  - attribution_ACD
+  - attribution_AD_hyst
+  - attribution_ACD_hyst
+  - attribution_DC
+  benchmarks:
+  - bh_spy
+  - bh_qqq
+  - sixty_forty
+  - spy_ma10
+  - simple_dual_mom
+  - ew_trend
+confirmation:
+  frozen_variant: attribution_DC
+  reference_a: attribution_A
+  simple_dual: simple_dual_mom
+  frozen_trend_horizons:
+  - 3
+  - 6
+  - 12
+  cost_bps:
+  - 5.0
+  - 10.0
+  - 20.0
+  trend_neighborhoods:
+  - - 3
+    - 6
+    - 12
+  - - 2
+    - 6
+    - 12
+  - - 3
+    - 5
+    - 12
+  - - 3
+    - 6
+    - 11
+  - - 4
+    - 6
+    - 12
+  gates:
+    max_cagr_lag_vs_a: 0.025
+    min_dd_better_pct: 0.5
+variants:
+  baseline_6:
+    pool: baseline_6
+    vol_adjust: false
+    category_constraint: false
+    trend_consistency: false
+    regime_sizing: false
+    use_hysteresis: true
+    selection_mode: topk
+    top_k: 2
+  own_v1:
+    pool: own_v1
+    vol_adjust: true
+    category_constraint: true
+    trend_consistency: false
+    regime_sizing: false
+    use_hysteresis: true
+    selection_mode: topk
+    top_k: 2
+  A_vol_adj:
+    pool: baseline_6
+    vol_adjust: true
+    category_constraint: false
+    trend_consistency: false
+    regime_sizing: false
+    use_hysteresis: true
+    selection_mode: topk
+    top_k: 2
+  B_regime_size:
+    pool: baseline_6
+    vol_adjust: false
+    category_constraint: false
+    trend_consistency: false
+    regime_sizing: true
+    use_hysteresis: true
+    selection_mode: topk
+    top_k: 2
+  C_trend_consistency:
+    pool: baseline_6
+    vol_adjust: false
+    category_constraint: false
+    trend_consistency: true
+    regime_sizing: false
+    use_hysteresis: true
+    selection_mode: topk
+    top_k: 2
+  D_category_only:
+    pool: own_v1
+    vol_adjust: false
+    category_constraint: true
+    trend_consistency: false
+    regime_sizing: false
+    use_hysteresis: true
+    selection_mode: topk
+    top_k: 2
+  attribution_A:
+    pool: baseline_6
+    vol_adjust: true
+    category_constraint: false
+    trend_consistency: false
+    regime_sizing: false
+    use_hysteresis: false
+    selection_mode: topk
+    top_k: 2
+  attribution_AC:
+    pool: baseline_6
+    vol_adjust: true
+    category_constraint: false
+    trend_consistency: true
+    regime_sizing: false
+    use_hysteresis: false
+    selection_mode: topk
+    top_k: 2
+  attribution_AD:
+    pool: own_v1
+    vol_adjust: true
+    category_constraint: true
+    trend_consistency: false
+    regime_sizing: false
+    use_hysteresis: false
+    selection_mode: topk
+    top_k: 2
+  attribution_ACD:
+    pool: own_v1
+    vol_adjust: true
+    category_constraint: true
+    trend_consistency: true
+    regime_sizing: false
+    use_hysteresis: false
+    selection_mode: topk
+    top_k: 2
+  attribution_AD_hyst:
+    pool: own_v1
+    vol_adjust: true
+    category_constraint: true
+    trend_consistency: false
+    regime_sizing: false
+    use_hysteresis: true
+    selection_mode: topk
+    top_k: 2
+  attribution_ACD_hyst:
+    pool: own_v1
+    vol_adjust: true
+    category_constraint: true
+    trend_consistency: true
+    regime_sizing: false
+    use_hysteresis: true
+    selection_mode: topk
+    top_k: 2
+  attribution_DC:
+    pool: own_v1
+    vol_adjust: false
+    category_constraint: true
+    trend_consistency: true
+    regime_sizing: false
+    use_hysteresis: false
+    selection_mode: topk
+    top_k: 2
+  simple_dual_mom:
+    pool: baseline_6
+    vol_adjust: false
+    category_constraint: false
+    trend_consistency: false
+    regime_sizing: false
+    use_hysteresis: false
+    selection_mode: topk
+    top_k: 2
+  ew_trend:
+    pool: baseline_6
+    vol_adjust: false
+    category_constraint: false
+    trend_consistency: false
+    regime_sizing: false
+    use_hysteresis: false
+    selection_mode: equal_weight_eligible
+    top_k: 2

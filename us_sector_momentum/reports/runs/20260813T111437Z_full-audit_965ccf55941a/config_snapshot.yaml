@@ -1,0 +1,120 @@
+frozen:
+  version: us_sector_momentum_v1
+  research_track: independent
+  relation_to_prior_strategies: none
+  versions:
+  - base_12_1_top3
+  - composite_6_1_12_1_top3
+  - composite_top3_buffer
+  challenger: composite_6_1_12_1_top3
+  top_n: 3
+  buffer_rank: 4
+  lookbacks_skip_recent_month: true
+  composite_weights:
+    ret_6_1: 0.5
+    ret_12_1: 0.5
+  one_way_bps: 5.0
+  execution: next_session_open
+  rebalance: month_end_close_signal
+  weighting: natural_drift_between_rebalances
+  leverage: false
+  shorting: false
+  always_fully_invested: true
+  cash_sleeve: none
+  data:
+    start: '1998-01-01'
+    source: Yahoo Finance via yfinance
+    return_basis: Yahoo_AdjClose_scaled_Open
+    fillna_returns: forbidden
+    require_strict_common_interval: true
+    refuse_silent_stale_on_failed_refresh: true
+    save_raw_snapshot_and_hash: true
+  benchmarks_formal:
+  - spy_buy_hold
+  - qqq_buy_hold
+  - equal_weight_9_monthly
+  - base_12_1_top3
+  - composite_6_1_12_1_top3
+  - composite_top3_buffer
+  stability:
+    cost_bps:
+    - 5.0
+    - 10.0
+    - 20.0
+    extra_delay_sessions: 1
+    exclude_last_years:
+    - 1
+    - 2
+    - 3
+    restart_from:
+    - '2003-01-01'
+    - '2008-01-01'
+    - '2013-01-01'
+    fixed_cutoffs:
+    - '2005-12-31'
+    - '2008-12-31'
+    - '2012-12-31'
+    - '2016-12-31'
+    - '2020-12-31'
+    - '2024-12-31'
+    - latest
+    rolling_years:
+    - 3
+    - 5
+    - 10
+    leave_one_sector_out: true
+    exclude_xlk_rerun: true
+    block_bootstrap:
+      n_boot: 400
+      block_trading_days: 21
+      seed: 42
+  gate_label_pass: SECTOR_MOMENTUM_RETURN_CANDIDATE
+  gate_label_fail: REJECTED
+  crisis_windows:
+    dotcom_2000_2002:
+    - '2000-01-01'
+    - '2002-12-31'
+    gfc_2008:
+    - '2008-01-01'
+    - '2009-03-31'
+    covid_2020:
+    - '2020-02-01'
+    - '2020-04-30'
+    bear_2022:
+    - '2022-01-01'
+    - '2022-12-31'
+  ibkr_modified: false
+universe:
+  sectors:
+  - XLB
+  - XLE
+  - XLF
+  - XLI
+  - XLK
+  - XLP
+  - XLU
+  - XLV
+  - XLY
+  benchmarks:
+  - SPY
+  - QQQ
+  rf_primary: BIL
+  rf_proxy_pre_bil: ^IRX
+  inception_approx:
+    XLB: '1998-12-16'
+    XLE: '1998-12-16'
+    XLF: '1998-12-16'
+    XLI: '1998-12-16'
+    XLK: '1998-12-16'
+    XLP: '1998-12-16'
+    XLU: '1998-12-16'
+    XLV: '1998-12-16'
+    XLY: '1998-12-16'
+    SPY: '1993-01-29'
+    QQQ: '1999-03-10'
+    BIL: '2007-05-30'
+    ^IRX: '1954-01-04'
+  sibling_cache_roots:
+  - ../dual_momentum_etf/data/cache/prices
+  - ../us_equity_strategy_research/data/cache/etf
+  - ../multi_asset_etf_trend/data/cache/prices

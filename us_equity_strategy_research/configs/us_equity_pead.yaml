@@ -1,0 +1,7 @@
+strategy: pead_C
+inherits: frozen.yaml
+status: BLOCKED
+formal_pead: false
+proxy_enabled: true
+proxy_may_enter_portfolio: false
+hold_days: [20, 40, 60]

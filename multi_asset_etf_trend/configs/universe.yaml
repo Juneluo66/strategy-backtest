@@ -1,0 +1,30 @@
+risk:
+  - SPY
+  - EFA
+  - EEM
+  - IEF
+  - TLT
+  - GLD
+  - DBC
+  - VNQ
+cash: BIL
+asset_groups:
+  equity: [SPY, EFA, EEM]
+  bonds: [IEF, TLT]
+  gold: [GLD]
+  commodities: [DBC]
+  real_estate: [VNQ]
+# Approximate ETF inception dates (exchange listing); audited against cache.
+inception_approx:
+  SPY: "1993-01-29"
+  EFA: "2001-08-17"
+  EEM: "2003-04-11"
+  IEF: "2002-07-26"
+  TLT: "2002-07-26"
+  GLD: "2004-11-18"
+  DBC: "2006-02-03"
+  VNQ: "2004-09-29"
+  BIL: "2007-05-30"
+sibling_cache_roots:
+  - ../dual_momentum_etf/data/cache/prices
+  - ../us_equity_strategy_research/data/cache/etf

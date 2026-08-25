@@ -1,0 +1,113 @@
+version: us_equity_strategy_research_v1
+random_seed: 42
+return_basis: Yahoo_AdjClose_scaled_Open
+benchmark: VTI
+opportunity_cost_benchmark: SPY
+execution: next_session_open
+rebalance: month_end_close_signal
+
+data:
+  start: "2005-01-01"
+  source: Yahoo Finance via yfinance
+  equity_cache: max_effect_vix  # reuse sibling parquet cache when present
+  membership: HISTORICAL_SP500_APPROX
+  DATA_TIER: HISTORICAL_SP500_APPROX
+  SURVIVORSHIP_BIAS: REDUCED_NOT_ELIMINATED
+  PIT_VALIDATED: false
+  DELISTING_RETURN: UNAVAILABLE
+  SIZE_NEUTRAL: BLOCKED_BY_PIT_MARKET_CAP
+  EARNINGS_SURPRISE: BLOCKED
+  SEC_FACTS_PIT: exploratory_filed_only
+
+universe:
+  name: HISTORICAL_SP500_APPROX
+  min_price: 5.0
+  min_price_sensitivity: [3.0, 5.0, 10.0]
+  min_adv_usd: 5000000
+  min_listing_months: 12
+  momentum_lookback_months: 12
+  # Cap-percentile filters require PIT market cap — blocked without it.
+  cap_percentile_sensitivity: BLOCKED_BY_PIT_MARKET_CAP
+
+cash:
+  primary: SGOV
+  proxy_before_primary: BIL
+
+costs:
+  scenarios:
+    optimistic:
+      commission_bps: 0.0
+      half_spread_bps: 1.0
+      impact_coeff_bps: 2.0
+    baseline:
+      commission_bps: 1.0
+      half_spread_bps: 2.5
+      impact_coeff_bps: 5.0
+    stress:
+      commission_bps: 2.0
+      half_spread_bps: 5.0
+      impact_coeff_bps: 10.0
+  max_adv_participation: 0.01
+  assumed_portfolio_value: 1000000
+  etf_one_way_bps: 5.0
+
+research_windows:
+  # Locked only after Phase-1/2 coverage audit confirms joint start.
+  in_sample: ["2015-01-01", "2015-12-31"]
+  validation: ["2016-01-01", "2020-12-31"]
+  locked_oos: ["2021-01-01", "2026-08-10"]
+  note: "Windows may be truncated to common tradable intersection (H4)."
+
+multifactor:
+  value_weight: 0.30
+  quality_weight: 0.35
+  momentum_weight: 0.35
+  n_holdings: 40
+  max_single_weight: 0.04
+  max_sector_weight: 0.25
+  buffer_entry_pct: 0.10
+  buffer_exit_pct: 0.20
+  winsor_limits: [0.025, 0.975]
+  equal_weight: true
+  require_pit_fundamentals: true
+
+momentum:
+  skip_months: 1
+  formation_months: 11
+  n_holdings: 40
+  buffer_entry_pct: 0.10
+  buffer_exit_pct: 0.20
+  variants: [B0, B1, B2, B3]
+
+pead:
+  status: BLOCKED
+  reason: "No point-in-time analyst consensus / standardized unexpected earnings in free cache"
+  hold_days_sensitivity: [20, 40, 60]
+  allow_proxy: true
+  proxy_label: PEAD_PROXY
+  proxy_may_enter_portfolio: false
+
+etf_controls:
+  frozen_dc_variant: attribution_DC
+  frozen_sleeve: {spy: 0.8, dc: 0.2}
+  expected_config_hash_prefix: "8725aaf18743"
+  do_not_retune: true
+
+portfolios:
+  # Only strategies passing data/timing/cost gates may fill equity_leg.
+  P0: {vti: 1.0}
+  P1: {spy: 0.8, dc: 0.2}  # frozen paper candidate
+  P2: {vti: 0.8, equity_leg: 0.2}  # requires qualified equity
+  P3: {vti: 0.6, dc: 0.2, equity_leg: 0.2}
+  P4: {vti: 0.7, qual_etf: 0.1, dc: 0.2}
+  P5: {equity_combo: true}  # only if evidence sufficient
+  vti_sleeve_experiment: {vti: 0.8, dc: 0.2}  # not the frozen SPY sleeve
+
+gates:
+  phase_stops:
+    no_price_cache: STOP
+    no_surprise: C_BLOCKED
+    no_pit_fundamentals: A_AND_B_QUALITY_BLOCKED
+    b0_timing_fail: STOP_EQUITY
+    formal_pead_without_consensus: FORBIDDEN
+    blocked_equity_in_portfolio: FORBIDDEN

@@ -1,0 +1,9 @@
+{
+  "command": "run_vix_deleverage",
+  "config_hash": "3670a2e72b23cd7356da7c5c6af89914e803daf075d7fa48575a64e6cf0257b1",
+  "data_status": "SURVIVORSHIP_BIASED_PILOT",
+  "git_commit": "unavailable",
+  "executed_at_utc": "20260810T090402Z",
+  "python": "3.9.25 (main, Apr 17 2026, 00:00:00) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]",
+  "platform": "Linux-6.1.170-210.320.amzn2023.x86_64-x86_64-with-glibc2.34"
+}

@@ -1,0 +1,30 @@
+# IBKR-like paper trading constraints (research simulator; no live orders).
+initial_cash: 100000.0
+allow_fractional_shares: true
+min_commission: 1.0
+commission_per_share: 0.005
+min_order_notional: 1.0
+share_lot_size: 1.0
+defer_residual_below_notional: 25.0
+one_way_bps: 5.0
+forbid_negative_cash: true
+
+# Books maintained in parallel (pre-declared; no weight search).
+books:
+  - id: candidate_80_20_dc
+    role: default_paper_candidate
+    type: spy_dc_lookthrough
+    spy: 0.8
+    dc: 0.2
+  - id: opp_cost_100_spy
+    role: opportunity_cost_benchmark
+    type: spy_only
+  - id: shadow_60_40_dc
+    role: conservative_shadow
+    type: spy_dc_lookthrough
+    spy: 0.6
+    dc: 0.4
+  - id: traditional_60_40_ief
+    role: traditional_benchmark
+    type: two_asset
+    weights: {SPY: 0.6, IEF: 0.4}

@@ -1,0 +1,48 @@
+{
+  "status": {
+    "DATA_TIER": "HISTORICAL_SP500_APPROX",
+    "SURVIVORSHIP_BIAS": "REDUCED_NOT_ELIMINATED",
+    "PIT_VALIDATED": false,
+    "DELISTING_RETURN": "UNAVAILABLE",
+    "SIZE_NEUTRAL": "BLOCKED_BY_PIT_MARKET_CAP"
+  },
+  "metrics": {
+    "gross_cagr": 0.09279584473595892,
+    "gross_volatility": 0.15060190304342183,
+    "gross_sharpe": 0.6647747014635251,
+    "gross_max_drawdown": -0.3306359435102362,
+    "net_cagr": 0.08208508590452834,
+    "net_volatility": 0.15066301835416,
+    "net_sharpe": 0.5991724196496808,
+    "net_max_drawdown": -0.3311961908984612,
+    "cost_drag_cagr": 0.010710758831430578,
+    "benchmark_sharpe": 0.8328409822588789,
+    "realized_beta_to_spy": 0.667086146092912,
+    "average_exposure": 0.9866255144032922,
+    "one_way_turnover": 113.9,
+    "annualized_turnover": 9.905232142857143,
+    "cost_total": 0.1139
+  },
+  "fama_macbeth": {
+    "mean_max_slope": 0.2359667237756293,
+    "t_stat": 1.6215261683085926,
+    "months": 137,
+    "size_status": "BLOCKED_BY_PIT_MARKET_CAP"
+  },
+  "factor_regression": {
+    "alpha": null,
+    "alpha_annualized": null,
+    "t_stat": null,
+    "n": 0,
+    "qmj_status": "NOT_AVAILABLE",
+    "loadings": {}
+  },
+  "limitations": [
+    "Wikipedia S&P 500 change history is incomplete.",
+    "SURVIVORSHIP_BIAS remains REDUCED_NOT_ELIMINATED, not eliminated.",
+    "PIT_VALIDATED is false; no CRSP/Compustat point-in-time fundamentals.",
+    "Size neutralization is BLOCKED_BY_PIT_MARKET_CAP.",
+    "Index exit is not a CRSP delisting return; DELISTING_RETURN=UNAVAILABLE.",
+    "Yahoo prices omit a complete delisting file and may miss dead tickers."
+  ]
+}

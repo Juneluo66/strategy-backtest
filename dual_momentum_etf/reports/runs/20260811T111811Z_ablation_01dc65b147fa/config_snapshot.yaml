@@ -1,0 +1,84 @@
+version: dual_momentum_etf_v1
+benchmark: SPY
+execution: next_session_open
+rebalance: month_end_close_signal
+momentum:
+  weight_5m: 0.6
+  weight_12m: 0.4
+trend_filter:
+  month_sma: 10
+volatility:
+  lookback_days: 60
+  min_observations: 40
+portfolio:
+  top_k: 2
+  equal_weight: true
+hysteresis:
+  relative_threshold: 0.05
+cash:
+  primary: SGOV
+  proxy_before_primary: BIL
+costs:
+  one_way_bps: 5.0
+  stress_one_way_bps:
+  - 0.0
+  - 5.0
+  - 10.0
+  - 20.0
+initial_capital: 1000000
+data:
+  start: '2005-01-01'
+  source: Yahoo Finance via yfinance
+research_windows:
+  in_sample:
+  - '2007-01-01'
+  - '2019-12-31'
+  validation:
+  - '2020-01-01'
+  - '2023-12-31'
+  locked_oos:
+  - '2024-01-01'
+  - '2026-06-30'
+variants:
+  baseline_6:
+    pool: baseline_6
+    vol_adjust: false
+    category_constraint: false
+    trend_consistency: false
+    regime_sizing: false
+    top_k: 2
+  own_v1:
+    pool: own_v1
+    vol_adjust: true
+    category_constraint: true
+    trend_consistency: false
+    regime_sizing: false
+    top_k: 2
+  A_vol_adj:
+    pool: baseline_6
+    vol_adjust: true
+    category_constraint: false
+    trend_consistency: false
+    regime_sizing: false
+    top_k: 2
+  B_regime_size:
+    pool: baseline_6
+    vol_adjust: false
+    category_constraint: false
+    trend_consistency: false
+    regime_sizing: true
+    top_k: 2
+  C_trend_consistency:
+    pool: baseline_6
+    vol_adjust: false
+    category_constraint: false
+    trend_consistency: true
+    regime_sizing: false
+    top_k: 2
+  D_category_only:
+    pool: own_v1
+    vol_adjust: false
+    category_constraint: true
+    trend_consistency: false
+    regime_sizing: false
+    top_k: 2

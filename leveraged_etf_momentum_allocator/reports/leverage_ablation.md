@@ -1,0 +1,21 @@
+# Leverage Ablation
+
+## ORIGINAL
+
+CAGR 198.82% Sharpe 1.99
+
+## LONG_DELEVERAGED
+
+CAGR 102.18% Sharpe 1.86
+
+## RISK_REDUCED_TREE
+
+CAGR 31.54% Sharpe 1.61
+
+## SPY
+
+CAGR 15.03%
+
+## QQQ
+
+CAGR 19.71%

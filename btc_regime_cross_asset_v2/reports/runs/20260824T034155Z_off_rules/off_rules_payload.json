@@ -1,0 +1,67 @@
+{
+  "generated_utc": "2026-08-24T03:41:55.930980+00:00",
+  "rule": {
+    "id": "IEF_SMA200_SHY",
+    "description": "OFF \u2192 IEF if IEF>SMA200 else SHY (train-selected tiny rule)",
+    "trend_asset": "IEF",
+    "fallback_asset": "SHY",
+    "sma_window": 200
+  },
+  "train": {
+    "shy_fixed": {
+      "label": "QQQ/SHY_fixed",
+      "stats": {
+        "cagr": 0.1662362504805992,
+        "sharpe": 1.3701627252151638,
+        "ann_vol": 0.11735206198447413,
+        "max_dd": -0.1624106776976404,
+        "final_nav": 2.576619762220824,
+        "n_days": 1550
+      },
+      "cum_active_vs_vol_matched_qqq_shy": 0.1816281859315929,
+      "max_dd": -0.1624106776976404
+    },
+    "ief_trend": {
+      "label": "QQQ/IEFtrend_SHY",
+      "stats": {
+        "cagr": 0.1743690533839457,
+        "sharpe": 1.3641470880395463,
+        "ann_vol": 0.12358246520390276,
+        "max_dd": -0.14135972608554515,
+        "final_nav": 2.689215237810837,
+        "n_days": 1550
+      },
+      "cum_active_vs_vol_matched_qqq_shy": 0.17714269541740513,
+      "max_dd": -0.14135972608554515
+    },
+    "train_winner_sharpe": "SHY_fixed"
+  },
+  "test_locked": {
+    "shy_fixed": {
+      "stats": {
+        "cagr": 0.18175287761393633,
+        "sharpe": 1.3422902979738596,
+        "ann_vol": 0.1290359646131306,
+        "max_dd": -0.13266965121937435,
+        "final_nav": 2.541423730017842,
+        "n_days": 1404
+      },
+      "cum_active": 0.38786208861519955,
+      "pass": true
+    },
+    "ief_trend": {
+      "stats": {
+        "cagr": 0.17627649396575285,
+        "sharpe": 1.2728016764794219,
+        "ann_vol": 0.1328079247382742,
+        "max_dd": -0.14516807458907566,
+        "final_nav": 2.476340178296041,
+        "n_days": 1404
+      },
+      "cum_active": 0.35105670850712967,
+      "pass": true
+    }
+  },
+  "off_sleeve_ief_pct": 0.2720797720797721,
+  "judgment": "OFF_RULE_MIXED"
+}

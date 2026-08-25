@@ -1,0 +1,2 @@
+months,historical_universe_min,historical_universe_max,outside_live_cache_min,outside_live_cache_max,outside_live_cache_total_month_observations,historical_fetch_records,baostock_price_cached_records,no_price_history_records
+90,4013,7154,428,1959,59761,100,12,38

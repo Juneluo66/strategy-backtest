@@ -1,0 +1,9 @@
+{
+  "command": "sleeve",
+  "config_hash": "1dd77c4b76bad4fe005e3cec2bf8f3a84471850055c58fc7f1afe6f246993043",
+  "git_commit": "unavailable",
+  "executed_at_utc": "20260812T025002Z",
+  "python": "3.9.25 (main, Apr 17 2026, 00:00:00) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]",
+  "platform": "Linux-6.1.170-210.320.amzn2023.x86_64-x86_64-with-glibc2.34",
+  "data_source": "Yahoo Finance via yfinance"
+}

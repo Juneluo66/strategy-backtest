@@ -1,0 +1,40 @@
+version: qc_research_20886_v1
+signal_lookback_days: 21
+top_returns: 5
+min_price: 5.0
+min_market_cap: 1000000000
+min_dollar_volume: 5000000
+portfolio_decile: 0.1
+max_portfolio_size: 25
+rebalance: monthly_first_trading_day
+execution: next_session_open
+benchmark: SPY
+vix:
+  symbol: ^VIX
+  low: 15.0
+  high: 30.0
+  low_leverage: 1.5
+  high_leverage: 1.0
+costs:
+  one_way_bps: 5.0
+  annual_margin_rate: 0.05
+variants:
+  baseline_1x:
+    vix_mode: none
+  vix_deleverage:
+    vix_mode: deleverage_only
+  vix_original:
+    vix_mode: original
+research_windows:
+  in_sample:
+  - '1998-01-01'
+  - '2016-12-31'
+  validation:
+  - '2017-01-01'
+  - '2023-12-31'
+  locked_oos:
+  - '2024-01-01'
+  - '2026-06-30'
+free_data:
+  status: SURVIVORSHIP_BIASED_PILOT
+  start: '2015-01-01'

@@ -1,0 +1,44 @@
+cash:
+  primary: SGOV
+  proxy_before_primary: BIL
+baseline_6:
+  risk:
+  - SPY
+  - QQQ
+  - IWM
+  - VEA
+  - GLD
+  cash: SGOV
+own_v1:
+  risk:
+  - SPY
+  - QQQ
+  - IWM
+  - VEA
+  - VWO
+  - GLD
+  - IEF
+  cash: SGOV
+categories:
+  us:
+  - SPY
+  - QQQ
+  - IWM
+  intl:
+  - VEA
+  - VWO
+  defensive:
+  - GLD
+  - IEF
+  cash:
+  - SGOV
+fetch_symbols:
+- SPY
+- QQQ
+- IWM
+- VEA
+- VWO
+- GLD
+- IEF
+- SGOV
+- BIL

@@ -1,0 +1,37 @@
+{
+  "label": "CAPITAL_PRESERVATION_CANDIDATE",
+  "checks": {
+    "beats_bil_cagr_1pp": true,
+    "wealth_vs_bil_gt_1_2": true,
+    "metric_c_bil_final_gt_1": true,
+    "rolling_beat_bil_3y_ge_60": true,
+    "rolling_beat_bil_5y_ge_60": true,
+    "maxdd_much_better_than_60_40": true,
+    "lags_60_40_wealth": true,
+    "rolling_beat_60_40_3y_lt_40": true,
+    "rolling_beat_60_40_5y_lt_40": true,
+    "incremental_vs_bil_not_tiny": true,
+    "not_only_bil_carry": true
+  },
+  "diagnostics": {
+    "excess_cagr_vs_bil": 0.03277089601356442,
+    "wealth_vs_bil": 1.7846663681932062,
+    "wealth_vs_60_40": 0.5028715315922181,
+    "timing_cagr_vs_passive": -0.011649979482033723,
+    "risk_balance_cagr": -0.0002752678897610661,
+    "passive_premium_cagr": 0.046635885271073985,
+    "beat_bil_3y": 0.9285714285714286,
+    "beat_bil_5y": 1.0,
+    "beat_60_40_3y": 0.027472527472527472,
+    "beat_60_40_5y": 0.0,
+    "periods_near_60_40": 1,
+    "n_periods": 4,
+    "avg_bil_weight": 0.3847594209767759,
+    "cagr_per_pp_maxdd_vs_bil": 0.004502969999221273
+  },
+  "notes": [
+    "No IBKR / frozen-rule changes.",
+    "BIL carry is not trend alpha.",
+    "Label is research-only, not a live profitability claim."
+  ]
+}

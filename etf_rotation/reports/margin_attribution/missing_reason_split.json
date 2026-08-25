@@ -1,0 +1,25 @@
+{
+  "MARGIN_BUY_RATIO": {
+    "observed": 75803,
+    "pit_unavailable": 19260,
+    "download_failure": 4768,
+    "structurally_not_applicable": 138
+  },
+  "MARGIN_CHG_10D": {
+    "observed": 75374,
+    "pit_unavailable": 19260,
+    "download_failure": 4768,
+    "rolling_warmup": 470,
+    "structurally_not_applicable": 97
+  },
+  "merge_failure_rows": 0,
+  "ohlcv_other_factor_nan_on_excluded": {
+    "excluded_rows_total": 26592,
+    "excluded_due_to_margin_buy_ratio_nan": 24166,
+    "excluded_with_margin_ok_other_nan": 2318,
+    "excluded_with_ADX_14D_nan": 1274,
+    "excluded_with_BREAKOUT_20D_nan": 980,
+    "excluded_with_PRICE_POSITION_120D_nan": 5831,
+    "excluded_with_SHARE_CHG_5D_nan": 4754
+  }
+}

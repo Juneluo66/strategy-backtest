@@ -1,0 +1,58 @@
+# Final Audit — Phase 5 Robust Core
+
+> **Status:** PAPER_TRADING_CANDIDATE
+
+## Audit Status
+
+SOURCE_VERIFICATION=PASS, LOGIC_REPLICATION=PASS, PERFORMANCE_RECONCILIATION=PARTIAL, SIMPLIFICATION=DONE
+
+## ORIGINAL
+
+frozen RESEARCH_CANDIDATE
+
+## BEST ROBUST CORE
+
+ORIGINAL:
+CAGR: 198.82%
+Sharpe: 1.99
+MaxDD: -49.43%
+parameters: 4
+thresholds: 8
+branches: 10
+
+STANDARDIZED:
+CAGR: 170.92%
+Sharpe: 1.86
+MaxDD: -49.43%
+parameters: 4
+thresholds: 8
+branches: 12
+
+BEST ROBUST CORE:
+name: ABLATION_DROP_SPY_RSI
+CAGR: 146.64%
+Sharpe: 1.72
+MaxDD: -49.43%
+parameters: 4
+thresholds: 6
+branches: 10
+
+EX-COVID CAGR: 114.30%
+EX-2022 CAGR: 146.10%
+EX-COVID+2022 CAGR: 111.46%
+
+RANDOM NEIGHBORHOOD:
+median: 116.73%
+10th percentile: 86.59%
+candidate percentile: 91.0
+
+ROLLING 5Y WIN RATE VS TQQQ: 100.0%
+
+LEVERAGE VERSION RECOMMENDED: ROBUST_CORE_1_5X
+  (CAGR 64.81% Sharpe 1.72 MaxDD -27.36% Calmar 2.37)
+
+CLASSIFICATION: PAPER_TRADING_CANDIDATE
+
+## Report
+
+reports/robust_core_extraction.md

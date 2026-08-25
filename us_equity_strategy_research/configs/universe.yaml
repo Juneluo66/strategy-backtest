@@ -1,0 +1,32 @@
+# Research universe declaration — NOT a full CRSP US common-stock universe.
+name: HISTORICAL_SP500_APPROX
+source: Wikipedia S&P 500 membership events via max_effect_vix cache
+limitation: >
+  Reduces current-constituent backfill only. Not all US ordinary shares,
+  not PIT market-cap top 80%, INDEX_EXIT != DELISTING.
+
+etf_fetch_symbols:
+  - VTI
+  - SPY
+  - VXUS
+  - SGOV
+  - BIL
+  - IEF
+  - QUAL
+  - QQQ
+  - IWM
+  - VEA
+  - VWO
+  - GLD
+
+cash:
+  primary: SGOV
+  proxy_before_primary: BIL
+
+exclude_security_types:
+  - ETF
+  - FUND
+  - PREFERRED
+  - ADR
+  - WARRANT
+  - SPAC_SHELL

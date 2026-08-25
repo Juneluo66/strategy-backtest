@@ -1,0 +1,7 @@
+{
+  "status": "ENGINEERING_PARTIAL_REPRODUCTION",
+  "sealed_strategy_reproduction": false,
+  "continue_margin_procurement": false,
+  "recommend_pivot": "ARCANA",
+  "audit_dir": "/home/ec2-user/strategy-backtest/etf_rotation/reports/stability_audit"
+}

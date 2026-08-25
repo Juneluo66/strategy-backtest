@@ -1,0 +1,180 @@
+# PAPER_V1 — frozen forward paper trading config
+# DO NOT EDIT. Any change requires PAPER_V2+ and a new forward clock.
+
+strategy_version: PAPER_V1
+base_tree: ABLATION_DROP_SPY_RSI
+parent_research: ROBUST_CORE_V1
+classification: PAPER_TRADING_CANDIDATE
+frozen_date: "2026-08-24"  # last complete trading session available at freeze
+frozen: true
+
+allow_parameter_changes: false
+allow_tree_changes: false
+allow_universe_changes: false
+allow_retroactive_log_rewrite: false
+
+# --- Signal parameters (frozen) ---
+parameters:
+  rsi_period: 10
+  spy_sma_period: 200
+  qqq_sma_period: 20
+  tqqq_sma_period: 20
+
+thresholds:
+  qqq_rsi_overbought: 80
+  spy_rsi_overbought: 80
+  tqqq_rsi_oversold: 30
+  spy_rsi_oversold: 30
+  uvxy_high: 70
+  uvxy_extreme: 80
+  sqqq_rsi_branch_1: 30
+  sqqq_rsi_branch_2: 30
+
+ablations:
+  drop_spy_rsi: true
+  drop_sqqq_rsi: false
+  drop_uvxy_rsi: false
+  drop_qqq_sma: false
+  drop_tqqq_sma: false
+  drop_qqq_rsi: false
+  prune_branches: []
+
+# --- Universe (frozen) ---
+universe:
+  - SPY
+  - QQQ
+  - TQQQ
+  - UVXY
+  - TECL
+  - SPXL
+  - SQQQ
+  - TECS
+  - BSV
+
+signal_assets:
+  - SPY
+  - QQQ
+  - TQQQ
+  - SQQQ
+  - UVXY
+  - TECS
+  - BSV
+
+target_assets:
+  - TQQQ
+  - UVXY
+  - TECL
+  - SPXL
+  - TECS
+  - BSV
+
+# --- Exposure definition (CRITICAL) ---
+# Historical ROBUST_CORE_1_5X in Phase 5 was RETURN SCALING by 0.5
+# (multiply strategy daily returns by 0.5). That is NOT SetHoldings(1.5).
+# Paper V1 implements the economically equivalent construction:
+#   target_underlying_equity_beta ≈ 1.5
+#   for ~3x equity ETFs → portfolio_weight ≈ 0.50, remainder cash/BSV
+exposure:
+  definition: underlying_equity_beta
+  target_underlying_beta: 1.5
+  reference_etf_beta: 3.0
+  three_x_etf_target_weight: 0.50
+  defensive_sleeve: BSV
+  defensive_weight: 0.50
+  # UVXY is NOT equity-beta; risk overlay only (does not change signal)
+  uvxy_max_portfolio_weight: 0.25
+  uvxy_overlay_label: PAPER_EXECUTION_OVERLAY
+  # Explicit non-equivalences
+  not:
+    - "SetHoldings(asset, 1.5)"
+    - "150% weight in 3x ETF"
+    - "silent return scaling without positions"
+
+asset_underlying_beta:
+  TQQQ: 3.0
+  TECL: 3.0
+  SPXL: 3.0
+  TECS: -3.0
+  SQQQ: -3.0
+  BSV: 0.0
+  SPY: 1.0
+  QQQ: 1.0
+  UVXY: null  # vol product — overlay capped separately
+
+# --- Execution (frozen) ---
+execution:
+  signal_timing: daily_close
+  fill_timing: next_market_open
+  same_close_fill: false
+  mode: NEXT_OPEN_CONSERVATIVE
+  liquidate_before_rotate: true
+
+# --- Costs ---
+# Base case for official Paper V1 NAV
+costs_base:
+  commission_bps: 0
+  slippage_bps: 5
+  total_bps: 5
+  note: "5 bps total slippage assumption per turnover leg"
+
+# Shadow cost variants (reporting only — do not drive Paper V1 decisions)
+costs_shadow:
+  - {name: "0bps", commission_bps: 0, slippage_bps: 0}
+  - {name: "10bps", commission_bps: 0, slippage_bps: 10}
+  - {name: "25bps", commission_bps: 0, slippage_bps: 25}
+
+# --- Capital ---
+backtest_reference:
+  initial_cash: 100000
+  warmup_bars: 200
+  historical_reference_note: >
+    Phase 5 ABLATION_DROP_SPY_RSI full 3x ETF weight:
+    CAGR 146.64% Sharpe 1.72 MaxDD -49.43%.
+    Economically-equivalent 50% weight (beta≈1.5) research scale:
+    CAGR 64.81% Sharpe 1.72 MaxDD -27.36%.
+
+paper_account:
+  initial_cash: 100000
+  currency: USD
+
+# --- Shadows (track only; Paper V1 is official) ---
+shadows:
+  SHADOW_A:
+    description: Original full leverage (100% 3x ETF weights, ORIGINAL thresholds+tree)
+  SHADOW_B:
+    description: Robust core signal full original ETF exposure (100% weight)
+  SHADOW_C:
+    description: Paper V1 reduced exposure (official)
+  SHADOW_D:
+    description: TQQQ buy and hold
+  SHADOW_E:
+    description: SPY buy and hold
+
+# --- Stop / review gates ---
+stop_conditions:
+  DATA_FAILURE:
+    - indicator_or_price_mismatch
+    - corporate_action_failure
+    - missing_required_ticker
+  EXECUTION_FAILURE:
+    - cannot_fill_at_assumptions
+    - realized_slippage_>>_model
+  MODEL_WARNING:
+    - rolling_underperformance_vs_benchmarks
+  note: "Do not change PAPER_V1 parameters on short-term losses. Create PAPER_V2 instead."
+
+live_readiness:
+  min_forward_months: 6
+  preferred_forward_months: 12
+  require_volatility_regime: true
+  checks:
+    - signal_correctness
+    - execution_realism
+    - turnover
+    - cost
+    - drawdown
+    - operational_reliability
+
+versioning_policy: >
+  PAPER_V1 is immutable. Any logic/config/universe change requires PAPER_Vn
+  with a new frozen_date and independent forward clock. Never rewrite logs.

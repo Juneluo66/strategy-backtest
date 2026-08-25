@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "max-effect-vix"
+version = "0.1.0"
+description = "Dual-track replication of the US equity MAX effect"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "pyarrow>=14",
+  "PyYAML>=6.0",
+  "yfinance>=0.2.50",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+max-effect-vix = "max_effect_vix.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+lint.ignore = ["UP045"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

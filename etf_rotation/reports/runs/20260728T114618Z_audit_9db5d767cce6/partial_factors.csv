@@ -1,0 +1,5 @@
+factor,source_path,status,missing_ratio,affected_dates,note
+MARGIN_BUY_RATIO,/home/ec2-user/strategy-backtest/etf_rotation/data/cache/non_ohlcv/MARGIN_BUY_RATIO.parquet,partial_unavailable,1.0,0,No cached source; C1/C4 are partial and cannot be full replication.
+MARGIN_CHG_10D,/home/ec2-user/strategy-backtest/etf_rotation/data/cache/non_ohlcv/MARGIN_CHG_10D.parquet,partial_unavailable,1.0,0,No cached source; C1/C4 are partial and cannot be full replication.
+SHARE_CHG_5D,/home/ec2-user/strategy-backtest/etf_rotation/data/cache/non_ohlcv/SHARE_CHG_5D.parquet,partial_unavailable,1.0,0,No cached source; C1/C4 are partial and cannot be full replication.
+SHARE_CHG_20D,/home/ec2-user/strategy-backtest/etf_rotation/data/cache/non_ohlcv/SHARE_CHG_20D.parquet,partial_unavailable,1.0,0,No cached source; C1/C4 are partial and cannot be full replication.

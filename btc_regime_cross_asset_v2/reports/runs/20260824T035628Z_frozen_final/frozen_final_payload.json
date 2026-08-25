@@ -1,0 +1,1067 @@
+{
+  "generated_utc": "2026-08-24T03:56:28.965506+00:00",
+  "frozen_candidates": [
+    {
+      "key": "A",
+      "id": "BTC_QQQ_SHY",
+      "label": "QQQ/SHY",
+      "on": "QQQ",
+      "off": "SHY",
+      "evidence_tier": "REFERENCE_CORE",
+      "role": "Defensive/Core reference (v1 analogue)"
+    },
+    {
+      "key": "B",
+      "id": "BTC_QQQ_BIL",
+      "label": "QQQ/BIL",
+      "on": "QQQ",
+      "off": "BIL",
+      "evidence_tier": "POST_TEST_CANDIDATE",
+      "role": "Ultra-short parking \u2014 selection informed by Test exploration; not clean OOS"
+    },
+    {
+      "key": "C",
+      "id": "BTC_SMH_SHY",
+      "label": "SMH/SHY",
+      "on": "SMH",
+      "off": "SHY",
+      "evidence_tier": "TRAIN_PRE_REGISTERED",
+      "role": "Aggressive semiconductor sleeve",
+      "train_off_selection": {
+        "rule": "train_higher_sharpe_adj0",
+        "scores": {
+          "SHY": 0.8407263916712023,
+          "BIL": 0.8306919737508083
+        },
+        "winner": "SHY"
+      }
+    },
+    {
+      "key": "D",
+      "id": "BTC_SPY_BIL",
+      "label": "SPY/BIL",
+      "on": "SPY",
+      "off": "BIL",
+      "evidence_tier": "TRAIN_AND_WF_EXPLORATORY",
+      "role": "Broad-equity regime hypothesis"
+    }
+  ],
+  "walkforward_with_costs": [
+    {
+      "label": "wf_2019_2020",
+      "test_range": "2019-01-01\u21922020-12-31",
+      "candidates": [
+        {
+          "cagr": 0.2806904539496853,
+          "sharpe": 1.7995211956588768,
+          "ann_vol": 0.14269548306016758,
+          "max_dd": -0.13575775613169871,
+          "cum_active": 0.08751330709531158,
+          "vol_matched_w_on": 0.62,
+          "edge_sharpe": 0.3522868424442289,
+          "edge_cagr_pp": 6.437690746100433,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "QQQ/SHY",
+          "id": "BTC_QQQ_SHY"
+        },
+        {
+          "cagr": 0.28040167323561005,
+          "sharpe": 1.8001360982509815,
+          "ann_vol": 0.14243794836045007,
+          "max_dd": -0.13541898198412583,
+          "cum_active": 0.10079284893118978,
+          "vol_matched_w_on": 0.62,
+          "edge_sharpe": 0.4064873669702902,
+          "edge_cagr_pp": 7.181206437916665,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "QQQ/BIL",
+          "id": "BTC_QQQ_BIL"
+        },
+        {
+          "cagr": 0.3198751678789056,
+          "sharpe": 1.4889952401047983,
+          "ann_vol": 0.19905584911711546,
+          "max_dd": -0.13893748579203113,
+          "cum_active": -0.015820691956783595,
+          "vol_matched_w_on": 0.66,
+          "edge_sharpe": 0.061182552135919055,
+          "edge_cagr_pp": 1.2560029097653747,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": false,
+          "pass_both": false,
+          "candidate": "SMH/SHY",
+          "id": "BTC_SMH_SHY"
+        },
+        {
+          "cagr": 0.13616389827616526,
+          "sharpe": 1.1178833303019378,
+          "ann_vol": 0.12021755719301042,
+          "max_dd": -0.1286542356871736,
+          "cum_active": -0.047072397721304005,
+          "vol_matched_w_on": 0.62,
+          "edge_sharpe": -0.024417157487016006,
+          "edge_cagr_pp": -1.6629466960304873,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": false,
+          "pass_both": false,
+          "candidate": "SPY/BIL",
+          "id": "BTC_SPY_BIL"
+        }
+      ]
+    },
+    {
+      "label": "wf_2021_2022",
+      "test_range": "2021-01-01\u21922022-12-31",
+      "candidates": [
+        {
+          "cagr": 0.08231458531261993,
+          "sharpe": 0.583027468441569,
+          "ann_vol": 0.13430709636192054,
+          "max_dd": -0.12657744908303026,
+          "cum_active": 0.14839133439435215,
+          "vol_matched_w_on": 0.62,
+          "edge_sharpe": 0.5877272634400426,
+          "edge_cagr_pp": 9.39464683453547,
+          "pass_sharpe_gt_1": false,
+          "pass_active_pos": true,
+          "pass_both": false,
+          "candidate": "QQQ/SHY",
+          "id": "BTC_QQQ_SHY"
+        },
+        {
+          "cagr": 0.10618918652484077,
+          "sharpe": 0.7481429704662785,
+          "ann_vol": 0.13354104283639956,
+          "max_dd": -0.11920202202840402,
+          "cum_active": 0.18619702537777227,
+          "vol_matched_w_on": 0.62,
+          "edge_sharpe": 0.7174570204094611,
+          "edge_cagr_pp": 11.244223552450993,
+          "pass_sharpe_gt_1": false,
+          "pass_active_pos": true,
+          "pass_both": false,
+          "candidate": "QQQ/BIL",
+          "id": "BTC_QQQ_BIL"
+        },
+        {
+          "cagr": 0.19173282041674944,
+          "sharpe": 0.9229150558699207,
+          "ann_vol": 0.20808966288867883,
+          "max_dd": -0.19004811168302038,
+          "cum_active": 0.22361180400026637,
+          "vol_matched_w_on": 0.66,
+          "edge_sharpe": 0.603420466723408,
+          "edge_cagr_pp": 14.402901542236046,
+          "pass_sharpe_gt_1": false,
+          "pass_active_pos": true,
+          "pass_both": false,
+          "candidate": "SMH/SHY",
+          "id": "BTC_SMH_SHY"
+        },
+        {
+          "cagr": 0.10130721197840797,
+          "sharpe": 0.9939164403107557,
+          "ann_vol": 0.09195419784502229,
+          "max_dd": -0.06889710134685811,
+          "cum_active": 0.07894879856088166,
+          "vol_matched_w_on": 0.59,
+          "edge_sharpe": 0.5297301688642719,
+          "edge_cagr_pp": 5.727170905862433,
+          "pass_sharpe_gt_1": false,
+          "pass_active_pos": true,
+          "pass_both": false,
+          "candidate": "SPY/BIL",
+          "id": "BTC_SPY_BIL"
+        }
+      ]
+    },
+    {
+      "label": "wf_2023_2024",
+      "test_range": "2023-01-01\u21922024-12-31",
+      "candidates": [
+        {
+          "cagr": 0.19461703768695293,
+          "sharpe": 1.4648158034807848,
+          "ann_vol": 0.12676560242300977,
+          "max_dd": -0.09462149967817612,
+          "cum_active": 0.02817780393576852,
+          "vol_matched_w_on": 0.6,
+          "edge_sharpe": -0.21250109931630679,
+          "edge_cagr_pp": 1.8364530138679447,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "QQQ/SHY",
+          "id": "BTC_QQQ_SHY"
+        },
+        {
+          "cagr": 0.18960294592616633,
+          "sharpe": 1.4414676721891293,
+          "ann_vol": 0.12604900955570048,
+          "max_dd": -0.09296834470052706,
+          "cum_active": 0.022857444371936042,
+          "vol_matched_w_on": 0.6,
+          "edge_sharpe": -0.2280578648025291,
+          "edge_cagr_pp": 1.4852780431400925,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "QQQ/BIL",
+          "id": "BTC_QQQ_BIL"
+        },
+        {
+          "cagr": 0.23229688063119225,
+          "sharpe": 1.0894600908806562,
+          "ann_vol": 0.21217447684484456,
+          "max_dd": -0.19481455310926998,
+          "cum_active": 0.0020287258426794352,
+          "vol_matched_w_on": 0.64,
+          "edge_sharpe": -0.09141010282620776,
+          "edge_cagr_pp": 1.143350691553069,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "SMH/SHY",
+          "id": "BTC_SMH_SHY"
+        },
+        {
+          "cagr": 0.1328577648520335,
+          "sharpe": 1.4347707373197072,
+          "ann_vol": 0.08981783521529382,
+          "max_dd": -0.06397947412159655,
+          "cum_active": 0.01664471843944071,
+          "vol_matched_w_on": 0.5700000000000001,
+          "edge_sharpe": -0.31883384236666035,
+          "edge_cagr_pp": 0.9774643515667814,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "SPY/BIL",
+          "id": "BTC_SPY_BIL"
+        }
+      ]
+    },
+    {
+      "label": "wf_2025_2026",
+      "test_range": "2025-01-01\u21922026-08-06",
+      "candidates": [
+        {
+          "cagr": 0.1960159625826785,
+          "sharpe": 1.8205921154612774,
+          "ann_vol": 0.10153799562469037,
+          "max_dd": -0.0766850730880424,
+          "cum_active": 0.21586823976287173,
+          "vol_matched_w_on": 0.63,
+          "edge_sharpe": 1.414586526964798,
+          "edge_cagr_pp": 15.04169942244582,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "QQQ/SHY",
+          "id": "BTC_QQQ_SHY"
+        },
+        {
+          "cagr": 0.18919979977869716,
+          "sharpe": 1.7750767099702363,
+          "ann_vol": 0.10104094093491647,
+          "max_dd": -0.07668507308804218,
+          "cum_active": 0.20321422759316032,
+          "vol_matched_w_on": 0.63,
+          "edge_sharpe": 1.360069469541263,
+          "edge_cagr_pp": 14.241709053538498,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "QQQ/BIL",
+          "id": "BTC_QQQ_BIL"
+        },
+        {
+          "cagr": 0.39049275171188325,
+          "sharpe": 1.7699112667677401,
+          "ann_vol": 0.19812874697077493,
+          "max_dd": -0.14810099126126375,
+          "cum_active": 0.2043796588225928,
+          "vol_matched_w_on": 0.66,
+          "edge_sharpe": 0.910179326440541,
+          "edge_cagr_pp": 19.602372063953144,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "SMH/SHY",
+          "id": "BTC_SMH_SHY"
+        },
+        {
+          "cagr": 0.1174563094311234,
+          "sharpe": 1.5470600187403667,
+          "ann_vol": 0.07398709018751455,
+          "max_dd": -0.05245058352911014,
+          "cum_active": 0.09031656548413336,
+          "vol_matched_w_on": 0.59,
+          "edge_sharpe": 0.9643332555977853,
+          "edge_cagr_pp": 6.552692709294972,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "SPY/BIL",
+          "id": "BTC_SPY_BIL"
+        }
+      ]
+    }
+  ],
+  "walkforward_adj_0bps": [
+    {
+      "label": "wf_2019_2020",
+      "test_range": "2019-01-01\u21922020-12-31",
+      "candidates": [
+        {
+          "cagr": 0.2424788983359285,
+          "sharpe": 1.6994219825387533,
+          "ann_vol": 0.1324682128888293,
+          "max_dd": -0.12512728822599373,
+          "cum_active": 0.048780967352654914,
+          "vol_matched_w_on": 0.58,
+          "edge_sharpe": 0.23775114013877285,
+          "edge_cagr_pp": 3.8641304091031614,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "QQQ/SHY",
+          "id": "BTC_QQQ_SHY"
+        },
+        {
+          "cagr": 0.2369918454618949,
+          "sharpe": 1.668741420662327,
+          "ann_vol": 0.1322418204465305,
+          "max_dd": -0.12929022030199477,
+          "cum_active": 0.05430286916794369,
+          "vol_matched_w_on": 0.58,
+          "edge_sharpe": 0.27038348390074307,
+          "edge_cagr_pp": 4.158753182035446,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "QQQ/BIL",
+          "id": "BTC_QQQ_BIL"
+        },
+        {
+          "cagr": 0.2909213591374995,
+          "sharpe": 1.4426005352558091,
+          "ann_vol": 0.18869742261169795,
+          "max_dd": -0.1277926478174891,
+          "cum_active": -0.026283826051554993,
+          "vol_matched_w_on": 0.62,
+          "edge_sharpe": 0.0052578417691238055,
+          "edge_cagr_pp": 0.1089781494000297,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": false,
+          "pass_both": false,
+          "candidate": "SMH/SHY",
+          "id": "BTC_SMH_SHY"
+        },
+        {
+          "cagr": 0.13569654824824484,
+          "sharpe": 1.1906392728378732,
+          "ann_vol": 0.11174948007452604,
+          "max_dd": -0.12104734021531394,
+          "cum_active": -0.024519272892530086,
+          "vol_matched_w_on": 0.5700000000000001,
+          "edge_sharpe": 0.04184565435536758,
+          "edge_cagr_pp": -0.5594410465573629,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": false,
+          "pass_both": false,
+          "candidate": "SPY/BIL",
+          "id": "BTC_SPY_BIL"
+        }
+      ]
+    },
+    {
+      "label": "wf_2021_2022",
+      "test_range": "2021-01-01\u21922022-12-31",
+      "candidates": [
+        {
+          "cagr": 0.09946916940699047,
+          "sharpe": 0.8093423850984832,
+          "ann_vol": 0.12628912569973122,
+          "max_dd": -0.12744036244029566,
+          "cum_active": 0.20958230485540885,
+          "vol_matched_w_on": 0.58,
+          "edge_sharpe": 0.8170983372797058,
+          "edge_cagr_pp": 11.015517223686233,
+          "pass_sharpe_gt_1": false,
+          "pass_active_pos": true,
+          "pass_both": false,
+          "candidate": "QQQ/SHY",
+          "id": "BTC_QQQ_SHY"
+        },
+        {
+          "cagr": 0.1136650612378649,
+          "sharpe": 0.9150813245086099,
+          "ann_vol": 0.12554102766631184,
+          "max_dd": -0.12417833351328711,
+          "cum_active": 0.22603202139383205,
+          "vol_matched_w_on": 0.58,
+          "edge_sharpe": 0.881063670020166,
+          "edge_cagr_pp": 11.840970788478355,
+          "pass_sharpe_gt_1": false,
+          "pass_active_pos": true,
+          "pass_both": false,
+          "candidate": "QQQ/BIL",
+          "id": "BTC_QQQ_BIL"
+        },
+        {
+          "cagr": 0.22489271894304586,
+          "sharpe": 1.119628843742812,
+          "ann_vol": 0.1974147580849994,
+          "max_dd": -0.1942048368688284,
+          "cum_active": 0.3176659766100025,
+          "vol_matched_w_on": 0.62,
+          "edge_sharpe": 0.802301364109829,
+          "edge_cagr_pp": 17.913594390705747,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "SMH/SHY",
+          "id": "BTC_SMH_SHY"
+        },
+        {
+          "cagr": 0.10943251768559592,
+          "sharpe": 1.2214143928470436,
+          "ann_vol": 0.08769131193447037,
+          "max_dd": -0.0684399874288697,
+          "cum_active": 0.12304475441348495,
+          "vol_matched_w_on": 0.54,
+          "edge_sharpe": 0.7509096421806707,
+          "edge_cagr_pp": 6.813626357900282,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "SPY/BIL",
+          "id": "BTC_SPY_BIL"
+        }
+      ]
+    },
+    {
+      "label": "wf_2023_2024",
+      "test_range": "2023-01-01\u21922024-12-31",
+      "candidates": [
+        {
+          "cagr": 0.18656432899706132,
+          "sharpe": 1.4722997231214001,
+          "ann_vol": 0.12127046146081233,
+          "max_dd": -0.08734559147903254,
+          "cum_active": 0.031725113190809395,
+          "vol_matched_w_on": 0.56,
+          "edge_sharpe": -0.2355613747469576,
+          "edge_cagr_pp": 1.9057860924750702,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "QQQ/SHY",
+          "id": "BTC_QQQ_SHY"
+        },
+        {
+          "cagr": 0.185945936758259,
+          "sharpe": 1.4771189411271661,
+          "ann_vol": 0.12045486492338377,
+          "max_dd": -0.08734559147903231,
+          "cum_active": 0.033566522463002624,
+          "vol_matched_w_on": 0.56,
+          "edge_sharpe": -0.2228363633272663,
+          "edge_cagr_pp": 2.007554149524937,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "QQQ/BIL",
+          "id": "BTC_QQQ_BIL"
+        },
+        {
+          "cagr": 0.21541110313331346,
+          "sharpe": 1.0705165672446708,
+          "ann_vol": 0.20120690526754106,
+          "max_dd": -0.1622791241080216,
+          "cum_active": -0.008196927614104399,
+          "vol_matched_w_on": 0.61,
+          "edge_sharpe": -0.12256106615133366,
+          "edge_cagr_pp": 0.24075008854951285,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": false,
+          "pass_both": false,
+          "candidate": "SMH/SHY",
+          "id": "BTC_SMH_SHY"
+        },
+        {
+          "cagr": 0.14534028508101882,
+          "sharpe": 1.6247970258042836,
+          "ann_vol": 0.08585105783048598,
+          "max_dd": -0.06694710119755198,
+          "cum_active": 0.050251111883693245,
+          "vol_matched_w_on": 0.53,
+          "edge_sharpe": -0.1761856812270688,
+          "edge_cagr_pp": 2.7865138120958033,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "SPY/BIL",
+          "id": "BTC_SPY_BIL"
+        }
+      ]
+    },
+    {
+      "label": "wf_2025_2026",
+      "test_range": "2025-01-01\u21922026-08-06",
+      "candidates": [
+        {
+          "cagr": 0.19604310556360005,
+          "sharpe": 1.9205572678228164,
+          "ann_vol": 0.0960646408609762,
+          "max_dd": -0.06374469821224771,
+          "cum_active": 0.2204810736878584,
+          "vol_matched_w_on": 0.59,
+          "edge_sharpe": 1.499263121726952,
+          "edge_cagr_pp": 15.090844079318888,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "QQQ/SHY",
+          "id": "BTC_QQQ_SHY"
+        },
+        {
+          "cagr": 0.19005298500289292,
+          "sharpe": 1.8765213449653568,
+          "ann_vol": 0.09560557650072611,
+          "max_dd": -0.06374469821224771,
+          "cum_active": 0.20833696464816498,
+          "vol_matched_w_on": 0.59,
+          "edge_sharpe": 1.4444926747380378,
+          "edge_cagr_pp": 14.360633513925315,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "QQQ/BIL",
+          "id": "BTC_QQQ_BIL"
+        },
+        {
+          "cagr": 0.4475538533906134,
+          "sharpe": 2.077353795620251,
+          "ann_vol": 0.18735436890468474,
+          "max_dd": -0.12109427068770073,
+          "cum_active": 0.30403231491931715,
+          "vol_matched_w_on": 0.63,
+          "edge_sharpe": 1.211746047751901,
+          "edge_cagr_pp": 25.96151790089607,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "SMH/SHY",
+          "id": "BTC_SMH_SHY"
+        },
+        {
+          "cagr": 0.12509662457679682,
+          "sharpe": 1.7602727744222122,
+          "ann_vol": 0.06862050472703411,
+          "max_dd": -0.0398350077243651,
+          "cum_active": 0.10452430062015083,
+          "vol_matched_w_on": 0.56,
+          "edge_sharpe": 1.1589475043764308,
+          "edge_cagr_pp": 7.389922570901475,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true,
+          "candidate": "SPY/BIL",
+          "id": "BTC_SPY_BIL"
+        }
+      ]
+    }
+  ],
+  "cross_sectional": {
+    "off_reference": "SHY",
+    "with_costs": true,
+    "per_block_ranks": [
+      {
+        "block": "wf_2019_2020",
+        "ranks": [
+          {
+            "on": "QQQ",
+            "sharpe": 1.7995211956588768,
+            "cum_active": 0.08751330709531158,
+            "max_dd": -0.13575775613169871,
+            "bucket": "growth",
+            "rank": 1
+          },
+          {
+            "on": "SOXX",
+            "sharpe": 1.5403142689028861,
+            "cum_active": -0.019501841121638885,
+            "max_dd": -0.14716543505735769,
+            "bucket": "growth",
+            "rank": 2
+          },
+          {
+            "on": "SMH",
+            "sharpe": 1.4889952401047983,
+            "cum_active": -0.015820691956783595,
+            "max_dd": -0.13893748579203113,
+            "bucket": "growth",
+            "rank": 3
+          },
+          {
+            "on": "IWO",
+            "sharpe": 1.2973461276387368,
+            "cum_active": 0.06464255117506013,
+            "max_dd": -0.1127966968070937,
+            "bucket": "growth",
+            "rank": 4
+          },
+          {
+            "on": "SPY",
+            "sharpe": 1.1181586281693512,
+            "cum_active": -0.06277923667950114,
+            "max_dd": -0.12899566050728273,
+            "bucket": "broad",
+            "rank": 5
+          },
+          {
+            "on": "IWM",
+            "sharpe": 0.8447951125416563,
+            "cum_active": -0.010537284705571803,
+            "max_dd": -0.12108349036281874,
+            "bucket": "small",
+            "rank": 6
+          }
+        ],
+        "mean_growth_rank": 2.5,
+        "spy_rank": 5,
+        "smh_rank": 3,
+        "qqq_rank": 1
+      },
+      {
+        "block": "wf_2021_2022",
+        "ranks": [
+          {
+            "on": "SMH",
+            "sharpe": 0.9229150558699207,
+            "cum_active": 0.22361180400026637,
+            "max_dd": -0.19004811168302038,
+            "bucket": "growth",
+            "rank": 1
+          },
+          {
+            "on": "SOXX",
+            "sharpe": 0.8810680604692464,
+            "cum_active": 0.19920352527104845,
+            "max_dd": -0.19680829290787183,
+            "bucket": "growth",
+            "rank": 2
+          },
+          {
+            "on": "SPY",
+            "sharpe": 0.750002267117293,
+            "cum_active": 0.04336689235378777,
+            "max_dd": -0.08397345249221888,
+            "bucket": "broad",
+            "rank": 3
+          },
+          {
+            "on": "QQQ",
+            "sharpe": 0.583027468441569,
+            "cum_active": 0.14839133439435215,
+            "max_dd": -0.12657744908303026,
+            "bucket": "growth",
+            "rank": 4
+          },
+          {
+            "on": "IWM",
+            "sharpe": 0.2913822035355698,
+            "cum_active": -0.0006908106563459082,
+            "max_dd": -0.12691663659000008,
+            "bucket": "small",
+            "rank": 5
+          },
+          {
+            "on": "IWO",
+            "sharpe": 0.1295102853123057,
+            "cum_active": 0.008128540795031114,
+            "max_dd": -0.1704857049504267,
+            "bucket": "growth",
+            "rank": 6
+          }
+        ],
+        "mean_growth_rank": 3.25,
+        "spy_rank": 3,
+        "smh_rank": 1,
+        "qqq_rank": 4
+      },
+      {
+        "block": "wf_2023_2024",
+        "ranks": [
+          {
+            "on": "QQQ",
+            "sharpe": 1.4648158034807848,
+            "cum_active": 0.02817780393576852,
+            "max_dd": -0.09462149967817612,
+            "bucket": "growth",
+            "rank": 1
+          },
+          {
+            "on": "SPY",
+            "sharpe": 1.4627403974664213,
+            "cum_active": 0.021748492914846596,
+            "max_dd": -0.06027262148381418,
+            "bucket": "broad",
+            "rank": 2
+          },
+          {
+            "on": "SMH",
+            "sharpe": 1.0894600908806562,
+            "cum_active": 0.0020287258426794352,
+            "max_dd": -0.19481455310926998,
+            "bucket": "growth",
+            "rank": 3
+          },
+          {
+            "on": "SOXX",
+            "sharpe": 0.7309798314426005,
+            "cum_active": -0.0014564517446097325,
+            "max_dd": -0.22537343892893835,
+            "bucket": "growth",
+            "rank": 4
+          },
+          {
+            "on": "IWO",
+            "sharpe": 0.5418036023679298,
+            "cum_active": -0.012353647204063845,
+            "max_dd": -0.17266414908598415,
+            "bucket": "growth",
+            "rank": 5
+          },
+          {
+            "on": "IWM",
+            "sharpe": 0.3526314303623433,
+            "cum_active": -0.07558521329974088,
+            "max_dd": -0.1884253436827653,
+            "bucket": "small",
+            "rank": 6
+          }
+        ],
+        "mean_growth_rank": 3.25,
+        "spy_rank": 2,
+        "smh_rank": 3,
+        "qqq_rank": 1
+      },
+      {
+        "block": "wf_2025_2026",
+        "ranks": [
+          {
+            "on": "QQQ",
+            "sharpe": 1.8205921154612774,
+            "cum_active": 0.21586823976287173,
+            "max_dd": -0.0766850730880424,
+            "bucket": "growth",
+            "rank": 1
+          },
+          {
+            "on": "SMH",
+            "sharpe": 1.7699112667677401,
+            "cum_active": 0.2043796588225928,
+            "max_dd": -0.14810099126126375,
+            "bucket": "growth",
+            "rank": 2
+          },
+          {
+            "on": "SOXX",
+            "sharpe": 1.6569571762107083,
+            "cum_active": 0.24427738798515564,
+            "max_dd": -0.17179411382672227,
+            "bucket": "growth",
+            "rank": 3
+          },
+          {
+            "on": "SPY",
+            "sharpe": 1.6063298363931058,
+            "cum_active": 0.1010857004472332,
+            "max_dd": -0.046886912658250846,
+            "bucket": "broad",
+            "rank": 4
+          },
+          {
+            "on": "IWO",
+            "sharpe": 0.9652313952706209,
+            "cum_active": 0.11524617719997798,
+            "max_dd": -0.061299462258921356,
+            "bucket": "growth",
+            "rank": 5
+          },
+          {
+            "on": "IWM",
+            "sharpe": 0.7523722035936906,
+            "cum_active": 0.008833984260963268,
+            "max_dd": -0.07169707059844621,
+            "bucket": "small",
+            "rank": 6
+          }
+        ],
+        "mean_growth_rank": 2.75,
+        "spy_rank": 4,
+        "smh_rank": 2,
+        "qqq_rank": 1
+      }
+    ],
+    "btc_on_weekly_return_corr": {
+      "QQQ": {
+        "QQQ": 1.0,
+        "SMH": 0.847,
+        "SOXX": 0.827,
+        "IWO": 0.776,
+        "IWM": 0.727,
+        "SPY": 0.914
+      },
+      "SMH": {
+        "QQQ": 0.847,
+        "SMH": 1.0,
+        "SOXX": 0.986,
+        "IWO": 0.717,
+        "IWM": 0.692,
+        "SPY": 0.783
+      },
+      "SOXX": {
+        "QQQ": 0.827,
+        "SMH": 0.986,
+        "SOXX": 1.0,
+        "IWO": 0.73,
+        "IWM": 0.709,
+        "SPY": 0.763
+      },
+      "IWO": {
+        "QQQ": 0.776,
+        "SMH": 0.717,
+        "SOXX": 0.73,
+        "IWO": 1.0,
+        "IWM": 0.977,
+        "SPY": 0.841
+      },
+      "IWM": {
+        "QQQ": 0.727,
+        "SMH": 0.692,
+        "SOXX": 0.709,
+        "IWO": 0.977,
+        "IWM": 1.0,
+        "SPY": 0.844
+      },
+      "SPY": {
+        "QQQ": 0.914,
+        "SMH": 0.783,
+        "SOXX": 0.763,
+        "IWO": 0.841,
+        "IWM": 0.844,
+        "SPY": 1.0
+      }
+    },
+    "rank_summary": {
+      "smh_ranks": [
+        3,
+        1,
+        3,
+        2
+      ],
+      "spy_ranks": [
+        5,
+        3,
+        2,
+        4
+      ],
+      "qqq_ranks": [
+        1,
+        4,
+        1,
+        1
+      ],
+      "smh_beats_spy_blocks": 3
+    },
+    "judgment": "MIXED_GROWTH_TILT_WITH_REGIME_DEPENDENCE"
+  },
+  "cost_risk_matched": {
+    "execution": {
+      "costs_bps_one_way": 5,
+      "fill": "next_open",
+      "half_spread_bps": {
+        "QQQ": 1.0,
+        "SPY": 1.0,
+        "SMH": 1.5,
+        "SOXX": 1.5,
+        "IWO": 1.5,
+        "IWM": 1.5,
+        "SHY": 2.0,
+        "BIL": 2.0,
+        "IEF": 2.0,
+        "TLT": 2.0,
+        "GLD": 2.0
+      }
+    },
+    "return_path": "close_open_switch_day_plus_adj_c2c",
+    "vol_match_calibrated_on": "train",
+    "comparisons": [
+      {
+        "candidate": "QQQ/SHY",
+        "id": "BTC_QQQ_SHY",
+        "evidence_tier": "REFERENCE_CORE",
+        "cost_rt_bps": 13.0,
+        "train": {
+          "cagr": 0.12590754364803014,
+          "sharpe": 1.1170475901504837,
+          "ann_vol": 0.1118304961269747,
+          "max_dd": -0.13575775613169816,
+          "cum_active": 0.11438499270554603,
+          "vol_matched_w_on": 0.62,
+          "edge_sharpe": 0.20360927361754666,
+          "edge_cagr_pp": 2.607324523376642,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true
+        },
+        "test": {
+          "cagr": 0.15303367164542192,
+          "sharpe": 1.1950212722427402,
+          "ann_vol": 0.12299464757720258,
+          "max_dd": -0.12657744908303026,
+          "cum_active": 0.42519876367178866,
+          "vol_matched_w_on": 0.62,
+          "edge_sharpe": 0.600670858611142,
+          "edge_cagr_pp": 8.291668382213778,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true
+        }
+      },
+      {
+        "candidate": "QQQ/BIL",
+        "id": "BTC_QQQ_BIL",
+        "evidence_tier": "POST_TEST_CANDIDATE",
+        "cost_rt_bps": 13.0,
+        "train": {
+          "cagr": 0.12467377659312273,
+          "sharpe": 1.1091750414499528,
+          "ann_vol": 0.11161559866972108,
+          "max_dd": -0.13541898198412639,
+          "cum_active": 0.12393734554011382,
+          "vol_matched_w_on": 0.62,
+          "edge_sharpe": 0.22313363481587178,
+          "edge_cagr_pp": 2.7535533290097725,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true
+        },
+        "test": {
+          "cagr": 0.15860307922852668,
+          "sharpe": 1.2406624850079204,
+          "ann_vol": 0.12229681217532018,
+          "max_dd": -0.11920202202840402,
+          "cum_active": 0.44902185278157547,
+          "vol_matched_w_on": 0.62,
+          "edge_sharpe": 0.6293700741354302,
+          "edge_cagr_pp": 8.653023952862625,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true
+        }
+      },
+      {
+        "candidate": "SMH/SHY",
+        "id": "BTC_SMH_SHY",
+        "evidence_tier": "TRAIN_PRE_REGISTERED",
+        "cost_rt_bps": 13.5,
+        "train": {
+          "cagr": 0.1293440256001137,
+          "sharpe": 0.8608732250999351,
+          "ann_vol": 0.15542831366089013,
+          "max_dd": -0.16408375457659607,
+          "cum_active": -0.053292315661369605,
+          "vol_matched_w_on": 0.66,
+          "edge_sharpe": 0.015733506733673464,
+          "edge_cagr_pp": 0.2695111571659803,
+          "pass_sharpe_gt_1": false,
+          "pass_active_pos": false,
+          "pass_both": false
+        },
+        "test": {
+          "cagr": 0.2593733715261506,
+          "sharpe": 1.2149004908863539,
+          "ann_vol": 0.20669172130980784,
+          "max_dd": -0.1948145531092702,
+          "cum_active": 0.4602687091283697,
+          "vol_matched_w_on": 0.66,
+          "edge_sharpe": 0.45914695941842265,
+          "edge_cagr_pp": 10.920470633503854,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true
+        }
+      },
+      {
+        "candidate": "SPY/BIL",
+        "id": "BTC_SPY_BIL",
+        "evidence_tier": "TRAIN_AND_WF_EXPLORATORY",
+        "cost_rt_bps": 13.0,
+        "train": {
+          "cagr": 0.07888260645201939,
+          "sharpe": 0.8823130853292807,
+          "ann_vol": 0.09076889568342456,
+          "max_dd": -0.12865423568717382,
+          "cum_active": 0.024803058954496304,
+          "vol_matched_w_on": 0.59,
+          "edge_sharpe": 0.09206619098719959,
+          "edge_cagr_pp": 0.9374832918759957,
+          "pass_sharpe_gt_1": false,
+          "pass_active_pos": true,
+          "pass_both": false
+        },
+        "test": {
+          "cagr": 0.11681278762367597,
+          "sharpe": 1.2891814821408856,
+          "ann_vol": 0.0863717723667983,
+          "max_dd": -0.06889710134685811,
+          "cum_active": 0.1896189683377878,
+          "vol_matched_w_on": 0.59,
+          "edge_sharpe": 0.44509582617954413,
+          "edge_cagr_pp": 4.210631380763141,
+          "pass_sharpe_gt_1": true,
+          "pass_active_pos": true,
+          "pass_both": true
+        }
+      }
+    ]
+  },
+  "verdicts": {
+    "pass_block_counts_with_costs": {
+      "QQQ/SHY": {
+        "with_costs": 3,
+        "adj_0bps": 3
+      },
+      "QQQ/BIL": {
+        "with_costs": 3,
+        "adj_0bps": 3
+      },
+      "SMH/SHY": {
+        "with_costs": 2,
+        "adj_0bps": 2
+      },
+      "SPY/BIL": {
+        "with_costs": 2,
+        "adj_0bps": 3
+      }
+    },
+    "assignments": {
+      "defensive_core": "BTC_QQQ_SHY_CORE_CANDIDATE",
+      "broad_equity": "SPY_BIL_PASS_2_4_NOT_BROAD",
+      "aggressive": "SMH/SHY_PASS_2_4_NOT_AGGRESSIVE",
+      "bil_parking": "BIL_INTERESTING_BUT_NOT_VALIDATED",
+      "cross_section": "MIXED_GROWTH_TILT_WITH_REGIME_DEPENDENCE",
+      "summary": "Multi-label allowed: do not pick single champion; map candidates to roles by WF stability with costs."
+    },
+    "n_blocks": 4
+  }
+}

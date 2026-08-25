@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "cagr_above_full": true,
+    "sharpe_ge_8020": true,
+    "maxdd_target": true,
+    "not_only_2008": true,
+    "sma_continuity": true,
+    "cost_double_stable": true,
+    "delay_stable": true,
+    "rel_8020_uw_ok": false,
+    "rolling_stable": true
+  },
+  "passed": 8,
+  "total": 9,
+  "label": "DEFENSIVE_SHADOW_CANDIDATE"
+}

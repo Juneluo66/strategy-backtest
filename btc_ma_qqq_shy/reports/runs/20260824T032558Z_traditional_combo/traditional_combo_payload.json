@@ -1,0 +1,122 @@
+{
+  "generated_utc": "2026-08-24T03:25:58.564868+00:00",
+  "return_basis": "yahoo_adj_close_total_return",
+  "sample_full": {
+    "t0": "2014-11-05",
+    "t1": "2026-08-21"
+  },
+  "sample_discovery": {
+    "t0": "2014-11-05",
+    "t1": "2026-08-07"
+  },
+  "frozen_comparator": {
+    "id": "QQQ200_VIX20_v1",
+    "qqq_sma_window": 200,
+    "vix_threshold": 20.0,
+    "logic": "all_required",
+    "description": "QQQ > SMA200 AND VIX < 20 at prior session \u2192 QQQ else SHY"
+  },
+  "discovery_vol_matched_w_qqq": 0.56,
+  "comparisons_full": [
+    {
+      "label": "BTC_timing",
+      "cagr": 0.17267331741253966,
+      "sharpe": 1.3611324726814904,
+      "ann_vol": 0.12285988687282605,
+      "max_dd": -0.1624101050144534,
+      "final_nav": 6.539446592225017,
+      "pct_qqq": 0.4716599190283401
+    },
+    {
+      "label": "QQQ_200DMA_only",
+      "cagr": 0.16531624473803475,
+      "sharpe": 1.0042724010641395,
+      "ann_vol": 0.16692484622983786,
+      "max_dd": -0.2517510240071733,
+      "final_nav": 6.071811640715236,
+      "pct_qqq": 0.819838056680162
+    },
+    {
+      "label": "VIX_lt_20_only",
+      "cagr": 0.055069219965010685,
+      "sharpe": 0.460943212428381,
+      "ann_vol": 0.1378417483688077,
+      "max_dd": -0.2831459725028469,
+      "final_nav": 1.8813234867129578,
+      "pct_qqq": 0.7041160593792173
+    },
+    {
+      "label": "QQQ200DMA_VIX20_combo",
+      "cagr": 0.05641458671213173,
+      "sharpe": 0.48840368951015034,
+      "ann_vol": 0.13074996851651538,
+      "max_dd": -0.23734503381879002,
+      "final_nav": 1.9098006437372028,
+      "pct_qqq": 0.6649797570850202
+    },
+    {
+      "label": "vol_matched_static",
+      "cagr": 0.11576128380521888,
+      "sharpe": 0.9603760336957112,
+      "ann_vol": 0.12228039045181639,
+      "max_dd": -0.22434705521805087,
+      "final_nav": 3.637698771999831,
+      "pct_qqq": 0.56
+    }
+  ],
+  "comparisons_discovery": [
+    {
+      "label": "BTC_timing",
+      "cagr": 0.17318530729152304,
+      "sharpe": 1.3627810444136106,
+      "ann_vol": 0.1230654579569862,
+      "max_dd": -0.1624101050144534,
+      "final_nav": 6.533066498304747,
+      "pct_qqq": 0.4732566012186865
+    },
+    {
+      "label": "QQQ_200DMA_only",
+      "cagr": 0.1672234877318619,
+      "sharpe": 1.0135485506216928,
+      "ann_vol": 0.16705692467108693,
+      "max_dd": -0.2517510240071733,
+      "final_nav": 6.153428646345067,
+      "pct_qqq": 0.8192281651997292
+    },
+    {
+      "label": "VIX_lt_20_only",
+      "cagr": 0.05645348167757591,
+      "sharpe": 0.47040118127763153,
+      "ann_vol": 0.1378973999457486,
+      "max_dd": -0.2831459725028469,
+      "final_nav": 1.9066121482677645,
+      "pct_qqq": 0.7031144211238998
+    },
+    {
+      "label": "QQQ200DMA_VIX20_combo",
+      "cagr": 0.057805010555333824,
+      "sharpe": 0.4984535870748108,
+      "ann_vol": 0.1307839661839469,
+      "max_dd": -0.23734503381879002,
+      "final_nav": 1.9354720938932874,
+      "pct_qqq": 0.6638456330399458
+    },
+    {
+      "label": "vol_matched_static",
+      "cagr": 0.11682339881559356,
+      "sharpe": 0.9673383962423999,
+      "ann_vol": 0.1224186731797985,
+      "max_dd": -0.22434705521805087,
+      "final_nav": 3.6631860858284204,
+      "pct_qqq": 0.56
+    }
+  ],
+  "btc_vs_combo": {
+    "cagr_pp": 11.625873070040793,
+    "sharpe_diff": 0.8727287831713401,
+    "maxdd_pp": 7.493492880433661
+  },
+  "judgment": "BTC_BEATS_FROZEN_TRADITIONAL_COMBO",
+  "weekly_signal_agreement_btc_vs_combo": 0.5430894308943089,
+  "interpretation": "Combo encodes trend + vol regime without BTC. If BTC \u2248 combo, BTC may be a bundled traditional filter; if BTC >> combo on risk-adj, BTC adds orthogonal timing."
+}

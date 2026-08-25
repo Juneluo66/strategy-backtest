@@ -1,0 +1,4 @@
+run,cagr,volatility,sharpe,max_drawdown,average_exposure
+20260810T090141Z_run_baseline_1x_244ab4032384,0.0,0.0,,0.0,0.0
+20260810T090142Z_run_vix_deleverage_244ab4032384,0.0,0.0,,0.0,0.0
+20260810T090144Z_run_vix_original_244ab4032384,0.0,0.0,,0.0,0.0

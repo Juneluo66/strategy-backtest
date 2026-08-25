@@ -1,0 +1,166 @@
+{
+  "status": "OK",
+  "return_basis": "Yahoo_AdjClose_scaled_Open",
+  "common_start": "2007-05-30",
+  "common_end": "2026-08-10",
+  "common_rows": 4830,
+  "per_symbol": {
+    "SPY": {
+      "rows": 5434,
+      "start": "2005-01-03",
+      "end": "2026-08-10",
+      "duplicate_dates": 0,
+      "missing_bdays_in_span": 202,
+      "adj_factor_min": 0.67476762502431,
+      "adj_factor_max": 1.0,
+      "adj_factor_last": 1.0,
+      "inception_approx": "1993-01-29",
+      "n_extreme_gt_25pct": 0
+    },
+    "EFA": {
+      "rows": 5436,
+      "start": "2005-01-03",
+      "end": "2026-08-12",
+      "duplicate_dates": 0,
+      "missing_bdays_in_span": 202,
+      "adj_factor_min": 0.5374137609839978,
+      "adj_factor_max": 1.0,
+      "adj_factor_last": 1.0,
+      "inception_approx": "2001-08-17",
+      "n_extreme_gt_25pct": 0
+    },
+    "EEM": {
+      "rows": 5436,
+      "start": "2005-01-03",
+      "end": "2026-08-12",
+      "duplicate_dates": 0,
+      "missing_bdays_in_span": 202,
+      "adj_factor_min": 0.652747392853532,
+      "adj_factor_max": 1.0,
+      "adj_factor_last": 1.0,
+      "inception_approx": "2003-04-11",
+      "n_extreme_gt_25pct": 0
+    },
+    "IEF": {
+      "rows": 5434,
+      "start": "2005-01-03",
+      "end": "2026-08-10",
+      "duplicate_dates": 0,
+      "missing_bdays_in_span": 202,
+      "adj_factor_min": 0.5593191231681992,
+      "adj_factor_max": 1.0,
+      "adj_factor_last": 1.0,
+      "inception_approx": "2002-07-26",
+      "n_extreme_gt_25pct": 0
+    },
+    "TLT": {
+      "rows": 5436,
+      "start": "2005-01-03",
+      "end": "2026-08-12",
+      "duplicate_dates": 0,
+      "missing_bdays_in_span": 202,
+      "adj_factor_min": 0.4945121820218541,
+      "adj_factor_max": 1.0,
+      "adj_factor_last": 1.0,
+      "inception_approx": "2002-07-26",
+      "n_extreme_gt_25pct": 0
+    },
+    "GLD": {
+      "rows": 5434,
+      "start": "2005-01-03",
+      "end": "2026-08-10",
+      "duplicate_dates": 0,
+      "missing_bdays_in_span": 202,
+      "adj_factor_min": 1.0,
+      "adj_factor_max": 1.0,
+      "adj_factor_last": 1.0,
+      "inception_approx": "2004-11-18",
+      "n_extreme_gt_25pct": 0
+    },
+    "DBC": {
+      "rows": 5161,
+      "start": "2006-02-06",
+      "end": "2026-08-12",
+      "duplicate_dates": 0,
+      "missing_bdays_in_span": 192,
+      "adj_factor_min": 0.7927725147442923,
+      "adj_factor_max": 1.0,
+      "adj_factor_last": 1.0,
+      "inception_approx": "2006-02-03",
+      "n_extreme_gt_25pct": 0
+    },
+    "VNQ": {
+      "rows": 5436,
+      "start": "2005-01-03",
+      "end": "2026-08-12",
+      "duplicate_dates": 0,
+      "missing_bdays_in_span": 202,
+      "adj_factor_min": 0.3999083352645069,
+      "adj_factor_max": 1.0,
+      "adj_factor_last": 1.0,
+      "inception_approx": "2004-09-29",
+      "n_extreme_gt_25pct": 0
+    },
+    "BIL": {
+      "rows": 4830,
+      "start": "2007-05-30",
+      "end": "2026-08-10",
+      "duplicate_dates": 0,
+      "missing_bdays_in_span": 179,
+      "adj_factor_min": 0.7683112315125523,
+      "adj_factor_max": 1.0,
+      "adj_factor_last": 1.0,
+      "inception_approx": "2007-05-30",
+      "n_extreme_gt_25pct": 0
+    }
+  },
+  "extreme_flags_sample": [],
+  "n_extreme_flags": 0,
+  "manifest": {
+    "retrieved_at_utc": "2026-08-13T09:36:27.194046+00:00",
+    "source": "Yahoo Finance via yfinance",
+    "start": "2005-01-01",
+    "return_basis": "Yahoo_AdjClose_scaled_Open",
+    "refresh": false,
+    "requested_symbols": [
+      "SPY",
+      "EFA",
+      "EEM",
+      "IEF",
+      "TLT",
+      "GLD",
+      "DBC",
+      "VNQ",
+      "BIL"
+    ],
+    "completed_symbols": [
+      "SPY",
+      "EFA",
+      "EEM",
+      "IEF",
+      "TLT",
+      "GLD",
+      "DBC",
+      "VNQ",
+      "BIL"
+    ],
+    "failures": {},
+    "actions": {
+      "SPY": "cache_hit",
+      "EFA": "cache_hit",
+      "EEM": "cache_hit",
+      "IEF": "cache_hit",
+      "TLT": "cache_hit",
+      "GLD": "cache_hit",
+      "DBC": "cache_hit",
+      "VNQ": "cache_hit",
+      "BIL": "cache_hit"
+    },
+    "refuse_silent_stale_on_failed_refresh": true
+  },
+  "notes": [
+    "Signals and NAV use dividend-adjusted total return (Adj Close).",
+    "Open scaled by AdjClose/Close for overnight coherence.",
+    "Missing returns are never fillna(0); panels trimmed to strict common dates."
+  ]
+}

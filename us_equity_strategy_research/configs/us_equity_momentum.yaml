@@ -1,0 +1,5 @@
+strategy: momentum_B
+inherits: frozen.yaml
+variants: [B0, B1, B2, B3]
+n_holdings: 40
+cost_scenario: baseline

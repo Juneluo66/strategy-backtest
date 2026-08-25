@@ -1,0 +1,36 @@
+# Fixed 1998 Select Sector SPDR pool — equal-weight research only.
+# Forbidden: ranking, Top-N, SMA/trend, BIL sleeve, XLRE/XLC, leverage, vol weighting.
+sectors:
+  - XLB
+  - XLE
+  - XLF
+  - XLI
+  - XLK
+  - XLP
+  - XLU
+  - XLV
+  - XLY
+benchmarks:
+  - SPY
+  - RSP
+rf_primary: BIL
+rf_proxy_pre_bil: "^IRX"
+inception_approx:
+  XLB: "1998-12-16"
+  XLE: "1998-12-16"
+  XLF: "1998-12-16"
+  XLI: "1998-12-16"
+  XLK: "1998-12-16"
+  XLP: "1998-12-16"
+  XLU: "1998-12-16"
+  XLV: "1998-12-16"
+  XLY: "1998-12-16"
+  SPY: "1993-01-29"
+  RSP: "2003-04-24"
+  BIL: "2007-05-30"
+  "^IRX": "1954-01-04"
+sibling_cache_roots:
+  - ../us_sector_momentum/data/cache/prices
+  - ../dual_momentum_etf/data/cache/prices
+  - ../us_equity_strategy_research/data/cache/etf
+  - ../multi_asset_etf_trend/data/cache/prices

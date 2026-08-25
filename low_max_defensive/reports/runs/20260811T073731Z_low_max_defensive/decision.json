@@ -1,0 +1,49 @@
+{
+  "parent_conclusion": "REJECTED_AS_INDEPENDENT_ALPHA",
+  "frozen": {
+    "top_returns": 5,
+    "lookback": 21,
+    "decile": 0.1,
+    "cap": 25,
+    "one_way_bps": 5.0
+  },
+  "data_status": {
+    "DATA_TIER": "HISTORICAL_SP500_APPROX",
+    "SURVIVORSHIP_BIAS": "REDUCED_NOT_ELIMINATED",
+    "PIT_VALIDATED": false,
+    "DELISTING_RETURN": "UNAVAILABLE",
+    "SIZE_NEUTRAL": "BLOCKED_BY_PIT_MARKET_CAP",
+    "SIZE_VALUATION_QUALITY": "BLOCKED_BY_PIT_DATA"
+  },
+  "eval_window": {
+    "start": "2015-03-02",
+    "end": "2026-08-07"
+  },
+  "style_notes": [
+    "SPLV (low_volatility): compared from 2015-03-02 to 2026-08-07",
+    "SPYV (value): compared from 2015-03-02 to 2026-08-07",
+    "IWD (value_alt): compared from 2015-03-02 to 2026-08-07"
+  ],
+  "value_vs_spy": {
+    "A_higher_return": false,
+    "B_higher_sharpe": false,
+    "C_lower_drawdown": true,
+    "D_lower_beta": true,
+    "E_better_downside_protection": true,
+    "F_nothing": false
+  },
+  "exclusion_flag": "NO_SYSTEMATIC_IMPROVEMENT",
+  "residual_flag": "NO_CLEAR_INCREMENT_AFTER_VOL_CONTROL",
+  "regime_flag": "CROSS_REGIME_POSITIVE",
+  "decision": "REJECT",
+  "rationale": [
+    "LOW_MAX vs SPY: sharpe 0.603 vs 0.826; cagr 0.083 vs 0.139; maxDD -0.331 vs -0.337; beta 0.673.",
+    "LOW_MAX vs EW: sharpe 0.603 vs 0.711; maxDD -0.331 vs -0.393.",
+    "Exclusion grid flag: NO_SYSTEMATIC_IMPROVEMENT.",
+    "Residual after vol control: NO_CLEAR_INCREMENT_AFTER_VOL_CONTROL.",
+    "Regime flag: CROSS_REGIME_POSITIVE.",
+    "Fraction of auto stress windows with LOW_MAX > SPY return: 0.50.",
+    "Anatomy: mean 60d vol diff (Low-MAX - universe) = -0.0854.",
+    "No clear outperformance vs SPY/EW and exclusion grid is weak or parameter-sensitive."
+  ]
+}

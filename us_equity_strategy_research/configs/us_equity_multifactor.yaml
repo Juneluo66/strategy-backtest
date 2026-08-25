@@ -1,0 +1,8 @@
+strategy: multifactor_A
+inherits: frozen.yaml
+variant: A
+n_holdings: 40
+value_weight: 0.30
+quality_weight: 0.35
+momentum_weight: 0.35
+cost_scenario: baseline

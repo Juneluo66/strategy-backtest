@@ -1,0 +1,33 @@
+{
+  "label": "REJECTED",
+  "passed": false,
+  "n_pass": 7,
+  "n_checks": 16,
+  "checks": {
+    "net_cagr_above_spy": false,
+    "final_wealth_above_spy": false,
+    "cagr_edge_at_least_~1pp": false,
+    "rolling_5y_beat_spy_ge_55pct": false,
+    "rolling_10y_beat_spy_ge_60pct": false,
+    "exclude_last_1y_still_leads_spy": true,
+    "exclude_last_2y_still_leads_spy": true,
+    "exclude_last_3y_still_leads_spy": true,
+    "fixed_cutoffs_majority_lead_spy": true,
+    "cost_10bp_still_leads_spy": false,
+    "cost_20bp_still_leads_spy": false,
+    "delay_does_not_flip": false,
+    "excess_not_entirely_from_xlk": false,
+    "qqq_results_disclosed": true,
+    "maxdd_not_5pp_deeper_than_spy": true,
+    "no_posthoc_search": true
+  },
+  "rolling_5y_beat_rate": 0.35546875,
+  "rolling_10y_beat_rate": 0.3112244897959184,
+  "reason": "CAGR/final wealth did not beat SPY \u2014 Sharpe alone cannot pass.",
+  "notes": [
+    "Primary objective is long-run terminal wealth vs SPY, not low drawdown or high cash.",
+    "Higher Sharpe with lower terminal wealth than SPY is a failure.",
+    "Do not retune Top-N / lookbacks / add SMA or BIL after seeing results.",
+    "IBKR/production configs must not be modified (ibkr_modified=false)."
+  ]
+}

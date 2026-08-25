@@ -1,0 +1,11 @@
+{
+  "run_id": "20260804T110027Z_fetch_non_ohlcv_9db5d767cce6",
+  "config_hash": "9db5d767cce65951f3657edca54f4b798840d6ec5f8a1a5f48bd1f0f261b0ed0",
+  "source": "free",
+  "source_version": "free_20260804T110028Z",
+  "status": "BLOCKED_BY_DATA",
+  "promoted": false,
+  "raw_dir": "/home/ec2-user/strategy-backtest/etf_rotation/data/cache/non_ohlcv/raw/free_20260804T110028Z",
+  "staging_dir": "/home/ec2-user/strategy-backtest/etf_rotation/data/cache/non_ohlcv/staging/free_20260804T110028Z",
+  "validation_path": "/home/ec2-user/strategy-backtest/etf_rotation/reports/non_ohlcv_validation.md"
+}

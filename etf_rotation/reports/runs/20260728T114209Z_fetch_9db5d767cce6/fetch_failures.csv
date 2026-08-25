@@ -1,0 +1,27 @@
+code,error,attempts
+159801,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+159819,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+159859,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+159883,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+159915,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+159920,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+159928,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+159949,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+159985,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+159992,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+159995,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+159998,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+510050,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+510300,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+510500,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+511010,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+511260,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+511380,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+512010,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+512100,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+512200,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+512400,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+512480,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+512660,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+512690,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5
+512720,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",5

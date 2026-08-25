@@ -1,0 +1,54 @@
+{
+  "note": "Frozen Metric C regression fixture from half_protect relative audit 2026-08-13. Strategy rules unchanged.",
+  "books": {
+    "half_protect": {
+      "cagr": 0.12327114583784216,
+      "sharpe": 0.827420874584926,
+      "max_drawdown": -0.2550816732770601,
+      "end_nav": 8.206963792231615
+    },
+    "frozen_80_20_spy_dc": {
+      "cagr": 0.11999950001904325,
+      "sharpe": 0.7504990767119558,
+      "max_drawdown": -0.38945638801288285,
+      "end_nav": 7.784730559963073
+    },
+    "frozen_60_40_spy_dc": {
+      "cagr": 0.11447121798917204,
+      "sharpe": 0.8035484312960998,
+      "max_drawdown": -0.2976292367036927,
+      "end_nav": 7.11753632834478
+    },
+    "spy_bh": {
+      "cagr": 0.12468804526566335,
+      "sharpe": 0.694463154125804,
+      "max_drawdown": -0.4716519450197112,
+      "end_nav": 8.3964612787768
+    }
+  },
+  "metric_c_vs_80": {
+    "final_relative_wealth": 1.048729698321955,
+    "relative_cagr": 0.002630980891900503,
+    "max_relative_underwater": -0.15304161050273657,
+    "longest_relative_underwater_trading_days": 4382,
+    "longest_relative_underwater_months_metric_c": 210,
+    "currently_underwater": true,
+    "current_distance_from_relative_peak": -0.14297082376905668,
+    "last_relative_peak_date": "2009-03-09",
+    "frac_days_relative_wealth_gt_1": 0.9995609220636663,
+    "common_start": "2008-07-01",
+    "common_end": "2026-08-10"
+  },
+  "metric_c_vs_60": {
+    "final_relative_wealth": 1.1464649220362932,
+    "max_relative_underwater": -0.16168981026067097,
+    "longest_relative_underwater_trading_days": 1876,
+    "longest_relative_underwater_months_metric_c": 90
+  },
+  "legacy_diag_vs_80": {
+    "method": "(1 + strategy_return - benchmark_return).cumprod()",
+    "final_approx_relative": 0.98418160895287,
+    "formal_use_forbidden": true
+  },
+  "decision_choice": "C"
+}

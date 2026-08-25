@@ -1,0 +1,17 @@
+{
+  "gross_cagr": 0.10225229080435283,
+  "gross_volatility": 0.14932145864174726,
+  "gross_sharpe": 0.7268956404874672,
+  "gross_max_drawdown": -0.31754541036014894,
+  "net_cagr": 0.05920069795621097,
+  "net_volatility": 0.14974986899106307,
+  "net_sharpe": 0.4591220243473549,
+  "net_max_drawdown": -0.31997862143554123,
+  "cost_drag_cagr": 0.04305159284814186,
+  "benchmark_sharpe": 0.8328409822588789,
+  "realized_beta_to_spy": 0.6637236824898932,
+  "average_exposure": 0.9869684499314129,
+  "one_way_turnover": 115.1,
+  "annualized_turnover": 10.009589285714286,
+  "cost_total": 0.46040000000000003
+}

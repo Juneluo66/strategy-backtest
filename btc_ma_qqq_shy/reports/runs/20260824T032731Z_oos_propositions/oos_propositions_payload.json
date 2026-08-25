@@ -1,0 +1,138 @@
+{
+  "generated_utc": "2026-08-24T03:27:31.940496+00:00",
+  "oos_cutoff": "2026-08-07",
+  "discovery_vol_matched_w_qqq_frozen": 0.56,
+  "frozen_comparator": {
+    "id": "QQQ200_VIX20_v1",
+    "qqq_sma_window": 200,
+    "vix_threshold": 20.0,
+    "logic": "all_required",
+    "description": "QQQ > SMA200 AND VIX < 20 at prior session \u2192 QQQ else SHY"
+  },
+  "propositions": {
+    "discovery_btc": {
+      "label": "discovery_pre_cutoff",
+      "n_weeks": 613,
+      "n_on": 288,
+      "n_off": 325,
+      "status": "TRACKING",
+      "proposition_1_risk_on": {
+        "mean_qqq_minus_shy_when_on": 0.0061893870869124635,
+        "mean_qqq_minus_shy_when_off": 0.0010006234181151377,
+        "win_rate_qqq_beats_shy_when_on": 0.6145833333333334,
+        "passes": true
+      },
+      "proposition_2_risk_off": {
+        "qqq_week_vol_when_off": 0.030448063399710894,
+        "qqq_week_vol_when_on": 0.024058205476363715,
+        "qqq_neg_frac_when_off": 0.4492307692307692,
+        "qqq_neg_frac_when_on": 0.3854166666666667,
+        "qqq_10pct_tail_when_off": -0.03707363281994345,
+        "qqq_10pct_tail_when_on": -0.022713205486472397,
+        "passes": true
+      },
+      "proposition_3_active_vs_static": {
+        "vol_matched_w_qqq": 0.56,
+        "cum_active_return": 0.7118148468007834,
+        "mean_weekly_active": 0.0009823909780694816,
+        "active_win_rate": 0.5285481239804242,
+        "passes": true
+      }
+    },
+    "oos_btc": {
+      "label": "frozen_oos_ledger",
+      "n_weeks": 1,
+      "n_on": 0,
+      "n_off": 1,
+      "status": "INSUFFICIENT_OOS",
+      "proposition_1_risk_on": {
+        "mean_qqq_minus_shy_when_on": NaN,
+        "mean_qqq_minus_shy_when_off": 0.010143254830960999,
+        "win_rate_qqq_beats_shy_when_on": NaN,
+        "passes": false
+      },
+      "proposition_2_risk_off": {
+        "qqq_week_vol_when_off": NaN,
+        "qqq_week_vol_when_on": NaN,
+        "qqq_neg_frac_when_off": 0.0,
+        "qqq_neg_frac_when_on": NaN,
+        "qqq_10pct_tail_when_off": NaN,
+        "qqq_10pct_tail_when_on": NaN,
+        "passes": false
+      },
+      "proposition_3_active_vs_static": {
+        "vol_matched_w_qqq": 0.56,
+        "cum_active_return": -0.006980222705338046,
+        "mean_weekly_active": -0.006980222705338061,
+        "active_win_rate": 0.0,
+        "passes": false
+      }
+    },
+    "discovery_combo": {
+      "label": "combo_discovery",
+      "n_weeks": 613,
+      "n_on": 407,
+      "n_off": 206,
+      "status": "TRACKING",
+      "proposition_1_risk_on": {
+        "mean_qqq_minus_shy_when_on": 0.0014250675733956122,
+        "mean_qqq_minus_shy_when_off": 0.007416231017214539,
+        "win_rate_qqq_beats_shy_when_on": 0.5724815724815725,
+        "passes": true
+      },
+      "proposition_2_risk_off": {
+        "qqq_week_vol_when_off": 0.03612477687007712,
+        "qqq_week_vol_when_on": 0.02211421284329021,
+        "qqq_neg_frac_when_off": 0.4077669902912621,
+        "qqq_neg_frac_when_on": 0.4250614250614251,
+        "qqq_10pct_tail_when_off": -0.03779179249767545,
+        "qqq_10pct_tail_when_on": -0.02632082467283323,
+        "passes": false
+      },
+      "proposition_3_active_vs_static": {
+        "vol_matched_w_qqq": 0.56,
+        "cum_active_return": -0.4851261741733054,
+        "mean_weekly_active": -0.0009793398190900211,
+        "active_win_rate": 0.5171288743882545,
+        "passes": false
+      }
+    },
+    "oos_combo": {
+      "label": "combo_oos_weeks",
+      "n_weeks": 1,
+      "n_on": 1,
+      "n_off": 0,
+      "status": "INSUFFICIENT_OOS",
+      "proposition_1_risk_on": {
+        "mean_qqq_minus_shy_when_on": 0.010143254830961013,
+        "mean_qqq_minus_shy_when_off": NaN,
+        "win_rate_qqq_beats_shy_when_on": 1.0,
+        "passes": true
+      },
+      "proposition_2_risk_off": {
+        "qqq_week_vol_when_off": NaN,
+        "qqq_week_vol_when_on": NaN,
+        "qqq_neg_frac_when_off": NaN,
+        "qqq_neg_frac_when_on": 0.0,
+        "qqq_10pct_tail_when_off": NaN,
+        "qqq_10pct_tail_when_on": NaN,
+        "passes": false
+      },
+      "proposition_3_active_vs_static": {
+        "vol_matched_w_qqq": 0.56,
+        "cum_active_return": 0.004463032125622934,
+        "mean_weekly_active": 0.004463032125622845,
+        "active_win_rate": 1.0,
+        "passes": true
+      }
+    }
+  },
+  "oos_tracking_guide": {
+    "1_exposure_value": "BTC=ON weeks: QQQ should beat SHY (mean spread > 0)",
+    "2_risk_off_downside": "BTC=OFF weeks: QQQ vol/neg-fraction worse than ON weeks",
+    "3_active_return": "Strategy beats vol-matched static (cum active > 0)",
+    "min_oos_weeks_for_confidence": 8
+  },
+  "ledger_path": "/home/ec2-user/strategy-backtest/btc_ma_qqq_shy/reports/frozen_oos_ledger.csv",
+  "ledger_n_rows": 1
+}

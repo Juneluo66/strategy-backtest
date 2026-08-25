@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+"""True OOS 2026 — frozen rules, no parameter tuning."""
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
+from config import ORIGINAL_ABORT_MESSAGE, ProjectConfig, SourceVerificationError
+
+
+def main() -> int:
+    cfg = ProjectConfig.load(ROOT)
+    try:
+        cfg.require_original_verification()
+    except SourceVerificationError:
+        print(ORIGINAL_ABORT_MESSAGE)
+        print("OOS 2026 requires frozen verified rules.")
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

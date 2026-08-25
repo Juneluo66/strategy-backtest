@@ -1,0 +1,47 @@
+# PRE-REGISTERED before seeing French backtest results.
+# Kenneth French 12 Industry Portfolios → approximate Select Sector SPDR mapping.
+# These are NOT 1:1 tradable equivalents. Mechanism validation only.
+
+source: Kenneth_French_12_Industry_Portfolios
+portfolio_variant: average_value_weighted  # FF industry portfolios are VW within industry
+disclaimer: >
+  ETF Select Sector SPDRs and French 12 industries cannot be perfectly aligned.
+  Mapping frozen prior to result inspection; do not retune to raise returns.
+
+etf_to_french_components:
+  XLB:
+    components: [Chems]
+    notes: "Materials proxy via Chemicals; omits other materials in Other."
+  XLE:
+    components: [Enrgy]
+    notes: "Energy"
+  XLF:
+    components: [Money]
+    notes: "Finance"
+  XLI:
+    components: [Manuf]
+    notes: "Industrials via Manufacturing; omits some industrial services in Other."
+  XLK:
+    components: [BusEq]
+    notes: "Technology via Business Equipment; Telcm excluded (not in 1998 nine)."
+  XLP:
+    components: [NoDur]
+    notes: "Consumer staples via NonDurables"
+  XLU:
+    components: [Utils]
+    notes: "Utilities"
+  XLV:
+    components: [Hlth]
+    notes: "Health"
+  XLY:
+    components: [Durbl, Shops]
+    notes: "Consumer discretionary ≈ equal mix of Durables + Shops/Retail"
+
+construction:
+  within_etf_leg: equal_weight_component_daily_returns
+  across_nine_legs: equal_weight_1_over_9
+  rebalance_frequencies: [monthly, quarterly, annual]
+  excluded_french_industries: [Telcm, Other]
+  exclusion_reason: >
+    Telcm/Other have no clean one-to-one map into the fixed 1998 nine SPDRs;
+    excluding avoids post-hoc blending that could inflate fit.

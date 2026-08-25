@@ -1,0 +1,2 @@
+date,nav,return,drawdown,raw_target,paper_target,branch_id,days_in_position,turnover,vol_20d,vol_60d,sharpe_20d,sharpe_60d,beta_spy,beta_qqq,cost_bps_case,version
+2026-08-24,100000.0,0.0,0.0,TQQQ,TQQQ,B3,0,0.0,,,,,,,5.0,PAPER_V1

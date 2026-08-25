@@ -1,0 +1,152 @@
+{
+  "merge_diag": {
+    "ohlcv_panel_rows": 99969,
+    "staging_mbr_rows": 99969,
+    "staging_mcg_rows": 99969,
+    "merged_panel_rows": 99969,
+    "staging_mbr_missing_ratio": 0.24173493783072753,
+    "staging_mcg_missing_ratio": 0.24602626814312437,
+    "panel_mbr_missing_ratio": 0.24173493783072753,
+    "panel_mcg_missing_ratio": 0.24602626814312437,
+    "staging_both_valid_ratio": 0.7535335954145785,
+    "staging_either_valid_ratio": 0.7587051986115696,
+    "panel_both_valid_ratio": 0.7535335954145785,
+    "panel_mbr_only_ratio": 0.004731466754693955,
+    "panel_mcg_only_ratio": 0.0004401364422971121,
+    "codes_panel_not_in_stage": [],
+    "codes_stage_not_in_panel": [],
+    "codes_never_in_raw_rzye": [
+      "159985",
+      "518880"
+    ]
+  },
+  "c1_full_panel_exclusion": {
+    "rows": 99969,
+    "excluded_rows": 26592,
+    "excluded_ratio": 0.26600246076283646,
+    "margin_missing_rows": 24166,
+    "margin_missing_ratio": 0.24173493783072753,
+    "overlap_excluded_and_margin_missing": 24166,
+    "p_margin_missing_given_excluded": 0.9087695547533092,
+    "p_excluded_given_margin_missing": 1.0,
+    "excluded_with_margin_present": 2426,
+    "excluded_with_other_factor_missing": 9813,
+    "excluded_margin_present_but_other_missing": 2318,
+    "complete_score_ratio": 0.7339975392371635
+  },
+  "c1_eligible_panel_exclusion": {
+    "rows": 72973,
+    "excluded_rows": 13785,
+    "excluded_ratio": 0.1889054855905609,
+    "margin_missing_rows": 13657,
+    "margin_missing_ratio": 0.18715141216614364,
+    "overlap_excluded_and_margin_missing": 13657,
+    "p_margin_missing_given_excluded": 0.9907145447950672,
+    "p_excluded_given_margin_missing": 1.0,
+    "excluded_with_margin_present": 128,
+    "excluded_with_other_factor_missing": 2772,
+    "excluded_margin_present_but_other_missing": 25,
+    "complete_score_ratio": 0.8110945144094391
+  },
+  "rebalance_day_exclusion": {
+    "rows": 14582,
+    "excluded_rows": 2759,
+    "excluded_ratio": 0.1892058702509944,
+    "margin_missing_rows": 2732,
+    "margin_missing_ratio": 0.18735427239061858,
+    "overlap_excluded_and_margin_missing": 2732,
+    "p_margin_missing_given_excluded": 0.9902138455962305,
+    "p_excluded_given_margin_missing": 1.0,
+    "excluded_with_margin_present": 27,
+    "excluded_with_other_factor_missing": 555,
+    "excluded_margin_present_but_other_missing": 5,
+    "complete_score_ratio": 0.8107941297490057
+  },
+  "rebalance_ranked_count_summary": {
+    "mean": 11.93037336024218,
+    "median": 4.0,
+    "min": 0,
+    "max": 39,
+    "p10": 0.0,
+    "p90": 37.0
+  },
+  "period_coverage_full_c1_panel": {
+    "all": {
+      "rows": 99969,
+      "mbr_coverage": 0.7582650621692725,
+      "mcg_coverage": 0.7539737318568757,
+      "both_coverage": 0.7535335954145785,
+      "score_coverage": 0.7339975392371635
+    },
+    "train": {
+      "rows": 58264,
+      "mbr_coverage": 0.8438658519840725,
+      "mcg_coverage": 0.8394720582177674,
+      "both_coverage": 0.8387168749141837,
+      "score_coverage": 0.8234930660442126
+    },
+    "oos": {
+      "rows": 14700,
+      "mbr_coverage": 0.9474829931972789,
+      "mcg_coverage": 0.9468027210884353,
+      "both_coverage": 0.9468027210884353,
+      "score_coverage": 0.9474829931972789
+    },
+    "pre_2020": {
+      "rows": 27005,
+      "mbr_coverage": 0.47057952231068323,
+      "mcg_coverage": 0.46454360303647474,
+      "both_coverage": 0.46454360303647474,
+      "score_coverage": 0.4246991297907795
+    }
+  },
+  "period_coverage_eligible_c1": {
+    "all": {
+      "rows": 72973,
+      "mbr_coverage": 0.8128485878338564,
+      "mcg_coverage": 0.8110396996149261,
+      "both_coverage": 0.8104915516697957,
+      "score_coverage": 0.8110945144094391
+    },
+    "train": {
+      "rows": 44026,
+      "mbr_coverage": 0.8733021396447553,
+      "mcg_coverage": 0.8723935856085041,
+      "both_coverage": 0.8714850315722528,
+      "score_coverage": 0.8733021396447553
+    },
+    "oos": {
+      "rows": 12300,
+      "mbr_coverage": 0.9372357723577236,
+      "mcg_coverage": 0.9364227642276423,
+      "both_coverage": 0.9364227642276423,
+      "score_coverage": 0.9372357723577236
+    },
+    "pre_2020": {
+      "rows": 16647,
+      "mbr_coverage": 0.5610620532228029,
+      "mcg_coverage": 0.5561362407641016,
+      "both_coverage": 0.5561362407641016,
+      "score_coverage": 0.5533729801165375
+    }
+  },
+  "missing_reason_counts_mbr": {
+    "observed": 75803,
+    "pit_unavailable": 19260,
+    "download_failure": 4768,
+    "structurally_not_applicable": 138
+  },
+  "exclusion_factor_decomposition": {
+    "excluded_rows_total": 26592,
+    "excluded_due_to_margin_buy_ratio_nan": 24166,
+    "excluded_with_margin_ok_other_nan": 2318,
+    "excluded_with_ADX_14D_nan": 1274,
+    "excluded_with_BREAKOUT_20D_nan": 980,
+    "excluded_with_PRICE_POSITION_120D_nan": 5831,
+    "excluded_with_SHARE_CHG_5D_nan": 4754
+  },
+  "interpretation": {
+    "grid_24pct": "staging MARGIN_* missing_ratio on full OHLCV ETF\u00d7date grid (~24.2% NaN cells / all staging rows)",
+    "overlap_91pct": "P(all declared MARGIN_* NaN | score NaN) on the scored C1 panel \u2014 NOT the share of universe lacking margin. Denominator = excluded score rows; numerator = excluded rows that also lack MARGIN_BUY_RATIO."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "command": "attribution",
+  "config_hash": "1287feacc0c26841e5f3e89748736d6ba55d58e4e9abe6987ae5ac585f3d2d81",
+  "git_commit": "unavailable",
+  "executed_at_utc": "20260811T112910Z",
+  "python": "3.9.25 (main, Apr 17 2026, 00:00:00) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]",
+  "platform": "Linux-6.1.170-210.320.amzn2023.x86_64-x86_64-with-glibc2.34",
+  "data_source": "Yahoo Finance via yfinance"
+}

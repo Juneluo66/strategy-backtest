@@ -1,0 +1,33 @@
+# ROBUST_CORE_V1 — standardized natural thresholds (not optimized for CAGR)
+# Derived from ORIGINAL tree structure with 30/70/80 round numbers.
+# ORIGINAL remains frozen in configs/original.yaml.
+
+strategy:
+  name: "Robust Core V1"
+  internal_name: "robust_core_v1"
+  parent: "conditional_leveraged_etf_rotation"
+  purpose: "simplification / paper-candidate extraction"
+
+parameters:
+  rsi_period: 10
+  spy_sma_period: 200
+  qqq_sma_period: 20
+  tqqq_sma_period: 20
+
+thresholds:
+  qqq_rsi_overbought: 80
+  spy_rsi_overbought: 80
+  tqqq_rsi_oversold: 30
+  spy_rsi_oversold: 30
+  uvxy_high: 70
+  uvxy_extreme: 80
+  sqqq_rsi_branch_1: 30
+  sqqq_rsi_branch_2: 30
+
+notes:
+  - "81->80, 80->80, 74->70, 84->80, 31->30, 34->30"
+  - "Goal: natural thresholds, not ORIGINAL CAGR match"
+  - "frozen: false — research candidate may evolve via pruning/ablation"
+
+source_verified: false
+frozen: false

@@ -1,0 +1,1851 @@
+{
+  "price_audit": {
+    "status": "OK",
+    "return_basis": "Yahoo_AdjClose_scaled_Open",
+    "common_start": "1998-12-22",
+    "common_end": "2026-08-12",
+    "common_rows": 6951,
+    "per_symbol": {
+      "XLB": {
+        "rows": 6951,
+        "start": "1998-12-22",
+        "end": "2026-08-12",
+        "duplicate_dates": 0,
+        "missing_bdays_in_span": 261,
+        "adj_factor_min": 0.547023630279629,
+        "adj_factor_max": 1.0,
+        "adj_factor_last": 1.0,
+        "inception_approx": "1998-12-16",
+        "n_extreme_gt_25pct": 0,
+        "n_split_like_flags": 0
+      },
+      "XLE": {
+        "rows": 6951,
+        "start": "1998-12-22",
+        "end": "2026-08-12",
+        "duplicate_dates": 0,
+        "missing_bdays_in_span": 261,
+        "adj_factor_min": 0.4896108844857243,
+        "adj_factor_max": 1.0,
+        "adj_factor_last": 1.0,
+        "inception_approx": "1998-12-16",
+        "n_extreme_gt_25pct": 0,
+        "n_split_like_flags": 0
+      },
+      "XLF": {
+        "rows": 6951,
+        "start": "1998-12-22",
+        "end": "2026-08-12",
+        "duplicate_dates": 0,
+        "missing_bdays_in_span": 261,
+        "adj_factor_min": 0.5874202898714469,
+        "adj_factor_max": 1.0,
+        "adj_factor_last": 1.0,
+        "inception_approx": "1998-12-16",
+        "n_extreme_gt_25pct": 0,
+        "n_split_like_flags": 0
+      },
+      "XLI": {
+        "rows": 6951,
+        "start": "1998-12-22",
+        "end": "2026-08-12",
+        "duplicate_dates": 0,
+        "missing_bdays_in_span": 261,
+        "adj_factor_min": 0.6183804989471631,
+        "adj_factor_max": 1.0,
+        "adj_factor_last": 1.0,
+        "inception_approx": "1998-12-16",
+        "n_extreme_gt_25pct": 0,
+        "n_split_like_flags": 0
+      },
+      "XLK": {
+        "rows": 6951,
+        "start": "1998-12-22",
+        "end": "2026-08-12",
+        "duplicate_dates": 0,
+        "missing_bdays_in_span": 261,
+        "adj_factor_min": 0.7432298543365532,
+        "adj_factor_max": 1.0,
+        "adj_factor_last": 1.0,
+        "inception_approx": "1998-12-16",
+        "n_extreme_gt_25pct": 0,
+        "n_split_like_flags": 0
+      },
+      "XLP": {
+        "rows": 6951,
+        "start": "1998-12-22",
+        "end": "2026-08-12",
+        "duplicate_dates": 0,
+        "missing_bdays_in_span": 261,
+        "adj_factor_min": 0.5241376376720346,
+        "adj_factor_max": 1.0,
+        "adj_factor_last": 1.0,
+        "inception_approx": "1998-12-16",
+        "n_extreme_gt_25pct": 0,
+        "n_split_like_flags": 0
+      },
+      "XLU": {
+        "rows": 6951,
+        "start": "1998-12-22",
+        "end": "2026-08-12",
+        "duplicate_dates": 0,
+        "missing_bdays_in_span": 261,
+        "adj_factor_min": 0.3885792049086579,
+        "adj_factor_max": 1.0,
+        "adj_factor_last": 1.0,
+        "inception_approx": "1998-12-16",
+        "n_extreme_gt_25pct": 0,
+        "n_split_like_flags": 0
+      },
+      "XLV": {
+        "rows": 6951,
+        "start": "1998-12-22",
+        "end": "2026-08-12",
+        "duplicate_dates": 0,
+        "missing_bdays_in_span": 261,
+        "adj_factor_min": 0.6678106398809524,
+        "adj_factor_max": 1.0,
+        "adj_factor_last": 1.0,
+        "inception_approx": "1998-12-16",
+        "n_extreme_gt_25pct": 0,
+        "n_split_like_flags": 0
+      },
+      "XLY": {
+        "rows": 6951,
+        "start": "1998-12-22",
+        "end": "2026-08-12",
+        "duplicate_dates": 0,
+        "missing_bdays_in_span": 261,
+        "adj_factor_min": 0.7350796383171913,
+        "adj_factor_max": 1.0,
+        "adj_factor_last": 1.0,
+        "inception_approx": "1998-12-16",
+        "n_extreme_gt_25pct": 0,
+        "n_split_like_flags": 0
+      },
+      "SPY": {
+        "rows": 6967,
+        "start": "1998-12-01",
+        "end": "2026-08-13",
+        "duplicate_dates": 0,
+        "missing_bdays_in_span": 261,
+        "adj_factor_min": 0.6178885994376717,
+        "adj_factor_max": 1.0,
+        "adj_factor_last": 1.0,
+        "inception_approx": "1993-01-29",
+        "n_extreme_gt_25pct": 0,
+        "n_split_like_flags": 0
+      }
+    },
+    "extreme_flags_sample": [],
+    "n_extreme_flags": 0,
+    "split_like_sample": [],
+    "n_split_like_flags": 0,
+    "manifest": {
+      "retrieved_at_utc": "2026-08-14T02:54:30.635711+00:00",
+      "source": "YahooFinance",
+      "start": "1998-12-01",
+      "return_basis": "Yahoo_AdjClose_scaled_Open",
+      "refresh": false,
+      "requested_symbols": [
+        "XLB",
+        "XLE",
+        "XLF",
+        "XLI",
+        "XLK",
+        "XLP",
+        "XLU",
+        "XLV",
+        "XLY",
+        "SPY",
+        "RSP",
+        "BIL",
+        "^IRX"
+      ],
+      "completed_symbols": [
+        "XLB",
+        "XLE",
+        "XLF",
+        "XLI",
+        "XLK",
+        "XLP",
+        "XLU",
+        "XLV",
+        "XLY",
+        "SPY",
+        "RSP",
+        "BIL",
+        "^IRX"
+      ],
+      "failures": {},
+      "actions": {
+        "XLB": "cache_hit",
+        "XLE": "cache_hit",
+        "XLF": "cache_hit",
+        "XLI": "cache_hit",
+        "XLK": "cache_hit",
+        "XLP": "cache_hit",
+        "XLU": "cache_hit",
+        "XLV": "cache_hit",
+        "XLY": "cache_hit",
+        "SPY": "downloaded",
+        "RSP": "cache_hit",
+        "BIL": "cache_hit",
+        "^IRX": "cache_hit"
+      },
+      "file_sha256": {
+        "XLB": "9772456e0660d945c6a71072ec409375b9845ca3ae87d045f6d87ac5975d069f",
+        "XLE": "05d68019943d0ee55c38afc0bd4ae04c5e0f0ef3b625dd67b4082b396a028a8f",
+        "XLF": "716ee83b200f48ccd469370a9f53516fc76b5182a7280b33c4bce85f364c4bd3",
+        "XLI": "c4793bbb6e7fc744b31d10ea14a3fdf72aa8a40d2fb8e7356146a3a33ed1872d",
+        "XLK": "a53537072044a43eade7c60251b51dba89147d0592da87051e26b0f09a6850f2",
+        "XLP": "42c127085be63c031972ac17ffebd448589b42ad1177e4854dc9f116f01d6cf6",
+        "XLU": "55301bb9aa32f3b03973286a389c680e8b1a753630b841c1b760c440c6d35aed",
+        "XLV": "4f2979aab9e9b81319927a43f5f79392a48004f96cd6604b872f8ca43973750d",
+        "XLY": "a5150583e3886ae72e524cf4b002a6b97f4da5e4aa92e9e17ca4e085dc6d2d84",
+        "SPY": "c1525aadeb63c316e00b58debc4b11bafa337cc272bc54afbed496393ac2f2f8",
+        "RSP": "61d62dc099cbe6faf1f52db153a47cf8eb66244ba71c7684a2df22568728d9f0",
+        "BIL": "a79dbed7da047abaace58130d3f3d32d7875531f58ebacd3eaa59358a2ec6242",
+        "^IRX": "2be2daabcc226f0854489f43158baf9d41655c476554689160bae746a100be37"
+      },
+      "refuse_silent_stale_on_failed_refresh": true
+    },
+    "notes": [
+      "Signals and NAV use dividend-adjusted total return (Adj Close).",
+      "Open scaled by AdjClose/Close for overnight coherence.",
+      "Missing returns are never fillna(0); panels trimmed to strict common dates.",
+      "Discovery common panel = intersection of nine sectors + SPY. RSP may start later (2003). Sample labeled DISCOVERY_SAMPLE."
+    ]
+  },
+  "rf_meta": {
+    "rf_primary": "BIL",
+    "rf_proxy_pre_bil": "^IRX",
+    "method": "BIL_adj_close_returns_with_IRX_daily_yield_proxy_pre_bil",
+    "bil_start": "2007-05-30",
+    "bil_end": "2026-08-10",
+    "irx_start": "1998-12-22",
+    "irx_end": "2026-08-12",
+    "irx_note": "Close yield percent / 100 / 252 as daily rf proxy",
+    "n_bil_days": 4829,
+    "n_irx_proxy_days": 2116,
+    "n_missing_rf": 6,
+    "source_by_day_sample": {
+      "first": "IRX_proxy",
+      "last": "IRX_proxy"
+    }
+  },
+  "discovery_label": "DISCOVERY_SAMPLE",
+  "discovery_common_start": "1998-12-22",
+  "discovery_common_end": "2026-08-12",
+  "discovery": {
+    "EW9_monthly": {
+      "metrics": {
+        "cagr": 0.09243376442908957,
+        "final_wealth": 11.476799545689133,
+        "gross_cagr": 0.09262452062045035,
+        "gross_final_wealth": 11.532245497091239,
+        "volatility": 0.1802394678744862,
+        "sharpe": 0.47304650445363067,
+        "sharpe_rf": 0.47304650445363067,
+        "sharpe_rf0": 0.581772138912019,
+        "sortino": 0.7284727280599234,
+        "max_drawdown": -0.5300521971316585,
+        "max_dd_duration_trading_sessions": 889.0,
+        "calmar": 0.1743861546641795,
+        "worst_year": -0.3478823851972508,
+        "worst_rolling_12m": -0.4727444513430975,
+        "year_win_rate": 0.7857142857142857,
+        "month_win_rate": 0.6385542168674698,
+        "annualized_turnover": 0.17457351817441574,
+        "avg_trades_per_year": 12.02767308073795,
+        "cost_drag_cagr": 0.0001907561913607747,
+        "cost_total": 0.004818754853482436,
+        "turnover_status": "measured",
+        "start": "1999-01-04",
+        "end": "2026-08-12",
+        "n_days": 6944,
+        "rel_definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater).",
+        "rf_meta": {
+          "rf_primary": "BIL",
+          "rf_proxy_pre_bil": "^IRX",
+          "method": "BIL_adj_close_returns_with_IRX_daily_yield_proxy_pre_bil",
+          "bil_start": "2007-05-30",
+          "bil_end": "2026-08-10",
+          "irx_start": "1998-12-22",
+          "irx_end": "2026-08-12",
+          "irx_note": "Close yield percent / 100 / 252 as daily rf proxy",
+          "n_bil_days": 4829,
+          "n_irx_proxy_days": 2116,
+          "n_missing_rf": 6,
+          "source_by_day_sample": {
+            "first": "IRX_proxy",
+            "last": "IRX_proxy"
+          }
+        },
+        "corr_spy": 0.9586131816279817,
+        "beta_spy": 0.897979021030928,
+        "up_capture_spy": 0.8956242313093279,
+        "down_capture_spy": 0.8823830466610656,
+        "up_capture": 0.8956242313093279,
+        "down_capture": 0.8823830466610656,
+        "rel_spy_final_relative_nav": 1.1367984066612127,
+        "rel_spy_relative_cagr": 0.004656264268771304,
+        "rel_spy_max_dd": -0.22478144439158776,
+        "rel_spy_underwater_trading_sessions": 3754.0,
+        "rel_spy_underwater_calendar_days": 5453.0,
+        "rel_spy_underwater_months": 180.0,
+        "rel_spy_current_relative_drawdown": -0.19507995152598168,
+        "rel_spy_distance_from_peak": -0.19507995152598168,
+        "rel_spy_currently_underwater": true
+      }
+    },
+    "EW9_quarterly": {
+      "metrics": {
+        "cagr": 0.09325650630574,
+        "final_wealth": 11.717791511542199,
+        "gross_cagr": 0.09337721284407396,
+        "gross_final_wealth": 11.753555743751448,
+        "volatility": 0.17967584461649536,
+        "sharpe": 0.4781614824803153,
+        "sharpe_rf": 0.4781614824803153,
+        "sharpe_rf0": 0.5872247518282457,
+        "sortino": 0.7361128375626015,
+        "max_drawdown": -0.5239327925042452,
+        "max_dd_duration_trading_sessions": 889.0,
+        "calmar": 0.17799326104403818,
+        "worst_year": -0.3434289428148666,
+        "worst_rolling_12m": -0.4653227009062406,
+        "year_win_rate": 0.7857142857142857,
+        "month_win_rate": 0.6355421686746988,
+        "annualized_turnover": 0.1103800722789157,
+        "avg_trades_per_year": 4.021300337234676,
+        "cost_drag_cagr": 0.00012070653833395895,
+        "cost_total": 0.0030468224194826225,
+        "turnover_status": "measured",
+        "start": "1999-01-04",
+        "end": "2026-08-12",
+        "n_days": 6944,
+        "rel_definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater).",
+        "rf_meta": {
+          "rf_primary": "BIL",
+          "rf_proxy_pre_bil": "^IRX",
+          "method": "BIL_adj_close_returns_with_IRX_daily_yield_proxy_pre_bil",
+          "bil_start": "2007-05-30",
+          "bil_end": "2026-08-10",
+          "irx_start": "1998-12-22",
+          "irx_end": "2026-08-12",
+          "irx_note": "Close yield percent / 100 / 252 as daily rf proxy",
+          "n_bil_days": 4829,
+          "n_irx_proxy_days": 2116,
+          "n_missing_rf": 6,
+          "source_by_day_sample": {
+            "first": "IRX_proxy",
+            "last": "IRX_proxy"
+          }
+        },
+        "corr_spy": 0.9581828025687947,
+        "beta_spy": 0.8947689369814479,
+        "up_capture_spy": 0.8946239264305056,
+        "down_capture_spy": 0.8805975987650171,
+        "up_capture": 0.8946239264305056,
+        "down_capture": 0.8805975987650171,
+        "rel_spy_final_relative_nav": 1.1606691104849856,
+        "rel_spy_relative_cagr": 0.005412973582575642,
+        "rel_spy_max_dd": -0.21500731930115158,
+        "rel_spy_underwater_trading_sessions": 3754.0,
+        "rel_spy_underwater_calendar_days": 5453.0,
+        "rel_spy_underwater_months": 180.0,
+        "rel_spy_current_relative_drawdown": -0.1821318774400681,
+        "rel_spy_distance_from_peak": -0.1821318774400681,
+        "rel_spy_currently_underwater": true
+      }
+    },
+    "EW9_annual": {
+      "metrics": {
+        "cagr": 0.09277337680186615,
+        "final_wealth": 11.575691866658138,
+        "gross_cagr": 0.09284115970153195,
+        "gross_final_wealth": 11.595527762960169,
+        "volatility": 0.17820155511642563,
+        "sharpe": 0.4781359032303429,
+        "sharpe_rf": 0.4781359032303429,
+        "sharpe_rf0": 0.5881246423070499,
+        "sortino": 0.7367968623804892,
+        "max_drawdown": -0.5237761540248604,
+        "max_dd_duration_trading_sessions": 889.0,
+        "calmar": 0.17712409411724148,
+        "worst_year": -0.3464954493424329,
+        "worst_rolling_12m": -0.4678028207092545,
+        "year_win_rate": 0.7857142857142857,
+        "month_win_rate": 0.6536144578313253,
+        "annualized_turnover": 0.06195620002963294,
+        "avg_trades_per_year": 1.0143820670501884,
+        "cost_drag_cagr": 6.778289966580253e-05,
+        "cost_total": 0.0017101777103319899,
+        "turnover_status": "measured",
+        "start": "1999-01-04",
+        "end": "2026-08-12",
+        "n_days": 6944,
+        "rel_definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater).",
+        "rf_meta": {
+          "rf_primary": "BIL",
+          "rf_proxy_pre_bil": "^IRX",
+          "method": "BIL_adj_close_returns_with_IRX_daily_yield_proxy_pre_bil",
+          "bil_start": "2007-05-30",
+          "bil_end": "2026-08-10",
+          "irx_start": "1998-12-22",
+          "irx_end": "2026-08-12",
+          "irx_note": "Close yield percent / 100 / 252 as daily rf proxy",
+          "n_bil_days": 4829,
+          "n_irx_proxy_days": 2116,
+          "n_missing_rf": 6,
+          "source_by_day_sample": {
+            "first": "IRX_proxy",
+            "last": "IRX_proxy"
+          }
+        },
+        "corr_spy": 0.957813670627584,
+        "beta_spy": 0.88708494072544,
+        "up_capture_spy": 0.8891078551367472,
+        "down_capture_spy": 0.8752946266222706,
+        "up_capture": 0.8891078551367472,
+        "down_capture": 0.8752946266222706,
+        "rel_spy_final_relative_nav": 1.146593875551386,
+        "rel_spy_relative_cagr": 0.004968619634678317,
+        "rel_spy_max_dd": -0.2156398746677488,
+        "rel_spy_underwater_trading_sessions": 3754.0,
+        "rel_spy_underwater_calendar_days": 5453.0,
+        "rel_spy_underwater_months": 180.0,
+        "rel_spy_current_relative_drawdown": -0.19187458492627973,
+        "rel_spy_distance_from_peak": -0.19187458492627973,
+        "rel_spy_currently_underwater": true
+      }
+    },
+    "spy_bh": {
+      "metrics": {
+        "cagr": 0.08814582790324588,
+        "final_wealth": 10.324756273821688,
+        "gross_cagr": 0.08814582790324588,
+        "gross_final_wealth": 10.324756273821688,
+        "volatility": 0.19239523464213218,
+        "sharpe": 0.4340609067764629,
+        "sharpe_rf": 0.4340609067764629,
+        "sharpe_rf0": 0.5362563152462521,
+        "sortino": 0.6882271869131683,
+        "max_drawdown": -0.5518943935996453,
+        "max_dd_duration_trading_sessions": 1656.0,
+        "calmar": 0.15971502687013803,
+        "worst_year": -0.36795001032965513,
+        "worst_rolling_12m": -0.47354107502708853,
+        "year_win_rate": 0.7931034482758621,
+        "month_win_rate": 0.6336336336336337,
+        "annualized_turnover": 0.0,
+        "avg_trades_per_year": 0.0,
+        "cost_drag_cagr": 0.0,
+        "cost_total": 0.0,
+        "turnover_status": "buy_and_hold",
+        "start": "1998-12-23",
+        "end": "2026-08-12",
+        "n_days": 6950,
+        "rel_definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater).",
+        "rf_meta": {
+          "rf_primary": "BIL",
+          "rf_proxy_pre_bil": "^IRX",
+          "method": "BIL_adj_close_returns_with_IRX_daily_yield_proxy_pre_bil",
+          "bil_start": "2007-05-30",
+          "bil_end": "2026-08-10",
+          "irx_start": "1998-12-22",
+          "irx_end": "2026-08-12",
+          "irx_note": "Close yield percent / 100 / 252 as daily rf proxy",
+          "n_bil_days": 4829,
+          "n_irx_proxy_days": 2116,
+          "n_missing_rf": 6,
+          "source_by_day_sample": {
+            "first": "IRX_proxy",
+            "last": "IRX_proxy"
+          }
+        },
+        "corr_spy": 1.0,
+        "beta_spy": 0.9999999999999997,
+        "up_capture_spy": 1.0,
+        "down_capture_spy": 1.0,
+        "up_capture": 1.0,
+        "down_capture": 1.0,
+        "rel_spy_final_relative_nav": 1.0,
+        "rel_spy_relative_cagr": 0.0,
+        "rel_spy_max_dd": 0.0,
+        "rel_spy_underwater_trading_sessions": 0.0,
+        "rel_spy_underwater_calendar_days": 0.0,
+        "rel_spy_underwater_months": 0.0,
+        "rel_spy_current_relative_drawdown": 0.0,
+        "rel_spy_distance_from_peak": 0.0,
+        "rel_spy_currently_underwater": false
+      }
+    },
+    "spy_monthly_reset": {
+      "metrics": {
+        "cagr": 0.08708836261971498,
+        "final_wealth": 10.023490493698787,
+        "gross_cagr": 0.08710811425040821,
+        "gross_final_wealth": 10.028518762948991,
+        "volatility": 0.19221594222345031,
+        "sharpe": 0.4292514822184841,
+        "sharpe_rf": 0.4292514822184841,
+        "sharpe_rf0": 0.5314211838881863,
+        "sortino": 0.6776404287507577,
+        "max_drawdown": -0.5539664086578893,
+        "max_dd_duration_trading_sessions": 1654.0,
+        "calmar": 0.15720874272991844,
+        "worst_year": -0.36991413370937276,
+        "worst_rolling_12m": -0.4775086494908779,
+        "year_win_rate": 0.7857142857142857,
+        "month_win_rate": 0.6295180722891566,
+        "annualized_turnover": 0.01811396548303908,
+        "avg_trades_per_year": 12.02767308073795,
+        "cost_drag_cagr": 1.975163069323216e-05,
+        "cost_total": 0.0005,
+        "turnover_status": "measured",
+        "start": "1999-01-04",
+        "end": "2026-08-12",
+        "n_days": 6944,
+        "rel_definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater).",
+        "rf_meta": {
+          "rf_primary": "BIL",
+          "rf_proxy_pre_bil": "^IRX",
+          "method": "BIL_adj_close_returns_with_IRX_daily_yield_proxy_pre_bil",
+          "bil_start": "2007-05-30",
+          "bil_end": "2026-08-10",
+          "irx_start": "1998-12-22",
+          "irx_end": "2026-08-12",
+          "irx_note": "Close yield percent / 100 / 252 as daily rf proxy",
+          "n_bil_days": 4829,
+          "n_irx_proxy_days": 2116,
+          "n_missing_rf": 6,
+          "source_by_day_sample": {
+            "first": "IRX_proxy",
+            "last": "IRX_proxy"
+          }
+        },
+        "corr_spy": 0.9999257682896182,
+        "beta_spy": 0.9989330759640737,
+        "up_capture_spy": 0.9994851426211269,
+        "down_capture_spy": 0.9997309390265287,
+        "up_capture": 0.9994851426211269,
+        "down_capture": 0.9997309390265287,
+        "rel_spy_final_relative_nav": 0.9929280485487071,
+        "rel_spy_relative_cagr": -0.00025710483504615134,
+        "rel_spy_max_dd": -0.025322895695520375,
+        "rel_spy_underwater_trading_sessions": 4485.0,
+        "rel_spy_underwater_calendar_days": 6512.0,
+        "rel_spy_underwater_months": 215.0,
+        "rel_spy_current_relative_drawdown": -0.019990480133824096,
+        "rel_spy_distance_from_peak": -0.019990480133824096,
+        "rel_spy_currently_underwater": true
+      }
+    },
+    "ew9_no_rebalance_basket": {
+      "metrics": {
+        "cagr": 0.08592138209911737,
+        "final_wealth": 9.730680800903661,
+        "gross_cagr": 0.08594116148984132,
+        "gross_final_wealth": 9.735574299228098,
+        "volatility": 0.18255876265305251,
+        "sharpe": 0.43675831363829326,
+        "sharpe_rf": 0.43675831363829326,
+        "sharpe_rf0": 0.5439020954569159,
+        "sortino": 0.6801827024827577,
+        "max_drawdown": -0.5251149279724872,
+        "max_dd_duration_trading_sessions": 846.0,
+        "calmar": 0.16362395643724517,
+        "worst_year": -0.36052502238583173,
+        "worst_rolling_12m": -0.47918369673692895,
+        "year_win_rate": 0.75,
+        "month_win_rate": 0.641566265060241,
+        "annualized_turnover": 0.01811396548303908,
+        "avg_trades_per_year": 0.03622793096607816,
+        "cost_drag_cagr": 1.977939072395074e-05,
+        "cost_total": 0.0005,
+        "turnover_status": "measured",
+        "start": "1999-01-04",
+        "end": "2026-08-12",
+        "n_days": 6944,
+        "rel_definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater).",
+        "rf_meta": {
+          "rf_primary": "BIL",
+          "rf_proxy_pre_bil": "^IRX",
+          "method": "BIL_adj_close_returns_with_IRX_daily_yield_proxy_pre_bil",
+          "bil_start": "2007-05-30",
+          "bil_end": "2026-08-10",
+          "irx_start": "1998-12-22",
+          "irx_end": "2026-08-12",
+          "irx_note": "Close yield percent / 100 / 252 as daily rf proxy",
+          "n_bil_days": 4829,
+          "n_irx_proxy_days": 2116,
+          "n_missing_rf": 6,
+          "source_by_day_sample": {
+            "first": "IRX_proxy",
+            "last": "IRX_proxy"
+          }
+        },
+        "corr_spy": 0.9575594207342493,
+        "beta_spy": 0.908534894187442,
+        "up_capture_spy": 0.9047300594485809,
+        "down_capture_spy": 0.8981787336345389,
+        "up_capture": 0.9047300594485809,
+        "down_capture": 0.8981787336345389,
+        "rel_spy_final_relative_nav": 0.963842087348402,
+        "rel_spy_relative_cagr": -0.0013334377993929891,
+        "rel_spy_max_dd": -0.35361062485317163,
+        "rel_spy_underwater_trading_sessions": 4557.0,
+        "rel_spy_underwater_calendar_days": 6616.0,
+        "rel_spy_underwater_months": 218.0,
+        "rel_spy_current_relative_drawdown": -0.3341525487856539,
+        "rel_spy_distance_from_peak": -0.3341525487856539,
+        "rel_spy_currently_underwater": true
+      }
+    },
+    "rsp_bh": {
+      "metrics": {
+        "cagr": 0.11419030923292306,
+        "final_wealth": 12.39400654486263,
+        "gross_cagr": 0.11419030923292306,
+        "gross_final_wealth": 12.39400654486263,
+        "volatility": 0.1975030313690421,
+        "sharpe": 0.5650632745360762,
+        "sharpe_rf": 0.5650632745360762,
+        "sharpe_rf0": 0.6474394601511871,
+        "sortino": 0.801742168899228,
+        "max_drawdown": -0.5992279061429562,
+        "max_dd_duration_trading_sessions": 896.0,
+        "calmar": 0.19056240215501744,
+        "worst_year": -0.4005539715064047,
+        "worst_rolling_12m": -0.5166275022666527,
+        "year_win_rate": 0.7916666666666666,
+        "month_win_rate": 0.6607142857142857,
+        "annualized_turnover": 0.0,
+        "avg_trades_per_year": 0.0,
+        "cost_drag_cagr": 0.0,
+        "cost_total": 0.0,
+        "turnover_status": "buy_and_hold",
+        "start": "2003-05-02",
+        "end": "2026-08-12",
+        "n_days": 5857,
+        "rel_definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater).",
+        "rf_meta": {
+          "rf_primary": "BIL",
+          "rf_proxy_pre_bil": "^IRX",
+          "method": "BIL_adj_close_returns_with_IRX_daily_yield_proxy_pre_bil",
+          "bil_start": "2007-05-30",
+          "bil_end": "2026-08-10",
+          "irx_start": "1998-12-22",
+          "irx_end": "2026-08-12",
+          "irx_note": "Close yield percent / 100 / 252 as daily rf proxy",
+          "n_bil_days": 4829,
+          "n_irx_proxy_days": 2116,
+          "n_missing_rf": 6,
+          "source_by_day_sample": {
+            "first": "IRX_proxy",
+            "last": "IRX_proxy"
+          }
+        },
+        "corr_spy": 0.9573360086051161,
+        "beta_spy": 1.0213259699914474,
+        "up_capture_spy": 1.0187405479328455,
+        "down_capture_spy": 1.0211280017116964,
+        "up_capture": 1.0187405479328455,
+        "down_capture": 1.0211280017116964,
+        "rel_spy_final_relative_nav": 0.956412985407853,
+        "rel_spy_relative_cagr": -0.0019131718428412325,
+        "rel_spy_max_dd": -0.30679272207486386,
+        "rel_spy_underwater_trading_sessions": 2855.0,
+        "rel_spy_underwater_calendar_days": 4145.0,
+        "rel_spy_underwater_months": 137.0,
+        "rel_spy_current_relative_drawdown": -0.270247590832558,
+        "rel_spy_distance_from_peak": -0.270247590832558,
+        "rel_spy_currently_underwater": true
+      }
+    },
+    "EW9_monthly_on_rsp_span": {
+      "metrics": {
+        "cagr": 0.11141615689723383,
+        "final_wealth": 11.590802107932982,
+        "gross_cagr": 0.111602568927748,
+        "gross_final_wealth": 11.635978861229491,
+        "volatility": 0.17707711110013807,
+        "sharpe": 0.5936886115769835,
+        "sharpe_rf": 0.5936886115769835,
+        "sharpe_rf0": 0.6863199504342444,
+        "sortino": 0.8267398235964069,
+        "max_drawdown": -0.5300521971316581,
+        "max_dd_duration_trading_sessions": 889.0,
+        "calmar": 0.21019846252907712,
+        "worst_year": -0.3478823851972508,
+        "worst_rolling_12m": -0.4727444513430975,
+        "year_win_rate": 0.8333333333333334,
+        "month_win_rate": 0.6738351254480287,
+        "annualized_turnover": 0.16762772346956878,
+        "avg_trades_per_year": 12.028417138810198,
+        "cost_drag_cagr": 0.00018641203051417143,
+        "cost_total": 0.003888137093043633,
+        "turnover_status": "measured",
+        "start": "2003-06-02",
+        "end": "2026-08-12",
+        "n_days": 5837,
+        "rel_definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater).",
+        "rf_meta": {
+          "rf_primary": "BIL",
+          "rf_proxy_pre_bil": "^IRX",
+          "method": "BIL_adj_close_returns_with_IRX_daily_yield_proxy_pre_bil",
+          "bil_start": "2007-05-30",
+          "bil_end": "2026-08-10",
+          "irx_start": "1998-12-22",
+          "irx_end": "2026-08-12",
+          "irx_note": "Close yield percent / 100 / 252 as daily rf proxy",
+          "n_bil_days": 4829,
+          "n_irx_proxy_days": 2116,
+          "n_missing_rf": 6,
+          "source_by_day_sample": {
+            "first": "IRX_proxy",
+            "last": "IRX_proxy"
+          }
+        },
+        "corr_spy": 0.9710223184602467,
+        "beta_spy": 0.9284258216631884,
+        "up_capture_spy": 0.9223444182967827,
+        "down_capture_spy": 0.9155676294891649,
+        "up_capture": 0.9223444182967827,
+        "down_capture": 0.9155676294891649,
+        "rel_spy_final_relative_nav": 0.9591272847158161,
+        "rel_spy_relative_cagr": -0.0017977476428884254,
+        "rel_spy_max_dd": -0.2247814443915812,
+        "rel_spy_underwater_trading_sessions": 3754.0,
+        "rel_spy_underwater_calendar_days": 5453.0,
+        "rel_spy_underwater_months": 180.0,
+        "rel_spy_current_relative_drawdown": -0.1950799515259719,
+        "rel_spy_distance_from_peak": -0.1950799515259719,
+        "rel_spy_currently_underwater": true
+      }
+    },
+    "sector_cap_weight_proxy": {
+      "metrics": {
+        "status": "NOT_COMPUTED",
+        "reason": "No reliable point-in-time sector market-cap weights; refusing to backfill with current weights."
+      }
+    }
+  },
+  "metric_c": {
+    "vs_spy": {
+      "final_relative_nav": 1.1397254789456892,
+      "relative_cagr": 0.004749400640488011,
+      "relative_max_dd": -0.22478144439158465,
+      "relative_underwater_trading_sessions": 3754.0,
+      "relative_underwater_calendar_days": 5453.0,
+      "relative_underwater_months": 180.0,
+      "current_relative_drawdown": -0.1950799515259759,
+      "distance_from_relative_peak": -0.1950799515259759,
+      "currently_underwater": true,
+      "n_common_observations": 6944,
+      "common_start": "1999-01-04",
+      "common_end": "2026-08-12",
+      "definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater)."
+    },
+    "vs_no_rebalance": {
+      "final_relative_nav": 1.1794446637920049,
+      "relative_cagr": 0.005997102955449307,
+      "relative_max_dd": -0.08696559940758053,
+      "relative_underwater_trading_sessions": 2059.0,
+      "relative_underwater_calendar_days": 2987.0,
+      "relative_underwater_months": 99.0,
+      "current_relative_drawdown": -0.015260198002844061,
+      "distance_from_relative_peak": -0.015260198002844061,
+      "currently_underwater": true,
+      "n_common_observations": 6944,
+      "common_start": "1999-01-04",
+      "common_end": "2026-08-12",
+      "definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater)."
+    },
+    "monthly_vs_quarterly": {
+      "final_relative_nav": 0.979433670106207,
+      "relative_cagr": -0.0007525606954131847,
+      "relative_max_dd": -0.029189904044057968,
+      "relative_underwater_trading_sessions": 6585.0,
+      "relative_underwater_calendar_days": 9563.0,
+      "relative_underwater_months": 315.0,
+      "current_relative_drawdown": -0.026340934400677196,
+      "distance_from_relative_peak": -0.026340934400677196,
+      "currently_underwater": true,
+      "n_common_observations": 6944,
+      "common_start": "1999-01-04",
+      "common_end": "2026-08-12",
+      "definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater)."
+    },
+    "monthly_vs_annual": {
+      "final_relative_nav": 0.991456897599888,
+      "relative_cagr": -0.00031078024042874297,
+      "relative_max_dd": -0.029984067713836215,
+      "relative_underwater_trading_sessions": 5182.0,
+      "relative_underwater_calendar_days": 7524.0,
+      "relative_underwater_months": 249.0,
+      "current_relative_drawdown": -0.018156042513792436,
+      "distance_from_relative_peak": -0.018156042513792436,
+      "currently_underwater": true,
+      "n_common_observations": 6944,
+      "common_start": "1999-01-04",
+      "common_end": "2026-08-12",
+      "definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater)."
+    },
+    "vs_rsp": {
+      "final_relative_nav": 1.0380357743514665,
+      "relative_cagr": 0.0016107001051044456,
+      "relative_max_dd": -0.2435292612750375,
+      "relative_underwater_trading_sessions": 4456.0,
+      "relative_underwater_calendar_days": 6473.0,
+      "relative_underwater_months": 214.0,
+      "current_relative_drawdown": -0.1256997739226705,
+      "distance_from_relative_peak": -0.1256997739226705,
+      "currently_underwater": true,
+      "n_common_observations": 5837,
+      "common_start": "2003-06-02",
+      "common_end": "2026-08-12",
+      "definition": "relative_nav_t = nav_strategy_t / nav_benchmark_t (both rebased to 1.0 at the first common date). Relative underwater = relative_nav / relative_nav.cummax() - 1. Distance from relative peak = current_relative_drawdown (negative when underwater)."
+    }
+  },
+  "attribution": {
+    "avg_weights": {
+      "XLB": 0.11109489023798796,
+      "XLE": 0.11116665623459815,
+      "XLF": 0.11096103045719119,
+      "XLI": 0.11115652229270367,
+      "XLK": 0.11132106337789674,
+      "XLP": 0.11114624301553333,
+      "XLU": 0.11087081255853208,
+      "XLV": 0.11120295106749291,
+      "XLY": 0.11107983075806396
+    },
+    "contributions": {
+      "total_contribution": {
+        "XLB": 0.32152172439191834,
+        "XLE": 0.3766498879799741,
+        "XLF": 0.28705772159599513,
+        "XLI": 0.3491511994984205,
+        "XLK": 0.40807302070969,
+        "XLP": 0.23461395259743045,
+        "XLU": 0.273523823603793,
+        "XLV": 0.29585543054596053,
+        "XLY": 0.35404014794078487
+      },
+      "share_of_contrib_mass": {
+        "XLB": 0.11085094830434822,
+        "XLE": 0.12985746869910766,
+        "XLF": 0.09896880441650639,
+        "XLI": 0.12037675413441963,
+        "XLK": 0.14069121272797605,
+        "XLP": 0.08088778193773047,
+        "XLU": 0.0943027264725439,
+        "XLV": 0.1020019878875572,
+        "XLY": 0.12206231541981058
+      },
+      "avg_weight": {
+        "XLB": 0.11109469485464994,
+        "XLE": 0.1111664148085658,
+        "XLF": 0.11096121070184504,
+        "XLI": 0.11115643314234264,
+        "XLK": 0.1113201335220133,
+        "XLP": 0.11114677461194179,
+        "XLU": 0.1108712929990074,
+        "XLV": 0.11120287858803857,
+        "XLY": 0.1110801667715955
+      },
+      "asset_cagr_proxy": {
+        "XLB": 0.083906763734656,
+        "XLE": 0.089787095027964,
+        "XLF": 0.061640799483428266,
+        "XLI": 0.09717742871502666,
+        "XLK": 0.10538606673909001,
+        "XLP": 0.06791491067764222,
+        "XLU": 0.07611733248603447,
+        "XLV": 0.08736098073105891,
+        "XLY": 0.09618820736835176
+      }
+    },
+    "dominance": {
+      "top_sector": "XLK",
+      "top_share": 0.14069121272797605,
+      "dominated": false,
+      "threshold": 0.4
+    },
+    "tech_gap": {
+      "ew9_avg_xlk": 0.11132106337789674,
+      "ew9_target_xlk": 0.1111111111111111,
+      "spy_tech_weight_pit": "NOT_COMPUTED",
+      "spy_tech_proxy_note": null,
+      "sector_cap_weight_proxy": "NOT_COMPUTED_no_reliable_PIT_sector_weights"
+    },
+    "rebalance_vs_hold": {
+      "status": "OK",
+      "ew_cagr": 0.09243376442908957,
+      "hold_cagr": 0.08592138209911737,
+      "rebalance_cagr_edge": 0.0065123823299721995,
+      "final_rel_ew_over_hold": 1.1794446637920046
+    },
+    "sample_label": "DISCOVERY_SAMPLE"
+  },
+  "pseudo_oos": {
+    "2003-01-02": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.11421768030176382,
+        "final_wealth": 12.849662618369768,
+        "max_drawdown": -0.5300521971316582,
+        "start": "2003-01-02",
+        "end": "2026-08-12"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.1152057546036469,
+        "final_wealth": 13.121393497893052,
+        "max_drawdown": -0.5239327925042456,
+        "start": "2003-01-02",
+        "end": "2026-08-12"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.11439786205677915,
+        "final_wealth": 12.898809362741833,
+        "max_drawdown": -0.5237761540248609,
+        "start": "2003-01-02",
+        "end": "2026-08-12"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.11633804415527926,
+        "final_wealth": 13.4395516353618,
+        "max_drawdown": -0.5518943935996454,
+        "start": "2003-01-02",
+        "end": "2026-08-12"
+      }
+    },
+    "2008-01-02": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.10458937807784396,
+        "final_wealth": 6.366962252614389,
+        "max_drawdown": -0.5155712597290161,
+        "start": "2008-01-02",
+        "end": "2026-08-12"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.10587684925469487,
+        "final_wealth": 6.506489403342506,
+        "max_drawdown": -0.5089184416761086,
+        "start": "2008-01-02",
+        "end": "2026-08-12"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.10463216239743844,
+        "final_wealth": 6.371553082513842,
+        "max_drawdown": -0.5111998392916965,
+        "start": "2008-01-02",
+        "end": "2026-08-12"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.11369333930694503,
+        "final_wealth": 7.417704003364111,
+        "max_drawdown": -0.5187373078593656,
+        "start": "2008-01-02",
+        "end": "2026-08-12"
+      }
+    },
+    "2013-01-02": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.1346918358146998,
+        "final_wealth": 5.5812373644251245,
+        "max_drawdown": -0.369127182871291,
+        "start": "2013-01-02",
+        "end": "2026-08-12"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.1359078922196002,
+        "final_wealth": 5.6631797499492205,
+        "max_drawdown": -0.3646200670393206,
+        "start": "2013-01-02",
+        "end": "2026-08-12"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.13527427033310868,
+        "final_wealth": 5.620345899974217,
+        "max_drawdown": -0.3646200670393205,
+        "start": "2013-01-02",
+        "end": "2026-08-12"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.15166106865812523,
+        "final_wealth": 6.830496349982845,
+        "max_drawdown": -0.33717252846989143,
+        "start": "2013-01-02",
+        "end": "2026-08-12"
+      }
+    },
+    "2018-01-02": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.12685626881813805,
+        "final_wealth": 2.795593610078011,
+        "max_drawdown": -0.369127182871291,
+        "start": "2018-01-02",
+        "end": "2026-08-12"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.12896512572467023,
+        "final_wealth": 2.8409499850077404,
+        "max_drawdown": -0.3646200670393205,
+        "start": "2018-01-02",
+        "end": "2026-08-12"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.1280715560191028,
+        "final_wealth": 2.8216526843737846,
+        "max_drawdown": -0.3646200670393204,
+        "start": "2018-01-02",
+        "end": "2026-08-12"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.1486740453020774,
+        "final_wealth": 3.297328817305573,
+        "max_drawdown": -0.3371725284698912,
+        "start": "2018-01-02",
+        "end": "2026-08-12"
+      }
+    },
+    "2021-01-04": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.1445513502858209,
+        "final_wealth": 2.130364420881812,
+        "max_drawdown": -0.17104562763371123,
+        "start": "2021-01-04",
+        "end": "2026-08-12"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.14590801044736668,
+        "final_wealth": 2.1445481222149847,
+        "max_drawdown": -0.17173355934931767,
+        "start": "2021-01-04",
+        "end": "2026-08-12"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.14638617397852371,
+        "final_wealth": 2.1495657086624047,
+        "max_drawdown": -0.1658447215309372,
+        "start": "2021-01-04",
+        "end": "2026-08-12"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.15348045341772876,
+        "final_wealth": 2.225149555949395,
+        "max_drawdown": -0.24496375155808936,
+        "start": "2021-01-04",
+        "end": "2026-08-12"
+      }
+    }
+  },
+  "fixed_endpoints": {
+    "2005-12-30": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.05104075783047346,
+        "final_wealth": 1.4159755221414658,
+        "max_drawdown": -0.3661711615885842,
+        "start": "1999-01-04",
+        "end": "2005-12-30"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.05100306078689387,
+        "final_wealth": 1.4156207191302246,
+        "max_drawdown": -0.3633497661869053,
+        "start": "1999-01-04",
+        "end": "2005-12-30"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.05155718298122358,
+        "final_wealth": 1.4208437718899731,
+        "max_drawdown": -0.36116385923229755,
+        "start": "1999-01-04",
+        "end": "2005-12-30"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.0191861347636757,
+        "final_wealth": 1.1427161751218748,
+        "max_drawdown": -0.4751584960301942,
+        "start": "1998-12-23",
+        "end": "2005-12-30"
+      }
+    },
+    "2008-12-31": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.01631463617886042,
+        "final_wealth": 1.175477857157214,
+        "max_drawdown": -0.4727740215376385,
+        "start": "1999-01-04",
+        "end": "2008-12-31"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.016915947994231573,
+        "final_wealth": 1.1824445232564118,
+        "max_drawdown": -0.4670252418105417,
+        "start": "1999-01-04",
+        "end": "2008-12-31"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.017330763331950383,
+        "final_wealth": 1.1872721162179023,
+        "max_drawdown": -0.46540667091518895,
+        "start": "1999-01-04",
+        "end": "2008-12-31"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": -0.012700102993469464,
+        "final_wealth": 0.8797549879663957,
+        "max_drawdown": -0.5076008339013447,
+        "start": "1998-12-23",
+        "end": "2008-12-31"
+      }
+    },
+    "2012-12-31": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.05288008365088559,
+        "final_wealth": 2.0563181237985626,
+        "max_drawdown": -0.5300521971316585,
+        "start": "1999-01-04",
+        "end": "2012-12-31"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.05334721375118279,
+        "final_wealth": 2.0691187687707138,
+        "max_drawdown": -0.5239327925042452,
+        "start": "1999-01-04",
+        "end": "2012-12-31"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.053000283499286205,
+        "final_wealth": 2.0596048842316432,
+        "max_drawdown": -0.5237761540248604,
+        "start": "1999-01-04",
+        "end": "2012-12-31"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.029899825431141558,
+        "final_wealth": 1.511567497411465,
+        "max_drawdown": -0.5518943935996453,
+        "start": "1998-12-23",
+        "end": "2012-12-31"
+      }
+    },
+    "2016-12-30": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.07116311130016895,
+        "final_wealth": 3.443761874667555,
+        "max_drawdown": -0.5300521971316585,
+        "start": "1999-01-04",
+        "end": "2016-12-30"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.07147103996555249,
+        "final_wealth": 3.4616129150443493,
+        "max_drawdown": -0.5239327925042452,
+        "start": "1999-01-04",
+        "end": "2016-12-30"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.07111239012653314,
+        "final_wealth": 3.4408298522789873,
+        "max_drawdown": -0.5237761540248604,
+        "start": "1999-01-04",
+        "end": "2016-12-30"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.053839438100141024,
+        "final_wealth": 2.5728099008208956,
+        "max_drawdown": -0.5518943935996453,
+        "start": "1998-12-23",
+        "end": "2016-12-30"
+      }
+    },
+    "2020-12-31": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.07958896332151744,
+        "final_wealth": 5.387247098756256,
+        "max_drawdown": -0.5300521971316585,
+        "start": "1999-01-04",
+        "end": "2020-12-31"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.0802836134612237,
+        "final_wealth": 5.463990940636719,
+        "max_drawdown": -0.5239327925042452,
+        "start": "1999-01-04",
+        "end": "2020-12-31"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.07956967131659054,
+        "final_wealth": 5.385130503343045,
+        "max_drawdown": -0.5237761540248604,
+        "start": "1999-01-04",
+        "end": "2020-12-31"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.0721717922316043,
+        "final_wealth": 4.640028013495269,
+        "max_drawdown": -0.5518943935996453,
+        "start": "1998-12-23",
+        "end": "2020-12-31"
+      }
+    },
+    "2024-12-31": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.08686186361609582,
+        "final_wealth": 8.713376238818809,
+        "max_drawdown": -0.5300521971316585,
+        "start": "1999-01-04",
+        "end": "2024-12-31"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.08749899307727249,
+        "final_wealth": 8.847108888211727,
+        "max_drawdown": -0.5239327925042452,
+        "start": "1999-01-04",
+        "end": "2024-12-31"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.08763949139684835,
+        "final_wealth": 8.87686376372614,
+        "max_drawdown": -0.5237761540248604,
+        "start": "1999-01-04",
+        "end": "2024-12-31"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.08160432875694101,
+        "final_wealth": 7.7014352021709165,
+        "max_drawdown": -0.5518943935996453,
+        "start": "1998-12-23",
+        "end": "2024-12-31"
+      }
+    },
+    "latest": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.09243376442908957,
+        "final_wealth": 11.476799545689133,
+        "max_drawdown": -0.5300521971316585,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.09325650630574,
+        "final_wealth": 11.717791511542199,
+        "max_drawdown": -0.5239327925042452,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.09277337680186615,
+        "final_wealth": 11.575691866658138,
+        "max_drawdown": -0.5237761540248604,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.08814582790324588,
+        "final_wealth": 10.324756273821688,
+        "max_drawdown": -0.5518943935996453,
+        "start": "1998-12-23",
+        "end": "2026-08-12"
+      }
+    }
+  },
+  "exclude_recent": {
+    "1": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.08791908638192769,
+        "final_wealth": 9.410327102159428,
+        "max_drawdown": -0.5300521971316585,
+        "start": "1999-01-04",
+        "end": "2025-08-12"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.08864024108555046,
+        "final_wealth": 9.57769353995974,
+        "max_drawdown": -0.5239327925042452,
+        "start": "1999-01-04",
+        "end": "2025-08-12"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.08858274840844382,
+        "final_wealth": 9.564246166351564,
+        "max_drawdown": -0.5237761540248604,
+        "start": "1999-01-04",
+        "end": "2025-08-12"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.08363869756945808,
+        "final_wealth": 8.495772788853985,
+        "max_drawdown": -0.5518943935996453,
+        "start": "1998-12-23",
+        "end": "2025-08-12"
+      }
+    },
+    "2": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.08576710913111762,
+        "final_wealth": 8.22272174903541,
+        "max_drawdown": -0.5300521971316585,
+        "start": "1999-01-04",
+        "end": "2024-08-12"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.08634748943636783,
+        "final_wealth": 8.336004652305379,
+        "max_drawdown": -0.5239327925042452,
+        "start": "1999-01-04",
+        "end": "2024-08-12"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.08651969673203053,
+        "final_wealth": 8.369904845084944,
+        "max_drawdown": -0.5237761540248604,
+        "start": "1999-01-04",
+        "end": "2024-08-12"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.07863124443678116,
+        "final_wealth": 6.96262046098678,
+        "max_drawdown": -0.5518943935996453,
+        "start": "1998-12-23",
+        "end": "2024-08-12"
+      }
+    },
+    "3": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.08393735141251302,
+        "final_wealth": 7.262539365533136,
+        "max_drawdown": -0.5300521971316585,
+        "start": "1999-01-04",
+        "end": "2023-08-11"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.08451928987058177,
+        "final_wealth": 7.359065053237159,
+        "max_drawdown": -0.5239327925042452,
+        "start": "1999-01-04",
+        "end": "2023-08-11"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.0846025974610598,
+        "final_wealth": 7.372983522891352,
+        "max_drawdown": -0.5237761540248604,
+        "start": "1999-01-04",
+        "end": "2023-08-11"
+      },
+      "spy_bh": {
+        "status": "OK",
+        "cagr": 0.07350572863295479,
+        "final_wealth": 5.738347101808527,
+        "max_drawdown": -0.5518943935996453,
+        "start": "1998-12-23",
+        "end": "2023-08-11"
+      }
+    }
+  },
+  "cost_stress": {
+    "5.0": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.09243376442908957,
+        "final_wealth": 11.476799545689133,
+        "max_drawdown": -0.5300521971316585,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.09325650630574,
+        "final_wealth": 11.717791511542199,
+        "max_drawdown": -0.5239327925042452,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.09277337680186615,
+        "final_wealth": 11.575691866658138,
+        "max_drawdown": -0.5237761540248604,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      }
+    },
+    "10.0": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.09224302879138979,
+        "final_wealth": 11.421616493099318,
+        "max_drawdown": -0.530203474087207,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.09313580020642842,
+        "final_wealth": 11.68213230286815,
+        "max_drawdown": -0.524019778639838,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.09270558551041175,
+        "final_wealth": 11.555886225684075,
+        "max_drawdown": -0.5238363015593273,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      }
+    },
+    "20.0": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.09186161913970703,
+        "final_wealth": 11.312034163958609,
+        "max_drawdown": -0.5305058914977211,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.09289438929493965,
+        "final_wealth": 11.611127759137926,
+        "max_drawdown": -0.5241937137885408,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.0925699777188238,
+        "final_wealth": 11.516365540949726,
+        "max_drawdown": -0.5239565853216932,
+        "start": "1999-01-04",
+        "end": "2026-08-12"
+      }
+    }
+  },
+  "delay_stress": {
+    "EW9_monthly": {
+      "status": "OK",
+      "cagr": 0.09285881574579924,
+      "final_wealth": 11.597880040981968,
+      "max_drawdown": -0.52823367584878,
+      "start": "1999-01-05",
+      "end": "2026-08-12"
+    },
+    "EW9_quarterly": {
+      "status": "OK",
+      "cagr": 0.09345663274309701,
+      "final_wealth": 11.774264024179894,
+      "max_drawdown": -0.5229047644193026,
+      "start": "1999-01-05",
+      "end": "2026-08-12"
+    },
+    "EW9_annual": {
+      "status": "OK",
+      "cagr": 0.09281203911867775,
+      "final_wealth": 11.58418669335357,
+      "max_drawdown": -0.5235549355189308,
+      "start": "1999-01-05",
+      "end": "2026-08-12"
+    }
+  },
+  "rolling": {
+    "3y": {
+      "n": 99,
+      "win_rate": 0.5656565656565656,
+      "years": 3
+    },
+    "5y": {
+      "n": 91,
+      "win_rate": 0.5164835164835165,
+      "years": 5
+    },
+    "10y": {
+      "n": 71,
+      "win_rate": 0.5211267605633803,
+      "years": 10
+    }
+  },
+  "leave_one_out": {
+    "XLB": {
+      "cagr": 0.09312584130985657,
+      "final_wealth": 11.679194903037397,
+      "max_drawdown": -0.5258050884836657,
+      "n_sectors": 8
+    },
+    "XLE": {
+      "cagr": 0.09050019472643478,
+      "final_wealth": 10.929088558938385,
+      "max_drawdown": -0.5375831132002332,
+      "n_sectors": 8
+    },
+    "XLF": {
+      "cagr": 0.09513311758762732,
+      "final_wealth": 12.285862364993438,
+      "max_drawdown": -0.47934147468704347,
+      "n_sectors": 8
+    },
+    "XLI": {
+      "cagr": 0.09179893158312691,
+      "final_wealth": 11.294120711710823,
+      "max_drawdown": -0.519192615703133,
+      "n_sectors": 8
+    },
+    "XLK": {
+      "cagr": 0.08876206312168988,
+      "final_wealth": 10.458309098734977,
+      "max_drawdown": -0.5337574244113277,
+      "n_sectors": 8
+    },
+    "XLP": {
+      "cagr": 0.09457434808191212,
+      "final_wealth": 12.113999023019092,
+      "max_drawdown": -0.5564490020014929,
+      "n_sectors": 8
+    },
+    "XLU": {
+      "cagr": 0.09316726508834994,
+      "final_wealth": 11.691417622654622,
+      "max_drawdown": -0.5427471970939004,
+      "n_sectors": 8
+    },
+    "XLV": {
+      "cagr": 0.09253134357438886,
+      "final_wealth": 11.505130111194994,
+      "max_drawdown": -0.5470716803410836,
+      "n_sectors": 8
+    },
+    "XLY": {
+      "cagr": 0.09129965998277312,
+      "final_wealth": 11.152422720403704,
+      "max_drawdown": -0.5277502871030033,
+      "n_sectors": 8
+    }
+  },
+  "bootstrap": {
+    "status": "OK",
+    "n_boot": 500,
+    "block": 21,
+    "mean_edge": 0.001007620648167942,
+    "p05": -0.012747294372162153,
+    "p50": 0.0008607620602810728,
+    "p95": 0.014511315342633176,
+    "frac_positive": 0.538
+  },
+  "french": {
+    "full": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.11227294250284237,
+        "final_wealth": 41396.3549344679,
+        "start": "1926-08-02",
+        "end": "2026-06-30",
+        "n_days": 26249,
+        "tradable": false,
+        "role": "economic_mechanism_validation_not_tradable_etf_backtest"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.11292421327485247,
+        "final_wealth": 43124.894674958734,
+        "start": "1926-10-01",
+        "end": "2026-06-30",
+        "n_days": 26199,
+        "tradable": false,
+        "role": "economic_mechanism_validation_not_tradable_etf_backtest"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.11388300891173109,
+        "final_wealth": 45706.40792951455,
+        "start": "1927-01-03",
+        "end": "2026-06-30",
+        "n_days": 26124,
+        "tradable": false,
+        "role": "economic_mechanism_validation_not_tradable_etf_backtest"
+      },
+      "ew9_no_rebalance": {
+        "status": "OK",
+        "cagr": 0.10857440954954733,
+        "final_wealth": 29947.62233741544,
+        "start": "1926-07-01",
+        "end": "2026-06-30",
+        "tradable": false
+      }
+    },
+    "pre_etf": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.11656313793925777,
+        "final_wealth": 2919.407553883605,
+        "start": "1926-08-02",
+        "end": "1998-12-15",
+        "n_days": 19324,
+        "tradable": false,
+        "role": "economic_mechanism_validation_not_tradable_etf_backtest"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.11707980780586902,
+        "final_wealth": 2964.3949866364387,
+        "start": "1926-10-01",
+        "end": "1998-12-15",
+        "n_days": 19274,
+        "tradable": false,
+        "role": "economic_mechanism_validation_not_tradable_etf_backtest"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.11808180845401783,
+        "final_wealth": 3073.0972724001717,
+        "start": "1927-01-03",
+        "end": "1998-12-15",
+        "n_days": 19199,
+        "tradable": false,
+        "role": "economic_mechanism_validation_not_tradable_etf_backtest"
+      },
+      "ew9_no_rebalance": {
+        "status": "OK",
+        "cagr": 0.11419573766156277,
+        "final_wealth": 2527.547126147885,
+        "start": "1926-07-01",
+        "end": "1998-12-15",
+        "tradable": false
+      }
+    },
+    "post_etf": {
+      "EW9_monthly": {
+        "status": "OK",
+        "cagr": 0.09923664642746921,
+        "final_wealth": 13.471106286319616,
+        "start": "1999-01-04",
+        "end": "2026-06-30",
+        "n_days": 6914,
+        "tradable": false,
+        "role": "economic_mechanism_validation_not_tradable_etf_backtest"
+      },
+      "EW9_quarterly": {
+        "status": "OK",
+        "cagr": 0.10021433595451024,
+        "final_wealth": 13.804330878742567,
+        "start": "1999-01-04",
+        "end": "2026-06-30",
+        "n_days": 6914,
+        "tradable": false,
+        "role": "economic_mechanism_validation_not_tradable_etf_backtest"
+      },
+      "EW9_annual": {
+        "status": "OK",
+        "cagr": 0.10105899879204072,
+        "final_wealth": 14.098599105935207,
+        "start": "1999-01-04",
+        "end": "2026-06-30",
+        "n_days": 6914,
+        "tradable": false,
+        "role": "economic_mechanism_validation_not_tradable_etf_backtest"
+      },
+      "ew9_no_rebalance": {
+        "status": "OK",
+        "cagr": 0.09565941576474035,
+        "final_wealth": 12.37537439918196,
+        "start": "1998-12-16",
+        "end": "2026-06-30",
+        "tradable": false
+      }
+    },
+    "mapping": {
+      "source": "Kenneth_French_12_Industry_Portfolios",
+      "portfolio_variant": "average_value_weighted",
+      "disclaimer": "ETF Select Sector SPDRs and French 12 industries cannot be perfectly aligned. Mapping frozen prior to result inspection; do not retune to raise returns.\n",
+      "etf_to_french_components": {
+        "XLB": {
+          "components": [
+            "Chems"
+          ],
+          "notes": "Materials proxy via Chemicals; omits other materials in Other."
+        },
+        "XLE": {
+          "components": [
+            "Enrgy"
+          ],
+          "notes": "Energy"
+        },
+        "XLF": {
+          "components": [
+            "Money"
+          ],
+          "notes": "Finance"
+        },
+        "XLI": {
+          "components": [
+            "Manuf"
+          ],
+          "notes": "Industrials via Manufacturing; omits some industrial services in Other."
+        },
+        "XLK": {
+          "components": [
+            "BusEq"
+          ],
+          "notes": "Technology via Business Equipment; Telcm excluded (not in 1998 nine)."
+        },
+        "XLP": {
+          "components": [
+            "NoDur"
+          ],
+          "notes": "Consumer staples via NonDurables"
+        },
+        "XLU": {
+          "components": [
+            "Utils"
+          ],
+          "notes": "Utilities"
+        },
+        "XLV": {
+          "components": [
+            "Hlth"
+          ],
+          "notes": "Health"
+        },
+        "XLY": {
+          "components": [
+            "Durbl",
+            "Shops"
+          ],
+          "notes": "Consumer discretionary \u2248 equal mix of Durables + Shops/Retail"
+        }
+      },
+      "construction": {
+        "within_etf_leg": "equal_weight_component_daily_returns",
+        "across_nine_legs": "equal_weight_1_over_9",
+        "rebalance_frequencies": [
+          "monthly",
+          "quarterly",
+          "annual"
+        ],
+        "excluded_french_industries": [
+          "Telcm",
+          "Other"
+        ],
+        "exclusion_reason": "Telcm/Other have no clean one-to-one map into the fixed 1998 nine SPDRs; excluding avoids post-hoc blending that could inflate fit.\n"
+      }
+    },
+    "columns_used": [
+      "XLB",
+      "XLE",
+      "XLF",
+      "XLI",
+      "XLK",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XLY"
+    ],
+    "french_columns_available": [
+      "NoDur",
+      "Durbl",
+      "Manuf",
+      "Enrgy",
+      "Chems",
+      "BusEq",
+      "Telcm",
+      "Utils",
+      "Shops",
+      "Hlth",
+      "Money",
+      "Other"
+    ],
+    "disclaimer": "ETF Select Sector SPDRs and French 12 industries cannot be perfectly aligned. Mapping frozen prior to result inspection; do not retune to raise returns.\n"
+  },
+  "gate": {
+    "label": "DISCOVERY_ONLY",
+    "passed": 9,
+    "total": 13,
+    "checks": {
+      "discovery_cagr_gt_spy": true,
+      "majority_pseudo_oos_gt_spy": false,
+      "majority_fixed_endpoints_gt_spy": true,
+      "rolling_5y_ge_55": false,
+      "rolling_10y_ge_60": false,
+      "cost_10bp_not_flip": true,
+      "cost_20bp_not_flip": true,
+      "delay_not_flip": true,
+      "french_same_direction": true,
+      "not_single_sector_dominated": true,
+      "vs_rsp_incremental": true,
+      "monthly_covers_extra_cost_vs_q_a": false,
+      "maxdd_not_worse_than_spy_by_5pp": true
+    },
+    "notes": {
+      "pseudo_oos_win_frac": "0/5",
+      "endpoint_win_frac": "7/7",
+      "cagr_edge_vs_rsp_same_span": "-0.0027741523356892284",
+      "rsp_exposure_warning": "EW9_close_to_RSP_general_equal_weight_exposure",
+      "prefer_lower_turnover_if_false": "If monthly_covers_extra_cost_vs_q_a is false, prefer quarterly/annual; do not pick frequency by max historical CAGR alone."
+    },
+    "rsp_similarity_note": "EW9_close_to_RSP_general_equal_weight_exposure_not_sector_alpha",
+    "preferred_frequency_hint": "prefer_EW9_quarterly_or_annual_lower_turnover"
+  }
+}

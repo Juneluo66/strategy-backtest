@@ -1,0 +1,287 @@
+{
+  "frozen_variant": "attribution_DC",
+  "common_start": "2005-02-01",
+  "full_sample": {
+    "dc": {
+      "cagr": 0.09525844301482889,
+      "sharpe": 0.7457226147238899,
+      "volatility": 0.1341374614144273,
+      "max_drawdown": -0.1796558626144723,
+      "worst_12m": -0.10914648015550499
+    },
+    "a": {
+      "cagr": 0.09690314844830028,
+      "sharpe": 0.717196968310336,
+      "volatility": 0.14335253712022347,
+      "max_drawdown": -0.22666767326665638,
+      "worst_12m": -0.20954487586332537
+    },
+    "sixty_forty": {
+      "cagr": 0.08434187777646529,
+      "sharpe": 0.7966289842855558,
+      "volatility": 0.10913443249724536,
+      "max_drawdown": -0.31533867882800126,
+      "worst_12m": -0.2747118617975768
+    },
+    "simple_dual_mom": {
+      "cagr": 0.0942143566714917,
+      "sharpe": 0.687358666757789,
+      "volatility": 0.14671394780862862,
+      "max_drawdown": -0.22811576918035903,
+      "worst_12m": -0.20954487586332537
+    },
+    "spy": {
+      "cagr": 0.11120203297233111,
+      "sharpe": 0.6512641658548622,
+      "volatility": 0.18953402366216798,
+      "max_drawdown": -0.5518940436853609,
+      "worst_12m": -0.4735413193731888
+    }
+  },
+  "oos": {
+    "bounds": [
+      "2024-01-01",
+      "2026-06-30"
+    ],
+    "dc": {
+      "cagr": 0.2584609332328405,
+      "sharpe": 1.5187688822469414,
+      "volatility": 0.15986840057819357,
+      "max_drawdown": -0.13937530671488296,
+      "worst_12m": 0.11555256419224391
+    },
+    "a": {
+      "cagr": 0.28791397391058315,
+      "sharpe": 1.627399520925153,
+      "volatility": 0.16381540159987315,
+      "max_drawdown": -0.13937530671488285,
+      "worst_12m": 0.0855913334914089
+    },
+    "sixty_forty": {
+      "cagr": 0.1411415268756948,
+      "sharpe": 1.3733622254608775,
+      "volatility": 0.09976603790715352,
+      "max_drawdown": -0.10527055378925765,
+      "worst_12m": 0.00907220988453794
+    },
+    "simple_dual_mom": {
+      "cagr": 0.2992171310641427,
+      "sharpe": 1.6521802047089948,
+      "volatility": 0.16696543204780437,
+      "max_drawdown": -0.13937530671488285,
+      "worst_12m": 0.0849912975863294
+    },
+    "spy": {
+      "cagr": 0.2142724545357675,
+      "sharpe": 1.296444601361968,
+      "volatility": 0.1595516700531681,
+      "max_drawdown": -0.1875522626062266,
+      "worst_12m": -0.030150673265671557
+    },
+    "total_return": {
+      "dc": 0.7685542988066649,
+      "a": 0.872995972820336,
+      "sixty_forty": 0.38743001662489096,
+      "simple_dual_mom": 0.9140300680955709
+    }
+  },
+  "rolling": {
+    "n_windows": 222,
+    "mean_cagr_gap": -0.0023636618975590336,
+    "median_cagr_gap": -0.00131721156787723,
+    "dd_better_pct": 0.8288288288288288,
+    "sharpe_better_pct": 0.6306306306306306,
+    "positive_cagr_gap_pct": 0.4774774774774775
+  },
+  "crisis_dependence": {
+    "gfc_window": [
+      "2007-10-01",
+      "2009-03-31"
+    ],
+    "gfc_total_return": {
+      "dc": 0.09054341937128307,
+      "a": -0.09357286645858609
+    },
+    "ex_2008_full": {
+      "dc": {
+        "cagr": 0.0908486053678319,
+        "sharpe": 0.741291106127313,
+        "volatility": 0.1284915735642607,
+        "max_drawdown": -0.17965586261447175,
+        "worst_12m": -0.10914648015550499
+      },
+      "a": {
+        "cagr": 0.10193065658448441,
+        "sharpe": 0.7719263488254974,
+        "volatility": 0.1381670871691258,
+        "max_drawdown": -0.2266676732666567,
+        "worst_12m": -0.20954487586332537
+      }
+    },
+    "ex_2008_cagr_gap": -0.011082051216652511,
+    "ex_2008_rolling_dd_better_pct": 0.6756756756756757,
+    "ex_2008_dd_better_or_cagr_close": true
+  },
+  "cost_sensitivity": {
+    "rows": [
+      {
+        "bps": 5.0,
+        "dc_cagr": 0.09525844301482889,
+        "dc_sharpe": 0.7457226147238899,
+        "dc_max_drawdown": -0.1796558626144723,
+        "a_cagr": 0.09690314844830028,
+        "a_sharpe": 0.717196968310336,
+        "cagr_gap": -0.001644705433471394,
+        "sharpe_gap": 0.02852564641355393
+      },
+      {
+        "bps": 10.0,
+        "dc_cagr": 0.09143885828457554,
+        "dc_sharpe": 0.7195537072810619,
+        "dc_max_drawdown": -0.17965586261447197,
+        "a_cagr": 0.09384179155395311,
+        "a_sharpe": 0.6976172019883958,
+        "cagr_gap": -0.002402933269377572,
+        "sharpe_gap": 0.02193650529266611
+      },
+      {
+        "bps": 20.0,
+        "dc_cagr": 0.08383261758074334,
+        "dc_sharpe": 0.6670148536869343,
+        "dc_max_drawdown": -0.1796558626144723,
+        "a_cagr": 0.08773904735902582,
+        "a_sharpe": 0.6583117965146844,
+        "cagr_gap": -0.003906429778282483,
+        "sharpe_gap": 0.00870305717224984
+      }
+    ],
+    "stable": true,
+    "base_cagr_gap": -0.001644705433471394
+  },
+  "neighborhood": {
+    "rows": [
+      {
+        "horizons": "3/6/12",
+        "is_frozen": true,
+        "cagr": 0.09525844301482889,
+        "sharpe": 0.7457226147238899,
+        "max_drawdown": -0.1796558626144723
+      },
+      {
+        "horizons": "2/6/12",
+        "is_frozen": false,
+        "cagr": 0.08116764240977581,
+        "sharpe": 0.678166718320775,
+        "max_drawdown": -0.18983171922240905
+      },
+      {
+        "horizons": "3/5/12",
+        "is_frozen": false,
+        "cagr": 0.09644349239559613,
+        "sharpe": 0.7500393707687146,
+        "max_drawdown": -0.17965586261447197
+      },
+      {
+        "horizons": "3/6/11",
+        "is_frozen": false,
+        "cagr": 0.10060955100184543,
+        "sharpe": 0.7794671530625623,
+        "max_drawdown": -0.1796558626144723
+      },
+      {
+        "horizons": "4/6/12",
+        "is_frozen": false,
+        "cagr": 0.10056070345844503,
+        "sharpe": 0.7706329340675292,
+        "max_drawdown": -0.19208703660777693
+      }
+    ],
+    "frozen": "3/6/12",
+    "stable": true,
+    "note": "Neighborhood is diagnostic only; frozen 3/6/12 is NOT reselected by Sharpe."
+  },
+  "pit_audit": {
+    "ok": true,
+    "checks": {
+      "all_signal_dates_are_month_ends": true,
+      "all_execution_after_signal": true,
+      "no_pre_inception_risk_weights": true,
+      "cash_proxy_before_sgov": true,
+      "month_end_returns_reproducible": true
+    },
+    "details": [],
+    "sgov_inception": "2020-06-01"
+  },
+  "holdings": {
+    "avg_weight_QQQ": 0.19111969111969113,
+    "avg_weight_SPY": 0.03088803088803089,
+    "avg_weight_cash": 0.25675675675675674,
+    "max_single_weight": 0.5,
+    "max_cash_weight": 1.0,
+    "qqq_held_pct": 0.38223938223938225,
+    "spy_held_pct": 0.06177606177606178,
+    "cash_only_pct": 0.13513513513513514
+  },
+  "category_weights": {
+    "cash": 0.25675675675675674,
+    "defensive": 0.2277992277992278,
+    "intl": 0.20656370656370657,
+    "us": 0.3088803088803089
+  },
+  "spy_streak": {
+    "longest_underperform_months_vs_spy": 9,
+    "streak_start": "2006-08",
+    "streak_end": "2007-04",
+    "months_underperform_pct": 0.5598455598455598
+  },
+  "relative": {
+    "vs_a": {
+      "rel_cagr": -0.001644705433471394,
+      "rel_sharpe": 0.02852564641355393,
+      "excess_cagr": -0.001644705433471394,
+      "benchmark_cagr": 0.09690314844830028,
+      "benchmark_sharpe": 0.717196968310336,
+      "benchmark_max_drawdown": -0.22666767326665638
+    },
+    "vs_sixty_forty": {
+      "rel_cagr": 0.011293189429768757,
+      "rel_sharpe": -0.04941729425535479,
+      "excess_cagr": 0.011293189429768757,
+      "benchmark_cagr": 0.08434187777646529,
+      "benchmark_sharpe": 0.7966289842855558,
+      "benchmark_max_drawdown": -0.31533867882800126
+    },
+    "vs_simple": {
+      "rel_cagr": 0.0010440863433371916,
+      "rel_sharpe": 0.05836394796610089,
+      "excess_cagr": 0.0010440863433371916,
+      "benchmark_cagr": 0.0942143566714917,
+      "benchmark_sharpe": 0.687358666757789,
+      "benchmark_max_drawdown": -0.22811576918035903
+    },
+    "vs_spy": {
+      "rel_cagr": -0.015943589957502224,
+      "rel_sharpe": 0.09445844886902766,
+      "excess_cagr": -0.015943589957502224,
+      "benchmark_cagr": 0.11120203297233111,
+      "benchmark_sharpe": 0.6512641658548622,
+      "benchmark_max_drawdown": -0.5518940436853609
+    }
+  },
+  "gates": {
+    "cagr_only_mildly_lags_A": true,
+    "majority_windows_lower_dd": true,
+    "oos_not_clearly_broken": true,
+    "not_only_2008": true,
+    "cost_stable": true,
+    "neighborhood_stable": true,
+    "pit_ok": true,
+    "PASS": true,
+    "notes": {
+      "cagr_gap_dc_minus_a": -0.001644705433471394,
+      "dd_better_pct": 0.8288288288288288,
+      "sharpe_better_pct": 0.6306306306306306,
+      "mean_cagr_gap_roll": -0.0023636618975590336
+    }
+  }
+}
