@@ -4,7 +4,7 @@ mode: paper  # paper | live — user must match Gateway login
 
 connection:
   host: "127.0.0.1"
-  port: 4002      # IB Gateway paper default; TWS paper 7497, live 7496 / Gateway live 4001
+  port: 4001      # live Gateway; paper = 4002
   client_id: 11
   timeout_sec: 30
   readonly: false

@@ -1,0 +1,16 @@
+[Unit]
+Description=Interactive Brokers Gateway (IBC)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ec2-user
+WorkingDirectory=/home/ec2-user/ibkr
+ExecStart=/home/ec2-user/ibkr/start_gateway.sh
+Restart=on-failure
+RestartSec=120
+Environment=HOME=/home/ec2-user
+
+[Install]
+WantedBy=multi-user.target

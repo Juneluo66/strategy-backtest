@@ -54,3 +54,5 @@ Weekly cron: `scripts/weekly_live_v1.sh` (uses `--confirm`; ensure pool is initi
 Live reports (committed): `reports/live/live_nav_ledger.csv`, `live_performance.md`, `capital_pool.json`
 
 Separate from research `frozen_oos_ledger.csv`.
+
+**IB Gateway on EC2:** see `/home/ec2-user/ibkr/README.md` and `scripts/ibgateway-ibc.service`.
