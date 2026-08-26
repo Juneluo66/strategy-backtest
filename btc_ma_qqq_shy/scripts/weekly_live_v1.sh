@@ -16,4 +16,4 @@ fi
 
 python3 -m pip install -q -e ".[live]" 2>/dev/null || pip3 install -q -e ".[live]"
 
-btc-ma-qqq live-weekly --git-push
+btc-ma-qqq live-weekly --confirm --git-push

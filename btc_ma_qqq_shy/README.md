@@ -35,16 +35,22 @@ Does not modify IBKR, production, or other strategy configs.
 
 Requires **IB Gateway or TWS** logged in on a host reachable from this machine.
 
+**Capital pool:** locks a confirmed cash amount; account deposits are ignored unless you run `live-inject-capital`.
+
 ```bash
 pip install -e ".[live]"
 # Edit strategy-backtest/.env — IBKR_HOST, IBKR_PORT (see .env.example)
-btc-ma-qqq live-status          # read account + current signal
-btc-ma-qqq live-weekly --dry-run
-btc-ma-qqq live-weekly --git-push   # rebalance + ledger + push GitHub
+btc-ma-qqq live-preview              # query cash + signal + order plan (no trades)
+btc-ma-qqq live-init --capital 10000 # preview lock amount
+btc-ma-qqq live-init --capital 10000 --confirm   # lock after you approve
+btc-ma-qqq live-weekly --dry-run     # simulate rebalance within pool only
+btc-ma-qqq live-weekly --confirm     # submit orders after you approve
+btc-ma-qqq live-weekly --confirm --git-push
+btc-ma-qqq live-inject-capital 5000 --confirm    # explicit add only
 ```
 
-Weekly cron: `scripts/weekly_live_v1.sh`
+Weekly cron: `scripts/weekly_live_v1.sh` (uses `--confirm`; ensure pool is initialized first)
 
-Live reports (committed): `reports/live/live_nav_ledger.csv`, `live_performance.md`
+Live reports (committed): `reports/live/live_nav_ledger.csv`, `live_performance.md`, `capital_pool.json`
 
 Separate from research `frozen_oos_ledger.csv`.

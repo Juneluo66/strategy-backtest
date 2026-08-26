@@ -48,14 +48,43 @@ def main(argv: list[str] | None = None) -> int:
         help="Active return A/B vs vol-matched static + frozen QQQ 200DMA benchmark",
     )
     p_live_status = sub.add_parser("live-status", help="IBKR account snapshot + v1 signal (read-only)")
+    p_live_preview = sub.add_parser(
+        "live-preview",
+        help="Query IBKR cash/pool/signal/order plan — no trades (confirm capital before orders)",
+    )
+    p_live_preview.add_argument(
+        "--capital",
+        type=float,
+        default=None,
+        help="Hypothetical lock amount to preview (default: all account cash if pool not initialized)",
+    )
+    p_live_init = sub.add_parser(
+        "live-init",
+        help="Lock confirmed cash amount as isolated strategy capital pool",
+    )
+    p_live_init.add_argument(
+        "--capital",
+        type=float,
+        default=None,
+        help="USD to lock (default: all account cash at init time)",
+    )
+    p_live_init.add_argument("--confirm", action="store_true", help="Confirm and lock capital")
+    p_live_init.add_argument("--force", action="store_true", help="Re-baseline locked pool (destructive)")
+    p_live_inject = sub.add_parser(
+        "live-inject-capital",
+        help="Explicitly add cash to strategy pool (only way to grow beyond P&L)",
+    )
+    p_live_inject.add_argument("amount", type=float, help="USD to add from account cash")
+    p_live_inject.add_argument("--confirm", action="store_true", help="Confirm injection")
     p_live_weekly = sub.add_parser(
         "live-weekly",
-        help="Weekly v1: rebalance IBKR to QQQ/SHY, update NAV ledger, optional git push",
+        help="Weekly v1: rebalance IBKR pool to QQQ/SHY, update NAV ledger, optional git push",
     )
     p_live_weekly.add_argument("--dry-run", action="store_true", help="Log orders without submitting")
     p_live_weekly.add_argument("--skip-trade", action="store_true", help="Snapshot + ledger only")
+    p_live_weekly.add_argument("--confirm", action="store_true", help="Confirm and submit orders")
     p_live_weekly.add_argument("--git-push", action="store_true", help="Commit live reports and push to GitHub")
-    p_live_weekly.add_argument("--reset-initial-nav", action="store_true", help="Re-baseline initial NAV to current")
+    p_live_weekly.add_argument("--reset-initial-nav", action="store_true", help="Re-sync initial NAV record from pool")
 
     args = parser.parse_args(argv)
     config = ProjectConfig()
@@ -219,11 +248,23 @@ def main(argv: list[str] | None = None) -> int:
         )
         return 0
 
-    if args.cmd in ("live-status", "live-weekly"):
+    if args.cmd in (
+        "live-status",
+        "live-preview",
+        "live-init",
+        "live-inject-capital",
+        "live-weekly",
+    ):
         from pathlib import Path
 
         from .ibkr_config import IbkrLiveConfig
-        from .live_runner import run_live_status, run_live_weekly
+        from .live_runner import (
+            run_live_init,
+            run_live_inject,
+            run_live_preview,
+            run_live_status,
+            run_live_weekly,
+        )
 
         # Load strategy-backtest/.env if present (never committed)
         env_path = Path(config.project_root).parent / ".env"
@@ -239,12 +280,31 @@ def main(argv: list[str] | None = None) -> int:
         try:
             if args.cmd == "live-status":
                 result = run_live_status(ibkr_cfg)
+            elif args.cmd == "live-preview":
+                result = run_live_preview(
+                    ibkr_cfg,
+                    capital_amount=args.capital,
+                )
+            elif args.cmd == "live-init":
+                result = run_live_init(
+                    ibkr_cfg,
+                    capital_amount=args.capital,
+                    confirm=args.confirm,
+                    force=args.force,
+                )
+            elif args.cmd == "live-inject-capital":
+                result = run_live_inject(
+                    ibkr_cfg,
+                    args.amount,
+                    confirm=args.confirm,
+                )
             else:
                 result = run_live_weekly(
                     ibkr_cfg,
                     dry_run=args.dry_run,
                     skip_trade=args.skip_trade,
                     git_push=args.git_push,
+                    confirm=args.confirm,
                     force_initial_nav=args.reset_initial_nav,
                 )
         except Exception as exc:

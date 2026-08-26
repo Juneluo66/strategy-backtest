@@ -19,8 +19,14 @@ strategy:
   risk_off_symbol: SHY
   exchange: SMART
   currency: USD
-  target_pct: 1.0   # 100% of NAV in target sleeve (v1 SetHoldings)
-  min_order_usd: 100.0
+  target_pct: 1.0   # 100% of pool NAV in target sleeve
+  fractional_shares: true   # IBKR fractional / cashQty orders
+  min_order_usd: 0.0        # 0 = disabled (IBKR enforces its own minimums)
+
+capital_pool:
+  state_path: reports/live/capital_pool.json
+  # Only explicit live-inject-capital may increase pool beyond P&L.
+  require_confirm_before_trade: true
 
 ledger:
   path: reports/live/live_nav_ledger.csv

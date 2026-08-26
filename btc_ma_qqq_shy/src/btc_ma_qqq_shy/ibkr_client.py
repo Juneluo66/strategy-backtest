@@ -1,10 +1,12 @@
 """IBKR connection helpers (ib_insync). Requires TWS or IB Gateway logged in."""
 from __future__ import annotations
 
+import math
 import os
 from dataclasses import dataclass
 from typing import Any, Optional
 
+from .capital_pool import CapitalPoolState, compute_pool_nav, save_pool_state
 from .ibkr_config import IbkrLiveConfig
 
 
@@ -20,6 +22,46 @@ class AccountSnapshot:
     shy_mkt_value: float
     gross_position_value: float
     timestamp_utc: str
+
+
+@dataclass
+class OrderPlan:
+    target: str
+    pool_nav: float
+    qqq_price: float
+    shy_price: float
+    current_qqq_shares: float
+    current_shy_shares: float
+    target_qqq_shares: float
+    target_shy_shares: float
+    sell_symbol: Optional[str]
+    sell_shares: float
+    buy_symbol: str
+    buy_shares: float
+    buy_notional: float
+    buy_cash_qty: float
+    fractional: bool
+    strategy_cash_after: float
+
+    def to_dict(self) -> dict:
+        return {
+            "target": self.target,
+            "pool_nav": self.pool_nav,
+            "qqq_price": self.qqq_price,
+            "shy_price": self.shy_price,
+            "current_qqq_shares": self.current_qqq_shares,
+            "current_shy_shares": self.current_shy_shares,
+            "target_qqq_shares": self.target_qqq_shares,
+            "target_shy_shares": self.target_shy_shares,
+            "sell_symbol": self.sell_symbol,
+            "sell_shares": self.sell_shares,
+            "buy_symbol": self.buy_symbol,
+            "buy_shares": self.buy_shares,
+            "buy_notional": self.buy_notional,
+            "buy_cash_qty": self.buy_cash_qty,
+            "fractional": self.fractional,
+            "strategy_cash_after": self.strategy_cash_after,
+        }
 
 
 def _env_override(cfg: IbkrLiveConfig) -> IbkrLiveConfig:
@@ -117,6 +159,192 @@ def fetch_account_snapshot(ib: Any, cfg: IbkrLiveConfig) -> AccountSnapshot:
         gross_position_value=gross,
         timestamp_utc=datetime.now(timezone.utc).isoformat(),
     )
+
+
+def _stock_contracts(cfg: IbkrLiveConfig) -> tuple[Any, Any, str, str]:
+    from ib_insync import Stock
+
+    strat = cfg.raw["strategy"]
+    qqq_sym = strat["risk_on_symbol"]
+    shy_sym = strat["risk_off_symbol"]
+    qqq = Stock(qqq_sym, strat["exchange"], strat["currency"])
+    shy = Stock(shy_sym, strat["exchange"], strat["currency"])
+    return qqq, shy, qqq_sym, shy_sym
+
+
+def fetch_etf_prices(ib: Any, cfg: IbkrLiveConfig) -> dict[str, float]:
+    from ib_insync import Stock
+
+    strat = cfg.raw["strategy"]
+    qqq_sym = strat["risk_on_symbol"]
+    shy_sym = strat["risk_off_symbol"]
+    qqq, shy = _stock_contracts(cfg)[:2]
+    ib.qualifyContracts(qqq, shy)
+    prices: dict[str, float] = {}
+    for contract, sym in ((qqq, qqq_sym), (shy, shy_sym)):
+        tickers = ib.reqTickers(contract)
+        if not tickers:
+            raise RuntimeError(f"No ticker for {sym}")
+        t = tickers[0]
+        px = t.marketPrice()
+        if px is None or (isinstance(px, float) and math.isnan(px)) or px <= 0:
+            px = t.close if t.close and t.close > 0 else t.last
+        if px is None or px <= 0:
+            raise RuntimeError(f"No usable price for {sym}")
+        prices[sym] = float(px)
+    return prices
+
+
+def build_order_plan(
+    cfg: IbkrLiveConfig,
+    pool: CapitalPoolState,
+    *,
+    target: str,
+    qqq_price: float,
+    shy_price: float,
+) -> OrderPlan:
+    strat = cfg.raw["strategy"]
+    qqq_sym = strat["risk_on_symbol"]
+    shy_sym = strat["risk_off_symbol"]
+    fractional = bool(strat.get("fractional_shares", True))
+    min_usd = float(strat.get("min_order_usd", 0.0))
+
+    pool_nav = compute_pool_nav(pool, qqq_price=qqq_price, shy_price=shy_price)
+    if min_usd > 0 and pool_nav < min_usd:
+        raise RuntimeError(f"Pool NAV ${pool_nav:,.2f} below min_order_usd ${min_usd:,.2f}")
+    if pool_nav <= 0:
+        raise RuntimeError("Pool NAV must be positive")
+
+    target_sym = qqq_sym if target == qqq_sym else shy_sym
+    other_sym = shy_sym if target_sym == qqq_sym else qqq_sym
+    target_px = qqq_price if target_sym == qqq_sym else shy_price
+
+    if fractional:
+        target_shares = pool_nav / target_px
+    else:
+        target_shares = float(math.floor(pool_nav / target_px))
+        if target_shares <= 0:
+            raise RuntimeError(
+                f"Pool NAV too small to buy 1 whole share of {target_sym} @ ${target_px:.2f}"
+            )
+
+    target_qqq = float(target_shares if target_sym == qqq_sym else 0.0)
+    target_shy = float(target_shares if target_sym == shy_sym else 0.0)
+
+    sell_sym: Optional[str] = None
+    sell_shares = 0.0
+    buy_shares = 0.0
+    buy_cash_qty = 0.0
+
+    if other_sym == qqq_sym and pool.qqq_shares > 0:
+        sell_sym = qqq_sym
+        sell_shares = pool.qqq_shares
+    elif other_sym == shy_sym and pool.shy_shares > 0:
+        sell_sym = shy_sym
+        sell_shares = pool.shy_shares
+
+    if target_sym == qqq_sym:
+        delta = target_qqq - pool.qqq_shares
+    else:
+        delta = target_shy - pool.shy_shares
+
+    if delta > 0:
+        if fractional and pool.strategy_cash >= delta * target_px * 0.99:
+            buy_cash_qty = min(pool.strategy_cash, delta * target_px)
+            buy_shares = buy_cash_qty / target_px if target_px > 0 else 0.0
+        else:
+            buy_shares = delta
+    elif delta < 0:
+        sell_sym = target_sym
+        sell_shares = abs(delta)
+
+    buy_notional = buy_cash_qty if buy_cash_qty > 0 else buy_shares * target_px
+    invested = target_shares * target_px
+    cash_after = max(pool_nav - invested, 0.0)
+
+    return OrderPlan(
+        target=target_sym,
+        pool_nav=pool_nav,
+        qqq_price=qqq_price,
+        shy_price=shy_price,
+        current_qqq_shares=pool.qqq_shares,
+        current_shy_shares=pool.shy_shares,
+        target_qqq_shares=target_qqq,
+        target_shy_shares=target_shy,
+        sell_symbol=sell_sym,
+        sell_shares=sell_shares,
+        buy_symbol=target_sym,
+        buy_shares=buy_shares,
+        buy_notional=buy_notional,
+        buy_cash_qty=buy_cash_qty,
+        fractional=fractional,
+        strategy_cash_after=cash_after,
+    )
+
+
+def execute_order_plan(
+    ib: Any,
+    cfg: IbkrLiveConfig,
+    pool: CapitalPoolState,
+    plan: OrderPlan,
+    *,
+    dry_run: bool,
+) -> tuple[str, CapitalPoolState]:
+    from ib_insync import MarketOrder
+
+    qqq, shy, qqq_sym, shy_sym = _stock_contracts(cfg)
+    ib.qualifyContracts(qqq, shy)
+    contract_map = {qqq_sym: qqq, shy_sym: shy}
+
+    if dry_run:
+        return f"DRY_RUN {plan.to_dict()}", pool
+
+    notes: list[str] = []
+
+    if plan.sell_symbol and plan.sell_shares > 0:
+        c = contract_map[plan.sell_symbol]
+        trade = ib.placeOrder(c, MarketOrder("SELL", plan.sell_shares))
+        ib.sleep(2)
+        status = trade.orderStatus.status if trade.orderStatus else "unknown"
+        notes.append(f"SELL {plan.sell_shares:.6f} {plan.sell_symbol} status={status}")
+        proceeds = plan.sell_shares * (
+            plan.qqq_price if plan.sell_symbol == qqq_sym else plan.shy_price
+        )
+        if plan.sell_symbol == qqq_sym:
+            pool.qqq_shares = max(pool.qqq_shares - plan.sell_shares, 0.0)
+        else:
+            pool.shy_shares = max(pool.shy_shares - plan.sell_shares, 0.0)
+        pool.strategy_cash += proceeds
+
+    if plan.buy_cash_qty > 0:
+        c = contract_map[plan.buy_symbol]
+        trade = ib.placeOrder(c, MarketOrder("BUY", 0, cashQty=round(plan.buy_cash_qty, 2)))
+        ib.sleep(3)
+        status = trade.orderStatus.status if trade.orderStatus else "unknown"
+        px = plan.qqq_price if plan.buy_symbol == qqq_sym else plan.shy_price
+        filled_shares = plan.buy_cash_qty / px if px > 0 else 0.0
+        notes.append(
+            f"BUY ${plan.buy_cash_qty:.2f} {plan.buy_symbol} (~{filled_shares:.6f} sh) status={status}"
+        )
+        if plan.buy_symbol == qqq_sym:
+            pool.qqq_shares += filled_shares
+        else:
+            pool.shy_shares += filled_shares
+        pool.strategy_cash = max(pool.strategy_cash - plan.buy_cash_qty, 0.0)
+    elif plan.buy_shares > 0:
+        c = contract_map[plan.buy_symbol]
+        trade = ib.placeOrder(c, MarketOrder("BUY", plan.buy_shares))
+        ib.sleep(3)
+        status = trade.orderStatus.status if trade.orderStatus else "unknown"
+        notes.append(f"BUY {plan.buy_shares:.6f} {plan.buy_symbol} status={status}")
+        if plan.buy_symbol == qqq_sym:
+            pool.qqq_shares += plan.buy_shares
+        else:
+            pool.shy_shares += plan.buy_shares
+
+    pool.strategy_cash = plan.strategy_cash_after
+    save_pool_state(cfg, pool)
+    return "; ".join(notes) if notes else "no_orders_needed", pool
 
 
 def disconnect_ib(ib: Any) -> None:

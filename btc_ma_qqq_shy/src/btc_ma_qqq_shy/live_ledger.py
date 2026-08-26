@@ -8,6 +8,7 @@ from typing import Any, Optional
 
 import pandas as pd
 
+from .capital_pool import CapitalPoolState
 from .ibkr_client import AccountSnapshot
 from .ibkr_config import IbkrLiveConfig
 
@@ -19,14 +20,14 @@ LEDGER_COLUMNS = [
     "rule_id",
     "signal",
     "target",
-    "net_liquidation",
-    "total_cash",
+    "pool_nav",
+    "capital_basis",
+    "strategy_cash",
+    "pool_qqq_shares",
+    "pool_shy_shares",
+    "account_net_liquidation",
+    "account_total_cash",
     "buying_power",
-    "qqq_shares",
-    "shy_shares",
-    "qqq_mkt_value",
-    "shy_mkt_value",
-    "initial_nav",
     "nav_return_since_start",
     "weekly_nav_return",
     "rebalance_executed",
@@ -56,6 +57,7 @@ def set_initial_nav(path: Path, nav: float, account_id: str, note: str = "") -> 
         "account_id": account_id,
         "set_utc": datetime.now(timezone.utc).isoformat(),
         "note": note,
+        "basis": "locked_cash_capital_pool",
     }
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2))
@@ -69,7 +71,9 @@ def append_live_row(
     signal: int,
     target: str,
     snap: AccountSnapshot,
-    initial_nav: float,
+    pool_nav: float,
+    capital_basis: float,
+    pool: CapitalPoolState,
     weekly_return: Optional[float],
     rebalance_executed: bool,
     order_note: str,
@@ -80,8 +84,7 @@ def append_live_row(
     if week_id in existing["week_id"].astype(str).tolist():
         return {"appended": False, "reason": "week_exists", "week_id": week_id}
 
-    nav = snap.net_liquidation
-    ret = (nav / initial_nav - 1.0) if initial_nav > 0 else 0.0
+    ret = (pool_nav / capital_basis - 1.0) if capital_basis > 0 else 0.0
     row = {
         "week_id": week_id,
         "recorded_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -90,14 +93,14 @@ def append_live_row(
         "rule_id": cfg.raw["strategy"]["rule_id"],
         "signal": signal,
         "target": target,
-        "net_liquidation": nav,
-        "total_cash": snap.total_cash,
+        "pool_nav": pool_nav,
+        "capital_basis": capital_basis,
+        "strategy_cash": pool.strategy_cash,
+        "pool_qqq_shares": pool.qqq_shares,
+        "pool_shy_shares": pool.shy_shares,
+        "account_net_liquidation": snap.net_liquidation,
+        "account_total_cash": snap.total_cash,
         "buying_power": snap.buying_power,
-        "qqq_shares": snap.qqq_shares,
-        "shy_shares": snap.shy_shares,
-        "qqq_mkt_value": snap.qqq_mkt_value,
-        "shy_mkt_value": snap.shy_mkt_value,
-        "initial_nav": initial_nav,
         "nav_return_since_start": ret,
         "weekly_nav_return": weekly_return if weekly_return is not None else "",
         "rebalance_executed": rebalance_executed,
@@ -105,7 +108,7 @@ def append_live_row(
     }
     out = pd.concat([existing, pd.DataFrame([row])], ignore_index=True)
     out.to_csv(path, index=False)
-    return {"appended": True, "week_id": week_id, "nav": nav, "return_since_start": ret}
+    return {"appended": True, "week_id": week_id, "pool_nav": pool_nav, "return_since_start": ret}
 
 
 def render_performance_md(cfg: IbkrLiveConfig) -> str:
@@ -114,15 +117,17 @@ def render_performance_md(cfg: IbkrLiveConfig) -> str:
     df = _read_ledger(path)
     init = load_initial_nav(init_path) or {}
     lines = [
-        "# v1 Live Performance (IBKR)",
+        "# v1 Live Performance (IBKR capital pool)",
         "",
         f"Rule: `{cfg.raw['strategy']['rule_id']}`",
         f"Mode: `{cfg.raw.get('mode')}`",
         "",
+        "Capital is **isolated** to the locked pool. Account deposits are ignored unless you run `live-inject-capital`.",
+        "",
     ]
     if init:
         lines += [
-            f"Initial NAV (baseline): **${init.get('initial_nav', 0):,.2f}**",
+            f"Locked capital basis: **${init.get('initial_nav', 0):,.2f}**",
             f"Set at: `{init.get('set_utc', '')}`",
             "",
         ]
@@ -133,22 +138,22 @@ def render_performance_md(cfg: IbkrLiveConfig) -> str:
     last = df.iloc[-1]
     lines += [
         f"Latest week: `{last['week_id']}`",
-        f"Current NAV: **${float(last['net_liquidation']):,.2f}**",
+        f"Pool NAV: **${float(last['pool_nav']):,.2f}**",
         f"Return since start: **{100*float(last['nav_return_since_start']):.2f}%**",
         f"Target: `{last['target']}` (signal={last['signal']})",
         "",
         "## Weekly ledger",
         "",
-        "| Week | NAV | Weekly | Since start | Target | Cash | Note |",
+        "| Week | Pool NAV | Weekly | Since start | Target | Pool cash | Note |",
         "|---|---:|---:|---:|---|---:|---|",
     ]
     for _, r in df.iterrows():
         wr = r["weekly_nav_return"]
         wr_s = f"{100*float(wr):.2f}%" if pd.notna(wr) and str(wr) != "" else "—"
         lines.append(
-            f"| {r['week_id']} | ${float(r['net_liquidation']):,.2f} | {wr_s} | "
+            f"| {r['week_id']} | ${float(r['pool_nav']):,.2f} | {wr_s} | "
             f"{100*float(r['nav_return_since_start']):.2f}% | {r['target']} | "
-            f"${float(r['total_cash']):,.0f} | {str(r['order_note'])[:40]} |"
+            f"${float(r['strategy_cash']):,.0f} | {str(r['order_note'])[:40]} |"
         )
     lines.append("")
     return "\n".join(lines)
