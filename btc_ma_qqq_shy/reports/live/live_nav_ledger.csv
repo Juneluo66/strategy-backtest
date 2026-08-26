@@ -1,0 +1,2 @@
+week_id,recorded_utc,mode,account_id,rule_id,signal,target,pool_nav,capital_basis,strategy_cash,pool_qqq_shares,pool_shy_shares,account_net_liquidation,account_total_cash,buying_power,nav_return_since_start,weekly_nav_return,rebalance_executed,order_note
+2026-08-17,2026-08-26T07:35:18Z,live,U17832073,BTC50_MOM20_QQQ_SHY_v1,0,SHY,76.0,76.0,0.0,0.0,0.9259259259259259,2906.27,76.11,8794.93,0.0,,True,BUY 0.925926 SHY type=MKT lmt=1.7976931348623157e+308 status=Cancelled

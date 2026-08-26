@@ -1,0 +1,14 @@
+{
+  "initial_capital": 76.0,
+  "injected_capital": 0.0,
+  "total_capital_basis": 76.0,
+  "account_id": "U17832073",
+  "set_utc": "2026-08-26T07:29:53.420422+00:00",
+  "locked": true,
+  "basis": "cash",
+  "qqq_shares": 0.0,
+  "shy_shares": 0.9259259259259259,
+  "strategy_cash": 0.0,
+  "injections": [],
+  "note": "user_confirmed_cash_lock"
+}
