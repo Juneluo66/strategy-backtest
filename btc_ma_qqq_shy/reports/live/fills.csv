@@ -1,0 +1,5 @@
+recorded_utc,fill_time_utc,week_id,status,side,symbol,shares,avg_price,cost_basis_per_share,notional,fee,order_id,limit_price,tif,note,source
+2026-08-26T08:02:41Z,,2026-08-17,pending,BUY,SHY,0.9259,,,,593594282.0,82.08,DAY,IBKR app PreSubmitted user screenshot,user_sync,
+2026-08-27T02:40:40Z,2026-08-26T13:30:02Z,2026-08-17,filled,BUY,SHY,0.9259,82.055,82.87552651474242,75.9747,0.75975,593594282.0,,,LIMIT 82.06 DAY,user_sync
+2026-09-04T07:14:51Z,2026-09-03T21:30:00Z,2026-08-31,filled,SELL,SHY,0.9259,81.72,0.0,75.6645,0.76,,,,IBKR app Sold SHY,user_sync
+2026-09-04T07:14:52Z,2026-09-04T00:05:00Z,2026-08-31,filled,BUY,QQQ,0.103,717.17,724.354369,73.8685,0.74,,,,IBKR app Bought QQQ,user_sync

@@ -35,24 +35,19 @@ Does not modify IBKR, production, or other strategy configs.
 
 Requires **IB Gateway or TWS** logged in on a host reachable from this machine.
 
-**Capital pool:** locks a confirmed cash amount; account deposits are ignored unless you run `live-inject-capital`.
+**Weekly automation (notify only):** Mon **09:20 ET**（北京 **21:20 夏令 / 22:20 冬令**）发 Lark。  
+流程：`fetch --refresh` → `oos-append` → `live-notify`（用**最新一周**信号，避免推过期周）。**不登录 IBKR，不下单。**
 
 ```bash
-pip install -e ".[live]"
-# Edit strategy-backtest/.env — IBKR_HOST, IBKR_PORT (see .env.example)
-btc-ma-qqq live-preview              # query cash + signal + order plan (no trades)
-btc-ma-qqq live-init --capital 10000 # preview lock amount
-btc-ma-qqq live-init --capital 10000 --confirm   # lock after you approve
-btc-ma-qqq live-weekly --dry-run     # simulate rebalance within pool only
-btc-ma-qqq live-weekly --confirm     # submit orders after you approve
-btc-ma-qqq live-weekly --confirm --git-push
-btc-ma-qqq live-inject-capital 5000 --confirm    # explicit add only
+# Lark webhook in btc_ma_qqq_shy/.env (see .env.example)
+bash scripts/install_weekly_cron.sh
+btc-ma-qqq live-notify --dry-run   # preview message (still refreshes data)
+btc-ma-qqq live-notify             # refresh + send to Lark
+btc-ma-qqq live-signal             # refresh + signal only
+FORCE=1 bash scripts/weekly_notify_v1.sh   # manual catch-up
 ```
 
-Weekly cron: `scripts/weekly_live_v1.sh` (uses `--confirm`; ensure pool is initialized first)
+Scripts: `install_weekly_cron.sh`, `weekly_notify_v1.sh`  
+Fills audit: `reports/live/fills.csv`, pending: `reports/live/pending_order.json`
 
-Live reports (committed): `reports/live/live_nav_ledger.csv`, `live_performance.md`, `capital_pool.json`
-
-Separate from research `frozen_oos_ledger.csv`.
-
-**IB Gateway on EC2:** see `/home/ec2-user/ibkr/README.md` and `scripts/ibgateway-ibc.service`.
+IBKR Gateway 仅在你明确要求时再启；默认 cron **不会**启动，成交以你同步的实盘为准。

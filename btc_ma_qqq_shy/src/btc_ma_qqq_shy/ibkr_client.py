@@ -173,25 +173,40 @@ def _stock_contracts(cfg: IbkrLiveConfig) -> tuple[Any, Any, str, str]:
 
 
 def fetch_etf_prices(ib: Any, cfg: IbkrLiveConfig) -> dict[str, float]:
-    from ib_insync import Stock
-
     strat = cfg.raw["strategy"]
     qqq_sym = strat["risk_on_symbol"]
     shy_sym = strat["risk_off_symbol"]
     qqq, shy = _stock_contracts(cfg)[:2]
     ib.qualifyContracts(qqq, shy)
+    # Prefer delayed/frozen ticks; fall back to last daily close when market is closed.
+    ib.reqMarketDataType(3)
     prices: dict[str, float] = {}
     for contract, sym in ((qqq, qqq_sym), (shy, shy_sym)):
         tickers = ib.reqTickers(contract)
-        if not tickers:
-            raise RuntimeError(f"No ticker for {sym}")
-        t = tickers[0]
-        px = t.marketPrice()
-        if px is None or (isinstance(px, float) and math.isnan(px)) or px <= 0:
-            px = t.close if t.close and t.close > 0 else t.last
+        px: Optional[float] = None
+        if tickers:
+            t = tickers[0]
+            for candidate in (t.marketPrice(), t.last, t.close):
+                if candidate is not None and not (
+                    isinstance(candidate, float) and math.isnan(candidate)
+                ) and candidate > 0:
+                    px = float(candidate)
+                    break
+        if px is None:
+            bars = ib.reqHistoricalData(
+                contract,
+                endDateTime="",
+                durationStr="5 D",
+                barSizeSetting="1 day",
+                whatToShow="TRADES",
+                useRTH=True,
+                formatDate=1,
+            )
+            if bars:
+                px = float(bars[-1].close)
         if px is None or px <= 0:
             raise RuntimeError(f"No usable price for {sym}")
-        prices[sym] = float(px)
+        prices[sym] = px
     return prices
 
 
@@ -282,6 +297,44 @@ def build_order_plan(
     )
 
 
+def _limit_price(side: str, last: float, cfg: IbkrLiveConfig) -> float:
+    """Slightly aggressive limit so DAY orders can fill at US open."""
+    strat = cfg.raw["strategy"]
+    buy_bps = float(strat.get("limit_buy_cushion_bps", 50)) / 10_000.0
+    sell_bps = float(strat.get("limit_sell_cushion_bps", 50)) / 10_000.0
+    if side.upper() == "BUY":
+        return round(last * (1.0 + buy_bps), 2)
+    return round(last * (1.0 - sell_bps), 2)
+
+
+def _make_order(
+    cfg: IbkrLiveConfig,
+    *,
+    action: str,
+    quantity: float,
+    last_price: float,
+):
+    """Build LMT (default) or MKT order; LMT waits for RTH fill."""
+    from ib_insync import LimitOrder, MarketOrder
+
+    strat = cfg.raw["strategy"]
+    order_type = str(strat.get("order_type", "LMT")).upper()
+    tif = str(strat.get("order_tif", "DAY")).upper()
+    outside_rth = bool(strat.get("outside_rth", False))
+    qty = round(float(quantity), 6)
+    if qty <= 0:
+        raise ValueError("order quantity must be positive")
+
+    if order_type == "MKT":
+        order = MarketOrder(action, qty)
+    else:
+        limit = _limit_price(action, last_price, cfg)
+        order = LimitOrder(action, qty, limit)
+        order.tif = tif
+        order.outsideRth = outside_rth
+    return order
+
+
 def execute_order_plan(
     ib: Any,
     cfg: IbkrLiveConfig,
@@ -290,8 +343,6 @@ def execute_order_plan(
     *,
     dry_run: bool,
 ) -> tuple[str, CapitalPoolState]:
-    from ib_insync import MarketOrder
-
     qqq, shy, qqq_sym, shy_sym = _stock_contracts(cfg)
     ib.qualifyContracts(qqq, shy)
     contract_map = {qqq_sym: qqq, shy_sym: shy}
@@ -300,49 +351,72 @@ def execute_order_plan(
         return f"DRY_RUN {plan.to_dict()}", pool
 
     notes: list[str] = []
+    order_type = str(cfg.raw["strategy"].get("order_type", "LMT")).upper()
+    filled_ok = True
+
+    def _wait_status(trade: Any, seconds: float = 3.0) -> str:
+        ib.sleep(seconds)
+        return trade.orderStatus.status if trade.orderStatus else "unknown"
+
+    def _is_bad(status: str) -> bool:
+        return status in {"Cancelled", "Inactive", "ApiCancelled"}
 
     if plan.sell_symbol and plan.sell_shares > 0:
         c = contract_map[plan.sell_symbol]
-        trade = ib.placeOrder(c, MarketOrder("SELL", plan.sell_shares))
-        ib.sleep(2)
-        status = trade.orderStatus.status if trade.orderStatus else "unknown"
-        notes.append(f"SELL {plan.sell_shares:.6f} {plan.sell_symbol} status={status}")
-        proceeds = plan.sell_shares * (
-            plan.qqq_price if plan.sell_symbol == qqq_sym else plan.shy_price
-        )
-        if plan.sell_symbol == qqq_sym:
-            pool.qqq_shares = max(pool.qqq_shares - plan.sell_shares, 0.0)
-        else:
-            pool.shy_shares = max(pool.shy_shares - plan.sell_shares, 0.0)
-        pool.strategy_cash += proceeds
-
-    if plan.buy_cash_qty > 0:
-        c = contract_map[plan.buy_symbol]
-        trade = ib.placeOrder(c, MarketOrder("BUY", 0, cashQty=round(plan.buy_cash_qty, 2)))
-        ib.sleep(3)
-        status = trade.orderStatus.status if trade.orderStatus else "unknown"
-        px = plan.qqq_price if plan.buy_symbol == qqq_sym else plan.shy_price
-        filled_shares = plan.buy_cash_qty / px if px > 0 else 0.0
+        last = plan.qqq_price if plan.sell_symbol == qqq_sym else plan.shy_price
+        order = _make_order(cfg, action="SELL", quantity=plan.sell_shares, last_price=last)
+        trade = ib.placeOrder(c, order)
+        status = _wait_status(trade, 2.0)
+        limit = getattr(order, "lmtPrice", None)
         notes.append(
-            f"BUY ${plan.buy_cash_qty:.2f} {plan.buy_symbol} (~{filled_shares:.6f} sh) status={status}"
+            f"SELL {plan.sell_shares:.6f} {plan.sell_symbol} "
+            f"type={order_type} lmt={limit} status={status}"
         )
-        if plan.buy_symbol == qqq_sym:
-            pool.qqq_shares += filled_shares
+        if _is_bad(status):
+            filled_ok = False
         else:
-            pool.shy_shares += filled_shares
-        pool.strategy_cash = max(pool.strategy_cash - plan.buy_cash_qty, 0.0)
-    elif plan.buy_shares > 0:
-        c = contract_map[plan.buy_symbol]
-        trade = ib.placeOrder(c, MarketOrder("BUY", plan.buy_shares))
-        ib.sleep(3)
-        status = trade.orderStatus.status if trade.orderStatus else "unknown"
-        notes.append(f"BUY {plan.buy_shares:.6f} {plan.buy_symbol} status={status}")
-        if plan.buy_symbol == qqq_sym:
-            pool.qqq_shares += plan.buy_shares
-        else:
-            pool.shy_shares += plan.buy_shares
+            proceeds = plan.sell_shares * last
+            if plan.sell_symbol == qqq_sym:
+                pool.qqq_shares = max(pool.qqq_shares - plan.sell_shares, 0.0)
+            else:
+                pool.shy_shares = max(pool.shy_shares - plan.sell_shares, 0.0)
+            pool.strategy_cash += proceeds
 
-    pool.strategy_cash = plan.strategy_cash_after
+    buy_qty = plan.buy_shares
+    if buy_qty <= 0 and plan.buy_cash_qty > 0:
+        px = plan.qqq_price if plan.buy_symbol == qqq_sym else plan.shy_price
+        buy_qty = plan.buy_cash_qty / px if px > 0 else 0.0
+
+    # API path: whole shares only when fractional_shares=false
+    if not plan.fractional and buy_qty > 0:
+        buy_qty = float(math.floor(buy_qty))
+
+    if buy_qty > 0 and filled_ok:
+        c = contract_map[plan.buy_symbol]
+        last = plan.qqq_price if plan.buy_symbol == qqq_sym else plan.shy_price
+        order = _make_order(cfg, action="BUY", quantity=buy_qty, last_price=last)
+        trade = ib.placeOrder(c, order)
+        status = _wait_status(trade, 3.0)
+        limit = getattr(order, "lmtPrice", None)
+        notes.append(
+            f"BUY {buy_qty:.6f} {plan.buy_symbol} "
+            f"type={order_type} lmt={limit} status={status}"
+        )
+        if _is_bad(status):
+            filled_ok = False
+            notes.append("order_rejected_pool_unchanged")
+        else:
+            if plan.buy_symbol == qqq_sym:
+                pool.qqq_shares += buy_qty
+            else:
+                pool.shy_shares += buy_qty
+            pool.strategy_cash = max(pool.strategy_cash - buy_qty * last, 0.0)
+            pool.strategy_cash = plan.strategy_cash_after
+    elif buy_qty <= 0:
+        notes.append("no_buy_shares_affordable")
+
+    if filled_ok and buy_qty > 0:
+        pool.strategy_cash = plan.strategy_cash_after
     save_pool_state(cfg, pool)
     return "; ".join(notes) if notes else "no_orders_needed", pool
 

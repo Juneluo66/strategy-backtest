@@ -1,0 +1,46 @@
+{
+  "status": "ok",
+  "ibkr_contacted": false,
+  "now_beijing": "2026-09-01 10:23 CST",
+  "signal": {
+    "week_id": "2026-08-17",
+    "signal": 0,
+    "target": "SHY",
+    "rule_id": "BTC50_MOM20_QQQ_SHY_v1",
+    "btc_close": 62921.0,
+    "sma50": 63642.26,
+    "mom20": -0.013313470283832562
+  },
+  "capital_summary": {
+    "pool_initialized": true,
+    "capital_basis": 76.0,
+    "strategy_cash": 0.0,
+    "qqq_shares": 0.0,
+    "shy_shares": 0.9259,
+    "qqq_cost_basis_per_share": 0.0,
+    "shy_cost_basis_per_share": 82.87552651474242,
+    "fees_paid_total": 0.75975,
+    "account_id": "U17832073",
+    "set_utc": "2026-08-26T07:29:53.420422+00:00",
+    "latest_pool_nav": 75.9747,
+    "return_since_start": -0.0003328947368421,
+    "last_weekly_return": null,
+    "last_week_id": "2026-08-17",
+    "last_order_note": "USER_FILL BUY 0.9259 SHY @ 82.055 cost_basis=82.8755 fee=0.75975 order=593594282 fill=2026-08-26T13:30:02Z LIMIT 82.06 DAY",
+    "last_target": "SHY"
+  },
+  "message_preview": "\u3010v1 \u5468\u63d0\u793a \u00b7 \u4e0d\u767b\u5f55 IBKR\u3011\n\u65f6\u95f4(\u5317\u4eac): 2026-09-01 10:23 CST\n\u5468\u6b21: 2026-08-17\n\n\ud83d\udc49 \u672c\u5468\u5e94\u4e70: SHY  (signal=0)\n\u89c4\u5219: BTC50_MOM20_QQQ_SHY_v1\nBTC\u6536\u76d8: 62921.0  SMA50: 63642.26  MOM20: -0.013313470283832562\n\n\u2014\u2014 \u8d44\u91d1\u6c60\u6458\u8981 \u2014\u2014\n\u9501\u5b9a\u672c\u91d1: $76.00\n\u6700\u65b0\u6c60NAV: $75.97\n\u7d2f\u8ba1\u6536\u76ca: -0.03%\n\u6301\u4ed3: QQQ=0.0  SHY=0.9259  \u73b0\u91d1=$0.00\nSHY\u6210\u672c\u4ef7(\u542b\u8d39): $82.8755/\u80a1\n\u7d2f\u8ba1\u624b\u7eed\u8d39: $0.7598\n\u4e0a\u7b14\u8bb0\u8d26: week=2026-08-17  note=USER_FILL BUY 0.9259 SHY @ 82.055 cost_basis=82.8755 fee=0.75975 order=593594282 fill=2026-08-26T13:30:02Z LIMIT 82.06 DAY\n\n\u8bf4\u660e: \u4ec5\u901a\u77e5\uff0c\u4e0d\u4f1a\u81ea\u52a8\u767b\u5f55/\u4e0b\u5355\u3002\u8bf7\u81ea\u884c\u5728 IBKR \u6309\u63d0\u793a\u64cd\u4f5c\u3002\n\u6574\u80a1\u63d0\u9192: API/\u81ea\u52a8\u5316\u4e0d\u652f\u6301\u788e\u80a1\uff1bSHY\u2248$82+ \u624d\u591f\u4e70 1 \u80a1\u3002",
+  "lark": {
+    "sent": true,
+    "response": {
+      "http_status": 200,
+      "body": {
+        "StatusCode": 0,
+        "StatusMessage": "success",
+        "code": 0,
+        "data": {},
+        "msg": "success"
+      }
+    }
+  }
+}

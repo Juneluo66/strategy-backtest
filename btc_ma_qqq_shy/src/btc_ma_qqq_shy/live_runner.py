@@ -1,6 +1,7 @@
 """Weekly v1 live: signal → IBKR rebalance → NAV ledger → optional git push."""
 from __future__ import annotations
 
+import json
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
@@ -34,18 +35,51 @@ from .live_ledger import (
 from .oos_ledger import generate_oos_candidates
 
 
+def _us_open_trade_window(cfg: IbkrLiveConfig) -> dict[str, Any]:
+    """Weekly trade window: Monday after US cash open (ET), DST-aware.
+
+    Beijing wall-clock ≈ Mon 21:30 (EDT) / Mon 22:30 (EST).
+    """
+    from zoneinfo import ZoneInfo
+
+    sched = cfg.raw.get("schedule", {})
+    tz_name = str(sched.get("timezone", "America/New_York"))
+    weekday_name = str(sched.get("rebalance_weekday", "Monday"))
+    after_h = int(sched.get("rebalance_after_hour", 9))
+    after_m = int(sched.get("rebalance_after_minute", 35))
+    end_h = int(sched.get("trade_window_end_hour", 11))
+
+    now_et = datetime.now(ZoneInfo(tz_name))
+    now_bj = now_et.astimezone(ZoneInfo("Asia/Shanghai"))
+    weekday_ok = now_et.strftime("%A") == weekday_name
+    minutes = now_et.hour * 60 + now_et.minute
+    start_min = after_h * 60 + after_m
+    end_min = end_h * 60
+    in_window = weekday_ok and start_min <= minutes < end_min
+    return {
+        "timezone": tz_name,
+        "now_et": now_et.isoformat(),
+        "now_beijing": now_bj.isoformat(),
+        "weekday": now_et.strftime("%A"),
+        "required_weekday": weekday_name,
+        "window_et": f"{after_h:02d}:{after_m:02d}–{end_h:02d}:00",
+        "in_window": in_window,
+    }
+
+
 def _current_week_id() -> str:
     return datetime.now(timezone.utc).date().isoformat()
 
 
 def _latest_signal(cfg: IbkrLiveConfig) -> tuple[int, str, dict]:
-    """Reuse frozen OOS candidate generator for current BTC signal."""
+    """Current trade signal = most recent OOS week (not a stuck older pending week)."""
     proj = ProjectConfig(project_root=cfg.project_root)
     cand = generate_oos_candidates(proj)
     if cand.empty:
         raise RuntimeError("No OOS candidates — check BTC data and calendar")
-    pending = cand[cand["strategy_return"].isna()]
-    row = pending.iloc[0] if len(pending) else cand.iloc[-1]
+    # Always use the latest week_id. Using first incomplete week caused stale
+    # Lark pushes when price cache lagged (e.g. still on 2026-08-17 SHY).
+    row = cand.iloc[-1]
     sig = int(row["signal"])
     target = str(row["target"])
     return sig, target, row.to_dict()
@@ -68,6 +102,17 @@ def _sync_initial_nav(cfg: IbkrLiveConfig, pool: CapitalPoolState) -> dict:
         pool.total_capital_basis,
         pool.account_id,
         note="locked_cash_capital_pool",
+        basis="locked_cash_capital_pool",
+    )
+
+
+def _sync_observe_initial_nav(cfg: IbkrLiveConfig, snap: Any) -> dict:
+    return set_initial_nav(
+        cfg.initial_nav_path(),
+        snap.net_liquidation,
+        snap.account_id,
+        note="account_observation_baseline",
+        basis="account_observation",
     )
 
 
@@ -98,6 +143,137 @@ def _pool_snapshot(
     }
 
 
+def run_live_signal(cfg: IbkrLiveConfig, *, refresh: bool = True) -> dict[str, Any]:
+    """Compute this week's QQQ/SHY target from BTC rules — no Gateway needed."""
+    from .config import ProjectConfig
+    from .data import fetch_prices
+    from .oos_ledger import append_oos_ledger
+
+    proj = ProjectConfig(project_root=cfg.project_root)
+    # Always refresh before notifying so we don't push a stale week.
+    fetch_result = fetch_prices(proj, refresh=refresh)
+    oos_result = None
+    try:
+        oos_result = append_oos_ledger(proj, dry_run=False)
+    except Exception as exc:  # keep signal even if ledger append fails
+        oos_result = {"error": str(exc)}
+
+    sig, target, sig_row = _latest_signal(cfg)
+    out = {
+        "status": "ok",
+        "gateway_required": False,
+        "week_id": str(sig_row.get("week_id", _current_week_id())),
+        "signal": sig,
+        "target": target,
+        "btc_close": sig_row.get("btc_close"),
+        "sma50": sig_row.get("sma50"),
+        "mom20": sig_row.get("mom20"),
+        "rule_id": cfg.raw["strategy"]["rule_id"],
+        "computed_utc": datetime.now(timezone.utc).isoformat(),
+        "trade_window": _us_open_trade_window(cfg),
+        "data_refresh": fetch_result,
+        "oos_append": oos_result,
+    }
+    path = cfg.project_root / "reports" / "live" / "pending_signal.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(out, indent=2, default=str))
+    out["saved_to"] = str(path)
+    return out
+
+
+def _capital_summary_from_local(cfg: IbkrLiveConfig) -> dict[str, Any]:
+    """Summarize locked pool + ledger without contacting IBKR."""
+    pool = load_pool_state(cfg)
+    df = _read_ledger(cfg.ledger_path())
+    out: dict[str, Any] = {"pool_initialized": pool is not None}
+    if pool is None:
+        return out
+    out.update(
+        {
+            "capital_basis": pool.total_capital_basis,
+            "strategy_cash": pool.strategy_cash,
+            "qqq_shares": pool.qqq_shares,
+            "shy_shares": pool.shy_shares,
+            "qqq_cost_basis_per_share": pool.qqq_cost_basis_per_share,
+            "shy_cost_basis_per_share": pool.shy_cost_basis_per_share,
+            "fees_paid_total": pool.fees_paid_total,
+            "account_id": pool.account_id,
+            "set_utc": pool.set_utc,
+        }
+    )
+    if df.empty:
+        out["latest_pool_nav"] = pool.strategy_cash
+        out["return_since_start"] = 0.0
+        out["last_weekly_return"] = None
+        out["last_week_id"] = None
+        out["last_order_note"] = ""
+        return out
+    last = df.iloc[-1]
+    out["latest_pool_nav"] = float(last["pool_nav"]) if last["pool_nav"] == last["pool_nav"] else pool.strategy_cash
+    try:
+        out["return_since_start"] = float(last["nav_return_since_start"])
+    except (TypeError, ValueError):
+        out["return_since_start"] = None
+    wr = last.get("weekly_nav_return", "")
+    out["last_weekly_return"] = (
+        float(wr) if wr is not None and str(wr) != "" and wr == wr else None
+    )
+    out["last_week_id"] = str(last.get("week_id", ""))
+    out["last_order_note"] = str(last.get("order_note", ""))
+    out["last_target"] = str(last.get("target", ""))
+    return out
+
+
+def run_live_notify(
+    cfg: IbkrLiveConfig,
+    *,
+    dry_run: bool = False,
+) -> dict[str, Any]:
+    """Weekly Lark ping: buy target + local capital summary. Never touches IBKR."""
+    from zoneinfo import ZoneInfo
+
+    from .lark_notify import (
+        format_weekly_notify_text,
+        load_lark_env,
+        send_lark_text,
+    )
+
+    signal = run_live_signal(cfg)
+    capital = _capital_summary_from_local(cfg)
+    now_bj = datetime.now(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M %Z")
+    payload = {
+        "status": "ok",
+        "ibkr_contacted": False,
+        "now_beijing": now_bj,
+        "signal": {
+            "week_id": signal["week_id"],
+            "signal": signal["signal"],
+            "target": signal["target"],
+            "rule_id": signal["rule_id"],
+            "btc_close": signal["btc_close"],
+            "sma50": signal["sma50"],
+            "mom20": signal["mom20"],
+        },
+        "capital_summary": capital,
+    }
+    text = format_weekly_notify_text(payload)
+    payload["message_preview"] = text
+
+    out_path = cfg.project_root / "reports" / "live" / "last_lark_notify.json"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    if dry_run:
+        payload["lark"] = {"sent": False, "dry_run": True}
+        out_path.write_text(json.dumps(payload, indent=2, default=str))
+        return payload
+
+    env = load_lark_env(cfg.project_root)
+    result = send_lark_text(env["webhook"], text, secret=env["secret"])
+    payload["lark"] = {"sent": True, "response": result}
+    out_path.write_text(json.dumps(payload, indent=2, default=str))
+    return payload
+
+
 def run_live_preview(
     cfg: IbkrLiveConfig,
     *,
@@ -112,9 +288,9 @@ def run_live_preview(
         pool = load_pool_state(cfg)
 
         proposed_capital = capital_amount
-        if pool is None:
-            proposed_capital = proposed_capital if proposed_capital is not None else snap.total_cash
-        else:
+        if pool is None and proposed_capital is None:
+            proposed_capital = None
+        elif pool is not None:
             proposed_capital = pool.total_capital_basis
 
         order_plan = None
@@ -170,13 +346,19 @@ def _preview_next_steps(
     steps: list[str] = []
     if pool is None:
         steps.append(
-            f"Confirm capital lock (proposed ${proposed_capital:,.2f}; account cash ${available_cash:,.2f})."
+            "Cash is never auto-locked. To deploy capital: "
+            "btc-ma-qqq live-init --capital <AMOUNT> --confirm"
         )
-        steps.append("Then run: btc-ma-qqq live-init --capital <AMOUNT> --confirm")
+        if proposed_capital is not None:
+            steps.append(
+                f"Preview lock amount: ${proposed_capital:,.2f} "
+                f"(account cash ${available_cash:,.2f})."
+            )
     else:
         steps.append("Capital pool already locked.")
-    steps.append("To trade: btc-ma-qqq live-weekly --confirm")
-    steps.append("Dry-run first: btc-ma-qqq live-weekly --dry-run")
+    steps.append("Observation only (no trades): btc-ma-qqq live-weekly --skip-trade")
+    steps.append("To trade after lock: btc-ma-qqq live-weekly --confirm")
+    steps.append("Dry-run orders: btc-ma-qqq live-weekly --dry-run")
     return steps
 
 
@@ -190,7 +372,19 @@ def run_live_init(
     ib = connect_ib(cfg)
     try:
         snap = fetch_account_snapshot(ib, cfg)
-        amount = capital_amount if capital_amount is not None else snap.total_cash
+        if capital_amount is None:
+            return {
+                "status": "awaiting_confirmation",
+                "message": (
+                    "Specify --capital <USD> explicitly. Account cash is never auto-locked."
+                ),
+                "preview": {
+                    "account_id": snap.account_id,
+                    "available_cash": snap.total_cash,
+                    "net_liquidation": snap.net_liquidation,
+                },
+            }
+        amount = capital_amount
         preview = {
             "account_id": snap.account_id,
             "available_cash": snap.total_cash,
@@ -280,9 +474,25 @@ def run_live_weekly(
     git_push: bool = False,
     confirm: bool = False,
     force_initial_nav: bool = False,
+    ignore_trade_window: bool = False,
 ) -> dict[str, Any]:
     if not cfg.raw.get("enabled", True):
         return {"status": "disabled"}
+
+    # Trading / 2FA only at US Monday open (unless mid-week manual override).
+    window = _us_open_trade_window(cfg)
+    if not skip_trade and not ignore_trade_window and not window["in_window"]:
+        return {
+            "status": "outside_trade_window",
+            "message": (
+                "Orders/2FA only at US Monday open "
+                f"({window['window_et']} {window['timezone']}; "
+                f"Beijing ≈ {window['now_beijing']}). "
+                "Use --skip-trade to ledger without orders, or "
+                "--ignore-trade-window for a mid-week manual run."
+            ),
+            "trade_window": window,
+        }
 
     require_confirm = bool(
         cfg.raw.get("capital_pool", {}).get("require_confirm_before_trade", True)
@@ -299,10 +509,63 @@ def run_live_weekly(
 
         pool = load_pool_state(cfg)
         if pool is None:
+            if not skip_trade:
+                return {
+                    "status": "error",
+                    "error": (
+                        "No locked capital pool. Observation only: live-weekly --skip-trade. "
+                        "To trade: live-init --capital <AMOUNT> --confirm then live-weekly --confirm."
+                    ),
+                    "preview_hint": "Run live-preview --capital <AMOUNT> to preview a lock.",
+                }
+            # Observation bookkeeping — account NAV only, no pool / no orders.
+            init_doc = load_initial_nav(cfg.initial_nav_path())
+            if init_doc is None or init_doc.get("basis") != "account_observation":
+                init_doc = _sync_observe_initial_nav(cfg, snap)
+            capital_basis = float(init_doc["initial_nav"])
+            pool_nav = snap.net_liquidation
+            order_note = "observe_only"
+            weekly_ret = _weekly_return_from_ledger(cfg, pool_nav)
+            row_result = append_live_row(
+                cfg,
+                week_id=week_id,
+                signal=sig,
+                target=target,
+                snap=snap,
+                pool_nav=pool_nav,
+                capital_basis=capital_basis,
+                pool=None,
+                weekly_return=weekly_ret,
+                rebalance_executed=False,
+                order_note=order_note,
+                observe_mode=True,
+            )
+            report_path = write_performance_report(cfg)
+            git_result = None
+            if git_push and cfg.raw.get("git", {}).get("auto_push", True):
+                git_result = _git_push_live(cfg, report_path)
             return {
-                "status": "error",
-                "error": "No locked capital pool. Run live-init --capital <AMOUNT> --confirm first.",
-                "preview_hint": "Run live-preview to see available cash and proposed lock.",
+                "status": "ok",
+                "mode": "observe_only",
+                "week_id": week_id,
+                "signal": sig,
+                "target": target,
+                "account": {
+                    "net_liquidation": snap.net_liquidation,
+                    "total_cash": snap.total_cash,
+                    "nav_return_since_start": (
+                        pool_nav / capital_basis - 1.0 if capital_basis > 0 else 0.0
+                    ),
+                },
+                "ledger": row_result,
+                "report": str(report_path),
+                "order_note": order_note,
+                "git": git_result,
+                "btc_signal_row": {
+                    "btc_close": sig_row.get("btc_close"),
+                    "sma50": sig_row.get("sma50"),
+                    "mom20": sig_row.get("mom20"),
+                },
             }
 
         if force_initial_nav:
@@ -367,6 +630,7 @@ def run_live_weekly(
             weekly_return=weekly_ret,
             rebalance_executed=executed,
             order_note=order_note,
+            observe_mode=False,
         )
         report_path = write_performance_report(cfg)
 
@@ -406,6 +670,35 @@ def run_live_weekly(
         disconnect_ib(ib)
 
 
+def run_live_unlock(
+    cfg: IbkrLiveConfig,
+    *,
+    confirm: bool = False,
+) -> dict[str, Any]:
+    """Remove locked capital pool — does not move cash or cancel orders."""
+    from .capital_pool import pool_state_path
+
+    path = pool_state_path(cfg)
+    if not path.exists():
+        return {
+            "status": "ok",
+            "message": "No capital pool file — nothing to unlock.",
+        }
+    preview = json.loads(path.read_text()) if path.exists() else {}
+    if not confirm:
+        return {
+            "status": "awaiting_confirmation",
+            "message": "Re-run with --confirm to delete the locked pool record (no trades).",
+            "preview": preview,
+        }
+    path.unlink()
+    return {
+        "status": "unlocked",
+        "message": "Capital pool record removed. Cash was not moved. Use live-weekly --skip-trade to observe.",
+        "removed": preview,
+    }
+
+
 def run_live_status(cfg: IbkrLiveConfig) -> dict[str, Any]:
     ib = connect_ib(cfg)
     try:
@@ -427,6 +720,7 @@ def run_live_status(cfg: IbkrLiveConfig) -> dict[str, Any]:
             "current_target": target,
             "mode": cfg.raw.get("mode"),
             "pool_initialized": pool is not None,
+            "observe_only": pool is None,
         }
         if pool is not None:
             basis = pool.total_capital_basis

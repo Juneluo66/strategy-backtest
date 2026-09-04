@@ -20,12 +20,19 @@ strategy:
   exchange: SMART
   currency: USD
   target_pct: 1.0   # 100% of pool NAV in target sleeve
-  fractional_shares: true   # IBKR fractional / cashQty orders
-  min_order_usd: 0.0        # 0 = disabled (IBKR enforces its own minimums)
+  fractional_shares: false  # IBKR API rejects fractional for this account (Error 10243)
+  min_order_usd: 0.0
+  # Weekly cron runs at US open → market orders.
+  order_type: MKT
+  order_tif: DAY
+  limit_buy_cushion_bps: 50
+  limit_sell_cushion_bps: 50
+  outside_rth: false
 
 capital_pool:
   state_path: reports/live/capital_pool.json
-  # Only explicit live-inject-capital may increase pool beyond P&L.
+  auto_lock_cash: false
+  require_explicit_capital_amount: true
   require_confirm_before_trade: true
 
 ledger:
@@ -34,11 +41,16 @@ ledger:
   report_path: reports/live/live_performance.md
 
 schedule:
-  # Week-start rebalance proxy (America/New_York); cron should run after US market open
+  # Monday US session — DST via America/New_York (not approximate Beijing-only times).
+  # Cron starts 08:45 ET (signal + 2FA early); trades at/after 09:35 ET.
+  # Beijing: start 20:45 (EDT) / 21:45 (EST); open 21:30 (EDT) / 22:30 (EST).
   timezone: America/New_York
   rebalance_weekday: Monday
   rebalance_after_hour: 9
   rebalance_after_minute: 35
+  trade_window_end_hour: 11
+  gateway_on_demand: true
+  # Cron: scripts/install_weekly_cron.sh → Mon 08:45 ET
 
 git:
   auto_push: true

@@ -1,0 +1,46 @@
+{
+  "status": "ok",
+  "gateway_required": false,
+  "week_id": "2026-08-31",
+  "signal": 1,
+  "target": "QQQ",
+  "btc_close": 78657.0,
+  "sma50": 64962.76,
+  "mom20": 0.2367258376440622,
+  "rule_id": "BTC50_MOM20_QQQ_SHY_v1",
+  "computed_utc": "2026-09-04T07:17:24.619794+00:00",
+  "trade_window": {
+    "timezone": "America/New_York",
+    "now_et": "2026-09-04T03:17:24.619806-04:00",
+    "now_beijing": "2026-09-04T15:17:24.619806+08:00",
+    "weekday": "Friday",
+    "required_weekday": "Monday",
+    "window_et": "09:35\u201311:00",
+    "in_window": false
+  },
+  "data_refresh": {
+    "completed": [
+      "BTC-USD",
+      "QQQ",
+      "SHY",
+      "SPY"
+    ],
+    "failures": {},
+    "actions": {
+      "BTC-USD": "downloaded",
+      "QQQ": "downloaded",
+      "SHY": "downloaded",
+      "SPY": "downloaded"
+    }
+  },
+  "oos_append": {
+    "appended": 0,
+    "ledger": "/home/ec2-user/strategy-backtest/btc_ma_qqq_shy/reports/frozen_oos_ledger.csv",
+    "n_existing": 3,
+    "cutoff": "2026-08-07",
+    "message": "ledger up to date",
+    "pending_incomplete_weeks": [
+      "2026-08-31"
+    ]
+  }
+}

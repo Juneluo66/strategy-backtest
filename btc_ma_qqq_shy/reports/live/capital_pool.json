@@ -6,9 +6,12 @@
   "set_utc": "2026-08-26T07:29:53.420422+00:00",
   "locked": true,
   "basis": "cash",
-  "qqq_shares": 0.0,
-  "shy_shares": 0.9259259259259259,
-  "strategy_cash": 0.0,
+  "qqq_shares": 0.103,
+  "shy_shares": 0.0,
+  "strategy_cash": 0.29599999999999227,
+  "qqq_cost_basis_per_share": 724.3543689320389,
+  "shy_cost_basis_per_share": 0.0,
+  "fees_paid_total": 2.25975,
   "injections": [],
   "note": "user_confirmed_cash_lock"
 }

@@ -23,10 +23,26 @@ class CapitalPoolState:
     strategy_cash: float
     injections: list[dict[str, Any]]
     note: str = ""
+    qqq_cost_basis_per_share: float = 0.0
+    shy_cost_basis_per_share: float = 0.0
+    fees_paid_total: float = 0.0
 
     @property
     def total_capital_basis(self) -> float:
         return self.initial_capital + self.injected_capital
+
+    def book_cost_nav(self) -> float:
+        """NAV at cost (fees included in per-share basis)."""
+        nav = self.strategy_cash
+        if self.qqq_shares and self.qqq_cost_basis_per_share:
+            nav += self.qqq_shares * self.qqq_cost_basis_per_share
+        elif self.qqq_shares:
+            nav += self.qqq_shares  # fallback
+        if self.shy_shares and self.shy_cost_basis_per_share:
+            nav += self.shy_shares * self.shy_cost_basis_per_share
+        elif self.shy_shares:
+            nav += self.shy_shares
+        return nav
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -40,6 +56,9 @@ class CapitalPoolState:
             "qqq_shares": self.qqq_shares,
             "shy_shares": self.shy_shares,
             "strategy_cash": self.strategy_cash,
+            "qqq_cost_basis_per_share": self.qqq_cost_basis_per_share,
+            "shy_cost_basis_per_share": self.shy_cost_basis_per_share,
+            "fees_paid_total": self.fees_paid_total,
             "injections": self.injections,
             "note": self.note,
         }
@@ -58,6 +77,9 @@ class CapitalPoolState:
             qqq_shares=float(data.get("qqq_shares", 0.0)),
             shy_shares=float(data.get("shy_shares", 0.0)),
             strategy_cash=float(data.get("strategy_cash", initial + injected)),
+            qqq_cost_basis_per_share=float(data.get("qqq_cost_basis_per_share", 0.0)),
+            shy_cost_basis_per_share=float(data.get("shy_cost_basis_per_share", 0.0)),
+            fees_paid_total=float(data.get("fees_paid_total", 0.0)),
             injections=list(data.get("injections", [])),
             note=str(data.get("note", "")),
         )
@@ -152,11 +174,12 @@ def compute_pool_nav(
     shy_price: float,
 ) -> float:
     """Mark-to-market NAV of the isolated strategy sleeve only."""
-    return (
-        state.qqq_shares * qqq_price
-        + state.shy_shares * shy_price
-        + state.strategy_cash
-    )
+    nav = state.strategy_cash
+    if state.qqq_shares:
+        nav += state.qqq_shares * qqq_price
+    if state.shy_shares:
+        nav += state.shy_shares * shy_price
+    return nav
 
 
 def update_pool_positions(

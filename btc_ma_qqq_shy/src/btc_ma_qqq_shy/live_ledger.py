@@ -51,13 +51,19 @@ def load_initial_nav(path: Path) -> Optional[dict]:
     return json.loads(path.read_text())
 
 
-def set_initial_nav(path: Path, nav: float, account_id: str, note: str = "") -> dict:
+def set_initial_nav(
+    path: Path,
+    nav: float,
+    account_id: str,
+    note: str = "",
+    basis: str = "locked_cash_capital_pool",
+) -> dict:
     payload = {
         "initial_nav": nav,
         "account_id": account_id,
         "set_utc": datetime.now(timezone.utc).isoformat(),
         "note": note,
-        "basis": "locked_cash_capital_pool",
+        "basis": basis,
     }
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2))
@@ -73,10 +79,11 @@ def append_live_row(
     snap: AccountSnapshot,
     pool_nav: float,
     capital_basis: float,
-    pool: CapitalPoolState,
+    pool: Optional[CapitalPoolState],
     weekly_return: Optional[float],
     rebalance_executed: bool,
     order_note: str,
+    observe_mode: bool = False,
 ) -> dict[str, Any]:
     path = cfg.ledger_path()
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -85,6 +92,11 @@ def append_live_row(
         return {"appended": False, "reason": "week_exists", "week_id": week_id}
 
     ret = (pool_nav / capital_basis - 1.0) if capital_basis > 0 else 0.0
+    strategy_cash = (
+        snap.total_cash if observe_mode or pool is None else pool.strategy_cash
+    )
+    pool_qqq = snap.qqq_shares if observe_mode or pool is None else pool.qqq_shares
+    pool_shy = snap.shy_shares if observe_mode or pool is None else pool.shy_shares
     row = {
         "week_id": week_id,
         "recorded_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -95,9 +107,9 @@ def append_live_row(
         "target": target,
         "pool_nav": pool_nav,
         "capital_basis": capital_basis,
-        "strategy_cash": pool.strategy_cash,
-        "pool_qqq_shares": pool.qqq_shares,
-        "pool_shy_shares": pool.shy_shares,
+        "strategy_cash": strategy_cash,
+        "pool_qqq_shares": pool_qqq,
+        "pool_shy_shares": pool_shy,
         "account_net_liquidation": snap.net_liquidation,
         "account_total_cash": snap.total_cash,
         "buying_power": snap.buying_power,
@@ -116,18 +128,36 @@ def render_performance_md(cfg: IbkrLiveConfig) -> str:
     init_path = cfg.initial_nav_path()
     df = _read_ledger(path)
     init = load_initial_nav(init_path) or {}
+    basis = init.get("basis", "")
+    is_observe = basis == "account_observation"
+    title = (
+        "# v1 Live Performance (account observation)"
+        if is_observe
+        else "# v1 Live Performance (IBKR capital pool)"
+    )
     lines = [
-        "# v1 Live Performance (IBKR capital pool)",
+        title,
         "",
         f"Rule: `{cfg.raw['strategy']['rule_id']}`",
         f"Mode: `{cfg.raw.get('mode')}`",
         "",
-        "Capital is **isolated** to the locked pool. Account deposits are ignored unless you run `live-inject-capital`.",
-        "",
     ]
-    if init:
+    if is_observe:
         lines += [
-            f"Locked capital basis: **${init.get('initial_nav', 0):,.2f}**",
+            "**Observation only** — no cash is locked or traded unless you run "
+            "`live-init --capital <USD> --confirm` and `live-weekly --confirm`.",
+            "",
+        ]
+    else:
+        lines += [
+            "Capital is **isolated** to the locked pool. Account deposits are ignored "
+            "unless you run `live-inject-capital`.",
+            "",
+        ]
+    if init:
+        label = "Account NAV baseline" if is_observe else "Locked capital basis"
+        lines += [
+            f"{label}: **${init.get('initial_nav', 0):,.2f}**",
             f"Set at: `{init.get('set_utc', '')}`",
             "",
         ]
@@ -136,9 +166,10 @@ def render_performance_md(cfg: IbkrLiveConfig) -> str:
         return "\n".join(lines)
 
     last = df.iloc[-1]
+    nav_label = "Account NAV" if is_observe else "Pool NAV"
     lines += [
         f"Latest week: `{last['week_id']}`",
-        f"Pool NAV: **${float(last['pool_nav']):,.2f}**",
+        f"{nav_label}: **${float(last['pool_nav']):,.2f}**",
         f"Return since start: **{100*float(last['nav_return_since_start']):.2f}%**",
         f"Target: `{last['target']}` (signal={last['signal']})",
         "",
